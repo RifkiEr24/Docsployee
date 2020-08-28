@@ -24,10 +24,12 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.14.0",
         "vee-validate": "^3.3.9",
         "vue-axios": "^2.1.5",
         "vue-page-transition": "^0.2.2",
         "vue-router": "^3.4.3",
+        "vue-sidebar-menu": "^4.7.1",
         "vue-sweetalert2": "^3.0.6"
     }
 }

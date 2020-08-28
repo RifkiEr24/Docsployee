@@ -8,11 +8,13 @@ import axios from 'axios';
 import App from './components/App.vue';
 import VueSweetalert2 from 'vue-sweetalert2'; 
 import VuePageTransition from "vue-page-transition";
+import VueSidebarMenu from 'vue-sidebar-menu'
 
 // If you don't need the styles, do not connect
 import 'sweetalert2/dist/sweetalert2.min.css';
- 
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 Vue.use(VueRouter);
+Vue.use(VueSidebarMenu)
 Vue.use(VuePageTransition);
 Vue.use(VueSweetalert2);
 Vue.use(VueAxios, axios);
@@ -23,6 +25,8 @@ import ArticleShow from './components/ArticleShow.vue';
 import ArticleEdit from './components/ArticleEdit.vue';
 import Home from './components/Home.vue'
 import CreateAccount from './components/CreateAccount.vue';
+import '@fortawesome/fontawesome-free/js/all.js';
+
 const routes = [
   {
       name: 'home',
@@ -32,12 +36,12 @@ const routes = [
   {
       name: 'create',
       path: '/article/create',
-      component: CreateAccount
+      component: () => import("./components/CreateAccount.vue")
   },
   {
-      name: 'edit',
-      path: '/article/edit/:id',
-      component: ArticleEdit
+      name: 'admin',
+      path: '/article/admin',
+      component: () => import("./components/AdminPage.vue")
   },
   {
     name: 'show',

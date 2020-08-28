@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2 class="text-center">Daftar Kepegawaian</h2>
-          <form class="px-5" validate>
+          <form class="px-5" required>
               <div class="form-group">
                             <label for="exampleInputEmail1">NIP</label>
                         <input type="number" class="form-control rounded-pill" placeholder="Masukkan NIP Anda disini"
