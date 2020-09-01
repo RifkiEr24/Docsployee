@@ -35,13 +35,19 @@ const routes = [
   },
   {
       name: 'create',
-      path: '/article/create',
+      path: '/account/create',
       component: () => import("./components/CreateAccount.vue")
   },
   {
       name: 'admin',
-      path: '/article/admin',
-      component: () => import("./components/AdminPage.vue")
+      path: '/admin',
+      component: () => import("./components/AdminPage.vue"),
+      children:[
+          {
+            path:'',
+            component: () => import("./components/Dashboard.vue")
+          }
+      ]
   },
   {
     name: 'show',

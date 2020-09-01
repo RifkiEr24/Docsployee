@@ -1,5 +1,6 @@
 <template>
-    <div class="row">
+    <div class="container">
+        <div class="row">
             <div class="col-md-6 d-md-block d-none">
                 <img src="./../../img/Logo_SMKN_1_Cimahi-2014.jpg" class="img-fluid mt-5 p-5">
             </div>
@@ -16,9 +17,12 @@
                             placeholder="Masukkan Password anda Disini" id="exampleInputPassword1">
                     </div>
                 </form>
-                <a href="./employee.html"><button type="button" class="btn btn-primary ml-auto mr-auto d-block px-5 rounded-pill">Login</button></a>
-                <router-link :to="{name: 'create'}"><small id="emailHelp" class="form-text text-primary text-center">Belum mempunyai akun?
+                <a href="./employee.html"><button type="button"
+                        class="btn btn-primary ml-auto mr-auto d-block px-5 rounded-pill">Login</button></a>
+                <router-link :to="{name: 'create'}"><small id="emailHelp"
+                        class="form-text text-primary text-center">Belum mempunyai akun?
                         Daftar Sekarang</small></router-link>
             </div>
         </div>
+    </div>
 </template>
