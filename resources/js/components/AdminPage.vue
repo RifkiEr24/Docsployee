@@ -10,7 +10,7 @@
         <router-view />
         </vue-page-transition>
       </div>
-      <sidebar-menu
+      <sidebar-menu class="bg-primary"
         :menu="menu"
         :collapsed="collapsed"
         :theme="selectedTheme"
@@ -20,7 +20,7 @@
       />
       <div
         v-if="isOnMobile && !collapsed"
-        class="sidebar-overlay"
+        class="sidebar-overlay "
         @click="collapsed = true"
       />
     </div>
@@ -51,14 +51,14 @@ export default {
           hiddenOnCollapse: true
         },
         {
-          href: '/',
-          title: 'Installation',
+          href: '/admin',
+          title: 'Dashboard',
           icon: 'fa fa-download'
         },
         {
-          href: '/basic-usage',
-          title: 'Basic Usage',
-          icon: 'fa fa-code'
+          href: '/admin/employeelist',
+          title: 'Employee List',
+          icon: 'fas fa-users'
         },
         {
           header: true,
@@ -159,7 +159,7 @@ export default {
           ]
         }
       ],
-      collapsed: false,
+      collapsed: true,
       themes: [
         {
           name: 'Default theme',
@@ -203,6 +203,12 @@ export default {
 }
 </script>
 <style >
+.v-sidebar-menu .vsm--toggle-btn{
+  background-color: #3490dc;
+}
+.v-sidebar-menu .vsm--link_level-1 .vsm--icon{
+  background: none;
+}
 body{
     background-color: #f0f0f0 !important;
 }

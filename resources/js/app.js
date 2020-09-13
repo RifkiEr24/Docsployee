@@ -27,6 +27,7 @@ import Home from './components/Home.vue'
 import CreateAccount from './components/CreateAccount.vue';
 import '@fortawesome/fontawesome-free/js/all.js';
 
+
 const routes = [
   {
       name: 'home',
@@ -46,6 +47,10 @@ const routes = [
           {
             path:'',
             component: () => import("./components/Dashboard.vue")
+          },
+          {
+            path:'/admin/employeelist',
+            component: () => import("./components/employeeList.vue")
           }
       ]
   },
