@@ -1,19 +1,19 @@
 <template>
     <div>
         <div class="input-group search ml-auto mt-3">
-            <input type="text" class=" rounded-pill form-control" placeholder="Employee Name" aria-label="Recipient's username"
+            <input type="text" v-model.lazy="keywords"  class=" rounded-pill form-control" placeholder="Employee Name" aria-label="Recipient's username"
                 aria-describedby="button-addon2">
             <div class="input-group-append ml-2">
-                <button class="btn btn-primary rounded-circle" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                <button class="btn btn-primary rounded-circle" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
             </div>
         </div>
-        <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center shadow-sm">
+        <ul class="list-group" v-if="results.length > 0">
+            <li v-for="(account) in accounts" :key="account.id" class="list-group-item d-flex justify-content-between align-items-center shadow-sm">
                 <div class="d-flex">
                     <img src="https://thispersondoesnotexist.com/image" class="avatar-profile rounded-circle mt-1"
                         alt="">
                     <div class="identity ml-2">
-                        <p class="name">Ammar Joni</p>
+                        <p class="name">{{account.nama}}</p>
                         <p class="otority">Admin</p>
                     </div>
                 </div>
@@ -62,3 +62,35 @@
         font-size: 17px;
     }
 </style>
+<script>
+export default {
+    data() {
+        return {
+          accounts: [],
+          results:[],
+          keywords:null,
+        }
+      },
+         created() {
+        let uri = '/api/account';
+        this.axios.get(uri).then(response => {
+            this.accounts = response.data;
+
+        });
+    },
+      watch:{
+          keywords(after,before){
+              this.fetch();
+          }
+      },
+      methods:{
+          fetch(){
+              axios.get('/api/account/search', { params: { keywords: this.keywords } })
+                .then(response => this.results = response.data)
+                .catch(error => {});
+                console.log(this.keywords);
+          }
+      }
+   
+}
+</script>

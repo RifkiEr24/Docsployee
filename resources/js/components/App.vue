@@ -16,7 +16,6 @@ export default {
     },
     methods:{
         CheckIfRoute: function (routeName){
-        console.log(this.$route.name === routeName);
       return this.$route.name === routeName;
     }
     }

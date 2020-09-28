@@ -1,5 +1,6 @@
 <?php
 
+use App\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/account','AccountController@index');
 Route::post('/account/store', 'AccountController@store');
+Route::post('/account/search','AccountController@search');
 Route::get('/articles', 'ArticleController@index');
 Route::post('/article/store', 'ArticleController@store');
 Route::get('/article/edit/{id}', 'ArticleController@getArticle');

@@ -14,7 +14,7 @@
                             id="NIP" aria-describedby="emailHelp">
                     </div> -->
             <div class="form-group">
-                <label for="exampleInputEmail2">nama</label>
+                <label for="exampleInputEmail2">Nama</label>
                 <input type="text" class="form-control rounded-pill" v-model="account.nama"
                     placeholder="Masukkan NPWP Anda disini" id="Email" aria-describedby="emailHelp">
             </div>
@@ -27,15 +27,27 @@
                         <span>{{ errors[0] }}</span>
                     </ValidationProvider>
                 </div>
-                <!-- <div class="form-group">
+                <div class="form-group">
                          <label for="exampleInputEmail1">Re-Password</label>
                              <ValidationProvider name="confirm" rules="required" v-slot="{ errors }">
                         <input type="password" class="form-control rounded-pill"
                             placeholder="Masukkan Ulang Password anda Disini" v-model="account.confirmation">
                              <span>{{ errors[0] }}</span>
                              </ValidationProvider>
-                    </div> -->
+                    </div>
             </ValidationObserver>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="./../../img/pasfoto.png" class="w-50 ml-auto mr-auto d-block" alt="">
+                    </div>
+                    <div class="col-md-6">
+                          <div class="form-group">
+                              <img id="output"/>
+                              <label for="exampleFormControlFile1">Example file input</label>
+                              <input type="file" accept="image/*"  class="form-control-file" id="exampleFormControlFile1">
+                          </div>
+                    </div>
+                </div>
             <button class="btn btn-primary rounded-pill ml-auto mr-auto d-block" type="submit">Register Akun</button>
         </form>
     </div>
@@ -80,11 +92,10 @@
         methods: {
             AccountCreate: function (e) {
                 console.log(this.$data.account);
-
                 if (this.$data.account.nama != null && this.$data.account.password != null) {
                     this.$swal.fire({
                         title: 'Success',
-                        text: "Article created successfully",
+                        text: "Account created successfully",
                         icon: 'success',
                         timer: 1000
                     })
