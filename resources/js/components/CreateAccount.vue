@@ -1,12 +1,7 @@
 <template>
     <div class="container">
         <h2 class="text-center">Daftar Kepegawaian</h2>
-        <div class="alert alert-danger" v-if="errors.length">
-            <b>Terdapat kesalahan dalam input data:</b>
-            <ul>
-                <li v-for="error in errors" :key="error">{{ error }}</li>
-            </ul>
-        </div>
+       
         <form class="px-5" @submit.prevent="AccountCreate">
             <!-- <div class="form-group">
                             <label for="exampleInputEmail1">NIP</label>
@@ -38,17 +33,34 @@
             </ValidationObserver>
                 <div class="row">
                     <div class="col-md-6">
+                        <h5 class="text-center">Masukkan Pas Foto Anda</h5>
                         <img src="./../../img/pasfoto.png" class="w-50 ml-auto mr-auto d-block" alt="">
+                         <div class="form-group">
+                              <img id="output"/>
+                              
+                              <input type="file" accept="image/*"  class=" d-none form-control-file  " id="photoForm">
+                            <label class="btn btn-primary rounded-pill ml-auto mr-auto d-block w-75" for="photoForm">Example file input</label>
+                          </div>
                     </div>
                     <div class="col-md-6">
-                          <div class="form-group">
+                           <h5 class="text-center">Masukkan Scan KTP Anda</h5>
+                          <img src="./../../img/card.png" class="w-75 mt-4 ml-auto mr-auto d-block" alt="">
+                         <div class="form-group">
                               <img id="output"/>
-                              <label for="exampleFormControlFile1">Example file input</label>
-                              <input type="file" accept="image/*"  class="form-control-file" id="exampleFormControlFile1">
+                              
+                              <input type="file" accept="image/*"  class=" d-none form-control-file  " id="idCard">
+                            <label class="btn btn-primary rounded-pill ml-auto mr-auto d-block w-75" for="idCard">Example file input</label>
                           </div>
                     </div>
                 </div>
-            <button class="btn btn-primary rounded-pill ml-auto mr-auto d-block" type="submit">Register Akun</button>
+                 <div class="alert alert-danger" v-if="errors.length">
+            <b>Terdapat kesalahan dalam input data:</b>
+            <ul>
+                <li v-for="error in errors" :key="error">{{ error }}</li>
+            </ul>
+        </div>
+            <button class="btn btn-primary rounded-pill ml-auto mr-auto d-block mb-3" type="submit">Register Akun</button>
+            
         </form>
     </div>
 </template>

@@ -7,7 +7,7 @@
                 <button class="btn btn-primary rounded-circle" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
             </div>
         </div>
-        <ul class="list-group" v-if="results.length > 0">
+        <ul class="list-group">
             <li v-for="(account) in accounts" :key="account.id" class="list-group-item d-flex justify-content-between align-items-center shadow-sm">
                 <div class="d-flex">
                     <img src="https://thispersondoesnotexist.com/image" class="avatar-profile rounded-circle mt-1"

@@ -66,19 +66,19 @@ export default {
           hiddenOnCollapse: true
         },
         {
-          href: '/props',
-          title: 'Props',
-          icon: 'fa fa-cogs'
+          href: '/admin/calendar',
+          title: 'Calendar',
+          icon: 'fa fa-calendar'
         },
         {
-          href: '/events',
-          title: 'Events',
-          icon: 'fa fa-bell'
+          href: '/admin/cloud',
+          title: 'Cloud',
+          icon: 'fa fa-cloud'
         },
         {
           href: '/styling',
-          title: 'Styling',
-          icon: 'fa fa-palette'
+          title: 'Notification',
+          icon: 'fas fa-bell'
         },
         {
           component: separator
@@ -202,7 +202,8 @@ export default {
   },
 }
 </script>
-<style >
+<style>
+
 .v-sidebar-menu .vsm--toggle-btn{
   background-color: #3490dc;
 }

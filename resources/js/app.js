@@ -42,15 +42,23 @@ const routes = [
   {
       name: 'admin',
       path: '/admin',
-      component: () => import("./components/AdminPage.vue"),
+      component: () => import("./components/admin/AdminPage.vue"),
       children:[
           {
             path:'',
-            component: () => import("./components/Dashboard.vue")
+            component: () => import("./components/admin/Dashboard.vue")
           },
           {
             path:'/admin/employeelist',
-            component: () => import("./components/employeeList.vue")
+            component: () => import("./components/admin/employeeList.vue")
+          },
+          {
+            path:'/admin/calendar',
+            component: () => import("./components/admin/Calendar.vue")
+          },
+          {
+            path:'/admin/cloud',
+            component: () => import("./components/admin/Cloud.vue")
           }
       ]
   },
@@ -58,7 +66,22 @@ const routes = [
     name: 'show',
     path: '/article/show/:id',
     component: ArticleShow
-}
+},
+{
+  name: 'articleindex',
+  path: '/article',
+  component: ArticleIndex
+},
+{
+  name: 'articlecretae',
+  path: '/article/create',
+  component: ArticleCreate
+},
+{
+  name: 'articleedit',
+  path: '/article/edit/:id',
+  component: ArticleEdit
+},
 ];
  
 const router = new VueRouter({ mode: 'history', routes: routes});
