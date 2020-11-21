@@ -26,3 +26,8 @@
         </div>
     </div>
 </template>
+<style>
+body{
+    background-color: #ffffff !important;
+}
+</style>

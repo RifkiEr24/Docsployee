@@ -17,8 +17,8 @@ export default {
     methods:{
         CheckIfRoute: function (routeName){
       return this.$route.name === routeName;
-    }
-    }
+    },
+    },
 }
 </script>
 

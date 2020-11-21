@@ -43,19 +43,19 @@ var staticRenderFns = [
       _c("div", { staticClass: "row mt-5" }, [
         _c("div", { staticClass: "col-md-4" }, [
           _c("div", { staticClass: "ffolder big cyan" }, [
-            _c("span", [_vm._v("37 Files")])
+            _c("span", [_vm._v("KTP")])
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-4" }, [
           _c("div", { staticClass: "ffolder big pink" }, [
-            _c("span", [_vm._v("37 Files")])
+            _c("span", [_vm._v("KK")])
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-4" }, [
           _c("div", { staticClass: "ffolder big cyan" }, [
-            _c("span", [_vm._v("37 Files")])
+            _c("span", [_vm._v("Akte")])
           ])
         ])
       ]),
@@ -77,10 +77,21 @@ var staticRenderFns = [
           _c("tr", [
             _c("td", [
               _c("i", { staticClass: "fas fa-file text-secondary" }),
-              _vm._v("   Mark")
+              _vm._v("   KTP")
             ]),
             _vm._v(" "),
             _c("td", [_vm._v("May 23, 2019")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("100MB")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [
+              _c("i", { staticClass: "fas fa-file text-secondary" }),
+              _vm._v("   Akte")
+            ]),
+            _vm._v(" "),
+            _c("td", [_vm._v("November 31, 2019")]),
             _vm._v(" "),
             _c("td", [_vm._v("100MB")])
           ])

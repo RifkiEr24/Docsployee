@@ -47,7 +47,7 @@ export default {
       menu: [
         {
           header: true,
-          title: 'Getting Started',
+          title: 'All',
           hiddenOnCollapse: true
         },
         {
@@ -85,80 +85,15 @@ export default {
         },
         {
           header: true,
-          title: 'Example',
+          title: 'Other',
           hiddenOnCollapse: true
         },
         {
-          href: '/disabled',
-          title: 'Disabled page',
-          icon: 'fa fa-lock',
-          disabled: true
+          href: '/',
+          title: 'Log Out',
+          icon: 'fa fa-sign-out-alt',
         },
-        {
-          title: 'Badge',
-          icon: 'fa fa-cog',
-          badge: {
-            text: 'new',
-            class: 'vsm--badge_default'
-          }
-        },
-        {
-          href: '/page',
-          title: 'Dropdown Page',
-          icon: 'fa fa-list-ul',
-          child: [
-            {
-              href: '/page/sub-page-1',
-              title: 'Sub Page 01',
-              icon: 'fa fa-file-alt'
-            },
-            {
-              href: '/page/sub-page-2',
-              title: 'Sub Page 02',
-              icon: 'fa fa-file-alt'
-            }
-          ]
-        },
-        {
-          title: 'Multiple Level',
-          icon: 'fa fa-list-alt',
-          child: [
-            {
-              title: 'page'
-            },
-            {
-              title: 'Level 2 ',
-              child: [
-                {
-                  title: 'page'
-                },
-                {
-                  title: 'Page'
-                }
-              ]
-            },
-            {
-              title: 'Page'
-            },
-            {
-              title: 'Another Level 2',
-              child: [
-                {
-                  title: 'Level 3',
-                  child: [
-                    {
-                      title: 'Page'
-                    },
-                    {
-                      title: 'Page'
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
+        ],
       collapsed: true,
       themes: [
         {
@@ -172,7 +107,6 @@ export default {
   },
   methods: {
     CheckIfRoute: function (routeName){
-        console.log(this.$route.name === routeName);
       return this.$route.name === routeName;
     },
     onToggleCollapse: function (collapsed) {

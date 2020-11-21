@@ -59,7 +59,7 @@ var separator = {
     return {
       menu: [{
         header: true,
-        title: 'Getting Started',
+        title: 'All',
         hiddenOnCollapse: true
       }, {
         href: '/admin',
@@ -89,58 +89,12 @@ var separator = {
         component: separator
       }, {
         header: true,
-        title: 'Example',
+        title: 'Other',
         hiddenOnCollapse: true
       }, {
-        href: '/disabled',
-        title: 'Disabled page',
-        icon: 'fa fa-lock',
-        disabled: true
-      }, {
-        title: 'Badge',
-        icon: 'fa fa-cog',
-        badge: {
-          text: 'new',
-          "class": 'vsm--badge_default'
-        }
-      }, {
-        href: '/page',
-        title: 'Dropdown Page',
-        icon: 'fa fa-list-ul',
-        child: [{
-          href: '/page/sub-page-1',
-          title: 'Sub Page 01',
-          icon: 'fa fa-file-alt'
-        }, {
-          href: '/page/sub-page-2',
-          title: 'Sub Page 02',
-          icon: 'fa fa-file-alt'
-        }]
-      }, {
-        title: 'Multiple Level',
-        icon: 'fa fa-list-alt',
-        child: [{
-          title: 'page'
-        }, {
-          title: 'Level 2 ',
-          child: [{
-            title: 'page'
-          }, {
-            title: 'Page'
-          }]
-        }, {
-          title: 'Page'
-        }, {
-          title: 'Another Level 2',
-          child: [{
-            title: 'Level 3',
-            child: [{
-              title: 'Page'
-            }, {
-              title: 'Page'
-            }]
-          }]
-        }]
+        href: '/',
+        title: 'Log Out',
+        icon: 'fa fa-sign-out-alt'
       }],
       collapsed: true,
       themes: [{
@@ -153,7 +107,6 @@ var separator = {
   },
   methods: {
     CheckIfRoute: function CheckIfRoute(routeName) {
-      console.log(this.$route.name === routeName);
       return this.$route.name === routeName;
     },
     onToggleCollapse: function onToggleCollapse(collapsed) {
@@ -310,8 +263,6 @@ var render = function() {
             [_vm._v("Dashboard")]
           ),
           _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
           _c(
             "div",
             {
@@ -360,28 +311,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "navbar-toggler",
-        attrs: {
-          type: "button",
-          "data-toggle": "collapse",
-          "data-target": "#navbarNavDropdown",
-          "aria-controls": "navbarNavDropdown",
-          "aria-expanded": "false",
-          "aria-label": "Toggle navigation"
-        }
-      },
-      [_c("span", { staticClass: "navbar-toggler-icon" })]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
