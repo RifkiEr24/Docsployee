@@ -59,9 +59,37 @@ const routes = [
           {
             path:'/admin/cloud',
             component: () => import("./components/admin/Cloud.vue")
+          },
+          {
+            path: '/admin/notification',
+            component: () => import("./components/admin/Notification.vue")
           }
       ]
   },
+  {
+    name: 'user',
+    path: '/user',
+    component: () => import("./components/admin/AdminPage.vue"),
+    children:[
+        {
+          path:'',
+          component: () => import("./components/admin/Dashboard.vue")
+        },
+        {
+          path:'/user/calendar',
+          component: () => import("./components/admin/Calendar.vue")
+        },
+        {
+          path:'/user/cloud',
+          component: () => import("./components/admin/Cloud.vue")
+        },
+        {
+          path: '/user/notification',
+          component: () => import("./components/admin/Notification.vue")
+        },
+    ]
+},
+
   {
     name: 'show',
     path: '/article/show/:id',

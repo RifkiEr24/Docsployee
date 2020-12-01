@@ -65969,7 +65969,7 @@ var routes = [{
   }, {
     path: '/admin/employeelist',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./components/admin/employeeList.vue */ "./resources/js/components/admin/employeeList.vue"));
+      return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./components/admin/employeeList.vue */ "./resources/js/components/admin/employeeList.vue"));
     }
   }, {
     path: '/admin/calendar',
@@ -65979,7 +65979,39 @@ var routes = [{
   }, {
     path: '/admin/cloud',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./components/admin/Cloud.vue */ "./resources/js/components/admin/Cloud.vue"));
+      return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./components/admin/Cloud.vue */ "./resources/js/components/admin/Cloud.vue"));
+    }
+  }, {
+    path: '/admin/notification',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./components/admin/Notification.vue */ "./resources/js/components/admin/Notification.vue"));
+    }
+  }]
+}, {
+  name: 'user',
+  path: '/user',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./components/admin/AdminPage.vue */ "./resources/js/components/admin/AdminPage.vue"));
+  },
+  children: [{
+    path: '',
+    component: function component() {
+      return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./components/admin/Dashboard.vue */ "./resources/js/components/admin/Dashboard.vue"));
+    }
+  }, {
+    path: '/user/calendar',
+    component: function component() {
+      return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ./components/admin/Calendar.vue */ "./resources/js/components/admin/Calendar.vue"));
+    }
+  }, {
+    path: '/user/cloud',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./components/admin/Cloud.vue */ "./resources/js/components/admin/Cloud.vue"));
+    }
+  }, {
+    path: '/user/notification',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./components/admin/Notification.vue */ "./resources/js/components/admin/Notification.vue"));
     }
   }]
 }, {

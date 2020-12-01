@@ -62,27 +62,28 @@ var separator = {
         title: 'All',
         hiddenOnCollapse: true
       }, {
-        href: '/admin',
+        href: '/' + this.routeDifferentiator(),
         title: 'Dashboard',
         icon: 'fa fa-download'
       }, {
-        href: '/admin/employeelist',
+        href: '/' + this.routeDifferentiator() + '/employeelist',
         title: 'Employee List',
-        icon: 'fas fa-users'
+        icon: 'fas fa-users',
+        hidden: this.showOnAdmin()
       }, {
         header: true,
         title: 'Usage',
         hiddenOnCollapse: true
       }, {
-        href: '/admin/calendar',
+        href: '/' + this.routeDifferentiator() + '/calendar',
         title: 'Calendar',
         icon: 'fa fa-calendar'
       }, {
-        href: '/admin/cloud',
+        href: '/' + this.routeDifferentiator() + '/cloud',
         title: 'Cloud',
         icon: 'fa fa-cloud'
       }, {
-        href: '/styling',
+        href: '/' + this.routeDifferentiator() + '/notification',
         title: 'Notification',
         icon: 'fas fa-bell'
       }, {
@@ -117,6 +118,20 @@ var separator = {
       console.log('onItemClick'); // console.log(event)
       // console.log(item)
       // console.log(node)
+    },
+    showOnAdmin: function showOnAdmin() {
+      if (this.$router.currentRoute.matched[0].name === 'admin') {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    routeDifferentiator: function routeDifferentiator(routeName) {
+      if (this.$router.currentRoute.matched[0].name === 'admin') {
+        return 'admin';
+      } else {
+        return 'user';
+      }
     },
     onResize: function onResize() {
       if (window.innerWidth <= 767) {

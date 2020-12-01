@@ -27,3 +27,4 @@ Route::get('/article/edit/{id}', 'ArticleController@getArticle');
 Route::get('/article/show/{id}', 'ArticleController@getArticle');
 Route::put('/article/update/{id}', 'ArticleController@update');
 Route::delete('/article/delete/{id}', 'ArticleController@delete'); 
+Route::get('/kirim-email', 'EmailController@index');

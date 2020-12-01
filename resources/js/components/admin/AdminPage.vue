@@ -51,14 +51,15 @@ export default {
           hiddenOnCollapse: true
         },
         {
-          href: '/admin',
+          href: '/'+ this.routeDifferentiator(),
           title: 'Dashboard',
           icon: 'fa fa-download'
         },
         {
-          href: '/admin/employeelist',
+          href: '/'+ this.routeDifferentiator()+'/employeelist',
           title: 'Employee List',
-          icon: 'fas fa-users'
+          icon: 'fas fa-users',
+          hidden: this.showOnAdmin()
         },
         {
           header: true,
@@ -66,17 +67,19 @@ export default {
           hiddenOnCollapse: true
         },
         {
-          href: '/admin/calendar',
+          href: '/'+ this.routeDifferentiator()+'/calendar',
           title: 'Calendar',
           icon: 'fa fa-calendar'
         },
         {
-          href: '/admin/cloud',
+          href: '/'+ this.routeDifferentiator()+'/cloud',
           title: 'Cloud',
-          icon: 'fa fa-cloud'
+          icon: 'fa fa-cloud',
+         
+          
         },
         {
-          href: '/styling',
+          href: '/'+ this.routeDifferentiator()+'/notification',
           title: 'Notification',
           icon: 'fas fa-bell'
         },
@@ -119,7 +122,21 @@ export default {
       // console.log(item)
       // console.log(node)
     },
-   
+    showOnAdmin: function(){
+      if( this.$router.currentRoute.matched[0].name === 'admin'){
+        return false;
+      }else{
+        return true;
+      }
+    },
+    routeDifferentiator: function (routeName){
+       if( this.$router.currentRoute.matched[0].name === 'admin'){
+        return 'admin';
+      }else{
+        return 'user';
+      }
+    },
+
     onResize () {
       if (window.innerWidth <= 767) {
         this.isOnMobile = true

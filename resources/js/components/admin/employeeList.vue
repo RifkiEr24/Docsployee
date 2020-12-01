@@ -7,7 +7,27 @@
                 <button class="btn btn-primary rounded-circle" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
             </div>
         </div>
-        <ul class="list-group">
+        <table class="table table-light mt-4 border-rounded">
+    <thead class="bg-primary border-rounded">
+    <tr class="text-white">
+      <th scope="col">NIP</th>
+      <th scope="col">Name</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="(account) in accounts" :key="account.id">
+      <th scope="row">{{account.id}}</th>
+      <td><img src="https://thispersondoesnotexist.com/image" class="avatar-profile rounded-circle mt-1 mr-3"
+                        alt="">  {{account.nama}}</td>
+      <td> <span class="badge badge-primary">Online</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+        <!-- <ul class="list-group">
             <li v-for="(account) in accounts" :key="account.id" class="list-group-item d-flex justify-content-between align-items-center shadow-sm">
                 <div class="d-flex">
                     <img src="https://thispersondoesnotexist.com/image" class="avatar-profile rounded-circle mt-1"
@@ -22,12 +42,17 @@
                     <span class="badge badge-danger badge-pill icon ml-2"><i class="fas fa-user-times"></i></span>
                 </div>
             </li>
-        </ul>
+        </ul> -->
         
     </div>
 
 </template>
 <style scoped>
+    th:first-child { -webkit-border-radius:35px 0 0 0; border-top:none}
+th:last-child{ -webkit-border-radius:0 35px 0 0;border-top:none }
+th{
+    border-top: none;
+}
     p {
         margin: 0;
     }
