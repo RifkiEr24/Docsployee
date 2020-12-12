@@ -23,55 +23,91 @@ import ArticleIndex from './components/ArticleIndex.vue';
 import ArticleCreate from './components/ArticleCreate.vue';
 import ArticleShow from './components/ArticleShow.vue';
 import ArticleEdit from './components/ArticleEdit.vue';
-import Home from './components/Home.vue'
-import CreateAccount from './components/CreateAccount.vue';
+import Login from './components/Login.vue'
+import Register from './components/Register.vue';
+import AdminPage from './components/admin/AdminPage.vue'
+import ExampleComponent from './components/ExampleComponent.vue'
+import NotFound from './components/NotFound.vue'
 import '@fortawesome/fontawesome-free/js/all.js';
 
-
+// Vue.component(
+//   'example-component',
+//   require('./components/ExampleComponent.vue').default
+// );
+Vue.component('example-component', require('./components/ExampleComponent.vue').default
+);
+  // {
+  //   name: 'login',
+  //   path: '/login',
+  //   component:  () => import("./components/ExampleComponent.vue")
+  // },
 const routes = [
   {
-      name: 'home',
+    path: '*',
+    component: NotFound
+},
+  {
+      name: 'login',
       path: '/',
-      component: Home
+      component: Login
   },
   {
-      name: 'create',
-      path: '/account/create',
-      component: () => import("./components/CreateAccount.vue")
+      name: 'register',
+      path: '/register',
+      component: Register
   },
   {
-      name: 'admin',
       path: '/admin',
-      component: () => import("./components/admin/AdminPage.vue"),
+      component: AdminPage,
+     
       children:[
           {
+            name: 'admin',
             path:'',
             component: () => import("./components/admin/Dashboard.vue")
           },
           {
-            path:'/admin/employeelist',
+            name: 'employeelist',
+            path:'employeelist',
             component: () => import("./components/admin/employeeList.vue")
           },
           {
-            path:'/admin/calendar',
+            name: 'edit',
+            path: 'edit/:id',
+            component: ArticleEdit
+          },
+          {
+            name:'create',
+            path:'createaccount',
+            component:ArticleCreate
+          },
+          {
+            path:'calendar',
             component: () => import("./components/admin/Calendar.vue")
           },
           {
-            path:'/admin/cloud',
+            path:'cloud',
             component: () => import("./components/admin/Cloud.vue")
           },
           {
-            path: '/admin/notification',
+            path: 'notification',
             component: () => import("./components/admin/Notification.vue")
           }
       ]
   },
   {
-    name: 'user',
     path: '/user',
-    component: () => import("./components/admin/AdminPage.vue"),
+    component: AdminPage,
+    beforeEnter: (to, form, next) =>{
+      axios.get('/api/athenticated').then(()=>{
+          next()
+      }).catch(()=>{
+          return next({ name: 'login'})
+      })
+  },
     children:[
         {
+          name: 'user',
           path:'',
           component: () => import("./components/admin/Dashboard.vue")
         },
@@ -110,6 +146,18 @@ const routes = [
   path: '/article/edit/:id',
   component: ArticleEdit
 },
+{
+  name: 'example',
+  path: '/example',
+  component: ExampleComponent,
+  beforeEnter: (to, form, next) =>{
+    axios.get('/api/athenticated').then(()=>{
+        next()
+    }).catch(()=>{
+        return next({ name: 'login'})
+    })
+}
+}
 ];
  
 const router = new VueRouter({ mode: 'history', routes: routes});

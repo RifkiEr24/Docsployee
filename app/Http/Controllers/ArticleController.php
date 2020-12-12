@@ -35,7 +35,7 @@ class ArticleController extends Controller
  
     public function getArticle($id) // for edit and show
     {
-        $article = \App\Article::find($id);
+        $article = \App\User::find($id);
  
         return $article->toJson();
     }
@@ -43,13 +43,13 @@ class ArticleController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-          'title' => 'required',
-          'content' => 'required',
+          'email' => 'required',
+          'name' => 'required',
         ]);
  
-        $article = \App\Article::find($id);
-        $article->title = $validatedData['title'];
-        $article->content = $validatedData['content'];
+        $article = \App\User::find($id);
+        $article->email = $validatedData['email'];
+        $article->name = $validatedData['name'];
         $article->save();
  
         $msg = [
@@ -62,7 +62,7 @@ class ArticleController extends Controller
  
     public function delete($id)
     {
-        $article = \App\Article::find($id);
+        $article = \App\User::find($id);
         if(!empty($article)){
             $article->delete();
             $msg = [

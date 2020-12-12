@@ -21,10 +21,19 @@ export default {
                          right: 'dayGridMonth,timeGridWeek,timeGridDay'
                      },
                      select: this.addEventClick,
-                     events: 'https://fullcalendar.io/demo-events.json',
+                     events: [],
                      selectable: true
-                 }
+                 },
+                 eventlist:[]
              }
+         },
+         created() {
+        let uri = '/api/event';
+        this.axios.get(uri).then(response => {
+            console.log(response);
+            this.calendarOptions.events = response.data;
+
+        });
          },
          methods: {
              addEventClick: function (info) {

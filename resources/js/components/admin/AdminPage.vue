@@ -44,6 +44,7 @@ export default {
     },
      data () {
     return {
+      user: null,
       menu: [
         {
           header: true,
@@ -92,7 +93,6 @@ export default {
           hiddenOnCollapse: true
         },
         {
-          href: '/',
           title: 'Log Out',
           icon: 'fa fa-sign-out-alt',
         },
@@ -109,28 +109,31 @@ export default {
     }
   },
   methods: {
+    logout(){
+            axios.post('/api/logout').then(()=>{
+                this.$router.push({ name: "login"})
+            })
+        },
     CheckIfRoute: function (routeName){
-      return this.$route.name === routeName;
+      return this.$route.matched[0].path.substr(1) === routeName;
     },
     onToggleCollapse: function (collapsed) {
       console.log(collapsed)
       this.collapsed = collapsed
     },
     onItemClick: function (event, item, node) {
-      console.log('onItemClick')
-      // console.log(event)
-      // console.log(item)
-      // console.log(node)
+   
     },
     showOnAdmin: function(){
-      if( this.$router.currentRoute.matched[0].name === 'admin'){
+      if(this.$route.matched[0].path.substr(1) === 'admin'){
         return false;
       }else{
         return true;
       }
     },
     routeDifferentiator: function (routeName){
-       if( this.$router.currentRoute.matched[0].name === 'admin'){
+      console.log(this.$route.matched[0].path.substr(1) );
+       if( this.$route.matched[0].path.substr(1) === 'admin'){
         return 'admin';
       }else{
         return 'user';
@@ -150,6 +153,9 @@ export default {
   mounted () {
     this.onResize()
     window.addEventListener('resize', this.onResize)
+     axios.get('/api/user').then((res)=>{
+            this.user = res.data
+        })
   },
 }
 </script>

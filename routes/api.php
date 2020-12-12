@@ -15,16 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+
+
 Route::get('/account','AccountController@index');
 Route::post('/account/store', 'AccountController@store');
-Route::post('/account/search','AccountController@search');
+Route::get('/account/search','AccountController@search');
+Route::get('/account/edit/{id}', 'ArticleController@getArticle');
+Route::put('/account/update/{id}', 'ArticleController@update');
+Route::delete('/account/delete/{id}', 'ArticleController@delete'); 
+Route::get('/event','EventController@index');
 Route::get('/articles', 'ArticleController@index');
 Route::post('/article/store', 'ArticleController@store');
-Route::get('/article/edit/{id}', 'ArticleController@getArticle');
 Route::get('/article/show/{id}', 'ArticleController@getArticle');
 Route::put('/article/update/{id}', 'ArticleController@update');
 Route::delete('/article/delete/{id}', 'ArticleController@delete'); 
 Route::get('/kirim-email', 'EmailController@index');
+Route::post('register', 'RegisterController@register');
+Route::post('login', 'LoginController@login');
+Route::post('logout', 'LoginController@logout');

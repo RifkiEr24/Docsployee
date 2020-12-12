@@ -14,12 +14,12 @@
  
                         <form @submit.prevent="updateArticle">
                             <div class='form-group'>
-                                <label htmlFor='title'>Title</label>
-                                <input type="text" class="form-control" id="title" v-model="article.title">
+                                <label htmlFor='title'>email</label>
+                                <input type="email" class="form-control" id="title" v-model="account.email">
                             </div>
                             <div class='form-group'>
                                 <label htmlFor='content'>Content</label>
-                                <textarea type="text" class="form-control" id="content" v-model="article.content" rows="5"></textarea>
+                                <input type="name" class="form-control" id="content" v-model="account.name">
                             </div>
                             <div class='form-group'>
                                 <router-link :to="{ name: 'home' }" class="btn btn-secondary">Back</router-link>
@@ -38,22 +38,23 @@
     export default {
         data(){
         return {
-            article:{},
+            account:{},
             errors: [],
             title: null,
             content: null,
         }
     },
     created() {
-        let uri = `/api/article/edit/${this.$route.params.id}`;
+        let uri = `/api/account/edit/${this.$route.params.id}`;
         this.axios.get(uri).then((response) => {
-            this.article = response.data;
+            this.account = response.data;
+            console.log(response)
         });
     },
     methods: {
         updateArticle(e){
              
-            if (this.$data.article.title != null && this.$data.article.content != null) {
+            if (this.$data.account.name != null && this.$data.account.email != null) {
                  
                 this.$swal.fire({
                     title: 'Success',
@@ -61,9 +62,9 @@
                     icon: 'success',
                     timer: 1000
                 });
-                let uri = `/api/article/update/${this.$route.params.id}`;
-                this.axios.put(uri, this.article).then((response) => {
-                    this.$router.push({name: 'home'});
+                let uri = `/api/account/update/${this.$route.params.id}`;
+                this.axios.put(uri, this.account).then((response) => {
+                    this.$router.push({name: 'employeelist'});
                 });
                 return true;
             }
