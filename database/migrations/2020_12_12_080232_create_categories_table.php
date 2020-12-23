@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddHakaksesToAccountsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddHakaksesToAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::table('accounts', function (Blueprint $table) {
-            $table->string('hak_akses');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id('id_category');
+            $table->string('category_name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddHakaksesToAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::table('accounts', function (Blueprint $table) {
-            $table->dropColumn('hak_akses');
-        });
+        Schema::dropIfExists('categories');
     }
 }

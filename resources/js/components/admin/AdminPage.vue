@@ -1,6 +1,5 @@
 <template>
     <div
-
     id="demo"
     :class="[{'collapsed' : collapsed}, {'onmobile' : isOnMobile}]">
     <div class="demo">
@@ -32,11 +31,13 @@ const separator = {
 }
 import { SidebarMenu } from 'vue-sidebar-menu';
 import AdminNavbar from './AdminNavbar.vue';
+import Cloud from './Cloud.vue'
 export default {
     components:{
-        AdminNavbar
+        AdminNavbar,
+        Cloud
     },
-      props:{
+  props:{
     theme: {
       type: String,
       default: ''

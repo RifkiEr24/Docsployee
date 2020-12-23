@@ -43,16 +43,21 @@ export default {
     },
     methods:{
         loginUser(){
-             axios.post('/api/login', this.form).then((response) =>{
-                 console.log(response);
-                 this.$router.push({ name: response.data.role}); 
-             }).catch((error) =>{
-        this.$swal.fire({
-  icon: 'error',
-  title: 'Login Failed',
-  text: error,
-})
-            })
+            axios.get('/sanctum/csrf-cookie').then(response => {
+                console.log(response);
+                    axios.post('/api/login', this.form).then((response) =>{
+                                    console.log(response);
+                                    this.$router.push({ name: response.data.role}); 
+                                }).catch((error) =>{
+                            this.$swal.fire({
+                    icon: 'error',
+                    title: 'Login Failed',
+                    text: error,
+                    })
+                                })
+          });
+    
+            
          }
     }
 }

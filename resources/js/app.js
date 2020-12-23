@@ -47,9 +47,9 @@ const routes = [
     component: NotFound
 },
   {
+      path: '/' ,
+      component: Login,
       name: 'login',
-      path: '/',
-      component: Login
   },
   {
       name: 'register',
@@ -59,7 +59,13 @@ const routes = [
   {
       path: '/admin',
       component: AdminPage,
-     
+      beforeEnter: (to, from, next) =>{
+        axios.get('api/athenticated').then(()=>{
+            next()
+        }).catch(()=>{
+          return next({ name: 'login'})
+        })
+    },
       children:[
           {
             name: 'admin',
@@ -93,16 +99,17 @@ const routes = [
             path: 'notification',
             component: () => import("./components/admin/Notification.vue")
           }
-      ]
+      ],
+    
   },
   {
     path: '/user',
     component: AdminPage,
     beforeEnter: (to, form, next) =>{
-      axios.get('/api/athenticated').then(()=>{
+      axios.get('/api/athenticated').then((response)=>{
           next()
       }).catch(()=>{
-          return next({ name: 'login'})
+        return next({ name: 'login'})
       })
   },
     children:[
@@ -123,7 +130,7 @@ const routes = [
           path: '/user/notification',
           component: () => import("./components/admin/Notification.vue")
         },
-    ]
+    ],
 },
 
   {
@@ -154,7 +161,7 @@ const routes = [
     axios.get('/api/athenticated').then(()=>{
         next()
     }).catch(()=>{
-        return next({ name: 'login'})
+      console.log('error')
     })
 }
 }

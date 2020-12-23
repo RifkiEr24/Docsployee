@@ -14,10 +14,13 @@ class CreateDocumentsTable extends Migration
     public function up()
     {
         Schema::create('documents', function (Blueprint $table) {
-            $table->id();
-            $table->string('id_category');
+            $table->id('id_document');
+            $table->bigInteger('id_akun')->unsigned()->nullable()->index();
+            $table->foreign('id_akun')->references('id_akun')->on('user_details');
+            $table->bigInteger('id_category')->unsigned()->nullable()->index();
+            $table->foreign('id_category')->references('id_category')->on('categories');
             $table->string('file_name');
-            $table->double('size');
+            $table->float('size');
         });
     }
 

@@ -9,14 +9,25 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
+    
+    public function detail()
+    {
+    	return $this->hasOne('App\UserDetail');
+    }
+    public function event()
+    {
+    	return $this->hasMany('App\Event');
+    }
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    protected $primaryKey = 'id_akun';
+
     protected $fillable = [
-        'name', 'email', 'password'
+        'npwp','name', 'email', 'password'
     ];
 
     /**

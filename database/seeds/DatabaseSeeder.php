@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+    
+            factory(App\User::class, 10)->create()->each(function ($user) {
+                factory(App\UserDetail::class)->create(['id' => $user->id]);
+            });
+        
     }
 }

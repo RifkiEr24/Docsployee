@@ -1,6 +1,5 @@
 <?php
 
-use App\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,5 +31,15 @@ Route::put('/article/update/{id}', 'ArticleController@update');
 Route::delete('/article/delete/{id}', 'ArticleController@delete'); 
 Route::get('/kirim-email', 'EmailController@index');
 Route::post('register', 'RegisterController@register');
-Route::post('login', 'LoginController@login');
-Route::post('logout', 'LoginController@logout');
+Route::post('/login', 'LoginController@login');
+Route::post('/logout', 'LoginController@logout');
+Route::post('/uploadimg', 'DriveController@store');
+Route::get('/document', 'DriveController@index');
+
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
+Route::middleware('auth:sanctum')->get('/athenticated', function () {
+    return true;
+});
