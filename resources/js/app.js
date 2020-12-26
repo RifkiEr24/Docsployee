@@ -9,6 +9,7 @@ import App from './components/App.vue';
 import VueSweetalert2 from 'vue-sweetalert2'; 
 import VuePageTransition from "vue-page-transition";
 import VueSidebarMenu from 'vue-sidebar-menu'
+import SweetAlertIcons from 'vue-sweetalert-icons';
 
 // If you don't need the styles, do not connect
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -18,7 +19,8 @@ Vue.use(VueSidebarMenu)
 Vue.use(VuePageTransition);
 Vue.use(VueSweetalert2);
 Vue.use(VueAxios, axios);
- 
+Vue.use(SweetAlertIcons);
+
 import ArticleIndex from './components/ArticleIndex.vue';
 import ArticleCreate from './components/ArticleCreate.vue';
 import ArticleShow from './components/ArticleShow.vue';
@@ -70,7 +72,7 @@ const routes = [
           {
             name: 'admin',
             path:'',
-            component: () => import("./components/admin/Dashboard.vue")
+            component: () => import("./components/admin/DashboardAdmin.vue")
           },
           {
             name: 'employeelist',
@@ -116,7 +118,7 @@ const routes = [
         {
           name: 'user',
           path:'',
-          component: () => import("./components/admin/Dashboard.vue")
+          component: () => import("./components/admin/DashboardUser.vue")
         },
         {
           path:'/user/calendar',

@@ -40,6 +40,7 @@
         "vue-page-transition": "^0.2.2",
         "vue-router": "^3.4.3",
         "vue-sidebar-menu": "^4.7.1",
+        "vue-sweetalert-icons": "^4.3.0",
         "vue-sweetalert2": "^3.0.6"
     }
 }

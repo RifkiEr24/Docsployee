@@ -97,6 +97,7 @@ export default {
       return {
          accounts: [],
           results:[],
+          user:null,
         datacollection: { labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
           datasets: [
             {
@@ -147,7 +148,13 @@ export default {
         });
         },
   mounted () {
-   
+       axios.get('/api/user').then((res)=>{
+            this.user = res.data
+        }).then(()=>{
+           axios.get('/api/datacheck',{params:{iduser:this.user.id_akun}}).then((res)=>{
+            console.log(res);
+            })
+        })
   },
   methods: {
     fetch(){

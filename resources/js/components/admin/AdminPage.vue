@@ -5,7 +5,7 @@
     <div class="demo">
         <AdminNavbar/>
       <div class="container">
-        <vue-page-transition name="fade-in-up">
+        <vue-page-transition  name="fade-in-up">
         <router-view />
         </vue-page-transition>
       </div>
@@ -45,7 +45,6 @@ export default {
     },
      data () {
     return {
-      user: null,
       menu: [
         {
           header: true,
@@ -154,9 +153,6 @@ export default {
   mounted () {
     this.onResize()
     window.addEventListener('resize', this.onResize)
-     axios.get('/api/user').then((res)=>{
-            this.user = res.data
-        })
   },
 }
 </script>

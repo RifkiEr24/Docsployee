@@ -30,7 +30,6 @@ class DriveController extends Controller
         Document::create([
         'id_akun' => $iduser,
         'id_category' => $defaultnum,
-        'file_name' => $imagename,
-        'size' => $imagesize]);
+        'file_name' => $imagename]);
     }
 }
