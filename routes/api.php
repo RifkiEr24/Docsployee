@@ -35,8 +35,10 @@ Route::post('/login', 'LoginController@login');
 Route::post('/logout', 'LoginController@logout');
 Route::post('/uploadimg', 'DriveController@store');
 Route::get('/document', 'DriveController@index');
+Route::get('/category', 'CategoryController@index');
 Route::get('/datacheck', 'CategoryController@missingdata');
 Route::get('/category/search', 'CategoryController@search');
+Route::get('/category/detail/{id}', 'CategoryController@detail');
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

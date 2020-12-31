@@ -1,8 +1,11 @@
 <template>
-<div>
+<div ref="html2Pdf">
+     <section slot="pdf-content">
+            <p>aaaa</p>
+        </section>
     <div class="row">
         <div class="col-md-3">
-              <button class="btn btn-success mt-3">Export PDF</button>
+              <button class="btn btn-success mt-3" @click="exportToPDF()">Export PDF</button>
         </div>
         <div class="col-md-3">
              <router-link :to="{ name: 'create' }">
@@ -29,13 +32,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr v-for="(user) in accounts" :key="user.id" >
+    <tr v-for="(user) in accounts" :key="user.id_akun" >
       <th scope="row">{{user.id}}</th>
       <td><img src="https://thispersondoesnotexist.com/image" class="avatar-profile rounded-circle mt-1 mr-3"
                         alt="">  {{user.name}}</td>
       <td> <span class="badge badge-primary">{{user.email}}</span></td>
       <td>
-               <router-link :to="{name: 'edit', params: { id: user.id }}">
+               <router-link :to="{name: 'edit', params: { id: user.id_akun }}">
           <span class="fa-stack  fa-size fa-lg">
                 <i class="fa fa-square text-primary fa-stack-2x"></i>
                 <i class="fas fa-user-edit fa-stack-1x text-white"></i>
@@ -111,6 +114,7 @@ th{
     }
 </style>
 <script>
+import VueHtml2pdf from 'vue-html2pdf'
 export default {
     data() {
         return {
@@ -133,6 +137,9 @@ export default {
           }
       },
       methods:{
+          exportToPDF () {
+            this.$refs.html2Pdf.generatePdf()
+			},
           search(){
               axios.get('/api/account/search', { params: { keywords: this.keywords } })
                 .then(response => this.accounts = response.data)
@@ -168,7 +175,10 @@ export default {
                 }
             })
         }
-      }
+      },
+       components: {
+        VueHtml2pdf
+    }
    
 }
 </script>

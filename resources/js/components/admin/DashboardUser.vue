@@ -33,7 +33,7 @@
     <div class="row mt-5 mb-5">
          <div class="col-md-8">
             <div class="bg-white p-4 border-rounded">
-                <div v-if="missingdata != null">
+                <div v-if="missingdata.length != 0">
                       <h4 class="text-center font-weight-bold">Ayo Lengkapi Akunmu</h4>
                       <sweetalert-icon icon="warning" color="#db2a3b"/>
                     <p class="font-weight-bold text-center">Data Akun Anda masih belum lengkap, Ayo lengkapi sekarang</p>
@@ -43,7 +43,7 @@
                 </div>
                 <div v-else>
                    <h4 class="text-center font-weight-bold">Data Akunmu sudah lengkap</h4>
-                      <sweetalert-icon icon="success" color="#db2a3b"/>
+                      <sweetalert-icon icon="success"/>
                 </div>
             </div>
             <div class="row mt-4">
@@ -170,14 +170,13 @@ export default {
             }).then(()=>{
                this.datacheck.forEach((category,index) => {
                  i++;
-                 console.log(i);
                     if(category.length==0){
                      axios.get('/api/category/search',{params:{idcategory:i}}).then((res)=>{
                          this.missingdata = this.missingdata.concat(res.data);
-                          console.log(this.missingdata)
                       })
                     }
-                    
+                                              console.log(this.missingdata)
+
                 });
                 console.log(i);
                 

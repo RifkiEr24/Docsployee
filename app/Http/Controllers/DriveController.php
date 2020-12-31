@@ -25,11 +25,11 @@ class DriveController extends Controller
         $imagename = $iduser.'.'.$request->image->getClientOriginalName();
         $imagesize=$request->image->getSize();
         // $contents = file_get_contents($request->photo->path());
-        $defaultnum= 1;
-        $path = Storage::putFileAs('public/images/'.$iduser, $request->image,$imagename);
+        $category= $request->idcategory;
+        $path = Storage::putFileAs('public/images/'.$request->name, $request->image,$imagename);
         Document::create([
         'id_akun' => $iduser,
-        'id_category' => $defaultnum,
+        'id_category' => $category,
         'file_name' => $imagename]);
     }
 }

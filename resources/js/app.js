@@ -63,7 +63,20 @@ const routes = [
       component: AdminPage,
       beforeEnter: (to, from, next) =>{
         axios.get('api/athenticated').then(()=>{
-            next()
+          axios.get('api/user').then((res)=>{
+            if(res.data.role == 'user'){
+             Vue.swal.fire({
+                icon: 'error',
+                title: 'Access Denied',
+                text: 'Maaf, hanya admin yang bisa mengakses halaman ini',
+              }).then(()=>{
+                next({ name: 'user'})
+              })
+            }else{
+              next()
+
+            }
+          })
         }).catch(()=>{
           return next({ name: 'login'})
         })
@@ -127,6 +140,11 @@ const routes = [
         {
           path:'/user/cloud',
           component: () => import("./components/admin/Cloud.vue")
+        },
+        {
+          name: 'categorydetail',
+          path:'/user/cloud/detail/:id',
+          component: () => import("./components/admin/CategoryDetail.vue")
         },
         {
           path: '/user/notification',

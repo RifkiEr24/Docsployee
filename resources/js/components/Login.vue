@@ -44,10 +44,16 @@ export default {
     methods:{
         loginUser(){
             axios.get('/sanctum/csrf-cookie').then(response => {
-                console.log(response);
+          this.$swal.showLoading();
                     axios.post('/api/login', this.form).then((response) =>{
-                                    console.log(response);
-                                    this.$router.push({ name: response.data.role}); 
+                        this.$swal.close();
+                                  this.$swal.fire({
+                                    icon: 'success',
+                                    title: 'Oops...',
+                                    text: 'Login Success',
+                                    }).then(()=>{
+                                        this.$router.push({ name: response.data.role}); 
+                                    })
                                 }).catch((error) =>{
                             this.$swal.fire({
                     icon: 'error',

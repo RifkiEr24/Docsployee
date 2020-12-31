@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
+
+    public function index()
+    {
+        $category = \App\Category::all();
+        return $category->toJson();
+    }
     public function missingdata(Request $request){
         $iduser = $request->validate([
             'iduser' => ['required', 'integer'],
@@ -31,5 +37,16 @@ class CategoryController extends Controller
     $posts = DB::table('categories')->where('id_category',$idcategory)-> get();
 
     return response()->json($posts);
+    }
+    
+    public function detail(Request $request, $id)
+	{
+        $iduser = $request->validate([
+            'iduser' => ['required', 'integer'],
+        ]);
+        $idcategory = $id;
+    $data= DB::table('documents')->where('id_akun', $iduser)->where('id_category', $idcategory)->get();  
+
+    return response()->json($data);
 	}
 }
