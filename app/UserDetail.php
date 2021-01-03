@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserDetail extends Model
 {
+    protected $primaryKey = 'id_akun';
+
     public function user() 
     { 
         return $this->belongsTo('App\User'); 

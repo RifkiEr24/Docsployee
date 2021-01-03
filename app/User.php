@@ -12,7 +12,7 @@ class User extends Authenticatable
     
     public function detail()
     {
-    	return $this->hasOne('App\UserDetail');
+    	return $this->hasOne('App\UserDetail','id_akun');
     }
     public function event()
     {

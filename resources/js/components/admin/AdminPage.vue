@@ -85,6 +85,11 @@ export default {
           icon: 'fas fa-bell'
         },
         {
+          href: '/'+ this.routeDifferentiator()+'/accountedit',
+          title: 'Edit Profile',
+          icon: 'fa fa-user-edit'
+        },
+        {
           component: separator
         },
         {

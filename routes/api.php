@@ -18,10 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/account','AccountController@index');
+Route::get('/userall','AccountController@indexall');
 Route::post('/account/store', 'AccountController@store');
+Route::get('/account/export', 'AccountController@export');
 Route::get('/account/search','AccountController@search');
 Route::get('/account/edit/{id}', 'ArticleController@getArticle');
 Route::put('/account/update/{id}', 'ArticleController@update');
+Route::put('/account/updateall/', 'AccountController@update');
 Route::delete('/account/delete/{id}', 'ArticleController@delete'); 
 Route::get('/event','EventController@index');
 Route::get('/articles', 'ArticleController@index');

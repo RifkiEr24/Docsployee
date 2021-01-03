@@ -1,76 +1,61 @@
 <template>
-<div ref="html2Pdf">
-     <section slot="pdf-content">
-            <p>aaaa</p>
-        </section>
+<div ref="content">
     <div class="row">
         <div class="col-md-3">
-              <button class="btn btn-success mt-3" @click="exportToPDF()">Export PDF</button>
+            <a href="/api/account/export/" type="button">
+            <button class="btn btn-success mt-3" @click="exportToPDF()">Export PDF</button>
+            </a>
         </div>
         <div class="col-md-3">
-             <router-link :to="{ name: 'create' }">
-             <button class="btn btn-primary mt-3 float-right">Add Account</button>
-             </router-link>
+            <router-link :to="{ name: 'create' }">
+                <button class="btn btn-primary mt-3 float-right">Add Account</button>
+            </router-link>
         </div>
         <div class="col-md-6">
             <div class="input-group search ml-auto mt-3">
-            <input type="text" v-model.lazy="keywords"  class=" rounded-pill form-control" placeholder="Employee Name" aria-label="Recipient's username"
-                aria-describedby="button-addon2">
-            <div class="input-group-append ml-2">
-                <button class="btn btn-primary rounded-circle" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+                <input type="text" v-model.lazy="keywords" class=" rounded-pill form-control"
+                    placeholder="Employee Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append ml-2">
+                    <button class="btn btn-primary rounded-circle" type="submit" id="button-addon2"><i
+                            class="fas fa-search"></i></button>
+                </div>
             </div>
         </div>
-        </div>        
     </div>
-        <table class="table table-light mt-4 border-rounded" >
-    <thead class="bg-primary border-rounded">
-    <tr class="text-white">
-      <th scope="col">NIP</th>
-      <th scope="col">Name</th>
-      <th scope="col">Role</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="(user) in accounts" :key="user.id_akun" >
-      <th scope="row">{{user.id}}</th>
-      <td><img src="https://thispersondoesnotexist.com/image" class="avatar-profile rounded-circle mt-1 mr-3"
-                        alt="">  {{user.name}}</td>
-      <td> <span class="badge badge-primary">{{user.email}}</span></td>
-      <td>
-               <router-link :to="{name: 'edit', params: { id: user.id_akun }}">
-          <span class="fa-stack  fa-size fa-lg">
-                <i class="fa fa-square text-primary fa-stack-2x"></i>
-                <i class="fas fa-user-edit fa-stack-1x text-white"></i>
-                </span>
-               </router-link>
-                 <span class="fa-stack  fa-size fa-lg" @click = "deletePost(user.id)">
-                <i class="fa fa-square text-danger fa-stack-2x"></i>
-                <i class="fas fa-user-minus fa-stack-1x text-white"></i>
-                </span>
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <table class="table table-light mt-4 border-rounded">
+        <thead class="bg-primary border-rounded">
+            <tr class="text-white">
+                <th scope="col">NIP</th>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(user) in accounts" :key="user.id_akun">
+                <th scope="row">{{user.id}}</th>
+    
+                <td><img  :src="'/storage/images/Muhammad Rifki Erlangga/17.stik.jpg'" class="avatar-profile rounded-circle mt-1 mr-3"
+                        alt=""> {{user.name}}</td>
+                <td> <span class="badge badge-primary">{{user.email}}</span></td>
+                <td>
+                    <router-link :to="{name: 'edit', params: { id: user.id_akun }}">
+                        <span class="fa-stack  fa-size fa-lg">
+                            <i class="fa fa-square text-primary fa-stack-2x"></i>
+                            <i class="fas fa-user-edit fa-stack-1x text-white"></i>
+                        </span>
+                    </router-link>
+                    <span class="fa-stack  fa-size fa-lg" @click="deletePost(user.id)">
+                        <i class="fa fa-square text-danger fa-stack-2x"></i>
+                        <i class="fas fa-user-minus fa-stack-1x text-white"></i>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-        <!-- <ul class="list-group">
-            <li v-for="(account) in accounts" :key="account.id" class="list-group-item d-flex justify-content-between align-items-center shadow-sm">
-                <div class="d-flex">
-                    <img src="https://thispersondoesnotexist.com/image" class="avatar-profile rounded-circle mt-1"
-                        alt="">
-                    <div class="identity ml-2">
-                        <p class="name">{{account.nama}}</p>
-                        <p class="otority">Admin</p>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <span class="badge badge-primary badge-pill icon"><i class=" fas fa-user-edit"></i></span>
-                    <span class="badge badge-danger badge-pill icon ml-2"><i class="fas fa-user-times"></i></span>
-                </div>
-            </li>
-        </ul> -->
-        
-    </div>
+
+</div>
 
 </template>
 <style scoped>
@@ -114,7 +99,10 @@ th{
     }
 </style>
 <script>
-import VueHtml2pdf from 'vue-html2pdf'
+import jspdf, { jsPDF } from 'jspdf';
+import html2canvas from "html2canvas"
+import domtoimage from "dom-to-image";
+
 export default {
     data() {
         return {
@@ -138,7 +126,15 @@ export default {
       },
       methods:{
           exportToPDF () {
-            this.$refs.html2Pdf.generatePdf()
+                         console.log('a')
+    //    html2canvas(this.$refs.content,{scale: 2}).then(function(canvas) {
+    //             var img = canvas.toDataURL('image/png');
+    //             var doc = new jsPDF({
+    //                 orientation: "l",
+    //             });
+    //             doc.addImage(img, 'JPEG', 20, 20);
+    //             doc.save('test.pdf');
+    //         });
 			},
           search(){
               axios.get('/api/account/search', { params: { keywords: this.keywords } })
@@ -176,9 +172,7 @@ export default {
             })
         }
       },
-       components: {
-        VueHtml2pdf
-    }
+
    
 }
 </script>

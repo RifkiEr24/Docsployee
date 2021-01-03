@@ -74,7 +74,6 @@ const routes = [
               })
             }else{
               next()
-
             }
           })
         }).catch(()=>{
@@ -109,6 +108,10 @@ const routes = [
           {
             path:'cloud',
             component: () => import("./components/admin/Cloud.vue")
+          },
+          {
+            path:'accountedit',
+            component: () => import("./components/admin/AccountEdit.vue")
           },
           {
             path: 'notification',

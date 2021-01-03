@@ -7310,6 +7310,10 @@ var separator = {
         title: 'Notification',
         icon: 'fas fa-bell'
       }, {
+        href: '/' + this.routeDifferentiator() + '/accountedit',
+        title: 'Edit Profile',
+        icon: 'fa fa-user-edit'
+      }, {
         component: separator
       }, {
         header: true,
@@ -70327,13 +70331,13 @@ var routes = [{
     name: 'admin',
     path: '',
     component: function component() {
-      return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ./components/admin/DashboardAdmin.vue */ "./resources/js/components/admin/DashboardAdmin.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! ./components/admin/DashboardAdmin.vue */ "./resources/js/components/admin/DashboardAdmin.vue"));
     }
   }, {
     name: 'employeelist',
     path: 'employeelist',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./components/admin/employeeList.vue */ "./resources/js/components/admin/employeeList.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(5), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ./components/admin/employeeList.vue */ "./resources/js/components/admin/employeeList.vue"));
     }
   }, {
     name: 'edit',
@@ -70352,6 +70356,11 @@ var routes = [{
     path: 'cloud',
     component: function component() {
       return Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./components/admin/Cloud.vue */ "./resources/js/components/admin/Cloud.vue"));
+    }
+  }, {
+    path: 'accountedit',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./components/admin/AccountEdit.vue */ "./resources/js/components/admin/AccountEdit.vue"));
     }
   }, {
     path: 'notification',
@@ -70375,7 +70384,7 @@ var routes = [{
     name: 'user',
     path: '',
     component: function component() {
-      return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! ./components/admin/DashboardUser.vue */ "./resources/js/components/admin/DashboardUser.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! ./components/admin/DashboardUser.vue */ "./resources/js/components/admin/DashboardUser.vue"));
     }
   }, {
     path: '/user/calendar',
@@ -70391,7 +70400,7 @@ var routes = [{
     name: 'categorydetail',
     path: '/user/cloud/detail/:id',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./components/admin/CategoryDetail.vue */ "./resources/js/components/admin/CategoryDetail.vue"));
+      return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./components/admin/CategoryDetail.vue */ "./resources/js/components/admin/CategoryDetail.vue"));
     }
   }, {
     path: '/user/notification',
