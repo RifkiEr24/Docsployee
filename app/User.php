@@ -16,9 +16,12 @@ class User extends Authenticatable
     }
     public function event()
     {
-    	return $this->hasMany('App\Event');
+    	return $this->hasMany('App\Event','id_akun');
     }
-
+    public function document()
+    {
+    	return $this->hasMany('App\Document','id_akun');
+    }
     /**
      * The attributes that are mass assignable.
      *

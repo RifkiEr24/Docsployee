@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Category;
 
 class CreateCategoriesTable extends Migration
 {
@@ -18,6 +19,35 @@ class CreateCategoriesTable extends Migration
             $table->string('category_name');
             $table->timestamps();
         });
+        Category::create(
+            [
+                'category_name' => 'KTP',
+            ]
+        );
+        Category::create(
+            [
+                'category_name' => 'KK',
+            ],
+        );
+        Category::create(
+            [
+                'category_name' => 'Akte Kelahiran',
+            ],
+        );
+        Category::create(
+            [
+                'category_name' => 'Pas Foto',
+            ],
+        );
+        Category::create(
+            [
+                'category_name' => 'Kartu Pegawai',
+            ],
+        );
+      
+       
+      
+       
     }
 
     /**

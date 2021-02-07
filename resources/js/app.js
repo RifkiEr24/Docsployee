@@ -62,7 +62,8 @@ const routes = [
       path: '/admin',
       component: AdminPage,
       beforeEnter: (to, from, next) =>{
-        axios.get('api/athenticated').then(()=>{
+        axios.get('/api/athenticated').then((res)=>{
+          console.log(res);
           axios.get('api/user').then((res)=>{
             if(res.data.role == 'user'){
              Vue.swal.fire({
@@ -97,17 +98,37 @@ const routes = [
             component: ArticleEdit
           },
           {
-            name:'create',
+            name:'createaccount',
             path:'createaccount',
-            component:ArticleCreate
+            component: () => import("./components/Register.vue")
           },
           {
-            path:'calendar',
+            path:'event',
             component: () => import("./components/admin/Calendar.vue")
           },
           {
+            path:'eventdetail/:id',
+            component: () => import("./components/admin/EventDetail.vue")
+          },
+          {
+            name:'admincloud',
             path:'cloud',
             component: () => import("./components/admin/Cloud.vue")
+          },
+          {
+            name: 'admincategorydetail',
+            path:'/admin/cloud/detail/:id',
+            component: () => import("./components/admin/CategoryDetail.vue")
+          },
+          {
+            name: 'admineditcloud',
+            path:'/admin/cloud/:id',
+            component: () => import("./components/admin/Cloud.vue")
+          },
+          {
+            name: 'admineditcategory',
+            path:'/admin/cloud/detail/:categoryname/:id',
+            component: () => import("./components/admin/CategoryDetail.vue")
           },
           {
             path:'accountedit',
@@ -123,13 +144,6 @@ const routes = [
   {
     path: '/user',
     component: AdminPage,
-    beforeEnter: (to, form, next) =>{
-      axios.get('/api/athenticated').then((response)=>{
-          next()
-      }).catch(()=>{
-        return next({ name: 'login'})
-      })
-  },
     children:[
         {
           name: 'user',
@@ -137,15 +151,17 @@ const routes = [
           component: () => import("./components/admin/DashboardUser.vue")
         },
         {
-          path:'/user/calendar',
+          name: 'usercalendar',
+          path:'/user/event',
           component: () => import("./components/admin/Calendar.vue")
         },
         {
+          name: 'usercloud',
           path:'/user/cloud',
           component: () => import("./components/admin/Cloud.vue")
         },
         {
-          name: 'categorydetail',
+          name: 'usercategorydetail',
           path:'/user/cloud/detail/:id',
           component: () => import("./components/admin/CategoryDetail.vue")
         },
@@ -153,7 +169,32 @@ const routes = [
           path: '/user/notification',
           component: () => import("./components/admin/Notification.vue")
         },
+        {
+          name: 'useraccountedit',
+          path:'/user/accountedit',
+          component: () => import("./components/admin/AccountEdit.vue")
+        },
     ],
+    beforeEnter: (to, form, next) =>{
+      axios.get('/api/athenticated').then((response)=>{
+        axios.get('/api/user').then((res)=>{
+          console.log(res);
+          if(res.data.role == 'admin'){
+           Vue.swal.fire({
+              icon: 'error',
+              title: 'Access Denied',
+              text: 'Maaf, hanya user yang bisa mengakses halaman ini',
+            }).then(()=>{
+              next({ name: 'admin'})
+            })
+          }else{
+            next()
+          }
+        })
+      }).catch(()=>{
+        return next({ name: 'login'})
+      })
+  }
 },
 
   {

@@ -9,11 +9,6 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.es.min.js");
-/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! html2canvas */ "./node_modules/html2canvas/dist/html2canvas.js");
-/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(html2canvas__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var dom_to_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dom-to-image */ "./node_modules/dom-to-image/src/dom-to-image.js");
-/* harmony import */ var dom_to_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dom_to_image__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -114,13 +109,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
-
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["accountuser", "session"],
   data: function data() {
     return {
-      accounts: [],
+      usersession: this.$props.session,
+      accounts: this.$props.accountuser,
       results: [],
       keywords: null
     };
@@ -128,9 +125,9 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    var uri = '/api/account';
-    this.axios.get(uri).then(function (response) {
-      console.log(response);
+    console.log(this.usersession);
+    var uriaccount = '/api/account';
+    this.axios.get(uriaccount).then(function (response) {
       _this.accounts = response.data;
     });
   },
@@ -141,14 +138,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     exportToPDF: function exportToPDF() {
-      console.log('a'); //    html2canvas(this.$refs.content,{scale: 2}).then(function(canvas) {
-      //             var img = canvas.toDataURL('image/png');
-      //             var doc = new jsPDF({
-      //                 orientation: "l",
-      //             });
-      //             doc.addImage(img, 'JPEG', 20, 20);
-      //             doc.save('test.pdf');
-      //         });
+      console.log('a');
     },
     search: function search() {
       var _this2 = this;
@@ -165,35 +155,43 @@ __webpack_require__.r(__webpack_exports__);
     deletePost: function deletePost(id) {
       var _this3 = this;
 
-      this.$swal.fire({
-        title: 'Apakah kamu yakin?',
-        text: "Jika kamu hapus, maka data tidak akan kembali lagi.",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Hapus Deh',
-        cancelButtonText: 'Nggak Jadi'
-      }).then(function (result) {
-        if (result.value) {
-          _this3.$swal.fire({
-            title: 'Success!',
-            text: 'Article deleted successfully',
-            icon: 'success',
-            timer: 1000
-          });
+      if (this.usersession.id_akun === id) {
+        this.$swal.fire({
+          title: 'Error',
+          text: "Anda tidak dapat menghapus data diri sendiri",
+          icon: 'warning'
+        });
+      } else {
+        this.$swal.fire({
+          title: 'Apakah kamu yakin?',
+          text: "Jika kamu hapus, maka data tidak akan kembali lagi.",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Hapus Deh',
+          cancelButtonText: 'Nggak Jadi'
+        }).then(function (result) {
+          if (result.value) {
+            _this3.$swal.fire({
+              title: 'Success!',
+              text: 'Akun Berhasil Dihapus',
+              icon: 'success',
+              timer: 1000
+            });
 
-          var uri = "api/account/delete/".concat(id);
+            var uri = "/api/account/delete/".concat(id);
 
-          _this3.axios["delete"](uri).then(function (response) {
-            console.log(response);
+            _this3.axios["delete"](uri).then(function (response) {
+              console.log(response);
 
-            _this3.accounts.splice(_this3.accounts.indexOf(id), 1);
-          });
+              _this3.accounts.splice(_this3.accounts.indexOf(id), 1);
+            });
 
-          console.log("Deleted article with id ..." + id);
-        }
-      });
+            console.log("Deleted article with id ..." + id);
+          }
+        });
+      }
     }
   }
 });
@@ -212,7 +210,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nth[data-v-205812b7]:first-child { -webkit-border-radius:35px 0 0 0; border-top:none}\nth[data-v-205812b7]:last-child{ -webkit-border-radius:0 35px 0 0;border-top:none\n}\nth[data-v-205812b7]{\n    border-top: none;\n}\np[data-v-205812b7] {\n        margin: 0;\n}\n.search[data-v-205812b7]{\n      max-width: 400px;\n}\n.list-group-item[data-v-205812b7] {\n        margin-top: 20px;\n        border-radius: 35px;\n        transition: 0.5s;\n}\n.list-group-item[data-v-205812b7]:hover {\n        background-color: #e0e0e0;\n}\n.avatar-profile[data-v-205812b7] {\n        width: 44px;\n        height: 44px;\n}\n.identity[data-v-205812b7] {\n        display: block;\n}\n.name[data-v-205812b7] {\n        font-size: 18px;\n        font-weight: bold;\n}\n.icon[data-v-205812b7] {\n        font-size: 17px;\n}\n", ""]);
+exports.push([module.i, "\nth[data-v-205812b7]:first-child { -webkit-border-radius:20px 0 0 0; border-top:none}\nth[data-v-205812b7]:last-child{ -webkit-border-radius:0 20px 0 0;border-top:none\n}\nth[data-v-205812b7]{\n    border-top: none;\n}\np[data-v-205812b7] {\n        margin: 0;\n}\n.search[data-v-205812b7]{\n      max-width: 400px;\n}\n.list-group-item[data-v-205812b7] {\n        margin-top: 20px;\n        border-radius: 35px;\n        transition: 0.5s;\n}\n.list-group-item[data-v-205812b7]:hover {\n        background-color: #e0e0e0;\n}\n.avatar-profile[data-v-205812b7] {\n        width: 44px;\n        height: 44px;\n}\n.identity[data-v-205812b7] {\n        display: block;\n}\n.name[data-v-205812b7] {\n        font-size: 18px;\n        font-weight: bold;\n}\n.icon[data-v-205812b7] {\n        font-size: 17px;\n}\n", ""]);
 
 // exports
 
@@ -265,144 +263,153 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { ref: "content" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-3" }, [
-        _c("a", { attrs: { href: "/api/account/export/", type: "button" } }, [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-6 col-md-3" }, [
           _c(
-            "button",
-            {
-              staticClass: "btn btn-success mt-3",
+            "a",
+            { attrs: { href: "/api/account/exportexcel/", type: "button" } },
+            [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-success mt-3",
+                  on: {
+                    click: function($event) {
+                      return _vm.exportToPDF()
+                    }
+                  }
+                },
+                [_vm._v("Export Excel")]
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: " col-6 col-md-3" },
+          [
+            _c("router-link", { attrs: { to: { name: "createaccount" } } }, [
+              _c(
+                "button",
+                { staticClass: "btn btn-primary mt-3 float-right" },
+                [_vm._v("Add Account")]
+              )
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 col-md-6" }, [
+          _c("div", { staticClass: "input-group search ml-auto mt-3" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model.lazy",
+                  value: _vm.keywords,
+                  expression: "keywords",
+                  modifiers: { lazy: true }
+                }
+              ],
+              staticClass: " rounded-pill form-control",
+              attrs: {
+                type: "text",
+                placeholder: "Employee Name",
+                "aria-label": "Recipient's username",
+                "aria-describedby": "button-addon2"
+              },
+              domProps: { value: _vm.keywords },
               on: {
-                click: function($event) {
-                  return _vm.exportToPDF()
+                change: function($event) {
+                  _vm.keywords = $event.target.value
                 }
               }
-            },
-            [_vm._v("Export PDF")]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-3" },
-        [
-          _c("router-link", { attrs: { to: { name: "create" } } }, [
-            _c("button", { staticClass: "btn btn-primary mt-3 float-right" }, [
-              _vm._v("Add Account")
-            ])
+            }),
+            _vm._v(" "),
+            _vm._m(0)
           ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "input-group search ml-auto mt-3" }, [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model.lazy",
-                value: _vm.keywords,
-                expression: "keywords",
-                modifiers: { lazy: true }
-              }
-            ],
-            staticClass: " rounded-pill form-control",
-            attrs: {
-              type: "text",
-              placeholder: "Employee Name",
-              "aria-label": "Recipient's username",
-              "aria-describedby": "button-addon2"
-            },
-            domProps: { value: _vm.keywords },
-            on: {
-              change: function($event) {
-                _vm.keywords = $event.target.value
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm._m(0)
         ])
       ])
     ]),
     _vm._v(" "),
-    _c("table", { staticClass: "table table-light mt-4 border-rounded" }, [
-      _vm._m(1),
-      _vm._v(" "),
+    _c("div", { staticClass: "table-responsive" }, [
       _c(
-        "tbody",
-        _vm._l(_vm.accounts, function(user) {
-          return _c("tr", { key: user.id_akun }, [
-            _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(user.id))]),
-            _vm._v(" "),
-            _c("td", [
-              _c("img", {
-                staticClass: "avatar-profile rounded-circle mt-1 mr-3",
-                attrs: {
-                  src: "/storage/images/Muhammad Rifki Erlangga/17.stik.jpg",
-                  alt: ""
-                }
-              }),
-              _vm._v(" " + _vm._s(user.name))
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("span", { staticClass: "badge badge-primary" }, [
-                _vm._v(_vm._s(user.email))
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "td",
-              [
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: { name: "edit", params: { id: user.id_akun } }
-                    }
-                  },
-                  [
-                    _c("span", { staticClass: "fa-stack  fa-size fa-lg" }, [
-                      _c("i", {
-                        staticClass: "fa fa-square text-primary fa-stack-2x"
-                      }),
-                      _vm._v(" "),
-                      _c("i", {
-                        staticClass: "fas fa-user-edit fa-stack-1x text-white"
-                      })
-                    ])
-                  ]
-                ),
+        "table",
+        { staticClass: "table table-light table-hover mt-4 border-rounded" },
+        [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.accounts, function(user) {
+              return _c("tr", { key: user.id_akun }, [
+                _c("th", { attrs: { scope: "row" } }, [
+                  _vm._v(" " + _vm._s(user.npwp))
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v(" " + _vm._s(user.name))]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("span", { staticClass: "badge badge-primary" }, [
+                    _vm._v(_vm._s(user.last_login))
+                  ])
+                ]),
                 _vm._v(" "),
                 _c(
-                  "span",
-                  {
-                    staticClass: "fa-stack  fa-size fa-lg",
-                    on: {
-                      click: function($event) {
-                        return _vm.deletePost(user.id)
-                      }
-                    }
-                  },
+                  "td",
                   [
-                    _c("i", {
-                      staticClass: "fa fa-square text-danger fa-stack-2x"
-                    }),
+                    _c(
+                      "router-link",
+                      {
+                        attrs: {
+                          to: { name: "edit", params: { id: user.id_akun } }
+                        }
+                      },
+                      [
+                        _c("span", { staticClass: "fa-stack  fa-size fa-lg" }, [
+                          _c("i", {
+                            staticClass: "fa fa-square text-primary fa-stack-2x"
+                          }),
+                          _vm._v(" "),
+                          _c("i", {
+                            staticClass:
+                              "fas fa-user-edit fa-stack-1x text-white"
+                          })
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("i", {
-                      staticClass: "fas fa-user-minus fa-stack-1x text-white"
-                    })
-                  ]
+                    _c(
+                      "span",
+                      {
+                        staticClass: "fa-stack  fa-size fa-lg",
+                        on: {
+                          click: function($event) {
+                            return _vm.deletePost(user.id_akun)
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "fa fa-square text-danger fa-stack-2x"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass:
+                            "fas fa-user-minus fa-stack-1x text-white"
+                        })
+                      ]
+                    )
+                  ],
+                  1
                 )
-              ],
-              1
-            )
-          ])
-        }),
-        0
+              ])
+            }),
+            0
+          )
+        ]
       )
     ])
   ])
@@ -429,11 +436,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", { staticClass: "bg-primary border-rounded" }, [
       _c("tr", { staticClass: "text-white" }, [
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("NIP")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("NPWP")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Role")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Last Login")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Action")])
       ])

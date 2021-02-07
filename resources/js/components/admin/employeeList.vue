@@ -1,17 +1,18 @@
 <template>
 <div ref="content">
+    <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <a href="/api/account/export/" type="button">
-            <button class="btn btn-success mt-3" @click="exportToPDF()">Export PDF</button>
+        <div class="col-6 col-md-3">
+            <a href="/api/account/exportexcel/" type="button">
+            <button class="btn btn-success mt-3" @click="exportToPDF()">Export Excel</button>
             </a>
         </div>
-        <div class="col-md-3">
-            <router-link :to="{ name: 'create' }">
+        <div class=" col-6 col-md-3">
+            <router-link :to="{ name: 'createaccount' }">
                 <button class="btn btn-primary mt-3 float-right">Add Account</button>
             </router-link>
         </div>
-        <div class="col-md-6">
+        <div class="col-12 col-md-6">
             <div class="input-group search ml-auto mt-3">
                 <input type="text" v-model.lazy="keywords" class=" rounded-pill form-control"
                     placeholder="Employee Name" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -22,22 +23,24 @@
             </div>
         </div>
     </div>
-    <table class="table table-light mt-4 border-rounded">
+    </div>
+    <div class="table-responsive">
+
+    <table class="table table-light table-hover mt-4 border-rounded">
         <thead class="bg-primary border-rounded">
             <tr class="text-white">
-                <th scope="col">NIP</th>
+                <th scope="col">NPWP</th>
                 <th scope="col">Name</th>
-                <th scope="col">Role</th>
+                <th scope="col">Last Login</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody> 
             <tr v-for="(user) in accounts" :key="user.id_akun">
-                <th scope="row">{{user.id}}</th>
+                <th scope="row"> {{user.npwp}}</th>
     
-                <td><img  :src="'/storage/images/Muhammad Rifki Erlangga/17.stik.jpg'" class="avatar-profile rounded-circle mt-1 mr-3"
-                        alt=""> {{user.name}}</td>
-                <td> <span class="badge badge-primary">{{user.email}}</span></td>
+                <td> {{user.name}}</td>
+                <td> <span class="badge badge-primary">{{user.last_login}}</span></td>
                 <td>
                     <router-link :to="{name: 'edit', params: { id: user.id_akun }}">
                         <span class="fa-stack  fa-size fa-lg">
@@ -45,7 +48,7 @@
                             <i class="fas fa-user-edit fa-stack-1x text-white"></i>
                         </span>
                     </router-link>
-                    <span class="fa-stack  fa-size fa-lg" @click="deletePost(user.id)">
+                    <span class="fa-stack  fa-size fa-lg" @click="deletePost(user.id_akun)">
                         <i class="fa fa-square text-danger fa-stack-2x"></i>
                         <i class="fas fa-user-minus fa-stack-1x text-white"></i>
                     </span>
@@ -54,13 +57,13 @@
         </tbody>
     </table>
 
-
+    </div>
 </div>
 
 </template>
 <style scoped>
-    th:first-child { -webkit-border-radius:35px 0 0 0; border-top:none}
-th:last-child{ -webkit-border-radius:0 35px 0 0;border-top:none }
+    th:first-child { -webkit-border-radius:20px 0 0 0; border-top:none}
+th:last-child{ -webkit-border-radius:0 20px 0 0;border-top:none }
 th{
     border-top: none;
 }
@@ -99,25 +102,26 @@ th{
     }
 </style>
 <script>
-import jspdf, { jsPDF } from 'jspdf';
-import html2canvas from "html2canvas"
-import domtoimage from "dom-to-image";
+
 
 export default {
+      props: ["accountuser","session"],
     data() {
         return {
-          accounts: [],
+        usersession: this.$props.session,
+          accounts: this.$props.accountuser,
           results:[],
           keywords:null,
         }
       },
          created() {
-        let uri = '/api/account';
-        this.axios.get(uri).then(response => {
-            console.log(response);
+             console.log(this.usersession);
+        let uriaccount = '/api/account';
+        this.axios.get(uriaccount).then(response => {
             this.accounts = response.data;
 
         });
+         
     },
       watch:{
           keywords(after,before){
@@ -127,14 +131,6 @@ export default {
       methods:{
           exportToPDF () {
                          console.log('a')
-    //    html2canvas(this.$refs.content,{scale: 2}).then(function(canvas) {
-    //             var img = canvas.toDataURL('image/png');
-    //             var doc = new jsPDF({
-    //                 orientation: "l",
-    //             });
-    //             doc.addImage(img, 'JPEG', 20, 20);
-    //             doc.save('test.pdf');
-    //         });
 			},
           search(){
               axios.get('/api/account/search', { params: { keywords: this.keywords } })
@@ -144,7 +140,14 @@ export default {
           },
         deletePost(id)
         {
-            this.$swal.fire({
+            if(this.usersession.id_akun === id){
+                   this.$swal.fire({
+                title: 'Error',
+                text: "Anda tidak dapat menghapus data diri sendiri",
+                icon: 'warning'
+                  })
+            }else{
+                 this.$swal.fire({
                 title: 'Apakah kamu yakin?',
                 text: "Jika kamu hapus, maka data tidak akan kembali lagi.",
                 icon: 'warning',
@@ -157,11 +160,11 @@ export default {
                 if (result.value) {
                     this.$swal.fire({
                         title: 'Success!',
-                        text: 'Article deleted successfully',
+                        text: 'Akun Berhasil Dihapus',
                         icon: 'success',
                         timer: 1000
                     });
-                    let uri = `api/account/delete/${id}`;
+                    let uri = `/api/account/delete/${id}`;
                     this.axios.delete(uri).then(response => {
                         console.log(response);
                         this.accounts.splice(this.accounts.indexOf(id), 1);
@@ -170,6 +173,8 @@ export default {
                     
                 }
             })
+            }
+           
         }
       },
 

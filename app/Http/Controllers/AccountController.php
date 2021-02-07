@@ -5,26 +5,53 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Storage;
 use App\Exports\UsersExport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\File; 
+use PDF;
+use Carbon\Carbon;
 
 class AccountController extends Controller
 {
   public function index()
   {
-      $accounts = \App\User::all();
+  
+      $accounts = \App\ User::with('detail','document')
+      ->get();
+      return $accounts->toJson();
+  }
+  public function accountsearch(Request $request)
+  {
+      $accounts = \App\ User::with('detail','document')
+      ->where('id_akun', $request->iduser)
+      ->first();
       return $accounts->toJson();
   }
   public function indexall(Request $request)
   {
-    $users = DB::table('users')
-    ->join('user_details', 'users.id_akun', '=', 'user_details.id_akun')
-    ->join('documents', 'user_details.id_akun', '=', 'documents.id_akun')
-    ->select('users.*', 'user_details.*','documents.file_name')
-    ->where('users.id_akun', $request->iduser)
-    ->where('documents.id_category', 1)
-    ->first();
+
+    $potocheck = DB::table('documents')
+    ->where('id_akun',$request->iduser)
+    ->where('id_category',4)
+    ->get(); 
+
+    if($potocheck -> isNotEmpty()){
+      $users = DB::table('users')
+      ->join('user_details', 'users.id_akun', '=', 'user_details.id_akun')
+      ->join('documents', 'user_details.id_akun', '=', 'documents.id_akun')
+      ->select('users.*', 'user_details.*','documents.file_name')
+      ->where('users.id_akun', $request->iduser)
+      ->where('documents.id_category', 4)
+      ->get();
+    }else{
+      $users = DB::table('users')
+      ->join('user_details', 'users.id_akun', '=', 'user_details.id_akun')
+      ->select('users.*', 'user_details.*')
+      ->where('users.id_akun', $request->iduser)
+      ->get();
+    }
+  
     return response()->json($users);
 
   }
@@ -92,23 +119,65 @@ class AccountController extends Controller
     public function delete($id)
     {
         $account = \App\User::find($id);
-        if(!empty($account)){
-            $account->delete();
-            $msg = [
-                'success' => true,
-                'message' => 'Article deleted successfully!'
-            ];
-            return response()->json($msg);
-        } else {
-            $msg = [
-                'success' => false,
-                'message' => 'Article deleted failed!'
-            ];
-            return response()->json($msg);
-        }
+        $documentdata= \App\Document::where('id_akun',$id);
+        $accountdetail= \App\UserDetail::find($id);
+        $path ='public/images/'.$account->id_akun;
+        Storage::deleteDirectory($path);
+        $documentdata->delete();
+        $accountdetail->delete();
+        $account->delete();
+
     }
-    public function export() 
+    public function profilepicture($id){
+      $profile= \App\Document::where([
+        'id_akun' => $id,
+        'id_category' => 4,
+      ])->get();
+      
+      return response()->json($profile);
+
+    }
+    public function gendercount(){
+      $users = DB::table('user_details')
+      ->select(DB::raw('count(jen_kel) as count'))
+      ->groupBy('jen_kel')
+      ->get();
+
+      return response()->json($users);
+
+    }
+    public function logincount(){
+      $users = DB::table('users')
+      ->select(DB::raw('count(last_login) as count'))
+      ->where('last_login', Carbon::now()->toDateString())
+      ->first();
+
+      return response()->json($users);
+
+    }
+    public function usercount(){
+      $users = DB::table('users')
+      ->select(DB::raw('count(id_akun) as count'))
+      ->first();
+
+      return response()->json($users);
+
+    }
+    public function exportexcel() 
     {
         return Excel::download(new UsersExport, 'users.xlsx');
     }
-}
+
+    public function exportpdf($id) 
+    {
+      $users = DB::table('users')
+      ->join('user_details', 'users.id_akun', '=', 'user_details.id_akun')
+      ->join('documents', 'user_details.id_akun', '=', 'documents.id_akun')
+      ->select('users.*', 'user_details.*','documents.file_name')
+      ->where('users.id_akun', $id)
+      ->take(1)
+      ->get();
+      $pdf = PDF::loadView('mahasiswa', compact('users'));
+        return $pdf->stream('mahasiswa.pdf');
+    }
+  }

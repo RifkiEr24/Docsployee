@@ -40,17 +40,17 @@ class RegisterController extends Controller
             'no_telp' => $request->tel,
         ]);
         $imagename = $request->pasfoto->getClientOriginalName();
-        $path = Storage::putFileAs('public/images/'.$request->name, $request->pasfoto,$imagename);
+        $path = Storage::putFileAs('public/images/'.$request->id_akun, $request->pasfoto,$imagename);
         Document::create([
             'id_akun' => $UserCreate->id_akun,
-            'id_category' => 1,
+            'id_category' => 4,
             'file_name' => $imagename]);
         
         $imagename = $request->pasktp->getClientOriginalName();
-        $path = Storage::putFileAs('public/images/'.$request->name, $request->pasktp,$imagename);
+        $path = Storage::putFileAs('public/images/'.$request->id_akun, $request->pasktp,$imagename);
         Document::create([
         'id_akun' => $UserCreate->id_akun,
-        'id_category' => 2,
+        'id_category' => 1,
         'file_name' => $imagename]);
     }
 

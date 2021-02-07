@@ -20,7 +20,7 @@ class CreateDocumentsTable extends Migration
             $table->bigInteger('id_category')->unsigned()->nullable()->index();
             $table->foreign('id_category')->references('id_category')->on('categories');
             $table->string('file_name');
-            $table->float('size');
+            $table->timestamps();
         });
     }
 

@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[13],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/AccountEdit.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************!*\
@@ -9,6 +9,13 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.es.min.js");
+/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! html2canvas */ "./node_modules/html2canvas/dist/html2canvas.js");
+/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(html2canvas__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var dom_to_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dom-to-image */ "./node_modules/dom-to-image/src/dom-to-image.js");
+/* harmony import */ var dom_to_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dom_to_image__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var html2pdf_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! html2pdf.js */ "./node_modules/html2pdf.js/dist/html2pdf.js");
+/* harmony import */ var html2pdf_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(html2pdf_js__WEBPACK_IMPORTED_MODULE_3__);
 //
 //
 //
@@ -60,10 +67,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      user: []
+      isActive: true,
+      none: false,
+      user: {}
     };
   },
   created: function created() {
@@ -77,28 +91,48 @@ __webpack_require__.r(__webpack_exports__);
           iduser: _this.user.id_akun
         }
       }).then(function (res) {
-        _this.user = res.data[0];
+        _this.user = res.data;
         console.log(_this.user);
       });
     });
   },
   methods: {
     update: function update() {
-      var _this2 = this;
-
-      this.$swal.showLoading();
-      this.axios.put('/api/account/updateall', this.user).then(function () {
-        _this2.$swal.close();
-
-        _this2.$swal.fire({
-          icon: 'success',
-          title: 'Success',
-          text: 'Akun Berhasil di update'
-        });
+      this.axios.put('/api/account/updateall', this.user).then(function (response) {
+        console.log(response);
       });
     },
-    a: function a() {
-      console.log(this.user);
+    exportToPDF: function exportToPDF() {
+      this.none = true;
+      this.isActive = false; //    html2canvas(this.$refs.content,{scale: 1}).then(function(canvas) {
+      //             var img = canvas.toDataURL('image/png');
+      //             var doc = new jsPDF({
+      //                 orientation: "p",
+      //                 format: "a4",
+      //             });
+      //             doc.addImage(img, 'JPEG', 0, 0);
+      //             doc.save('test.pdf');
+      //         });
+      //        this.none = false;
+      //        this.isActive= true;
+
+      var opt = {
+        margin: 1,
+        filename: 'myfile.pdf',
+        image: {
+          type: 'jpeg',
+          quality: 0.98
+        },
+        html2canvas: {
+          scale: 2
+        },
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait'
+        }
+      };
+      html2pdf_js__WEBPACK_IMPORTED_MODULE_3___default()().from(this.$refs.contet).set(opt).save();
     }
   }
 });
@@ -133,9 +167,22 @@ var render = function() {
         }
       },
       [
-        _c("div", [
+        _c("div", { ref: "content", staticStyle: { width: "100%" } }, [
+          _c("img", {
+            staticClass: "w-25 ml-auto mr-auto d-block",
+            attrs: {
+              src:
+                "/storage/images/" + _vm.user.name + "/" + _vm.user.file_name,
+              alt: ""
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }),
+          _vm._v(" "),
           _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "npwp" } }, [_vm._v("NPWP")]),
+            _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+              _vm._v("NPWP")
+            ]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -151,7 +198,7 @@ var render = function() {
                 type: "number",
                 placeholder: "Masukkan NPWP Anda disini",
                 id: "NPWP",
-                "aria-describedby": "npwp"
+                "aria-describedby": "emailHelp"
               },
               domProps: { value: _vm.user.npwp },
               on: {
@@ -166,7 +213,9 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+            _c("label", { attrs: { for: "exampleInputEmail2" } }, [
+              _vm._v("Email")
+            ]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -195,7 +244,9 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("label", { attrs: { for: "name" } }, [_vm._v("Nama")]),
+            _c("label", { attrs: { for: "exampleInputEmail2" } }, [
+              _vm._v("Nama")
+            ]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -228,7 +279,7 @@ var render = function() {
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-md-6" }, [
               _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "date" } }, [
+                _c("label", { attrs: { for: "exampleInputEmail2" } }, [
                   _vm._v("Tanggal Lahir")
                 ]),
                 _vm._v(" "),
@@ -259,7 +310,9 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "address" } }, [_vm._v("Alamat")]),
+                _c("label", { attrs: { for: "exampleInputEmail2" } }, [
+                  _vm._v("Alamat")
+                ]),
                 _vm._v(" "),
                 _c("textarea", {
                   directives: [
@@ -275,7 +328,7 @@ var render = function() {
                     rows: " 4",
                     placeholder: "Masukkan Alamat Anda disini",
                     id: "Adress",
-                    "aria-describedby": "adressHelp"
+                    "aria-describedby": "emailHelp"
                   },
                   domProps: { value: _vm.user.alamat },
                   on: {
@@ -337,9 +390,11 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c("label", { staticClass: "mt-2", attrs: { for: "tel" } }, [
-                _vm._v("No Telepon")
-              ]),
+              _c(
+                "label",
+                { staticClass: "mt-2", attrs: { for: "exampleInputEmail2" } },
+                [_vm._v("No Telepon")]
+              ),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -382,24 +437,18 @@ var render = function() {
         ),
         _vm._v(" "),
         _c(
-          "a",
-          { attrs: { href: "/api/account/exportpdf/" + _vm.user.id_akun } },
-          [
-            _c(
-              "button",
-              {
-                staticClass:
-                  "btn btn-success rounded-pill ml-auto mr-auto d-block mb-3",
-                attrs: { type: "button" },
-                on: {
-                  click: function($event) {
-                    return _vm.a()
-                  }
-                }
-              },
-              [_vm._v("Export PDF")]
-            )
-          ]
+          "button",
+          {
+            staticClass:
+              "btn btn-success rounded-pill ml-auto mr-auto d-block mb-3",
+            attrs: { type: "button" },
+            on: {
+              click: function($event) {
+                return _vm.exportToPDF()
+              }
+            }
+          },
+          [_vm._v("Export PDF")]
         )
       ]
     )

@@ -108,10 +108,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["accountuser", "session"],
   components: {
     LineChart: _chart_LineChart_js__WEBPACK_IMPORTED_MODULE_1__["default"],
     BarChart: _chart_BarChart_js__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -119,13 +155,19 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      accounts: [],
+      accounts: this.$props.accountuser,
+      usersession: this.$props.session,
       results: [],
       user: null,
+      gendercount: [],
       datacheck: null,
       missingdata: [],
+      usercount: 0,
+      logincount: 0,
+      profilepicture: [],
+      monthlyevent: [],
       datacollection: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['January', 'February', 'March', 'April'],
         datasets: [{
           label: 'Task finished',
           borderColor: '#FC2525',
@@ -152,7 +194,7 @@ __webpack_require__.r(__webpack_exports__);
           borderWidth: 1,
           pointBorderColor: 'white',
           backgroundColor: ["#fcc026", "#2295c9"],
-          data: [13, 7]
+          data: null
         }]
       },
       options: {
@@ -161,62 +203,69 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  created: function created() {
+  mounted: function mounted() {
     var _this = this;
 
-    var uri = '/api/account';
-    this.axios.get(uri).then(function (response) {
-      _this.accounts = response.data;
+    console.log(this.profilepicture);
+    axios.get('/api/event/monthly').then(function (res) {
+      _this.monthlyevent = res.data;
     });
-  },
-  mounted: function mounted() {
-    var _this2 = this;
+    console.log(this.usersession); // DOCUMENT DATA CHECK
 
     var i = 0;
-    axios.get('/api/user').then(function (res) {
-      _this2.user = res.data;
+    axios.get('/api/datacheck', {
+      params: {
+        iduser: this.usersession.id_akun
+      }
+    }).then(function (res) {
+      _this.datacheck = res.data;
     }).then(function () {
-      axios.get('/api/datacheck', {
-        params: {
-          iduser: _this2.user.id_akun
+      _this.datacheck.forEach(function (category, index) {
+        i++;
+
+        if (category.length == 0) {
+          axios.get('/api/category/search', {
+            params: {
+              idcategory: i
+            }
+          }).then(function (res) {
+            _this.missingdata = _this.missingdata.concat(res.data);
+          });
         }
-      }).then(function (res) {
-        _this2.datacheck = res.data;
-      }).then(function () {
-        _this2.datacheck.forEach(function (category, index) {
-          i++;
-
-          if (category.length == 0) {
-            axios.get('/api/category/search', {
-              params: {
-                idcategory: i
-              }
-            }).then(function (res) {
-              _this2.missingdata = _this2.missingdata.concat(res.data);
-            });
-          }
-
-          console.log(_this2.missingdata);
-        });
-
-        console.log(i);
       });
+    }); //GENDER COUNT
+
+    var urigendercount = '/api/account/gendercount';
+    this.axios.get(urigendercount).then(function (response) {
+      _this.gendercount = response.data;
+
+      if (_this.gendercount[0].count == null && _this.gendercount[1].count != null) {
+        _this.dataPie.datasets[0].data = [0, _this.gendercount[1].count];
+      } else if (_this.gendercount[1] == null && _this.gendercount[0].count != null) {
+        _this.dataPie.datasets[0].data = [_this.gendercount[0].count, 0];
+      } else if (_this.gendercount[0] == null && _this.gendercount[1].count == null) {
+        _this.dataPie.datasets[0].data = [0, 0];
+      } else {
+        _this.dataPie.datasets[0].data = [_this.gendercount[0].count, _this.gendercount[1].count];
+      }
+    }); //LOGIN COUNT
+
+    var urilogincount = '/api/account/logincount';
+    this.axios.get(urilogincount).then(function (response) {
+      _this.logincount = response.data;
+    }); //USER COUNT
+
+    var uriusercount = '/api/account/usercount';
+    this.axios.get(uriusercount).then(function (response) {
+      _this.usercount = response.data;
+    }); //GETPROFILE
+
+    var uriuserprofile = "/api/account/profilepicture/".concat(this.usersession.id_akun);
+    this.axios.get(uriuserprofile).then(function (response) {
+      _this.profilepicture = response.data;
     });
   },
-  methods: {
-    fetch: function fetch() {
-      var _this3 = this;
-
-      axios.get('/api/account/search', {
-        params: {
-          keywords: this.keywords
-        }
-      }).then(function (response) {
-        return _this3.results = response.data;
-      })["catch"](function (error) {});
-      console.log(this.keywords);
-    }
-  }
+  methods: {}
 });
 
 /***/ }),
@@ -233,7 +282,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.fa-size[data-v-551d7fb8]{\r\n  font-size: 25px;\n}\n.list-group-item[data-v-551d7fb8] {\r\n        transition: 0.5s;\r\n        border: 0px;\n}\n.otority[data-v-551d7fb8]{\r\n      margin: 0% !important;\n}\n.avatar-profile[data-v-551d7fb8] {\r\n        width: 44px;\r\n        height: 44px;\n}\n.identity[data-v-551d7fb8] {\r\n        display: block;\n}\n.name[data-v-551d7fb8] {\r\n        font-size: 18px;\r\n        font-weight: bold;\n}\n.icon[data-v-551d7fb8] {\r\n        font-size: 17px;\n}\r\n", ""]);
+exports.push([module.i, "\n.fa-size[data-v-551d7fb8]{\r\n  font-size: 25px;\n}\n.list-group-item[data-v-551d7fb8] {\r\n        transition: 0.5s;\r\n        border: 0px;\n}\n.otority[data-v-551d7fb8]{\r\n      margin: 0% !important;\n}\n.avatar-profile[data-v-551d7fb8] {\r\n        width: 44px;\r\n        height: 44px;\r\n        -o-object-fit: cover;\r\n           object-fit: cover;\n}\n.avatar-profile-big[data-v-551d7fb8]{\r\n    width: 200px;\r\n        height: 200px;\r\n        -o-object-fit: cover;\r\n           object-fit: cover;\n}\n.identity[data-v-551d7fb8] {\r\n        display: block;\n}\n.name[data-v-551d7fb8] {\r\n        font-size: 18px;\r\n        font-weight: bold;\n}\n.icon[data-v-551d7fb8] {\r\n        font-size: 17px;\n}\r\n", ""]);
 
 // exports
 
@@ -647,22 +696,130 @@ var render = function() {
               )
         ]),
         _vm._v(" "),
-        _vm._m(1)
+        _c("div", { staticClass: "row mt-4" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("div", { staticClass: "bg-white p-3 border-rounded" }, [
+              _c("h4", { staticClass: "text-center font-weight-bold" }, [
+                _vm._v("Acara Bulan Ini")
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row" },
+                _vm._l(_vm.monthlyevent.slice(0, 4), function(event) {
+                  return _c(
+                    "div",
+                    { key: event.id, staticClass: "col-md-6 mt-3" },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "card text-center border-rounded" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "card-header  bg-success border-rounded text-white font-weight-bold"
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                          " +
+                                  _vm._s(event.start) +
+                                  "\r\n                        "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "card-body" }, [
+                            _c(
+                              "h5",
+                              { staticClass: "card-title font-weight-bold" },
+                              [_vm._v(_vm._s(event.title))]
+                            ),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "card-text" }, [
+                              _vm._v(_vm._s(event.deskripsi))
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "card-footer text-muted" }, [
+                            _vm._v(
+                              "\r\n                          " +
+                                _vm._s(event.start) +
+                                "\r\n                        "
+                            )
+                          ])
+                        ]
+                      )
+                    ]
+                  )
+                }),
+                0
+              ),
+              _vm._v(" "),
+              _c(
+                "h5",
+                {
+                  staticClass: "text-center text-primary font-weight-bold mt-2"
+                },
+                [_vm._v("See More")]
+              )
+            ])
+          ])
+        ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-4 " }, [
-        _c(
-          "div",
-          { staticClass: "bg-white p-4 border-rounded" },
-          [
-            _c("h4", { staticClass: "text-center font-weight-bold" }, [
-              _vm._v("Employee by gender")
-            ]),
-            _vm._v(" "),
-            _c("pie-chart", { attrs: { "chart-data": _vm.dataPie } })
-          ],
-          1
-        ),
+        _c("div", { staticClass: "bg-white p-4 border-rounded" }, [
+          _c("h4", { staticClass: "text-center font-weight-bold" }, [
+            _vm._v("Tentang Anda")
+          ]),
+          _vm._v(" "),
+          _vm.profilepicture.length != 0
+            ? _c(
+                "div",
+                _vm._l(_vm.profilepicture.slice(0, 1), function(doc) {
+                  return _c("div", { key: doc.id_document }, [
+                    _c("img", {
+                      staticClass:
+                        "avatar-profile-big d-block ml-auto mr-auto rounded-circle mt-1",
+                      attrs: {
+                        src:
+                          "/storage/images/" +
+                          _vm.usersession.name +
+                          "/" +
+                          doc.file_name,
+                        alt: ""
+                      }
+                    })
+                  ])
+                }),
+                0
+              )
+            : _c("div", [
+                _c("img", {
+                  staticClass:
+                    "avatar-profile-big d-block ml-auto mr-auto rounded-circle mt-1",
+                  attrs: {
+                    src: "https://thispersondoesnotexist.com/image",
+                    alt: ""
+                  }
+                })
+              ]),
+          _vm._v(" "),
+          _c("h5", { staticClass: "text-center font-weight-bold mt-3" }, [
+            _vm._v(_vm._s(_vm.usersession.name))
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"
+            },
+            [_vm._v(" Edit Akun")]
+          )
+        ]),
         _vm._v(" "),
         _c("div", { staticClass: "row mt-4" }, [
           _c("div", { staticClass: "col-md-12 " }, [
@@ -684,22 +841,47 @@ var render = function() {
                     },
                     [
                       _c("div", { staticClass: "d-flex" }, [
-                        _c("img", {
-                          staticClass: "avatar-profile rounded-circle mt-1",
-                          attrs: {
-                            src: "https://thispersondoesnotexist.com/image",
-                            alt: ""
-                          }
-                        }),
+                        account.document.length != 0
+                          ? _c(
+                              "div",
+                              _vm._l(account.document.slice(0, 1), function(
+                                doc
+                              ) {
+                                return _c("div", { key: doc.id_document }, [
+                                  _c("img", {
+                                    staticClass:
+                                      "avatar-profile rounded-circle mt-1",
+                                    attrs: {
+                                      src:
+                                        "/storage/images/" +
+                                        account.name +
+                                        "/" +
+                                        doc.file_name,
+                                      alt: ""
+                                    }
+                                  })
+                                ])
+                              }),
+                              0
+                            )
+                          : _c("div", [
+                              _c("img", {
+                                staticClass:
+                                  "avatar-profile rounded-circle mt-1",
+                                attrs: {
+                                  src:
+                                    "https://thispersondoesnotexist.com/image",
+                                  alt: ""
+                                }
+                              })
+                            ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "identity ml-3" }, [
                           _c("p", { staticClass: "name mt-1 mb-0" }, [
-                            _vm._v(_vm._s(account.nama))
+                            _vm._v(_vm._s(account.name))
                           ]),
                           _vm._v(" "),
-                          _c("p", { staticClass: "otority" }, [
-                            _vm._v("Employee")
-                          ])
+                          _c("p", { staticClass: "otority" })
                         ])
                       ])
                     ]
@@ -777,61 +959,6 @@ var staticRenderFns = [
         ])
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-4" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "bg-white p-3 border-rounded" }, [
-          _c("h4", { staticClass: "text-center font-weight-bold" }, [
-            _vm._v("Activities")
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "list-group" }, [
-            _c("li", { staticClass: "list-group-item font-weight-bold" }, [
-              _c("img", {
-                staticClass: "avatar-profile rounded-circle mt-1 mr-2",
-                attrs: {
-                  src: "https://thispersondoesnotexist.com/image",
-                  alt: ""
-                }
-              }),
-              _vm._v(" Jone Doe Just Created An Account ")
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "list-group-item font-weight-bold" }, [
-              _c("img", {
-                staticClass: "avatar-profile rounded-circle mt-1 mr-2",
-                attrs: {
-                  src: "https://thispersondoesnotexist.com/image",
-                  alt: ""
-                }
-              }),
-              _vm._v(" Jone Doe Just Created An Account ")
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "list-group-item font-weight-bold" }, [
-              _c("img", {
-                staticClass: "avatar-profile rounded-circle mt-1 mr-2",
-                attrs: {
-                  src: "https://thispersondoesnotexist.com/image",
-                  alt: ""
-                }
-              }),
-              _vm._v(" Jone Doe Just Created An Account ")
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "h5",
-            { staticClass: "text-center text-primary font-weight-bold" },
-            [_vm._v("See More")]
-          )
-        ])
-      ])
-    ])
   }
 ]
 render._withStripped = true

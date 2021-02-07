@@ -49,7 +49,7 @@ export default {
                         this.$swal.close();
                                   this.$swal.fire({
                                     icon: 'success',
-                                    title: 'Oops...',
+                                    title: 'Success',
                                     text: 'Login Success',
                                     }).then(()=>{
                                         this.$router.push({ name: response.data.role}); 

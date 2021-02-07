@@ -8,6 +8,11 @@ class Category extends Model
 {
     public function document()
     {
-    	return $this->hasOne('App\Document');
+    	return $this->hasMany('App\Document','id_category');
     }
+    protected $fillable = [
+        'category_name'
+    ];
+    protected $primaryKey = 'id_category';
+
 }

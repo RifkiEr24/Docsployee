@@ -4,7 +4,9 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
+use App\Event;
+use App\Mail\VerificationMail;
+use Illuminate\Support\Facades\Mail;
 class Kernel extends ConsoleKernel
 {
     /**
@@ -24,7 +26,16 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->call(function () {
+            $arr_users = Event::all();
+            if(count($arr_users) > 0) {
+                foreach ($arr_users as $user) {
+                    $nama = "Rifki Erlangga";
+                    $email = "rifkierlangga17@gmail.com";
+                    $kirim = Mail::to($email)->send(new VerificationMail($nama));
+                }
+            }
+        })->everyMinute();
     }
 
     /**

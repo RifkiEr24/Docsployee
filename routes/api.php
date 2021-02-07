@@ -20,13 +20,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/account','AccountController@index');
 Route::get('/userall','AccountController@indexall');
 Route::post('/account/store', 'AccountController@store');
-Route::get('/account/export', 'AccountController@export');
+Route::get('/account/exportexcel', 'AccountController@exportexcel');
+Route::get('/account/exportpdf/{id}', 'AccountController@exportpdf');
 Route::get('/account/search','AccountController@search');
+Route::get('/account/accountsearch','AccountController@accountsearch');
 Route::get('/account/edit/{id}', 'ArticleController@getArticle');
 Route::put('/account/update/{id}', 'ArticleController@update');
+Route::get('/account/profilepicture/{id}', 'AccountController@profilepicture');
 Route::put('/account/updateall/', 'AccountController@update');
-Route::delete('/account/delete/{id}', 'ArticleController@delete'); 
+Route::delete('/account/delete/{id}', 'AccountController@delete'); 
+Route::get('/account/gendercount', 'AccountController@gendercount'); 
+Route::get('/account/logincount', 'AccountController@logincount'); 
+Route::get('/account/usercount', 'AccountController@usercount'); 
 Route::get('/event','EventController@index');
+Route::post('/event/addevent','EventController@addevent');
+Route::put('/event/update','EventController@update');
+Route::get('/event/show','EventController@search');
+Route::get('/event/monthly','EventController@monthevent');
+Route::delete('/event/delete/{id}', 'EventController@delete'); 
+
 Route::get('/articles', 'ArticleController@index');
 Route::post('/article/store', 'ArticleController@store');
 Route::get('/article/show/{id}', 'ArticleController@getArticle');
@@ -41,7 +53,10 @@ Route::get('/document', 'DriveController@index');
 Route::get('/category', 'CategoryController@index');
 Route::get('/datacheck', 'CategoryController@missingdata');
 Route::get('/category/search', 'CategoryController@search');
+Route::get('/category/detailname/{id}', 'CategoryController@detailname');
 Route::get('/category/detail/{id}', 'CategoryController@detail');
+Route::delete('/document/delete/{id}', 'DriveController@delete'); 
+
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

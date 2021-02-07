@@ -6,7 +6,7 @@
         <AdminNavbar/>
       <div class="container">
         <vue-page-transition  name="fade-in-up">
-        <router-view />
+        <router-view v-if="accounts.length != 0 && usersession != null" :accountuser="accounts" :session="usersession" />
         </vue-page-transition>
       </div>
       <sidebar-menu class="bg-primary"
@@ -45,6 +45,8 @@ export default {
     },
      data () {
     return {
+      accounts: [],
+      usersession:null,
       menu: [
         {
           header: true,
@@ -68,7 +70,7 @@ export default {
           hiddenOnCollapse: true
         },
         {
-          href: '/'+ this.routeDifferentiator()+'/calendar',
+          href: '/'+ this.routeDifferentiator()+'/event',
           title: 'Calendar',
           icon: 'fa fa-calendar'
         },
@@ -123,11 +125,14 @@ export default {
       return this.$route.matched[0].path.substr(1) === routeName;
     },
     onToggleCollapse: function (collapsed) {
-      console.log(collapsed)
       this.collapsed = collapsed
     },
     onItemClick: function (event, item, node) {
-   
+    if(item.title === 'Log Out'){
+      axios.post('/api/logout').then(()=>{
+        this.$router.push({name: 'login'});
+      })
+    }    
     },
     showOnAdmin: function(){
       if(this.$route.matched[0].path.substr(1) === 'admin'){
@@ -137,7 +142,6 @@ export default {
       }
     },
     routeDifferentiator: function (routeName){
-      console.log(this.$route.matched[0].path.substr(1) );
        if( this.$route.matched[0].path.substr(1) === 'admin'){
         return 'admin';
       }else{
@@ -156,6 +160,27 @@ export default {
     }
   },
   mounted () {
+    // GET ALL ACCOUNT
+     let uri = '/api/account';
+        this.axios.get(uri).then(response => {
+            this.accounts = response.data;
+            this.accounts.forEach(element => {
+                let sum = -1;
+                element.document.forEach(doc => {
+                    sum = sum + 1;
+              
+                    if (doc.id_category != 4) {
+                        element.document.splice(sum, 1);
+                    }
+                });
+            });
+        });
+    // GET USER SESSION
+    let urisession = '/api/user';
+        this.axios.get(urisession).then(response => {
+            this.usersession = response.data;
+           
+        });
     this.onResize()
     window.addEventListener('resize', this.onResize)
   },

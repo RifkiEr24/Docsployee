@@ -2,10 +2,15 @@
   border-radius: 35px;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
 
 .ffolder{
     position: relative;
-    display: inline-block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -25,8 +30,8 @@
 
 .ffolder.big{
   margin-top: 24px;
-  width: 264px;
-  height: 183px;
+  min-width: 234px;
+  height: 153px;
   border-radius: 0px 14px 14px 14px;
 }
 

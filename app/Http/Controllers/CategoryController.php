@@ -48,5 +48,17 @@ class CategoryController extends Controller
     $data= DB::table('documents')->where('id_akun', $iduser)->where('id_category', $idcategory)->get();  
 
     return response()->json($data);
+    }
+    public function detailname( Request $request, $id)
+	{
+        $doc = DB::table('documents')
+        ->join('users','documents.id_akun','=','users.id_akun')
+        ->join('categories', 'documents.id_category', '=', 'categories.id_category')
+        ->select('documents.*', 'categories.*','users.name')
+        ->where('categories.category_name', $request->categoryname)
+        ->where('documents.id_akun', $id)
+        ->get();
+
+    return response()->json($doc);
 	}
 }
