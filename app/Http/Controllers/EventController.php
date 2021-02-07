@@ -47,9 +47,7 @@ class EventController extends Controller
             'success' => true,
             'message' => 'Event created successfully!'
         ];
-        $nama = "Rifki Erlangga";
-        $email = "rifkierlangga17@gmail.com";
-        $kirim = Mail::to($email)->send(new VerificationMail($nama));
+ 
         return response()->json($msg);
     } 
 
