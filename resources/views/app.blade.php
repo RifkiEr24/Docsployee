@@ -12,13 +12,13 @@
  
     <title>Aplikasi Kepegawaian</title>
     <!-- Styles -->
-    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
     <div id="app"></div>
  
-    <script src="{{ secure_asset('js/app.js') }}"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
