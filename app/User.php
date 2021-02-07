@@ -30,7 +30,7 @@ class User extends Authenticatable
     protected $primaryKey = 'id_akun';
 
     protected $fillable = [
-        'npwp','name', 'email', 'password'
+        'npwp','name', 'email', 'password','role'
     ];
 
     /**
