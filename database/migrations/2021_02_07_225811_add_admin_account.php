@@ -20,7 +20,7 @@ class AddAdminAccount extends Migration
                 'npwp' => '191919191',
                 'role' => 'admin',
                 'email' => 'admin123@gmail.com',
-                'password' =>'admin123',
+                'password' =>Hash::make('admin123'),
 
                 
             ]
