@@ -18,10 +18,10 @@ class DriveController extends Controller
     public function store(Request $request){
     
         $iduser=$request->iduser;
-        $imagename = $request->image->getClientOriginalName();
+        $imagename = $request->file('image')->getClientOriginalName();
         $imagesize=$request->image->getSize();
         $category= $request->idcategory;
-        $path = Storage::putFileAs('public/images/'.$request->iduser, $request->image,$imagename);
+        $request->image->move(public_path('userdata/'.$iduser.'/'),$imagename);
         Document::create([
         'id_akun' => $iduser,
         'id_category' => $category,
@@ -31,8 +31,8 @@ class DriveController extends Controller
     {
         $document = \App\Document::find($id);
         $user= \App\User::find($document->id_akun);
-        $path ='public/images/'.$document->id_akun.'/'.$document->file_name;
-        Storage::delete($path);
+        $path ='userdata/'.$document->id_akun.'/'.$document->file_name;
+        File::delete(public_path($path));
         $document->delete();
     }
 }

@@ -143,6 +143,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -652,7 +675,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "font-weight-bold text-center" }, [
                     _vm._v(
-                      "Data Akun Anda masih belum lengkap, Ayo lengkapi sekarang"
+                      "Data Akun Anda masih belum lengkap, Ayo lengkapi\n                        sekarang"
                     )
                   ]),
                   _vm._v(" "),
@@ -672,14 +695,20 @@ var render = function() {
                     )
                   }),
                   _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"
-                    },
-                    [_vm._v(" Pergi ke ruang penyimpanan")]
-                  )
+                  _c("router-link", { attrs: { to: { name: "usercloud" } } }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Pergi ke ruang penyimpanan"
+                        )
+                      ]
+                    )
+                  ])
                 ],
                 2
               )
@@ -703,123 +732,154 @@ var render = function() {
                 _vm._v("Acara Bulan Ini")
               ]),
               _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "row" },
-                _vm._l(_vm.monthlyevent.slice(0, 4), function(event) {
-                  return _c(
+              _vm.monthlyevent.length != 0
+                ? _c(
                     "div",
-                    { key: event.id, staticClass: "col-md-6 mt-3" },
                     [
                       _c(
                         "div",
-                        { staticClass: "card text-center border-rounded" },
-                        [
-                          _c(
+                        { staticClass: "row" },
+                        _vm._l(_vm.monthlyevent.slice(0, 4), function(event) {
+                          return _c(
                             "div",
-                            {
-                              staticClass:
-                                "card-header  bg-success border-rounded text-white font-weight-bold"
-                            },
+                            { key: event.id, staticClass: "col-md-6 mt-3" },
                             [
-                              _vm._v(
-                                "\r\n                          " +
-                                  _vm._s(event.start) +
-                                  "\r\n                        "
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "card text-center border-rounded"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "card-header  bg-success border-rounded text-white font-weight-bold"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        " +
+                                          _vm._s(event.start) +
+                                          "\n                                    "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c(
+                                      "h5",
+                                      {
+                                        staticClass:
+                                          "card-title font-weight-bold"
+                                      },
+                                      [_vm._v(_vm._s(event.title))]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("p", { staticClass: "card-text" }, [
+                                      _vm._v(_vm._s(event.deskripsi))
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "card-footer text-muted" },
+                                    [
+                                      _vm._v(
+                                        "\n                                        " +
+                                          _vm._s(event.start) +
+                                          "\n                                    "
+                                      )
+                                    ]
+                                  )
+                                ]
                               )
                             ]
-                          ),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "card-body" }, [
-                            _c(
-                              "h5",
-                              { staticClass: "card-title font-weight-bold" },
-                              [_vm._v(_vm._s(event.title))]
-                            ),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "card-text" }, [
-                              _vm._v(_vm._s(event.deskripsi))
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "card-footer text-muted" }, [
-                            _vm._v(
-                              "\r\n                          " +
-                                _vm._s(event.start) +
-                                "\r\n                        "
-                            )
-                          ])
+                          )
+                        }),
+                        0
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        { attrs: { to: { name: "usercalendar" } } },
+                        [
+                          _c(
+                            "h5",
+                            {
+                              staticClass:
+                                "text-center text-primary font-weight-bold mt-2"
+                            },
+                            [_vm._v("See More")]
+                          )
                         ]
                       )
-                    ]
+                    ],
+                    1
                   )
-                }),
-                0
-              ),
-              _vm._v(" "),
-              _c(
-                "h5",
-                {
-                  staticClass: "text-center text-primary font-weight-bold mt-2"
-                },
-                [_vm._v("See More")]
-              )
+                : _c("div", [_vm._m(1)])
             ])
           ])
         ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-4 " }, [
-        _c("div", { staticClass: "bg-white p-4 border-rounded" }, [
-          _c("h4", { staticClass: "text-center font-weight-bold" }, [
-            _vm._v("Tentang Anda")
-          ]),
-          _vm._v(" "),
-          _vm.profilepicture.length != 0
-            ? _c(
-                "div",
-                _vm._l(_vm.profilepicture.slice(0, 1), function(doc) {
-                  return _c("div", { key: doc.id_document }, [
-                    _c("img", {
-                      staticClass:
-                        "avatar-profile-big d-block ml-auto mr-auto rounded-circle mt-1",
-                      attrs: {
-                        src:
-                          "/storage/images/" +
-                          _vm.usersession.name +
-                          "/" +
-                          doc.file_name,
-                        alt: ""
-                      }
-                    })
-                  ])
-                }),
-                0
-              )
-            : _c("div", [
-                _c("img", {
+        _c(
+          "div",
+          { staticClass: "bg-white p-4 border-rounded" },
+          [
+            _c("h4", { staticClass: "text-center font-weight-bold" }, [
+              _vm._v("Tentang Anda")
+            ]),
+            _vm._v(" "),
+            _vm.profilepicture.length != 0
+              ? _c(
+                  "div",
+                  _vm._l(_vm.profilepicture.slice(0, 1), function(doc) {
+                    return _c("div", { key: doc.id_document }, [
+                      _c("img", {
+                        staticClass:
+                          "avatar-profile-big d-block ml-auto mr-auto rounded-circle mt-1",
+                        attrs: {
+                          src:
+                            "/userdata/" +
+                            _vm.usersession.id_akun +
+                            "/" +
+                            doc.file_name,
+                          alt: ""
+                        }
+                      })
+                    ])
+                  }),
+                  0
+                )
+              : _c("div", [
+                  _c("img", {
+                    staticClass:
+                      "avatar-profile-big d-block ml-auto mr-auto rounded-circle mt-1",
+                    attrs: {
+                      src: "https://thispersondoesnotexist.com/image",
+                      alt: ""
+                    }
+                  })
+                ]),
+            _vm._v(" "),
+            _c("h5", { staticClass: "text-center font-weight-bold mt-3" }, [
+              _vm._v(_vm._s(_vm.usersession.name))
+            ]),
+            _vm._v(" "),
+            _c("router-link", { attrs: { to: { name: "useraccountedit" } } }, [
+              _c(
+                "button",
+                {
                   staticClass:
-                    "avatar-profile-big d-block ml-auto mr-auto rounded-circle mt-1",
-                  attrs: {
-                    src: "https://thispersondoesnotexist.com/image",
-                    alt: ""
-                  }
-                })
-              ]),
-          _vm._v(" "),
-          _c("h5", { staticClass: "text-center font-weight-bold mt-3" }, [
-            _vm._v(_vm._s(_vm.usersession.name))
-          ]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass:
-                "btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"
-            },
-            [_vm._v(" Edit Akun")]
-          )
-        ]),
+                    "btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"
+                },
+                [_vm._v("\n                    Edit Akun")]
+              )
+            ])
+          ],
+          1
+        ),
         _vm._v(" "),
         _c("div", { staticClass: "row mt-4" }, [
           _c("div", { staticClass: "col-md-12 " }, [
@@ -853,8 +913,8 @@ var render = function() {
                                       "avatar-profile rounded-circle mt-1",
                                     attrs: {
                                       src:
-                                        "/storage/images/" +
-                                        account.name +
+                                        "/userdata/" +
+                                        account.id_akun +
                                         "/" +
                                         doc.file_name,
                                       alt: ""
@@ -888,12 +948,6 @@ var render = function() {
                   )
                 }),
                 0
-              ),
-              _vm._v(" "),
-              _c(
-                "h5",
-                { staticClass: "text-center text-primary font-weight-bold" },
-                [_vm._v("See More")]
               )
             ])
           ])
@@ -959,6 +1013,18 @@ var staticRenderFns = [
         ])
       ]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("h4", { staticClass: "text-center font-weight-bold" }, [
+          _vm._v(" Tidak ada acara di bulan ini")
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true

@@ -121,10 +121,16 @@ class AccountController extends Controller
         $account = \App\User::find($id);
         $documentdata= \App\Document::where('id_akun',$id);
         $accountdetail= \App\UserDetail::find($id);
-        $path ='public/images/'.$account->id_akun;
-        Storage::deleteDirectory($path);
-        $documentdata->delete();
-        $accountdetail->delete();
+        $path ='userdata/'.$account->id_akun;
+        File::deleteDirectory(public_path($path));
+        if($documentdata){
+          $documentdata->delete();
+        }
+        if($accountdetail){
+          $accountdetail->delete();
+
+        }
+       
         $account->delete();
 
     }

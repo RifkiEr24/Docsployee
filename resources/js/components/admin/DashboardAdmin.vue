@@ -39,7 +39,9 @@
                     <p class="font-weight-bold text-center">Data Akun Anda masih belum lengkap, Ayo lengkapi sekarang</p>
                     <p class="font-weight-bold text-center">Data yang kurang:</p>
                     <span class="badge badge-danger p-2 ml-auto mr-auto d-block w-50 mt-2" v-for="(data) in missingdata" :key="data.id_category">{{data.category_name}}</span>
+                        <router-link :to="{name: 'admincloud'}">
                        <button  class="btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"> Pergi ke ruang penyimpanan</button>
+                        </router-link>
                 </div>
                 <div v-else>
                    <h4 class="text-center font-weight-bold">Data Akunmu sudah lengkap</h4>
@@ -79,7 +81,7 @@
                 <div class="d-flex">
                   <div v-if="account.document.length != 0">
                   <div v-for="(doc) in account.document.slice(0,1)" :key="doc.id_document">
-                      <img :src="'/storage/images/'+account.id_akun+'/'+doc.file_name" class="avatar-profile rounded-circle mt-1"
+                      <img :src="'/userdata/'+account.id_akun+'/'+doc.file_name" class="avatar-profile rounded-circle mt-1"
                        alt="">
                   </div>
                   </div>
@@ -94,7 +96,9 @@
                 </div>
             </li>
         </ul>
+          <router-link :to="{name: 'employeelist'}">
         <h5 class="text-center text-primary font-weight-bold">See More</h5>
+          </router-link>
             </div>
         </div>
             </div>

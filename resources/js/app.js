@@ -103,6 +103,7 @@ const routes = [
             component: () => import("./components/Register.vue")
           },
           {
+            name:'admincalendar',
             path:'event',
             component: () => import("./components/admin/Calendar.vue")
           },
@@ -131,6 +132,7 @@ const routes = [
             component: () => import("./components/admin/CategoryDetail.vue")
           },
           {
+            name:'adminaccountedit',
             path:'accountedit',
             component: () => import("./components/admin/AccountEdit.vue")
           },

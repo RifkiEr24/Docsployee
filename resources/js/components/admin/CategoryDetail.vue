@@ -2,9 +2,9 @@
     <div class="row mt-5">
         <div class="col-md-4" v-for="(document) in documents" :key="document.id_document">
             <div class="card border-rounded" style="width: 18rem;">
-                <img class="card-img-top" :src="'/storage/images/'+user.id_akun+'/'+document.file_name"
+                <img class="card-img-top" :src="'/userdata/'+user.id_akun+'/'+document.file_name"
                     alt="Card image cap" v-if="user.name != null">
-                     <img class="card-img-top" :src="'/storage/images/'+document.id_akun+'/'+document.file_name"
+                     <img class="card-img-top" :src="'/userdata/'+document.id_akun+'/'+document.file_name"
                     alt="Card image cap" v-else>
                 <div class="card-body border-top">
                     <h5 class="card-title">{{document.file_name}}</h5>

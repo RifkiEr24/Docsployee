@@ -7655,7 +7655,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     download: function download(user, filename) {
       axios({
-        url: "http://127.0.0.1:8000/storage/images/".concat(user, "/").concat(filename),
+        url: "http://127.0.0.1:8000/userdata/".concat(user, "/").concat(filename),
         method: 'GET',
         responseType: 'blob'
       }).then(function (response) {
@@ -55562,7 +55562,7 @@ var render = function() {
                       staticClass: "avatar-profile rounded",
                       attrs: {
                         src:
-                          "/storage/images/" +
+                          "/userdata/" +
                           document.user.id_akun +
                           "/" +
                           document.file_name
@@ -55580,7 +55580,7 @@ var render = function() {
                           click: function($event) {
                             $event.preventDefault()
                             return _vm.download(
-                              document.user.name,
+                              document.user.id_akun,
                               document.file_name
                             )
                           }
@@ -71511,6 +71511,7 @@ var routes = [{
       return Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./components/Register.vue */ "./resources/js/components/Register.vue"));
     }
   }, {
+    name: 'admincalendar',
     path: 'event',
     component: function component() {
       return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./components/admin/Calendar.vue */ "./resources/js/components/admin/Calendar.vue"));
@@ -71545,6 +71546,7 @@ var routes = [{
       return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./components/admin/CategoryDetail.vue */ "./resources/js/components/admin/CategoryDetail.vue"));
     }
   }, {
+    name: 'adminaccountedit',
     path: 'accountedit',
     component: function component() {
       return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./components/admin/AccountEdit.vue */ "./resources/js/components/admin/AccountEdit.vue"));

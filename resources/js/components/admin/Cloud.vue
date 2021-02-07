@@ -68,10 +68,10 @@
                 
                 <tr  v-for="(document) in documents" :key="document.id_document">
                     <td> {{document.category.category_name}}</td>
-                    <td><img :src="'/storage/images/'+document.user.id_akun+'/'+document.file_name"
+                    <td><img :src="'/userdata/'+document.user.id_akun+'/'+document.file_name"
                             class="avatar-profile rounded"> {{document.file_name}}</td>
                     <td>
-                           <span class="fa-stack  fa-size fa-lg cursor-pointer" @click.prevent="download(document.user.name,document.file_name)">
+                           <span class="fa-stack  fa-size fa-lg cursor-pointer" @click.prevent="download(document.user.id_akun,document.file_name)">
                             <i class="fa fa-square text-primary fa-stack-2x"></i>
                             <i class="fas fa-download fa-stack-1x text-white"></i>
                         </span>
@@ -146,7 +146,7 @@ export default {
     methods: {
          download(user,filename) {
               axios({
-                    url: `http://127.0.0.1:8000/storage/images/${user}/${filename}`,
+                    url: `http://127.0.0.1:8000/userdata/${user}/${filename}`,
                     method: 'GET',
                     responseType: 'blob',
                 }).then((response) => {

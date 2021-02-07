@@ -154,7 +154,7 @@ var render = function() {
                   staticClass: "card-img-top",
                   attrs: {
                     src:
-                      "/storage/images/" +
+                      "/userdata/" +
                       _vm.user.id_akun +
                       "/" +
                       document.file_name,
@@ -165,7 +165,7 @@ var render = function() {
                   staticClass: "card-img-top",
                   attrs: {
                     src:
-                      "/storage/images/" +
+                      "/userdata/" +
                       document.id_akun +
                       "/" +
                       document.file_name,

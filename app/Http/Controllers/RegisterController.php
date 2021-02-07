@@ -30,7 +30,8 @@ class RegisterController extends Controller
             'npwp' => $request->npwp,
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password),
+            'role' => 'user'
         ]);
         UserDetail::create([
             'id_akun' => $UserCreate->id_akun,
@@ -39,15 +40,20 @@ class RegisterController extends Controller
             'alamat' => $request->address,
             'no_telp' => $request->tel,
         ]);
-        $imagename = $request->pasfoto->getClientOriginalName();
-        $path = Storage::putFileAs('public/images/'.$request->id_akun, $request->pasfoto,$imagename);
+        $imagenamefoto = $request->file('pasfoto')->getClientOriginalName();
+
+        if($request->pasfoto){
+            $request->pasfoto->move(public_path('userdata/'.$UserCreate->id_akun.'/'),$imagenamefoto);
+        }
         Document::create([
             'id_akun' => $UserCreate->id_akun,
             'id_category' => 4,
-            'file_name' => $imagename]);
+            'file_name' => $imagenamefoto]);
         
-        $imagename = $request->pasktp->getClientOriginalName();
-        $path = Storage::putFileAs('public/images/'.$request->id_akun, $request->pasktp,$imagename);
+        $imagename = $request->file('pasktp')->getClientOriginalName();
+        if($request->pasktp){
+            $request->pasktp->move(public_path('userdata/'.$UserCreate->id_akun.'/'),$imagename);
+        }
         Document::create([
         'id_akun' => $UserCreate->id_akun,
         'id_category' => 1,

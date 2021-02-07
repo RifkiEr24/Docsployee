@@ -117,6 +117,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -634,14 +638,16 @@ var render = function() {
                     )
                   }),
                   _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"
-                    },
-                    [_vm._v(" Pergi ke ruang penyimpanan")]
-                  )
+                  _c("router-link", { attrs: { to: { name: "admincloud" } } }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"
+                      },
+                      [_vm._v(" Pergi ke ruang penyimpanan")]
+                    )
+                  ])
                 ],
                 2
               )
@@ -709,79 +715,88 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "row mt-4" }, [
           _c("div", { staticClass: "col-md-12 " }, [
-            _c("div", { staticClass: "bg-white p-1 border-rounded" }, [
-              _c("h4", { staticClass: "text-center font-weight-bold mt-2" }, [
-                _vm._v("Users")
-              ]),
-              _vm._v(" "),
-              _c(
-                "ul",
-                { staticClass: "list-group" },
-                _vm._l(_vm.accounts.slice(0, 4), function(account) {
-                  return _c(
-                    "li",
-                    {
-                      key: account.id,
-                      staticClass:
-                        "list-group-item d-flex justify-content-between align-items-center"
-                    },
-                    [
-                      _c("div", { staticClass: "d-flex" }, [
-                        account.document.length != 0
-                          ? _c(
-                              "div",
-                              _vm._l(account.document.slice(0, 1), function(
-                                doc
-                              ) {
-                                return _c("div", { key: doc.id_document }, [
-                                  _c("img", {
-                                    staticClass:
-                                      "avatar-profile rounded-circle mt-1",
-                                    attrs: {
-                                      src:
-                                        "/storage/images/" +
-                                        account.id_akun +
-                                        "/" +
-                                        doc.file_name,
-                                      alt: ""
-                                    }
-                                  })
-                                ])
-                              }),
-                              0
-                            )
-                          : _c("div", [
-                              _c("img", {
-                                staticClass:
-                                  "avatar-profile rounded-circle mt-1",
-                                attrs: {
-                                  src:
-                                    "https://thispersondoesnotexist.com/image",
-                                  alt: ""
-                                }
-                              })
-                            ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "identity ml-3" }, [
-                          _c("p", { staticClass: "name mt-1 mb-0" }, [
-                            _vm._v(_vm._s(account.name))
-                          ]),
+            _c(
+              "div",
+              { staticClass: "bg-white p-1 border-rounded" },
+              [
+                _c("h4", { staticClass: "text-center font-weight-bold mt-2" }, [
+                  _vm._v("Users")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  { staticClass: "list-group" },
+                  _vm._l(_vm.accounts.slice(0, 4), function(account) {
+                    return _c(
+                      "li",
+                      {
+                        key: account.id,
+                        staticClass:
+                          "list-group-item d-flex justify-content-between align-items-center"
+                      },
+                      [
+                        _c("div", { staticClass: "d-flex" }, [
+                          account.document.length != 0
+                            ? _c(
+                                "div",
+                                _vm._l(account.document.slice(0, 1), function(
+                                  doc
+                                ) {
+                                  return _c("div", { key: doc.id_document }, [
+                                    _c("img", {
+                                      staticClass:
+                                        "avatar-profile rounded-circle mt-1",
+                                      attrs: {
+                                        src:
+                                          "/userdata/" +
+                                          account.id_akun +
+                                          "/" +
+                                          doc.file_name,
+                                        alt: ""
+                                      }
+                                    })
+                                  ])
+                                }),
+                                0
+                              )
+                            : _c("div", [
+                                _c("img", {
+                                  staticClass:
+                                    "avatar-profile rounded-circle mt-1",
+                                  attrs: {
+                                    src:
+                                      "https://thispersondoesnotexist.com/image",
+                                    alt: ""
+                                  }
+                                })
+                              ]),
                           _vm._v(" "),
-                          _c("p", { staticClass: "otority" })
+                          _c("div", { staticClass: "identity ml-3" }, [
+                            _c("p", { staticClass: "name mt-1 mb-0" }, [
+                              _vm._v(_vm._s(account.name))
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "otority" })
+                          ])
                         ])
-                      ])
-                    ]
+                      ]
+                    )
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _c("router-link", { attrs: { to: { name: "employeelist" } } }, [
+                  _c(
+                    "h5",
+                    {
+                      staticClass: "text-center text-primary font-weight-bold"
+                    },
+                    [_vm._v("See More")]
                   )
-                }),
-                0
-              ),
-              _vm._v(" "),
-              _c(
-                "h5",
-                { staticClass: "text-center text-primary font-weight-bold" },
-                [_vm._v("See More")]
-              )
-            ])
+                ])
+              ],
+              1
+            )
           ])
         ])
       ])
