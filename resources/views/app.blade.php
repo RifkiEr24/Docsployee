@@ -11,7 +11,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
  
     <title>Aplikasi Kepegawaian</title>
-    @laravelPWA
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
