@@ -52,7 +52,17 @@ const routes = [
       path: '/' ,
       component: Login,
       name: 'login',
+      beforeEnter: (to, from, next) =>{
+        axios.get('/api/athenticated').then((res)=>{
+          axios.get('api/user').then((res)=>{
+           next({name: res.data.role})
+          })
+        }).catch(()=>{
+           next()
+        })
+    },
   },
+  
   {
       name: 'register',
       path: '/register',
@@ -74,6 +84,16 @@ const routes = [
                 next({ name: 'user'})
               })
             }else{
+              const today = new Date();
+              const start= new Date(res.data.last_login);
+              let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+              let startdate = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
+              console.log(date, startdate)
+              if(startdate != date){
+                axios.get('/api/updatelogin',{params:{iduser: res.data.id_akun}}).then((res)=>{
+                  console.log(res.data);
+                });
+              }
               next()
             }
           })
@@ -190,6 +210,16 @@ const routes = [
               next({ name: 'admin'})
             })
           }else{
+            const today = new Date();
+            const start= new Date(res.data.last_login);
+            let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            let startdate = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
+            console.log(date, startdate)
+            if(startdate != date){
+              axios.get('/api/updatelogin',{params:{iduser: res.data.id_akun}}).then((res)=>{
+                console.log(res.data);
+              });
+            }
             next()
           }
         })

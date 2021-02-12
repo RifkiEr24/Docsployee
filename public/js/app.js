@@ -6691,7 +6691,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['session'],
   data: function data() {
@@ -6994,12 +6993,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       form: {
         email: '',
-        password: ''
+        password: '',
+        remember: false
       },
       errors: []
     };
@@ -7334,6 +7341,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 var separator = {
   template: "<hr style=\"border-color: rgba(0, 0, 0, 0.1); margin: 20px;\">"
 };
@@ -7380,10 +7389,6 @@ var separator = {
         href: '/' + this.routeDifferentiator() + '/cloud',
         title: 'Cloud',
         icon: 'fa fa-cloud'
-      }, {
-        href: '/' + this.routeDifferentiator() + '/notification',
-        title: 'Notification',
-        icon: 'fas fa-bell'
       }, {
         href: '/' + this.routeDifferentiator() + '/accountedit',
         title: 'Edit Profile',
@@ -7667,8 +7672,29 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         fileLink.click();
       });
     },
-    deletefile: function deletefile(id) {
+    getdocument: function getdocument() {
       var _this = this;
+
+      if (this.$route.name == 'admineditcloud') {
+        axios.get('/api/document', {
+          params: {
+            iduser: this.$route.params.id
+          }
+        }).then(function (res) {
+          _this.documents = res.data;
+        });
+      } else {
+        axios.get('/api/document', {
+          params: {
+            iduser: this.user.id_akun
+          }
+        }).then(function (res) {
+          _this.documents = res.data;
+        });
+      }
+    },
+    deletefile: function deletefile(id) {
+      var _this2 = this;
 
       this.$swal.fire({
         title: 'Apakah kamu yakin?',
@@ -7681,7 +7707,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         cancelButtonText: 'Kembali'
       }).then(function (result) {
         if (result.value) {
-          _this.$swal.fire({
+          _this2.$swal.fire({
             title: 'Success!',
             text: 'Gambar Berhasil Dihapus',
             icon: 'success',
@@ -7690,10 +7716,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
           var uri = "/api/document/delete/".concat(id);
 
-          _this.axios["delete"](uri).then(function (response) {
+          _this2.axios["delete"](uri).then(function (response) {
             console.log(response);
 
-            _this.documents.splice(_this.documents.indexOf(id), 1);
+            _this2.documents.splice(_this2.documents.indexOf(id), 1);
           });
         }
       });
@@ -7732,7 +7758,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       return addModal;
     }(),
     Upload: function Upload(e) {
-      var _this2 = this;
+      var _this3 = this;
 
       if (this.$data.file != null && this.categoryId != null) {
         var config = {
@@ -7742,15 +7768,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         };
         var formdata = new FormData();
         formdata.append('image', this.file);
-        formdata.append('iduser', this.user.id_akun);
-        formdata.append('name', this.user.name);
+
+        if (this.$route.name == 'admineditcloud') {
+          formdata.append('iduser', this.$route.params.id);
+        } else {
+          formdata.append('iduser', this.user.id_akun);
+        }
+
         formdata.append('idcategory', this.categoryId);
         var uri = '/api/uploadimg';
         this.$swal.showLoading();
         this.axios.post(uri, formdata, config).then(function (response) {
-          _this2.$swal.close();
+          _this3.getdocument();
 
-          _this2.$swal.fire({
+          _this3.$swal.close();
+
+          _this3.$swal.fire({
             icon: 'success',
             title: 'Success',
             text: 'Gambar Berhasil Di Tambahkan'
@@ -7769,7 +7802,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   mounted: function mounted() {
-    var _this3 = this;
+    var _this4 = this;
 
     this.idcloud = this.$route.params.id;
 
@@ -7779,27 +7812,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           iduser: this.$route.params.id
         }
       }).then(function (res) {
-        console.log(res.data);
-        _this3.documents = res.data;
+        _this4.documents = res.data;
       });
     } else {
       axios.get('/api/user').then(function (res) {
-        _this3.user = res.data;
+        _this4.user = res.data;
       }).then(function () {
         axios.get('/api/document', {
           params: {
-            iduser: _this3.user.id_akun
+            iduser: _this4.user.id_akun
           }
         }).then(function (res) {
-          _this3.documents = res.data;
-          console.log(_this3.documents);
+          _this4.documents = res.data;
+          console.log(_this4.documents);
         });
       });
     } // GET All category
 
 
     axios.get('/api/category').then(function (res) {
-      _this3.category = res.data;
+      _this4.category = res.data;
     });
   }
 });
@@ -54073,41 +54105,26 @@ var render = function() {
         ),
         _vm._v(" "),
         _c(
-          "router-link",
-          {
-            attrs: {
-              to: { name: "admineditcloud", params: { id: _vm.user.id_akun } }
-            }
-          },
+          "a",
+          { attrs: { href: "/api/account/exportpdf/" + _vm.user.id_akun } },
           [
             _c(
               "button",
               {
                 staticClass:
-                  "btn btn-info rounded-pill ml-auto mr-auto d-block mb-3 text-white",
-                attrs: { type: "button" }
+                  "btn btn-success rounded-pill ml-auto mr-auto d-block mb-3",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    return _vm.exportToPDF()
+                  }
+                }
               },
-              [_vm._v("Lihat Penyimpanan")]
+              [_vm._v("Export PDF")]
             )
           ]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass:
-              "btn btn-success rounded-pill ml-auto mr-auto d-block mb-3",
-            attrs: { type: "button" },
-            on: {
-              click: function($event) {
-                return _vm.exportToPDF()
-              }
-            }
-          },
-          [_vm._v("Export PDF")]
         )
-      ],
-      1
+      ]
     )
   ])
 }
@@ -54443,7 +54460,12 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
-      _vm._m(0),
+      _c("div", { staticClass: "col-md-6 d-md-block d-none" }, [
+        _c("img", {
+          staticClass: "img-fluid mt-5 p-5",
+          attrs: { src: "/images/Logo_SMKN_1_Cimahi-2014.png" }
+        })
+      ]),
       _vm._v(" "),
       _c(
         "div",
@@ -54455,79 +54477,139 @@ var render = function() {
           _vm._v(" "),
           _c("h5", { staticClass: "text-center" }, [_vm._v("Login")]),
           _vm._v(" "),
-          _c("form", { staticClass: "px-3" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.email,
-                    expression: "form.email"
-                  }
-                ],
-                staticClass: "form-control rounded-pill",
-                attrs: {
-                  type: "email",
-                  placeholder: "Masukkan Email Anda disini",
-                  id: "exampleInputEmail1",
-                  "aria-describedby": "emailHelp"
-                },
-                domProps: { value: _vm.form.email },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.form, "email", $event.target.value)
-                  }
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.password,
-                    expression: "form.password"
-                  }
-                ],
-                staticClass: "form-control rounded-pill",
-                attrs: {
-                  type: "password",
-                  placeholder: "Masukkan Password anda Disini",
-                  id: "exampleInputPassword1"
-                },
-                domProps: { value: _vm.form.password },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.form, "password", $event.target.value)
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
           _c(
-            "button",
+            "form",
             {
-              staticClass:
-                "btn btn-primary ml-auto mr-auto d-block px-5 rounded-pill",
-              attrs: { type: "button" },
+              staticClass: "px-3",
+              attrs: { method: "POST" },
               on: {
-                click: function($event) {
+                submit: function($event) {
                   $event.preventDefault()
                   return _vm.loginUser($event)
                 }
               }
             },
-            [_vm._v("Login")]
+            [
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.email,
+                      expression: "form.email"
+                    }
+                  ],
+                  staticClass: "form-control rounded-pill",
+                  attrs: {
+                    type: "email",
+                    placeholder: "Masukkan Email Anda disini",
+                    id: "exampleInputEmail1",
+                    "aria-describedby": "emailHelp"
+                  },
+                  domProps: { value: _vm.form.email },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "email", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.password,
+                      expression: "form.password"
+                    }
+                  ],
+                  staticClass: "form-control rounded-pill",
+                  attrs: {
+                    type: "password",
+                    placeholder: "Masukkan Password anda Disini",
+                    id: "exampleInputPassword1"
+                  },
+                  domProps: { value: _vm.form.password },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "password", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "btn btn-primary ml-auto mr-auto d-block px-5 rounded-pill",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Login")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-check text-center my-3" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.remember,
+                      expression: "form.remember"
+                    }
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: { type: "checkbox", value: "", id: "defaultCheck1" },
+                  domProps: {
+                    checked: Array.isArray(_vm.form.remember)
+                      ? _vm._i(_vm.form.remember, "") > -1
+                      : _vm.form.remember
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.form.remember,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = "",
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 &&
+                            _vm.$set(_vm.form, "remember", $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            _vm.$set(
+                              _vm.form,
+                              "remember",
+                              $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                            )
+                        }
+                      } else {
+                        _vm.$set(_vm.form, "remember", $$c)
+                      }
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  {
+                    staticClass: "form-check-label",
+                    attrs: { for: "defaultCheck1" }
+                  },
+                  [_vm._v("\n                    Ingat Saya\n                ")]
+                )
+              ])
+            ]
           ),
           _vm._v(" "),
           _c("router-link", { attrs: { to: { name: "register" } } }, [
@@ -54550,19 +54632,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6 d-md-block d-none" }, [
-      _c("img", {
-        staticClass: "img-fluid mt-5 p-5",
-        attrs: { src: __webpack_require__(/*! ./../../img/Logo_SMKN_1_Cimahi-2014.jpg */ "./resources/img/Logo_SMKN_1_Cimahi-2014.jpg") }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -55369,7 +55439,16 @@ var render = function() {
             on: {
               "toggle-collapse": _vm.onToggleCollapse,
               "item-click": _vm.onItemClick
-            }
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "toggle-icon",
+                fn: function() {
+                  return [_c("i", { staticClass: "fas fa-arrows-alt-h" })]
+                },
+                proxy: true
+              }
+            ])
           }),
           _vm._v(" "),
           _vm.isOnMobile && !_vm.collapsed
@@ -55411,30 +55490,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "row mt-5" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "float-right" }, [
-          this.$route.name != "admineditcloud"
-            ? _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary  rounded-pill text-white py-2",
-                  attrs: {
-                    "data-toggle": "modal",
-                    "data-target": "#exampleModalCenter"
-                  }
-                },
-                [
-                  _c("i", { staticClass: "fas fa-plus" }),
-                  _vm._v("   Add\n                    Files")
-                ]
-              )
-            : _vm._e()
-        ])
-      ])
-    ]),
+    _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "container" }, [
       this.$route.name == "admineditcloud"
@@ -55742,8 +55798,29 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
-      _c("h4", { staticClass: "text-dark " }, [_vm._v("Quick Access")])
+    return _c("div", { staticClass: "row mt-5" }, [
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("h4", { staticClass: "text-dark " }, [_vm._v("Quick Access")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("div", { staticClass: "float-right" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary  rounded-pill text-white py-2",
+              attrs: {
+                "data-toggle": "modal",
+                "data-target": "#exampleModalCenter"
+              }
+            },
+            [
+              _c("i", { staticClass: "fas fa-plus" }),
+              _vm._v("   Add\n                    Files")
+            ]
+          )
+        ])
+      ])
     ])
   },
   function() {
@@ -71364,17 +71441,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/img/Logo_SMKN_1_Cimahi-2014.jpg":
-/*!***************************************************!*\
-  !*** ./resources/img/Logo_SMKN_1_Cimahi-2014.jpg ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/Logo_SMKN_1_Cimahi-2014.jpg?b0a281fee4233d1e497a1779b2af7735";
-
-/***/ }),
-
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -71456,7 +71522,18 @@ var routes = [{
 }, {
   path: '/',
   component: _components_Login_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
-  name: 'login'
+  name: 'login',
+  beforeEnter: function beforeEnter(to, from, next) {
+    axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/athenticated').then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('api/user').then(function (res) {
+        next({
+          name: res.data.role
+        });
+      });
+    })["catch"](function () {
+      next();
+    });
+  }
 }, {
   name: 'register',
   path: '/register',
@@ -71479,6 +71556,22 @@ var routes = [{
             });
           });
         } else {
+          var today = new Date();
+          var start = new Date(res.data.last_login);
+          var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+          var startdate = start.getFullYear() + '-' + (start.getMonth() + 1) + '-' + start.getDate();
+          console.log(date, startdate);
+
+          if (startdate != date) {
+            axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/updatelogin', {
+              params: {
+                iduser: res.data.id_akun
+              }
+            }).then(function (res) {
+              console.log(res.data);
+            });
+          }
+
           next();
         }
       });
@@ -71612,6 +71705,22 @@ var routes = [{
             });
           });
         } else {
+          var today = new Date();
+          var start = new Date(res.data.last_login);
+          var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+          var startdate = start.getFullYear() + '-' + (start.getMonth() + 1) + '-' + start.getDate();
+          console.log(date, startdate);
+
+          if (startdate != date) {
+            axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/updatelogin', {
+              params: {
+                iduser: res.data.id_akun
+              }
+            }).then(function (res) {
+              console.log(res.data);
+            });
+          }
+
           next();
         }
       });

@@ -13,17 +13,24 @@ class LoginController extends Controller
     {
         $validatedData = $request->validate([
             'email' => ['required', 'email'],
-            'password' => ['required']
+            'password' => ['required'],
+            'remember' => ['required']
         ]);
-        $account = \App\User::where('email',$validatedData['email'])->first();
-        if (Auth::attempt($request->only('email', 'password'))){
-            $account->last_login = Carbon::now()->toDateTimeString();
-            $account->save();
+        $ingat =$validatedData['remember'] ? true : false;
+        if (Auth::attempt($request->only('email', 'password'),$ingat)){
+         
             return response()->json(Auth::User(), 200);
         }
         throw ValidationException::withMessages([
             'email' =>['The provided credentials are incorect.']
         ]);
+    }
+    public function updatelogin(Request $request)
+    {
+     $account = \App\User::where('id_akun',$request->iduser)->first();
+     $account->last_login = Carbon::now()->toDateTimeString();
+     $account->save();
+     return response()->json($account);
     }
     public function logout()
     {

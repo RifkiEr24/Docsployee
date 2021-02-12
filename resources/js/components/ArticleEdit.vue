@@ -56,12 +56,11 @@
                 </div>
             </div>
             <button class="btn btn-primary rounded-pill ml-auto mr-auto d-block mb-3" type="submit">Simpan Data</button>
-              <router-link :to="{name: 'admineditcloud', params: { id: user.id_akun }}">
-             <button class="btn btn-info rounded-pill ml-auto mr-auto d-block mb-3 text-white"
-                type="button">Lihat Penyimpanan</button>
-              </router-link>
-            <button class="btn btn-success rounded-pill ml-auto mr-auto d-block mb-3" @click="exportToPDF()"
+                 <a :href="'/api/account/exportpdf/'+user.id_akun">
+                          <button class="btn btn-success rounded-pill ml-auto mr-auto d-block mb-3" @click="exportToPDF()"
                 type="button">Export PDF</button>
+                </a>
+          
         </form>
     </div>
 </template>

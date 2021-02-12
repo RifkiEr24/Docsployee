@@ -112,6 +112,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["accountuser", "session"],
   data: function data() {
@@ -360,6 +367,29 @@ var render = function() {
                 _c(
                   "td",
                   [
+                    _c(
+                      "router-link",
+                      {
+                        attrs: {
+                          to: {
+                            name: "admineditcloud",
+                            params: { id: user.id_akun }
+                          }
+                        }
+                      },
+                      [
+                        _c("span", { staticClass: "fa-stack  fa-size fa-lg" }, [
+                          _c("i", {
+                            staticClass: "fa fa-square text-success fa-stack-2x"
+                          }),
+                          _vm._v(" "),
+                          _c("i", {
+                            staticClass: "fas fa-folder fa-stack-1x text-white"
+                          })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
                     _c(
                       "router-link",
                       {

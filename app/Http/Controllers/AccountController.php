@@ -169,6 +169,13 @@ class AccountController extends Controller
       return response()->json($users);
 
     }
+    public function searchid(Request $request)
+	{
+    $user = \App\User::find($request->iduser);
+
+    return response()->json($user);
+ 
+	}
     public function exportexcel() 
     {
         return Excel::download(new UsersExport, 'users.xlsx');

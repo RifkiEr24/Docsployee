@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 d-md-block d-none">
-                <img src="./../../img/Logo_SMKN_1_Cimahi-2014.jpg" class="img-fluid mt-5 p-5">
+                <img :src="'/images/Logo_SMKN_1_Cimahi-2014.png'"  class="img-fluid mt-5 p-5">
             </div>
             <div class="col-md-6 ml-auto mr-auto d-block mt-auto mb-auto">
                 <h2 class="p-3 text-center mt-md-5">Sistem Aplikasi Kepegawaian</h2>
                 <h5 class="text-center">Login</h5>
-                <form class="px-3" >
+                <form class="px-3" method="POST" @submit.prevent="loginUser">
                     <div class="form-group">
                         <input type="email" class="form-control rounded-pill" placeholder="Masukkan Email Anda disini"
                             id="exampleInputEmail1" aria-describedby="emailHelp" v-model="form.email">
@@ -16,8 +16,15 @@
                         <input type="password" class="form-control rounded-pill"
                             placeholder="Masukkan Password anda Disini" id="exampleInputPassword1" v-model="form.password">
                     </div>
+                      <button type="submit" class="btn btn-primary ml-auto mr-auto d-block px-5 rounded-pill">Login</button>
+                <div class="form-check text-center my-3">
+                    <input class="form-check-input" type="checkbox" value="" v-model="form.remember" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Ingat Saya
+                    </label>
+                    </div>
                 </form>
-                <button type="button" class="btn btn-primary ml-auto mr-auto d-block px-5 rounded-pill" @click.prevent="loginUser">Login</button>
+              
                 <router-link :to="{name: 'register'}"><small id="emailHelp"
                         class="form-text text-primary text-center">Belum mempunyai akun?
                         Daftar Sekarang</small></router-link>
@@ -36,7 +43,8 @@ export default {
         return{
              form:{
                 email: '',
-                password: ''
+                password: '',
+                remember: false
             },
             errors: []
         }

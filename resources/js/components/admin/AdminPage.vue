@@ -16,7 +16,9 @@
         :show-one-child="true"
         @toggle-collapse="onToggleCollapse"
         @item-click="onItemClick"
-      />
+      >
+        <template v-slot:toggle-icon><i class="fas fa-arrows-alt-h"></i></template>
+      </sidebar-menu>
       <div
         v-if="isOnMobile && !collapsed"
         class="sidebar-overlay "
@@ -80,11 +82,6 @@ export default {
           icon: 'fa fa-cloud',
          
           
-        },
-        {
-          href: '/'+ this.routeDifferentiator()+'/notification',
-          title: 'Notification',
-          icon: 'fas fa-bell'
         },
         {
           href: '/'+ this.routeDifferentiator()+'/accountedit',

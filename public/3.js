@@ -53,11 +53,9 @@ __webpack_require__.r(__webpack_exports__);
     getevent: function getevent() {
       var _this = this;
 
-      console.log('aaaaaaa');
       var uri = '/api/event';
       this.axios.get(uri).then(function (response) {
         _this.calendarOptions.events = response.data;
-        console.log(_this.calendarOptions.events);
       });
     },
     handleEventClick: function handleEventClick(clickInfo) {
@@ -93,39 +91,36 @@ __webpack_require__.r(__webpack_exports__);
                   return [document.getElementById('swal-input1').value, document.getElementById('swal-input2').value];
                 }
               }).then(function (form) {
-                console.log(form);
-
                 if (form.value[0] != "" && form.value[1] != "") {
-                  console.log(res.data.id);
-                  var formdata = new FormData();
                   _this2.eventedit.id = res.data.id;
                   _this2.eventedit.title = form.value[0];
                   _this2.eventedit.deskripsi = form.value[1];
-                  console.log(res.data.id + form.value[0] + form.value[1]);
-                  var a = form.value[0];
-                  var b = form.value[1];
-                  formdata.append('title', a);
-                  formdata.append('deskripsi', b);
-                  formdata.append('id', res.data.id);
-                  console.log(_this2.eventedit);
+                  var eventitle = form.value[0];
+                  var eventdeskrisi = form.value[1];
 
                   _this2.axios.put("/api/event/update", {
                     params: {
-                      id: 1,
-                      title: 'a',
-                      deskripsi: 'bbb'
+                      id: res.data.id,
+                      title: eventitle,
+                      deskripsi: eventdeskrisi
                     }
                   }).then(function (response) {
-                    response.data;
-
                     _this2.getevent();
+
+                    _this2.$swal.fire({
+                      icon: 'success',
+                      title: 'Berhasil',
+                      text: 'Acara berhasil diperbaharui'
+                    });
                   });
                 } else {
-                  console.log('gagal');
+                  _this2.$swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: 'Tolong isi judul dan deskripsi acara!'
+                  });
                 }
               });
-
-              console.log(formvalues);
             } else if (result.isDenied) {
               _this2.axios["delete"]("/api/event/delete/".concat(res.data.id)).then(function (response) {
                 response.data;
@@ -160,8 +155,6 @@ __webpack_require__.r(__webpack_exports__);
             return _this3.$swal.isLoading();
           }
         }).then(function (text) {
-          console.log(text);
-
           if (text.isDismissed != true && text.value != "") {
             var _this3$$swal$fire$the = _this3.$swal.fire({
               title: 'Enter Event Description',
@@ -189,6 +182,18 @@ __webpack_require__.r(__webpack_exports__);
                     text: 'Acara Berhasil Dibuat'
                   }).then(function () {
                     _this3.getevent();
+                  });
+
+                  axios.get('/api/sentemailall', {
+                    params: {
+                      title: response.data.title,
+                      deskripsi: response.data.deskripsi,
+                      start: response.data.start
+                    }
+                  }).then(function (res) {
+                    res.data;
+                  })["catch"](function (error) {
+                    console.log(error);
                   });
                 })["catch"](function (error) {
                   _this3.$swal.fire({

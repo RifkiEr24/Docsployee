@@ -38,11 +38,10 @@ export default {
     },
     methods: {
         getevent() {
-            console.log('aaaaaaa')
             let uri = '/api/event';
             this.axios.get(uri).then(response => {
                 this.calendarOptions.events = response.data;
-                console.log(this.calendarOptions.events);
+              
 
 
             });
@@ -79,33 +78,36 @@ export default {
                             ]
                         }
                         }).then((form)=>{
-                           console.log(form);
+                          
                             if (form.value[0] != "" && form.value[1] != "") {
-                        console.log(res.data.id);
-                         const formdata = new FormData();
+                     
                          this.eventedit.id=res.data.id;
                          this.eventedit.title=form.value[0];
                          this.eventedit.deskripsi=form.value[1];
-                         console.log(res.data.id + form.value[0] + form.value[1])
-                         let a= form.value[0];
-                         let b=form.value[1]
-                        formdata.append('title', a);
-                        formdata.append('deskripsi',b);
-                          formdata.append('id',res.data.id);
-                        console.log(this.eventedit);
+                         let eventitle= form.value[0];
+                         let eventdeskrisi=form.value[1]
+        
                       this.axios.put(`/api/event/update`,{params: {
-                        id: 1,
-                        title: 'a',
-                        deskripsi: 'bbb',
+                        id: res.data.id,
+                        title: eventitle,
+                        deskripsi: eventdeskrisi,
                     }},).then((response) => {
-                            response.data;
-                        this.getevent();
+                         this.getevent();
+                           this.$swal.fire({
+                                icon: 'success',
+                              title: 'Berhasil',
+                          text: 'Acara berhasil diperbaharui',
+                           })
+                       
                             });
                         }else{
-                            console.log('gagal');
+                            this.$swal.fire({
+                                icon: 'error',
+                              title: 'Gagal',
+                          text: 'Tolong isi judul dan deskripsi acara!',
+                           })
                         }
                         })
-                     console.log(formvalues);
                 } else if (result.isDenied) {
                    this.axios.delete(`/api/event/delete/${res.data.id}`).then((response) => {
                             response.data;
@@ -140,7 +142,7 @@ export default {
                 confirmButtonText: 'Create Event',
                 allowOutsideClick: () => this.$swal.isLoading(),
             }).then((text) => {
-                console.log(text);
+            
                 if (text.isDismissed != true && text.value != "") {
                     const {
                         value: description
@@ -170,6 +172,15 @@ export default {
                                     text: 'Acara Berhasil Dibuat',
                                 }).then(() => {
                                     this.getevent();
+                                })
+                                axios.get('/api/sentemailall',{params: {
+                                    title:response.data.title,
+                                    deskripsi:response.data.deskripsi,
+                                    start:response.data.start
+                                }}).then((res)=>{
+                                    res.data;
+                                }).catch((error)=>{
+                                    console.log(error);
                                 })
                             }).catch((error) => {
                                 this.$swal.fire({

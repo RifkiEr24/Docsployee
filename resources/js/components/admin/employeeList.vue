@@ -42,6 +42,12 @@
                 <td> {{user.name}}</td>
                 <td> <span class="badge badge-primary">{{user.last_login}}</span></td>
                 <td>
+                       <router-link :to="{name: 'admineditcloud', params: { id: user.id_akun }}">
+                        <span class="fa-stack  fa-size fa-lg">
+                            <i class="fa fa-square text-success fa-stack-2x"></i>
+                            <i class="fas fa-folder fa-stack-1x text-white"></i>
+                        </span>
+                    </router-link>
                     <router-link :to="{name: 'edit', params: { id: user.id_akun }}">
                         <span class="fa-stack  fa-size fa-lg">
                             <i class="fa fa-square text-primary fa-stack-2x"></i>
@@ -52,6 +58,7 @@
                         <i class="fa fa-square text-danger fa-stack-2x"></i>
                         <i class="fas fa-user-minus fa-stack-1x text-white"></i>
                     </span>
+
                 </td>
             </tr>
         </tbody>

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', 'hidden-harbor-00569.herokuapp.com')),
+    'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', 'kepegawaiansmk1cmh.herokuapp.com')),
     // 'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', 'localhost,127.0.0.1,127.0.0.1:8000,::1')),
 
     /*

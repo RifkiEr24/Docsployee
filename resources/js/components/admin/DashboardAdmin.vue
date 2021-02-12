@@ -172,6 +172,7 @@ export default {
 
     mounted() {
         // DOCUMENT DATA CHECK
+  
         let i = 0;
             axios.get('/api/datacheck', {
                 params: {

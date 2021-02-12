@@ -15,9 +15,13 @@ class VerificationMail extends Mailable
      *
      * @return void
      */
-    public function __construct($nama)
+    public function __construct($nama,$eventname,$deskripsi,$start,$role)
     {
         $this->nama = $nama;
+        $this->title = $eventname;
+        $this->deskripsi = $deskripsi;
+        $this->waktu = $start;
+        $this->role = $role;
     }
 
     /**
@@ -28,10 +32,15 @@ class VerificationMail extends Mailable
     public function build()
     {
         return $this->from('smkn1cmhapp@gmail.com')
+            ->subject('Pemberitahuan Acara')
             ->view('email')
             ->with(
             [
-                'nama' => $this->nama
+                'nama' => $this->nama,
+                'judul' => $this->title,
+                'deskripsi' => $this->deskripsi,
+                'waktu' => $this->waktu,
+                'role' => $this->role
             ]);
     }
 } 

@@ -42,13 +42,10 @@ class EventController extends Controller
           'start' => $validatedData['start'],
           'end' => ($validatedData['end']),
         ]);
+
+
  
-        $msg = [
-            'success' => true,
-            'message' => 'Event created successfully!'
-        ];
- 
-        return response()->json($msg);
+        return response()->json($validatedData);
     } 
 
    
@@ -63,15 +60,14 @@ class EventController extends Controller
     } 
     public function update(Request $request)
     { 
-
-      $validatedData = $request->validate([
-        'id' => 'required',
-        'title' => 'required',
-        'deskripsi' => 'required'
-      ]);
-        $article = \App\Event::find($request->id);
-        $article->title = $request->title;
-        $article->deskripsi = $request->deskripsi;
+      // $validatedData = $request->validate([
+      //   'id' => 'required',
+      //   'title' => 'required',
+      //   'deskripsi' => 'required'
+      // ]);
+        $article = \App\Event::find($request->input('params.id'));
+        $article->title = $request->input('params.title');
+        $article->deskripsi = $request->input('params.deskripsi');
         $article->save();
        
         $msg = [
@@ -81,6 +77,7 @@ class EventController extends Controller
   
         return response()->json($msg);
     }
+
     public function delete($id)
     {
         $event = \App\Event::find($id);

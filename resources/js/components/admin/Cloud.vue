@@ -7,7 +7,7 @@
             <div class="col-md-6">
                 <div class="float-right">
                     <!-- <input type="file" @change="processFile($event)" name="imgupload"> -->
-                    <button data-toggle="modal" data-target="#exampleModalCenter" v-if="this.$route.name != 'admineditcloud'"
+                    <button data-toggle="modal" data-target="#exampleModalCenter"
                         class="btn btn-primary  rounded-pill text-white py-2"> <i class="fas fa-plus"></i> &nbsp Add
                         Files</button>
 
@@ -160,6 +160,26 @@ export default {
                      fileLink.click();
                 });
           },
+          getdocument(){
+               if(this.$route.name == 'admineditcloud'){
+                axios.get('/api/document', {
+                params: {
+                    iduser: this.$route.params.id
+                }
+            }).then((res) => {
+               this.documents=res.data;
+            })
+                }else{
+               axios.get('/api/document', {
+                params: {
+                    iduser: this.user.id_akun
+                }
+            }).then((res) => {
+                this.documents = res.data
+               
+            })
+                }
+          },
           deletefile(id){
                  this.$swal.fire({
                 title: 'Apakah kamu yakin?',
@@ -210,12 +230,16 @@ export default {
                 }
                 const formdata = new FormData();
                 formdata.append('image', this.file);
+                if(this.$route.name == 'admineditcloud'){
+                formdata.append('iduser', this.$route.params.id);
+                }else{
                 formdata.append('iduser', this.user.id_akun);
-                formdata.append('name', this.user.name);
+                }
                 formdata.append('idcategory', this.categoryId);
                 let uri = '/api/uploadimg';
                  this.$swal.showLoading();
                 this.axios.post(uri, formdata, config).then((response) => {
+                    this.getdocument();
                 this.$swal.close();
                 this.$swal.fire({
                      icon: 'success',
@@ -232,7 +256,7 @@ export default {
                 confirmButtonText: `Kembali`,
             })
             }
-
+        
             e.preventDefault();
         }
     },
@@ -244,7 +268,6 @@ export default {
                     iduser: this.$route.params.id
                 }
             }).then((res) => {
-                console.log(res.data);
                this.documents=res.data;
             })
         }else{

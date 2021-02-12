@@ -20,4 +20,24 @@ class EmailController extends Controller
             echo "email gagal terkirim";
         }
 }
+
+public function sendemailtoall(Request $request)
+{
+
+    $validatedData = $request->validate([
+        'title' => 'required',
+        'deskripsi' => 'required',
+        'start' => 'required',
+      ]);
+      $user= \App\User::all();
+      foreach ($user as $useritem) {
+        $nama = $useritem->name;
+        $email = $useritem->email;
+        $title= $validatedData['title'];
+        $deskripsi =  $validatedData['deskripsi'];
+        $start = $validatedData['start'];
+        $role = $useritem->role;
+        $kirim = Mail::to($email)->send(new VerificationMail($nama,$title,$deskripsi,$start,$role));
+    }
+}
 }
