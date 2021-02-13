@@ -11,6 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
  
     <title>Aplikasi Kepegawaian</title>
+    <link rel="manifest" href="manifest.json" />
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -18,7 +19,13 @@
 </head>
 <body>
     <div id="app"></div>
- 
+    <script>
+    if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
     <script src="/js/app.js"></script>
 </body>
 
