@@ -1,5 +1,6 @@
 <template>
-    <div class="row mt-5">
+<div>
+    <div v-if="documents.length > 0" class="row mt-5">
         <div class="col-md-4" v-for="(document) in documents" :key="document.id_document">
             <div class="card border-rounded" style="width: 18rem;">
                 <img class="card-img-top" :src="'/userdata/'+user.id_akun+'/'+document.file_name"
@@ -21,6 +22,19 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div v-else class="row mt-5">
+        <div class="col-md-4">
+             
+        </div>
+         <div class="col-md-4">
+             <img :src="'/images/not found.png'" class="w-100 d-block ml-auto mr-auto" alt="">
+             <h4 class="text-center mt-3">Tidak Ada dokumen di folder ini</h4>
+               <!-- <button  class="btn btn-primary ml-auto mr-auto d-block rounded-pill text-white py-2"> <i class="fas fa-plus"></i> Tambah Sekarang</button> -->
+        </div>
+         <div class="col-md-4">
+        </div>
+    </div>
     </div>
 </template>
 <script>
@@ -76,12 +90,9 @@ export default {
       
            },
     mounted() {
-        console.log(this.$route);
         if(this.$route.name== 'admineditcategory'){
-              axios.get(`/api/category/detailname/${this.$route.params.id}`,{params:{categoryname:this.$route.params.categoryname}}).then((res) => {
-                this.documents = res.data;  
-        
-                console.log(this.documents);
+              axios.get(`/api/category/detailname/${this.$route.params.id}`,{params:{categoryid:this.$route.params.categoryname}}).then((res) => {
+                this.documents = res.data;      
             })
         }else{
            axios.get('/api/user').then((res) => {
@@ -89,7 +100,6 @@ export default {
         }).then(() => {
             axios.get(`/api/category/detail/${this.$route.params.id}`,{params : {iduser: this.user.id_akun}}).then((res) => {
                 this.documents = res.data;  
-                console.log(this.documents);
             })
         })  
         }

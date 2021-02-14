@@ -54,6 +54,12 @@
                             <i class="fas fa-user-edit fa-stack-1x text-white"></i>
                         </span>
                     </router-link>
+                        <router-link :to="{name: 'adminpasswordedit', params: { id: user.id_akun }}">
+                        <span class="fa-stack  fa-size fa-lg">
+                            <i class="fa fa-square text-warning fa-stack-2x"></i>
+                            <i class="fas fa-key fa-stack-1x text-white"></i>
+                        </span>
+                    </router-link>
                     <span class="fa-stack  fa-size fa-lg" @click="deletePost(user.id_akun)">
                         <i class="fa fa-square text-danger fa-stack-2x"></i>
                         <i class="fas fa-user-minus fa-stack-1x text-white"></i>
@@ -122,12 +128,7 @@ export default {
         }
       },
          created() {
-             console.log(this.usersession);
-        let uriaccount = '/api/account';
-        this.axios.get(uriaccount).then(response => {
-            this.accounts = response.data;
-
-        });
+      
          
     },
       watch:{
@@ -136,6 +137,12 @@ export default {
           }
       },
       methods:{
+          getaccount(){
+                 let uriaccount = '/api/account';
+        this.axios.get(uriaccount).then(response => {
+            this.accounts = response.data;
+        })
+          },
           exportToPDF () {
                          console.log('a')
 			},
@@ -165,18 +172,18 @@ export default {
                 cancelButtonText: 'Nggak Jadi'
                 }).then((result) => {
                 if (result.value) {
-                    this.$swal.fire({
+                
+                    let uri = `/api/account/delete/${id}`;
+                    this.axios.delete(uri).then(response => {
+                            this.$swal.fire({
                         title: 'Success!',
                         text: 'Akun Berhasil Dihapus',
                         icon: 'success',
                         timer: 1000
                     });
-                    let uri = `/api/account/delete/${id}`;
-                    this.axios.delete(uri).then(response => {
-                        console.log(response);
-                        this.accounts.splice(this.accounts.indexOf(id), 1);
+                        this.getaccount();
                     });
-                    console.log("Deleted article with id ..." +id);
+                 
                     
                 }
             })

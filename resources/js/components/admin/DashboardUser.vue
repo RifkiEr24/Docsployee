@@ -1,36 +1,15 @@
 <template>
     <div>
-        <div class="bg-white border-rounded p-2 py-3 m-1 row mt-4">
-            <div class="col-md-4 ">
-
-                <span class="fa-stack fa-size fa-lg float-left">
-                    <i class="fa fa-square text-danger fa-stack-2x"></i>
-                    <i class="far fa-envelope-open fa-stack-1x text-white"></i>
-                </span>
-                <p class="mt-1"> <span class="font-weight-bold">125</span> <br> Notification</p>
-
-
-            </div>
-            <div class="col-md-4 ">
-
-                <span class="fa-stack  fa-size fa-lg float-left">
-                    <i class="fa fa-square text-info fa-stack-2x"></i>
-                    <i class="fas fa-users fa-stack-1x text-white"></i>
-                </span>
-                <p class="mt-1"><span class="font-weight-bold">20</span> <br> Employee</p>
-
-            </div>
-            <div class="col-md-4 ">
-
-                <span class="fa-stack  fa-size fa-lg float-left">
-                    <i class="fa fa-square text-primary fa-stack-2x"></i>
-                    <i class="fas fa-tasks fa-stack-1x text-white"></i>
-                </span>
-                <p class="mt-1"><span class="font-weight-bold">12</span> <br> Task</p>
-
-            </div>
+           <div class="bg-white border-rounded p-2 py-3 m-1 row mt-4">
+        <div class="col-md-12 ">
+          
+            <h3 class="font-weight-bold">Halo, {{ usersession.name }}</h3>
+            <h5>Anda Adalah {{usersession.role}}</h5>
+            
         </div>
-        <div class="row mt-5 mb-5">
+          
+    </div>
+        <div class="row mt-4 mb-5">
             <div class="col-md-8">
                 <div class="bg-white p-4 border-rounded">
                     <div v-if="missingdata.length != 0">
@@ -92,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4 mt-4 mt-md-0">
                 <div class="bg-white p-4 border-rounded">
                     <h4 class="text-center font-weight-bold">Tentang Anda</h4>
 
@@ -104,7 +83,7 @@
                         </div>
                     </div>
                     <div v-else>
-                        <img :src="'https://thispersondoesnotexist.com/image'"
+                        <img :src="'https://ui-avatars.com/api/?background=3490dc&color=fff&name='+usersession.name"
                             class="avatar-profile-big d-block ml-auto mr-auto rounded-circle mt-1" alt="">
                     </div>
 
@@ -118,34 +97,6 @@
                         Edit Akun</button>
                        </router-link>
 
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-12 ">
-                        <div class="bg-white p-1 border-rounded">
-                            <h4 class="text-center font-weight-bold mt-2">Users</h4>
-                            <ul class="list-group">
-                                <li v-for="(account) in accounts.slice(0, 4)" :key="account.id"
-                                    class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div class="d-flex">
-                                        <div v-if="account.document.length != 0">
-                                            <div v-for="(doc) in account.document.slice(0,1)" :key="doc.id_document">
-                                                <img :src="'/userdata/'+account.id_akun+'/'+doc.file_name"
-                                                    class="avatar-profile rounded-circle mt-1" alt="">
-                                            </div>
-                                        </div>
-                                        <div v-else>
-                                            <img :src="'https://thispersondoesnotexist.com/image'"
-                                                class="avatar-profile rounded-circle mt-1" alt="">
-                                        </div>
-                                        <div class="identity ml-3">
-                                            <p class="name mt-1 mb-0">{{account.name}}</p>
-                                            <p class="otority"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
 

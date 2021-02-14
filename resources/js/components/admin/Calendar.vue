@@ -233,4 +233,11 @@ color: white;
     transition: 1s;
 background-color: #19588b
 }
+.fc-daygrid-day{
+    background-color: white ;
+
+}
+.fc .fc-daygrid-day.fc-day-today{
+    background-color: #6cb2eb;
+}
 </style>

@@ -157,6 +157,16 @@ const routes = [
             component: () => import("./components/admin/AccountEdit.vue")
           },
           {
+            name:'adminpassword',
+            path:'passwordedit',
+            component: () => import("./components/admin/PasswordEdit.vue")
+          },
+          {
+            name:'adminpasswordedit',
+            path:'passwordedit/:id',
+            component: () => import("./components/admin/PasswordEdit.vue")
+          },
+          {
             path: 'notification',
             component: () => import("./components/admin/Notification.vue")
           }

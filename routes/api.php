@@ -26,6 +26,8 @@ Route::get('/account/search','AccountController@search');
 Route::get('/account/accountsearch','AccountController@accountsearch');
 Route::get('/account/accountsearchid','AccountController@searchid');
 Route::get('/account/edit/{id}', 'ArticleController@getArticle');
+Route::post('/account/changepassword', 'AccountController@changepassword');
+Route::post('/account/changepasswordadmin', 'AccountController@changepasswordadmin');
 Route::put('/account/update/{id}', 'ArticleController@update');
 Route::get('/account/profilepicture/{id}', 'AccountController@profilepicture');
 Route::put('/account/updateall/', 'AccountController@update');

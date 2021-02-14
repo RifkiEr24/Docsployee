@@ -11,8 +11,8 @@
                         </select>
                 </div>
                 <div class="form-group" v-else>
-                     <label for="role">Jenis Kelamin</label>
-                        <select id="role"  class="form-control" v-model="user.role">
+                     <label for="roleb">Hak Akses</label>
+                        <select id="roleb" class="form-control" v-model="user.role">
                             <option selected>admin</option>
                             <option>user</option>
                         </select>
@@ -88,9 +88,10 @@
         });
     },
     methods: {
+
         updateArticle(e){
              
-            if (this.$data.account.name != null && this.$data.account.email != null) {
+            if (this.$data.user.name != null && this.$data.user.email != null) {
                  
                 this.$swal.fire({
                     title: 'Success',
@@ -99,8 +100,11 @@
                     timer: 1000
                 });
                 let uri = `/api/account/update/${this.$route.params.id}`;
-                this.axios.put(uri, this.account).then((response) => {
+                this.axios.put(uri, this.user).then((response) => {
+                    console.log(response.data);
                     this.$router.push({name: 'employeelist'});
+                }).catch((error)=>{
+                    console.log(error);
                 });
                 return true;
             }
@@ -124,7 +128,10 @@
                     text: "Account Berhasil diperbaharui",
                     icon: 'success',
                     timer: 1000
+                }).then(()=>{
+                     this.$router.push({name: 'employeelist'});
                 }));
+               
         }
     }
   }

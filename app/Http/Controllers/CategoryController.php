@@ -55,7 +55,7 @@ class CategoryController extends Controller
         ->join('users','documents.id_akun','=','users.id_akun')
         ->join('categories', 'documents.id_category', '=', 'categories.id_category')
         ->select('documents.*', 'categories.*','users.name')
-        ->where('categories.category_name', $request->categoryname)
+        ->where('categories.id_category', $request->categoryid)
         ->where('documents.id_akun', $id)
         ->get();
 

@@ -117,55 +117,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -656,9 +607,21 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c(
+      "div",
+      { staticClass: "bg-white border-rounded p-2 py-3 m-1 row mt-4" },
+      [
+        _c("div", { staticClass: "col-md-12 " }, [
+          _c("h3", { staticClass: "font-weight-bold" }, [
+            _vm._v("Halo, " + _vm._s(_vm.usersession.name))
+          ]),
+          _vm._v(" "),
+          _c("h5", [_vm._v("Anda Adalah " + _vm._s(_vm.usersession.role))])
+        ])
+      ]
+    ),
     _vm._v(" "),
-    _c("div", { staticClass: "row mt-5 mb-5" }, [
+    _c("div", { staticClass: "row mt-4 mb-5" }, [
       _c("div", { staticClass: "col-md-8" }, [
         _c("div", { staticClass: "bg-white p-4 border-rounded" }, [
           _vm.missingdata.length != 0
@@ -816,13 +779,13 @@ var render = function() {
                     ],
                     1
                   )
-                : _c("div", [_vm._m(1)])
+                : _c("div", [_vm._m(0)])
             ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-4 " }, [
+      _c("div", { staticClass: "col-md-4 mt-4 mt-md-0" }, [
         _c(
           "div",
           { staticClass: "bg-white p-4 border-rounded" },
@@ -857,7 +820,9 @@ var render = function() {
                     staticClass:
                       "avatar-profile-big d-block ml-auto mr-auto rounded-circle mt-1",
                     attrs: {
-                      src: "https://thispersondoesnotexist.com/image",
+                      src:
+                        "https://ui-avatars.com/api/?background=3490dc&color=fff&name=" +
+                        _vm.usersession.name,
                       alt: ""
                     }
                   })
@@ -879,141 +844,12 @@ var render = function() {
             ])
           ],
           1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "row mt-4" }, [
-          _c("div", { staticClass: "col-md-12 " }, [
-            _c("div", { staticClass: "bg-white p-1 border-rounded" }, [
-              _c("h4", { staticClass: "text-center font-weight-bold mt-2" }, [
-                _vm._v("Users")
-              ]),
-              _vm._v(" "),
-              _c(
-                "ul",
-                { staticClass: "list-group" },
-                _vm._l(_vm.accounts.slice(0, 4), function(account) {
-                  return _c(
-                    "li",
-                    {
-                      key: account.id,
-                      staticClass:
-                        "list-group-item d-flex justify-content-between align-items-center"
-                    },
-                    [
-                      _c("div", { staticClass: "d-flex" }, [
-                        account.document.length != 0
-                          ? _c(
-                              "div",
-                              _vm._l(account.document.slice(0, 1), function(
-                                doc
-                              ) {
-                                return _c("div", { key: doc.id_document }, [
-                                  _c("img", {
-                                    staticClass:
-                                      "avatar-profile rounded-circle mt-1",
-                                    attrs: {
-                                      src:
-                                        "/userdata/" +
-                                        account.id_akun +
-                                        "/" +
-                                        doc.file_name,
-                                      alt: ""
-                                    }
-                                  })
-                                ])
-                              }),
-                              0
-                            )
-                          : _c("div", [
-                              _c("img", {
-                                staticClass:
-                                  "avatar-profile rounded-circle mt-1",
-                                attrs: {
-                                  src:
-                                    "https://thispersondoesnotexist.com/image",
-                                  alt: ""
-                                }
-                              })
-                            ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "identity ml-3" }, [
-                          _c("p", { staticClass: "name mt-1 mb-0" }, [
-                            _vm._v(_vm._s(account.name))
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "otority" })
-                        ])
-                      ])
-                    ]
-                  )
-                }),
-                0
-              )
-            ])
-          ])
-        ])
+        )
       ])
     ])
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "bg-white border-rounded p-2 py-3 m-1 row mt-4" },
-      [
-        _c("div", { staticClass: "col-md-4 " }, [
-          _c("span", { staticClass: "fa-stack fa-size fa-lg float-left" }, [
-            _c("i", { staticClass: "fa fa-square text-danger fa-stack-2x" }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "far fa-envelope-open fa-stack-1x text-white"
-            })
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "mt-1" }, [
-            _c("span", { staticClass: "font-weight-bold" }, [_vm._v("125")]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" Notification")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 " }, [
-          _c("span", { staticClass: "fa-stack  fa-size fa-lg float-left" }, [
-            _c("i", { staticClass: "fa fa-square text-info fa-stack-2x" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "fas fa-users fa-stack-1x text-white" })
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "mt-1" }, [
-            _c("span", { staticClass: "font-weight-bold" }, [_vm._v("20")]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" Employee")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 " }, [
-          _c("span", { staticClass: "fa-stack  fa-size fa-lg float-left" }, [
-            _c("i", { staticClass: "fa fa-square text-primary fa-stack-2x" }),
-            _vm._v(" "),
-            _c("i", { staticClass: "fas fa-tasks fa-stack-1x text-white" })
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "mt-1" }, [
-            _c("span", { staticClass: "font-weight-bold" }, [_vm._v("12")]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" Task")
-          ])
-        ])
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

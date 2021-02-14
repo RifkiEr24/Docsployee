@@ -88,6 +88,12 @@ export default {
           title: 'Edit Profile',
           icon: 'fa fa-user-edit'
         },
+           {
+          href: '/'+ this.routeDifferentiator()+'/passwordedit',
+          title: 'Edit Password',
+          icon: 'fas fa-key'
+        },
+      
         {
           component: separator
         },
@@ -163,13 +169,19 @@ export default {
             this.accounts = response.data;
             this.accounts.forEach(element => {
                 let sum = -1;
-                element.document.forEach(doc => {
-                    sum = sum + 1;
-              
-                    if (doc.id_category != 4) {
-                        element.document.splice(sum, 1);
+                for (var i = element.document.length - 1; i >= 0; i--) {
+                    if (element.document[i].id_category != 4) { 
+                       element.document.splice(i, 1);
                     }
-                });
+                }
+                // element.document.forEach(doc => {
+                //     sum = sum + 1;
+              
+                //     if (doc.id_category == 1 || doc.id_category == 2 || doc.id_category == 3 || doc.id_category == 5  ) {
+                //         element.document.splice(this.accounts.indexOf(sum));
+                //         console.log('berhasil dihapus')
+                //     }
+                // });
             });
         });
     // GET USER SESSION

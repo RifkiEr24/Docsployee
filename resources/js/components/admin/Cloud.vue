@@ -20,7 +20,7 @@
             <div class="row mt-5" v-if="this.$route.name == 'admineditcloud'">
                 <div v-for="(category) in category" :key="category.id_category">
                     <router-link
-                        :to="{name: 'admineditcategory', params: { id: idcloud, categoryname: category.category_name}}">
+                        :to="{name: 'admineditcategory', params: { id: idcloud, categoryname: category.id_category}}">
                         <div class="col-md-4 mb-4">
                             <div class="ffolder big cyan">
                                 <span>{{category.category_name}}</span>
@@ -75,7 +75,7 @@
                             <i class="fa fa-square text-primary fa-stack-2x"></i>
                             <i class="fas fa-download fa-stack-1x text-white"></i>
                         </span>
-                   
+                   {{document.id_document}}
                     <span class="fa-stack  fa-size fa-lg cursor-pointer" @click="deletefile(document.id_document)">
                         <i class="fa fa-square text-danger fa-stack-2x"></i>
                         <i class="fas fa-trash fa-stack-1x text-white"></i>
@@ -200,8 +200,7 @@ export default {
                     });
                     let uri = `/api/document/delete/${id}`;
                     this.axios.delete(uri).then(response => {
-                        console.log(response);
-                        this.documents.splice(this.documents.indexOf(id), 1);
+                       this.getdocument();
                     });                    
                 }
             })

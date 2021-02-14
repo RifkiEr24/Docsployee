@@ -11,6 +11,8 @@ use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\File; 
 use PDF;
 use Carbon\Carbon;
+use App\Rules\MatchOldPassword;
+
 
 class AccountController extends Controller
 {
@@ -66,12 +68,14 @@ class AccountController extends Controller
         'tgl_lahir' => 'required',
         'email' => 'required',
         'name' => 'required',
+        'role' => 'required'
       ]);
 
       $article = \App\User::find($validatedData['id_akun']);
       $article->email = $validatedData['email'];
       $article->name = $validatedData['name'];
       $article->npwp = $validatedData['npwp'];
+      $article->role = $validatedData['role'];
       $article->save();
     
       $detail = \App\UserDetail::find($validatedData['id_akun']);
@@ -132,6 +136,26 @@ class AccountController extends Controller
         }
        
         $account->delete();
+
+    }
+    public function changepassword(Request $request){
+      $request->validate([
+        'old' => ['required', new MatchOldPassword],
+        'newpassword' => ['required'],
+        'confirmnewpassword' => ['same:newpassword'],
+
+    ]);
+    \App\ User::find(auth()->user()->id_akun)->update(['password'=> Hash::make($request->newpassword)]);
+
+    }
+    public function changepasswordadmin(Request $request){
+      $request->validate([
+        
+        'newpassword' => ['required'],
+        'confirmnewpassword' => ['same:newpassword'],
+
+    ]);
+    \App\ User::find($request->id)->update(['password'=> Hash::make($request->newpassword)]);
 
     }
     public function profilepicture($id){

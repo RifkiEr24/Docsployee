@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form method="POST" enctype="multipart/form-data" @submit.prevent="update">
+        <form  method="POST" enctype="multipart/form-data" @submit.prevent="update">
             <div>
                 
                 <div class="form-group">
