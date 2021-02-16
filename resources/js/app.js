@@ -206,6 +206,11 @@ const routes = [
           path:'/user/accountedit',
           component: () => import("./components/admin/AccountEdit.vue")
         },
+        {
+          name:'userpassword',
+          path:'passwordedit',
+          component: () => import("./components/admin/PasswordEdit.vue")
+        },
     ],
     beforeEnter: (to, form, next) =>{
       axios.get('/api/athenticated').then((response)=>{

@@ -75,7 +75,7 @@
                             <i class="fa fa-square text-primary fa-stack-2x"></i>
                             <i class="fas fa-download fa-stack-1x text-white"></i>
                         </span>
-                   {{document.id_document}}
+        
                     <span class="fa-stack  fa-size fa-lg cursor-pointer" @click="deletefile(document.id_document)">
                         <i class="fa fa-square text-danger fa-stack-2x"></i>
                         <i class="fas fa-trash fa-stack-1x text-white"></i>

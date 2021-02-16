@@ -215,6 +215,6 @@ class AccountController extends Controller
       ->take(1)
       ->get();
       $pdf = PDF::loadView('mahasiswa', compact('users'));
-        return $pdf->stream('mahasiswa.pdf');
+        return $pdf->stream('pegawai.pdf');
     }
   }

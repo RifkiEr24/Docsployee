@@ -58,7 +58,7 @@ export default {
         {
           href: '/'+ this.routeDifferentiator(),
           title: 'Dashboard',
-          icon: 'fa fa-download'
+          icon: 'fa fa-tachometer-alt'
         },
         {
           href: '/'+ this.routeDifferentiator()+'/employeelist',
