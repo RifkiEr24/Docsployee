@@ -4,10 +4,10 @@
             <div class="col-md-6 d-md-block d-none">
                 <img :src="'/images/Logo_SMKN_1_Cimahi-2014.png'"  class="img-fluid mt-5 p-5">
             </div>
-            <div class="col-md-6 ml-auto mr-auto d-block mt-auto mb-auto">
-                <h2 class="p-3 text-center mt-md-5">Sistem Aplikasi Kepegawaian</h2>
-                <h5 class="text-center">Login</h5>
-                <form class="px-3" method="POST" @submit.prevent="loginUser">
+            <div class="col-md-6 ml-auto mr-auto d-block mt-auto mb-auto bg-white changecolorcontainer border-rounded p-5">
+                <h2 class=" text-center my-3">Sistem Aplikasi Kepegawaian</h2>
+                <h5 class="text-center my-3">Login</h5>
+                <form class="px-3 my-3" method="POST" @submit.prevent="loginUser">
                     <div class="form-group">
                         <input type="email" class="form-control rounded-pill" placeholder="Masukkan Email Anda disini"
                             id="exampleInputEmail1" aria-describedby="emailHelp" v-model="form.email">
@@ -35,6 +35,11 @@
 <style>
 body{
     background-color: #ffffff !important;
+}
+@media only screen and (max-width: 600px) {
+  .changecolorcontainer {
+    background-color:#f0f0f0 !important;
+  }
 }
 </style>
 <script>

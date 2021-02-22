@@ -7010,6 +7010,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -14343,7 +14348,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nbody{\r\n    background-color: #ffffff !important;\n}\r\n", ""]);
+exports.push([module.i, "\nbody{\r\n    background-color: #ffffff !important;\n}\n@media only screen and (max-width: 600px) {\n.changecolorcontainer {\r\n    background-color:#f0f0f0 !important;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -54487,18 +54492,21 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-md-6 ml-auto mr-auto d-block mt-auto mb-auto" },
+        {
+          staticClass:
+            "col-md-6 ml-auto mr-auto d-block mt-auto mb-auto bg-white changecolorcontainer border-rounded p-5"
+        },
         [
-          _c("h2", { staticClass: "p-3 text-center mt-md-5" }, [
+          _c("h2", { staticClass: " text-center my-3" }, [
             _vm._v("Sistem Aplikasi Kepegawaian")
           ]),
           _vm._v(" "),
-          _c("h5", { staticClass: "text-center" }, [_vm._v("Login")]),
+          _c("h5", { staticClass: "text-center my-3" }, [_vm._v("Login")]),
           _vm._v(" "),
           _c(
             "form",
             {
-              staticClass: "px-3",
+              staticClass: "px-3 my-3",
               attrs: { method: "POST" },
               on: {
                 submit: function($event) {
