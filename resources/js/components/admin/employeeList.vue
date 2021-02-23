@@ -128,8 +128,7 @@ export default {
         }
       },
          created() {
-      
-         
+         this.getaccount();
     },
       watch:{
           keywords(after,before){

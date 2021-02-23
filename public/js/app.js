@@ -6763,8 +6763,7 @@ __webpack_require__.r(__webpack_exports__);
       this.axios.put('/api/account/updateall', this.user).then(this.$swal.fire({
         title: 'Success',
         text: "Account Berhasil diperbaharui",
-        icon: 'success',
-        timer: 1000
+        icon: 'success'
       }).then(function () {
         _this3.$router.push({
           name: 'employeelist'

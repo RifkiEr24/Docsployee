@@ -49,6 +49,13 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.getevent();
   },
+  onResize: function onResize() {
+    if (window.innerWidth <= 767) {
+      _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__["default"].updateSize();
+    } else {
+      _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__["default"].updateSize();
+    }
+  },
   methods: {
     getevent: function getevent() {
       var _this = this;

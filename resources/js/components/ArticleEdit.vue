@@ -127,7 +127,6 @@
                     title: 'Success',
                     text: "Account Berhasil diperbaharui",
                     icon: 'success',
-                    timer: 1000
                 }).then(()=>{
                      this.$router.push({name: 'employeelist'});
                 }));

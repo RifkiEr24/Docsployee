@@ -135,7 +135,9 @@ __webpack_require__.r(__webpack_exports__);
       keywords: null
     };
   },
-  created: function created() {},
+  created: function created() {
+    this.getaccount();
+  },
   watch: {
     keywords: function keywords(after, before) {
       this.search();

@@ -36,14 +36,19 @@ export default {
     created() {
         this.getevent();
     },
+      onResize () {
+      if (window.innerWidth <= 767) {
+        FullCalendar.updateSize();
+      } else {
+        FullCalendar.updateSize();
+      }
+    },
     methods: {
         getevent() {
             let uri = '/api/event';
             this.axios.get(uri).then(response => {
                 this.calendarOptions.events = response.data;
               
-
-
             });
         },
         handleEventClick(clickInfo) {
