@@ -1,49 +1,20 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
-
-/***/ "./node_modules/@fullcalendar/bootstrap/main.css":
-/*!*******************************************************!*\
-  !*** ./node_modules/@fullcalendar/bootstrap/main.css ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./main.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@fullcalendar/bootstrap/main.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_admin_Calendar_vue"],{
 
 /***/ "./node_modules/@fullcalendar/bootstrap/main.js":
 /*!******************************************************!*\
   !*** ./node_modules/@fullcalendar/bootstrap/main.js ***!
   \******************************************************/
-/*! exports provided: default, BootstrapTheme */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BootstrapTheme", function() { return BootstrapTheme; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "BootstrapTheme": () => (/* binding */ BootstrapTheme)
+/* harmony export */ });
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ "./node_modules/@fullcalendar/bootstrap/main.css");
-/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/bootstrap/node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fullcalendar/common */ "./node_modules/@fullcalendar/common/main.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/bootstrap/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/common */ "./node_modules/@fullcalendar/common/main.js");
 /*!
 FullCalendar v5.3.1
 Docs & License: https://fullcalendar.io/
@@ -55,12 +26,12 @@ Docs & License: https://fullcalendar.io/
 
 
 var BootstrapTheme = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(BootstrapTheme, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(BootstrapTheme, _super);
     function BootstrapTheme() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     return BootstrapTheme;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Theme"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Theme));
 BootstrapTheme.prototype.classes = {
     root: 'fc-theme-bootstrap',
     table: 'table-bordered',
@@ -89,13 +60,13 @@ BootstrapTheme.prototype.rtlIconClasses = {
 BootstrapTheme.prototype.iconOverrideOption = 'bootstrapFontAwesome'; // TODO: make TS-friendly. move the option-processing into this plugin
 BootstrapTheme.prototype.iconOverrideCustomButtonOption = 'bootstrapFontAwesome';
 BootstrapTheme.prototype.iconOverridePrefix = 'fa-';
-var plugin = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createPlugin"])({
+var plugin = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createPlugin)({
     themeClasses: {
         bootstrap: BootstrapTheme
     }
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (plugin);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (plugin);
 
 //# sourceMappingURL=main.js.map
 
@@ -106,34 +77,35 @@ var plugin = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createPlu
 /*!******************************************************************************!*\
   !*** ./node_modules/@fullcalendar/bootstrap/node_modules/tslib/tslib.es6.js ***!
   \******************************************************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__extends": () => (/* binding */ __extends),
+/* harmony export */   "__assign": () => (/* binding */ __assign),
+/* harmony export */   "__rest": () => (/* binding */ __rest),
+/* harmony export */   "__decorate": () => (/* binding */ __decorate),
+/* harmony export */   "__param": () => (/* binding */ __param),
+/* harmony export */   "__metadata": () => (/* binding */ __metadata),
+/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
+/* harmony export */   "__generator": () => (/* binding */ __generator),
+/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
+/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
+/* harmony export */   "__values": () => (/* binding */ __values),
+/* harmony export */   "__read": () => (/* binding */ __read),
+/* harmony export */   "__spread": () => (/* binding */ __spread),
+/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
+/* harmony export */   "__await": () => (/* binding */ __await),
+/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
+/* harmony export */   "__asyncDelegator": () => (/* binding */ __asyncDelegator),
+/* harmony export */   "__asyncValues": () => (/* binding */ __asyncValues),
+/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
+/* harmony export */   "__importStar": () => (/* binding */ __importStar),
+/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__classPrivateFieldGet": () => (/* binding */ __classPrivateFieldGet),
+/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet)
+/* harmony export */ });
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -365,263 +337,220 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 /***/ }),
 
-/***/ "./node_modules/@fullcalendar/common/main.css":
-/*!****************************************************!*\
-  !*** ./node_modules/@fullcalendar/common/main.css ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./main.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@fullcalendar/common/main.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/@fullcalendar/common/main.js":
 /*!***************************************************!*\
   !*** ./node_modules/@fullcalendar/common/main.js ***!
   \***************************************************/
-/*! exports provided: Component, createElement, render, createRef, Fragment, createContext, flushToDom, BASE_OPTION_DEFAULTS, BASE_OPTION_REFINERS, BaseComponent, BgEvent, CalendarApi, CalendarContent, CalendarDataManager, CalendarDataProvider, CalendarRoot, ContentHook, CustomContentRenderContext, DateComponent, DateEnv, DateProfileGenerator, DayCellContent, DayCellRoot, DayHeader, DaySeriesModel, DayTableModel, DelayedRunner, ElementDragging, ElementScrollController, Emitter, EventApi, EventRoot, EventSourceApi, Interaction, MountHook, NamedTimeZoneImpl, NowIndicatorRoot, NowTimer, PositionCache, RefMap, RenderHook, ScrollController, ScrollResponder, Scroller, SimpleScrollGrid, Slicer, Splitter, StandardEvent, TableDateCell, TableDowCell, Theme, ViewApi, ViewContextType, ViewRoot, WeekNumberRoot, WindowScrollController, addDays, addDurations, addMs, addWeeks, allowContextMenu, allowSelection, applyMutationToEventStore, applyStyle, applyStyleProp, asCleanDays, asRoughMinutes, asRoughMs, asRoughSeconds, buildClassNameNormalizer, buildEventApis, buildEventRangeKey, buildHashFromArray, buildNavLinkData, buildSegCompareObj, buildSegTimeText, collectFromHash, combineEventUis, compareByFieldSpec, compareByFieldSpecs, compareNumbers, compareObjs, computeEdges, computeFallbackHeaderFormat, computeHeightAndMargins, computeInnerRect, computeRect, computeSegDraggable, computeSegEndResizable, computeSegStartResizable, computeShrinkWidth, computeSmallestCellWidth, computeVisibleDayRange, config, constrainPoint, createDuration, createEmptyEventStore, createEventInstance, createEventUi, createFormatter, createPlugin, diffDates, diffDayAndTime, diffDays, diffPoints, diffWeeks, diffWholeDays, diffWholeWeeks, disableCursor, elementClosest, elementMatches, enableCursor, eventTupleToStore, filterEventStoreDefs, filterHash, findDirectChildren, findElements, flexibleCompare, formatDate, formatDayString, formatIsoTimeString, formatRange, getAllowYScrolling, getCanVGrowWithinCell, getClippingParents, getDateMeta, getDayClassNames, getDefaultEventEnd, getElSeg, getEventClassNames, getIsRtlScrollbarOnLeft, getRectCenter, getRelevantEvents, getScrollGridClassNames, getScrollbarWidths, getSectionClassNames, getSectionHasLiquidHeight, getSegMeta, getSlotClassNames, getStickyFooterScrollbar, getStickyHeaderDates, getUnequalProps, globalLocales, globalPlugins, greatestDurationDenominator, guid, hasBgRendering, hasShrinkWidth, identity, interactionSettingsStore, interactionSettingsToStore, intersectRanges, intersectRects, isArraysEqual, isColPropsEqual, isDateSpansEqual, isInt, isInteractionValid, isMultiDayRange, isPropsEqual, isPropsValid, isValidDate, listenBySelector, mapHash, memoize, memoizeArraylike, memoizeHashlike, memoizeObjArg, mergeEventStores, multiplyDuration, padStart, parseBusinessHours, parseClassNames, parseDragMeta, parseEventDef, parseFieldSpecs, parseMarker, pointInsideRect, preventContextMenu, preventDefault, preventSelection, rangeContainsMarker, rangeContainsRange, rangesEqual, rangesIntersect, refineEventDef, refineProps, removeElement, removeExact, renderChunkContent, renderFill, renderMicroColGroup, renderScrollShim, requestJson, sanitizeShrinkWidth, setElSeg, setRef, sliceEventStore, sliceEvents, sortEventSegs, startOfDay, translateRect, triggerDateSelect, unpromisify, version, whenTransitionDone, wholeDivideDurations */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_OPTION_DEFAULTS", function() { return BASE_OPTION_DEFAULTS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_OPTION_REFINERS", function() { return BASE_OPTION_REFINERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseComponent", function() { return BaseComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BgEvent", function() { return BgEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarApi", function() { return CalendarApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarContent", function() { return CalendarContent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarDataManager", function() { return CalendarDataManager; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarDataProvider", function() { return CalendarDataProvider; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarRoot", function() { return CalendarRoot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContentHook", function() { return ContentHook; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomContentRenderContext", function() { return CustomContentRenderContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateComponent", function() { return DateComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateEnv", function() { return DateEnv; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateProfileGenerator", function() { return DateProfileGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayCellContent", function() { return DayCellContent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayCellRoot", function() { return DayCellRoot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayHeader", function() { return DayHeader; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DaySeriesModel", function() { return DaySeriesModel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayTableModel", function() { return DayTableModel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DelayedRunner", function() { return DelayedRunner; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementDragging", function() { return ElementDragging; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementScrollController", function() { return ElementScrollController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Emitter", function() { return Emitter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventApi", function() { return EventApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventRoot", function() { return EventRoot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventSourceApi", function() { return EventSourceApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Interaction", function() { return Interaction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MountHook", function() { return MountHook; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NamedTimeZoneImpl", function() { return NamedTimeZoneImpl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NowIndicatorRoot", function() { return NowIndicatorRoot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NowTimer", function() { return NowTimer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PositionCache", function() { return PositionCache; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RefMap", function() { return RefMap; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderHook", function() { return RenderHook; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollController", function() { return ScrollController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollResponder", function() { return ScrollResponder; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Scroller", function() { return Scroller; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SimpleScrollGrid", function() { return SimpleScrollGrid; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Slicer", function() { return Slicer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Splitter", function() { return Splitter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StandardEvent", function() { return StandardEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableDateCell", function() { return TableDateCell; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableDowCell", function() { return TableDowCell; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Theme", function() { return Theme; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewApi", function() { return ViewApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewContextType", function() { return ViewContextType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewRoot", function() { return ViewRoot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WeekNumberRoot", function() { return WeekNumberRoot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WindowScrollController", function() { return WindowScrollController; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addDays", function() { return addDays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addDurations", function() { return addDurations; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addMs", function() { return addMs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addWeeks", function() { return addWeeks; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allowContextMenu", function() { return allowContextMenu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allowSelection", function() { return allowSelection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMutationToEventStore", function() { return applyMutationToEventStore; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyStyle", function() { return applyStyle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyStyleProp", function() { return applyStyleProp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asCleanDays", function() { return asCleanDays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asRoughMinutes", function() { return asRoughMinutes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asRoughMs", function() { return asRoughMs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asRoughSeconds", function() { return asRoughSeconds; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildClassNameNormalizer", function() { return buildClassNameNormalizer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildEventApis", function() { return buildEventApis; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildEventRangeKey", function() { return buildEventRangeKey; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildHashFromArray", function() { return buildHashFromArray; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildNavLinkData", function() { return buildNavLinkData; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildSegCompareObj", function() { return buildSegCompareObj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildSegTimeText", function() { return buildSegTimeText; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "collectFromHash", function() { return collectFromHash; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "combineEventUis", function() { return combineEventUis; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compareByFieldSpec", function() { return compareByFieldSpec; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compareByFieldSpecs", function() { return compareByFieldSpecs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compareNumbers", function() { return compareNumbers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compareObjs", function() { return compareObjs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEdges", function() { return computeEdges; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeFallbackHeaderFormat", function() { return computeFallbackHeaderFormat; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeHeightAndMargins", function() { return computeHeightAndMargins; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeInnerRect", function() { return computeInnerRect; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeRect", function() { return computeRect; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeSegDraggable", function() { return computeSegDraggable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeSegEndResizable", function() { return computeSegEndResizable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeSegStartResizable", function() { return computeSegStartResizable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeShrinkWidth", function() { return computeShrinkWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeSmallestCellWidth", function() { return computeSmallestCellWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeVisibleDayRange", function() { return computeVisibleDayRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "constrainPoint", function() { return constrainPoint; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDuration", function() { return createDuration; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createEmptyEventStore", function() { return createEmptyEventStore; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createEventInstance", function() { return createEventInstance; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createEventUi", function() { return createEventUi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createFormatter", function() { return createFormatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPlugin", function() { return createPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffDates", function() { return diffDates; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffDayAndTime", function() { return diffDayAndTime; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffDays", function() { return diffDays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffPoints", function() { return diffPoints; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffWeeks", function() { return diffWeeks; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffWholeDays", function() { return diffWholeDays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diffWholeWeeks", function() { return diffWholeWeeks; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableCursor", function() { return disableCursor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elementClosest", function() { return elementClosest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elementMatches", function() { return elementMatches; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableCursor", function() { return enableCursor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eventTupleToStore", function() { return eventTupleToStore; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterEventStoreDefs", function() { return filterEventStoreDefs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterHash", function() { return filterHash; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findDirectChildren", function() { return findDirectChildren; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findElements", function() { return findElements; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "flexibleCompare", function() { return flexibleCompare; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDayString", function() { return formatDayString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatIsoTimeString", function() { return formatIsoTimeString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatRange", function() { return formatRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAllowYScrolling", function() { return getAllowYScrolling; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCanVGrowWithinCell", function() { return getCanVGrowWithinCell; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getClippingParents", function() { return getClippingParents; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDateMeta", function() { return getDateMeta; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDayClassNames", function() { return getDayClassNames; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDefaultEventEnd", function() { return getDefaultEventEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getElSeg", function() { return getElSeg; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getEventClassNames", function() { return getEventClassNames; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIsRtlScrollbarOnLeft", function() { return getIsRtlScrollbarOnLeft; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRectCenter", function() { return getRectCenter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRelevantEvents", function() { return getRelevantEvents; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getScrollGridClassNames", function() { return getScrollGridClassNames; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getScrollbarWidths", function() { return getScrollbarWidths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSectionClassNames", function() { return getSectionClassNames; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSectionHasLiquidHeight", function() { return getSectionHasLiquidHeight; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSegMeta", function() { return getSegMeta; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSlotClassNames", function() { return getSlotClassNames; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStickyFooterScrollbar", function() { return getStickyFooterScrollbar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStickyHeaderDates", function() { return getStickyHeaderDates; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUnequalProps", function() { return getUnequalProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "globalLocales", function() { return globalLocales; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "globalPlugins", function() { return globalPlugins; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "greatestDurationDenominator", function() { return greatestDurationDenominator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guid", function() { return guid; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasBgRendering", function() { return hasBgRendering; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasShrinkWidth", function() { return hasShrinkWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "identity", function() { return identity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interactionSettingsStore", function() { return interactionSettingsStore; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interactionSettingsToStore", function() { return interactionSettingsToStore; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "intersectRanges", function() { return intersectRanges; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "intersectRects", function() { return intersectRects; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isArraysEqual", function() { return isArraysEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isColPropsEqual", function() { return isColPropsEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDateSpansEqual", function() { return isDateSpansEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInt", function() { return isInt; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInteractionValid", function() { return isInteractionValid; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMultiDayRange", function() { return isMultiDayRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPropsEqual", function() { return isPropsEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPropsValid", function() { return isPropsValid; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidDate", function() { return isValidDate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listenBySelector", function() { return listenBySelector; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapHash", function() { return mapHash; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memoize", function() { return memoize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memoizeArraylike", function() { return memoizeArraylike; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memoizeHashlike", function() { return memoizeHashlike; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memoizeObjArg", function() { return memoizeObjArg; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergeEventStores", function() { return mergeEventStores; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "multiplyDuration", function() { return multiplyDuration; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "padStart", function() { return padStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseBusinessHours", function() { return parseBusinessHours; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseClassNames", function() { return parseClassNames; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseDragMeta", function() { return parseDragMeta; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseEventDef", function() { return parseEventDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseFieldSpecs", function() { return parseFieldSpecs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseMarker", function() { return parse; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pointInsideRect", function() { return pointInsideRect; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "preventContextMenu", function() { return preventContextMenu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "preventDefault", function() { return preventDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "preventSelection", function() { return preventSelection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangeContainsMarker", function() { return rangeContainsMarker; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangeContainsRange", function() { return rangeContainsRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangesEqual", function() { return rangesEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rangesIntersect", function() { return rangesIntersect; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "refineEventDef", function() { return refineEventDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "refineProps", function() { return refineProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeElement", function() { return removeElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeExact", function() { return removeExact; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderChunkContent", function() { return renderChunkContent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderFill", function() { return renderFill; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderMicroColGroup", function() { return renderMicroColGroup; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderScrollShim", function() { return renderScrollShim; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestJson", function() { return requestJson; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sanitizeShrinkWidth", function() { return sanitizeShrinkWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setElSeg", function() { return setElSeg; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setRef", function() { return setRef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliceEventStore", function() { return sliceEventStore; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliceEvents", function() { return sliceEvents; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sortEventSegs", function() { return sortEventSegs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startOfDay", function() { return startOfDay; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "translateRect", function() { return translateRect; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "triggerDateSelect", function() { return triggerDateSelect; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unpromisify", function() { return unpromisify; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenTransitionDone", function() { return whenTransitionDone; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wholeDivideDurations", function() { return wholeDivideDurations; });
+/* empty/unused harmony star reexport */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BASE_OPTION_DEFAULTS": () => (/* binding */ BASE_OPTION_DEFAULTS),
+/* harmony export */   "BASE_OPTION_REFINERS": () => (/* binding */ BASE_OPTION_REFINERS),
+/* harmony export */   "BaseComponent": () => (/* binding */ BaseComponent),
+/* harmony export */   "BgEvent": () => (/* binding */ BgEvent),
+/* harmony export */   "CalendarApi": () => (/* binding */ CalendarApi),
+/* harmony export */   "CalendarContent": () => (/* binding */ CalendarContent),
+/* harmony export */   "CalendarDataManager": () => (/* binding */ CalendarDataManager),
+/* harmony export */   "CalendarDataProvider": () => (/* binding */ CalendarDataProvider),
+/* harmony export */   "CalendarRoot": () => (/* binding */ CalendarRoot),
+/* harmony export */   "ContentHook": () => (/* binding */ ContentHook),
+/* harmony export */   "CustomContentRenderContext": () => (/* binding */ CustomContentRenderContext),
+/* harmony export */   "DateComponent": () => (/* binding */ DateComponent),
+/* harmony export */   "DateEnv": () => (/* binding */ DateEnv),
+/* harmony export */   "DateProfileGenerator": () => (/* binding */ DateProfileGenerator),
+/* harmony export */   "DayCellContent": () => (/* binding */ DayCellContent),
+/* harmony export */   "DayCellRoot": () => (/* binding */ DayCellRoot),
+/* harmony export */   "DayHeader": () => (/* binding */ DayHeader),
+/* harmony export */   "DaySeriesModel": () => (/* binding */ DaySeriesModel),
+/* harmony export */   "DayTableModel": () => (/* binding */ DayTableModel),
+/* harmony export */   "DelayedRunner": () => (/* binding */ DelayedRunner),
+/* harmony export */   "ElementDragging": () => (/* binding */ ElementDragging),
+/* harmony export */   "ElementScrollController": () => (/* binding */ ElementScrollController),
+/* harmony export */   "Emitter": () => (/* binding */ Emitter),
+/* harmony export */   "EventApi": () => (/* binding */ EventApi),
+/* harmony export */   "EventRoot": () => (/* binding */ EventRoot),
+/* harmony export */   "EventSourceApi": () => (/* binding */ EventSourceApi),
+/* harmony export */   "Interaction": () => (/* binding */ Interaction),
+/* harmony export */   "MountHook": () => (/* binding */ MountHook),
+/* harmony export */   "NamedTimeZoneImpl": () => (/* binding */ NamedTimeZoneImpl),
+/* harmony export */   "NowIndicatorRoot": () => (/* binding */ NowIndicatorRoot),
+/* harmony export */   "NowTimer": () => (/* binding */ NowTimer),
+/* harmony export */   "PositionCache": () => (/* binding */ PositionCache),
+/* harmony export */   "RefMap": () => (/* binding */ RefMap),
+/* harmony export */   "RenderHook": () => (/* binding */ RenderHook),
+/* harmony export */   "ScrollController": () => (/* binding */ ScrollController),
+/* harmony export */   "ScrollResponder": () => (/* binding */ ScrollResponder),
+/* harmony export */   "Scroller": () => (/* binding */ Scroller),
+/* harmony export */   "SimpleScrollGrid": () => (/* binding */ SimpleScrollGrid),
+/* harmony export */   "Slicer": () => (/* binding */ Slicer),
+/* harmony export */   "Splitter": () => (/* binding */ Splitter),
+/* harmony export */   "StandardEvent": () => (/* binding */ StandardEvent),
+/* harmony export */   "TableDateCell": () => (/* binding */ TableDateCell),
+/* harmony export */   "TableDowCell": () => (/* binding */ TableDowCell),
+/* harmony export */   "Theme": () => (/* binding */ Theme),
+/* harmony export */   "ViewApi": () => (/* binding */ ViewApi),
+/* harmony export */   "ViewContextType": () => (/* binding */ ViewContextType),
+/* harmony export */   "ViewRoot": () => (/* binding */ ViewRoot),
+/* harmony export */   "WeekNumberRoot": () => (/* binding */ WeekNumberRoot),
+/* harmony export */   "WindowScrollController": () => (/* binding */ WindowScrollController),
+/* harmony export */   "addDays": () => (/* binding */ addDays),
+/* harmony export */   "addDurations": () => (/* binding */ addDurations),
+/* harmony export */   "addMs": () => (/* binding */ addMs),
+/* harmony export */   "addWeeks": () => (/* binding */ addWeeks),
+/* harmony export */   "allowContextMenu": () => (/* binding */ allowContextMenu),
+/* harmony export */   "allowSelection": () => (/* binding */ allowSelection),
+/* harmony export */   "applyMutationToEventStore": () => (/* binding */ applyMutationToEventStore),
+/* harmony export */   "applyStyle": () => (/* binding */ applyStyle),
+/* harmony export */   "applyStyleProp": () => (/* binding */ applyStyleProp),
+/* harmony export */   "asCleanDays": () => (/* binding */ asCleanDays),
+/* harmony export */   "asRoughMinutes": () => (/* binding */ asRoughMinutes),
+/* harmony export */   "asRoughMs": () => (/* binding */ asRoughMs),
+/* harmony export */   "asRoughSeconds": () => (/* binding */ asRoughSeconds),
+/* harmony export */   "buildClassNameNormalizer": () => (/* binding */ buildClassNameNormalizer),
+/* harmony export */   "buildEventApis": () => (/* binding */ buildEventApis),
+/* harmony export */   "buildEventRangeKey": () => (/* binding */ buildEventRangeKey),
+/* harmony export */   "buildHashFromArray": () => (/* binding */ buildHashFromArray),
+/* harmony export */   "buildNavLinkData": () => (/* binding */ buildNavLinkData),
+/* harmony export */   "buildSegCompareObj": () => (/* binding */ buildSegCompareObj),
+/* harmony export */   "buildSegTimeText": () => (/* binding */ buildSegTimeText),
+/* harmony export */   "collectFromHash": () => (/* binding */ collectFromHash),
+/* harmony export */   "combineEventUis": () => (/* binding */ combineEventUis),
+/* harmony export */   "compareByFieldSpec": () => (/* binding */ compareByFieldSpec),
+/* harmony export */   "compareByFieldSpecs": () => (/* binding */ compareByFieldSpecs),
+/* harmony export */   "compareNumbers": () => (/* binding */ compareNumbers),
+/* harmony export */   "compareObjs": () => (/* binding */ compareObjs),
+/* harmony export */   "computeEdges": () => (/* binding */ computeEdges),
+/* harmony export */   "computeFallbackHeaderFormat": () => (/* binding */ computeFallbackHeaderFormat),
+/* harmony export */   "computeHeightAndMargins": () => (/* binding */ computeHeightAndMargins),
+/* harmony export */   "computeInnerRect": () => (/* binding */ computeInnerRect),
+/* harmony export */   "computeRect": () => (/* binding */ computeRect),
+/* harmony export */   "computeSegDraggable": () => (/* binding */ computeSegDraggable),
+/* harmony export */   "computeSegEndResizable": () => (/* binding */ computeSegEndResizable),
+/* harmony export */   "computeSegStartResizable": () => (/* binding */ computeSegStartResizable),
+/* harmony export */   "computeShrinkWidth": () => (/* binding */ computeShrinkWidth),
+/* harmony export */   "computeSmallestCellWidth": () => (/* binding */ computeSmallestCellWidth),
+/* harmony export */   "computeVisibleDayRange": () => (/* binding */ computeVisibleDayRange),
+/* harmony export */   "config": () => (/* binding */ config),
+/* harmony export */   "constrainPoint": () => (/* binding */ constrainPoint),
+/* harmony export */   "createDuration": () => (/* binding */ createDuration),
+/* harmony export */   "createEmptyEventStore": () => (/* binding */ createEmptyEventStore),
+/* harmony export */   "createEventInstance": () => (/* binding */ createEventInstance),
+/* harmony export */   "createEventUi": () => (/* binding */ createEventUi),
+/* harmony export */   "createFormatter": () => (/* binding */ createFormatter),
+/* harmony export */   "createPlugin": () => (/* binding */ createPlugin),
+/* harmony export */   "diffDates": () => (/* binding */ diffDates),
+/* harmony export */   "diffDayAndTime": () => (/* binding */ diffDayAndTime),
+/* harmony export */   "diffDays": () => (/* binding */ diffDays),
+/* harmony export */   "diffPoints": () => (/* binding */ diffPoints),
+/* harmony export */   "diffWeeks": () => (/* binding */ diffWeeks),
+/* harmony export */   "diffWholeDays": () => (/* binding */ diffWholeDays),
+/* harmony export */   "diffWholeWeeks": () => (/* binding */ diffWholeWeeks),
+/* harmony export */   "disableCursor": () => (/* binding */ disableCursor),
+/* harmony export */   "elementClosest": () => (/* binding */ elementClosest),
+/* harmony export */   "elementMatches": () => (/* binding */ elementMatches),
+/* harmony export */   "enableCursor": () => (/* binding */ enableCursor),
+/* harmony export */   "eventTupleToStore": () => (/* binding */ eventTupleToStore),
+/* harmony export */   "filterEventStoreDefs": () => (/* binding */ filterEventStoreDefs),
+/* harmony export */   "filterHash": () => (/* binding */ filterHash),
+/* harmony export */   "findDirectChildren": () => (/* binding */ findDirectChildren),
+/* harmony export */   "findElements": () => (/* binding */ findElements),
+/* harmony export */   "flexibleCompare": () => (/* binding */ flexibleCompare),
+/* harmony export */   "formatDate": () => (/* binding */ formatDate),
+/* harmony export */   "formatDayString": () => (/* binding */ formatDayString),
+/* harmony export */   "formatIsoTimeString": () => (/* binding */ formatIsoTimeString),
+/* harmony export */   "formatRange": () => (/* binding */ formatRange),
+/* harmony export */   "getAllowYScrolling": () => (/* binding */ getAllowYScrolling),
+/* harmony export */   "getCanVGrowWithinCell": () => (/* binding */ getCanVGrowWithinCell),
+/* harmony export */   "getClippingParents": () => (/* binding */ getClippingParents),
+/* harmony export */   "getDateMeta": () => (/* binding */ getDateMeta),
+/* harmony export */   "getDayClassNames": () => (/* binding */ getDayClassNames),
+/* harmony export */   "getDefaultEventEnd": () => (/* binding */ getDefaultEventEnd),
+/* harmony export */   "getElSeg": () => (/* binding */ getElSeg),
+/* harmony export */   "getEventClassNames": () => (/* binding */ getEventClassNames),
+/* harmony export */   "getIsRtlScrollbarOnLeft": () => (/* binding */ getIsRtlScrollbarOnLeft),
+/* harmony export */   "getRectCenter": () => (/* binding */ getRectCenter),
+/* harmony export */   "getRelevantEvents": () => (/* binding */ getRelevantEvents),
+/* harmony export */   "getScrollGridClassNames": () => (/* binding */ getScrollGridClassNames),
+/* harmony export */   "getScrollbarWidths": () => (/* binding */ getScrollbarWidths),
+/* harmony export */   "getSectionClassNames": () => (/* binding */ getSectionClassNames),
+/* harmony export */   "getSectionHasLiquidHeight": () => (/* binding */ getSectionHasLiquidHeight),
+/* harmony export */   "getSegMeta": () => (/* binding */ getSegMeta),
+/* harmony export */   "getSlotClassNames": () => (/* binding */ getSlotClassNames),
+/* harmony export */   "getStickyFooterScrollbar": () => (/* binding */ getStickyFooterScrollbar),
+/* harmony export */   "getStickyHeaderDates": () => (/* binding */ getStickyHeaderDates),
+/* harmony export */   "getUnequalProps": () => (/* binding */ getUnequalProps),
+/* harmony export */   "globalLocales": () => (/* binding */ globalLocales),
+/* harmony export */   "globalPlugins": () => (/* binding */ globalPlugins),
+/* harmony export */   "greatestDurationDenominator": () => (/* binding */ greatestDurationDenominator),
+/* harmony export */   "guid": () => (/* binding */ guid),
+/* harmony export */   "hasBgRendering": () => (/* binding */ hasBgRendering),
+/* harmony export */   "hasShrinkWidth": () => (/* binding */ hasShrinkWidth),
+/* harmony export */   "identity": () => (/* binding */ identity),
+/* harmony export */   "interactionSettingsStore": () => (/* binding */ interactionSettingsStore),
+/* harmony export */   "interactionSettingsToStore": () => (/* binding */ interactionSettingsToStore),
+/* harmony export */   "intersectRanges": () => (/* binding */ intersectRanges),
+/* harmony export */   "intersectRects": () => (/* binding */ intersectRects),
+/* harmony export */   "isArraysEqual": () => (/* binding */ isArraysEqual),
+/* harmony export */   "isColPropsEqual": () => (/* binding */ isColPropsEqual),
+/* harmony export */   "isDateSpansEqual": () => (/* binding */ isDateSpansEqual),
+/* harmony export */   "isInt": () => (/* binding */ isInt),
+/* harmony export */   "isInteractionValid": () => (/* binding */ isInteractionValid),
+/* harmony export */   "isMultiDayRange": () => (/* binding */ isMultiDayRange),
+/* harmony export */   "isPropsEqual": () => (/* binding */ isPropsEqual),
+/* harmony export */   "isPropsValid": () => (/* binding */ isPropsValid),
+/* harmony export */   "isValidDate": () => (/* binding */ isValidDate),
+/* harmony export */   "listenBySelector": () => (/* binding */ listenBySelector),
+/* harmony export */   "mapHash": () => (/* binding */ mapHash),
+/* harmony export */   "memoize": () => (/* binding */ memoize),
+/* harmony export */   "memoizeArraylike": () => (/* binding */ memoizeArraylike),
+/* harmony export */   "memoizeHashlike": () => (/* binding */ memoizeHashlike),
+/* harmony export */   "memoizeObjArg": () => (/* binding */ memoizeObjArg),
+/* harmony export */   "mergeEventStores": () => (/* binding */ mergeEventStores),
+/* harmony export */   "multiplyDuration": () => (/* binding */ multiplyDuration),
+/* harmony export */   "padStart": () => (/* binding */ padStart),
+/* harmony export */   "parseBusinessHours": () => (/* binding */ parseBusinessHours),
+/* harmony export */   "parseClassNames": () => (/* binding */ parseClassNames),
+/* harmony export */   "parseDragMeta": () => (/* binding */ parseDragMeta),
+/* harmony export */   "parseEventDef": () => (/* binding */ parseEventDef),
+/* harmony export */   "parseFieldSpecs": () => (/* binding */ parseFieldSpecs),
+/* harmony export */   "parseMarker": () => (/* binding */ parse),
+/* harmony export */   "pointInsideRect": () => (/* binding */ pointInsideRect),
+/* harmony export */   "preventContextMenu": () => (/* binding */ preventContextMenu),
+/* harmony export */   "preventDefault": () => (/* binding */ preventDefault),
+/* harmony export */   "preventSelection": () => (/* binding */ preventSelection),
+/* harmony export */   "rangeContainsMarker": () => (/* binding */ rangeContainsMarker),
+/* harmony export */   "rangeContainsRange": () => (/* binding */ rangeContainsRange),
+/* harmony export */   "rangesEqual": () => (/* binding */ rangesEqual),
+/* harmony export */   "rangesIntersect": () => (/* binding */ rangesIntersect),
+/* harmony export */   "refineEventDef": () => (/* binding */ refineEventDef),
+/* harmony export */   "refineProps": () => (/* binding */ refineProps),
+/* harmony export */   "removeElement": () => (/* binding */ removeElement),
+/* harmony export */   "removeExact": () => (/* binding */ removeExact),
+/* harmony export */   "renderChunkContent": () => (/* binding */ renderChunkContent),
+/* harmony export */   "renderFill": () => (/* binding */ renderFill),
+/* harmony export */   "renderMicroColGroup": () => (/* binding */ renderMicroColGroup),
+/* harmony export */   "renderScrollShim": () => (/* binding */ renderScrollShim),
+/* harmony export */   "requestJson": () => (/* binding */ requestJson),
+/* harmony export */   "sanitizeShrinkWidth": () => (/* binding */ sanitizeShrinkWidth),
+/* harmony export */   "setElSeg": () => (/* binding */ setElSeg),
+/* harmony export */   "setRef": () => (/* binding */ setRef),
+/* harmony export */   "sliceEventStore": () => (/* binding */ sliceEventStore),
+/* harmony export */   "sliceEvents": () => (/* binding */ sliceEvents),
+/* harmony export */   "sortEventSegs": () => (/* binding */ sortEventSegs),
+/* harmony export */   "startOfDay": () => (/* binding */ startOfDay),
+/* harmony export */   "translateRect": () => (/* binding */ translateRect),
+/* harmony export */   "triggerDateSelect": () => (/* binding */ triggerDateSelect),
+/* harmony export */   "unpromisify": () => (/* binding */ unpromisify),
+/* harmony export */   "version": () => (/* binding */ version),
+/* harmony export */   "whenTransitionDone": () => (/* binding */ whenTransitionDone),
+/* harmony export */   "wholeDivideDurations": () => (/* binding */ wholeDivideDurations)
+/* harmony export */ });
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ "./node_modules/@fullcalendar/common/main.css");
-/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/common/node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _vdom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./vdom */ "./node_modules/@fullcalendar/common/vdom.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return _vdom__WEBPACK_IMPORTED_MODULE_2__["Component"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _vdom__WEBPACK_IMPORTED_MODULE_2__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createRef", function() { return _vdom__WEBPACK_IMPORTED_MODULE_2__["createRef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Fragment", function() { return _vdom__WEBPACK_IMPORTED_MODULE_2__["Fragment"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createContext", function() { return _vdom__WEBPACK_IMPORTED_MODULE_2__["createContext"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "flushToDom", function() { return _vdom__WEBPACK_IMPORTED_MODULE_2__["flushToDom"]; });
-
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/common/node_modules/tslib/tslib.es6.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /*!
 FullCalendar v5.3.1
 Docs & License: https://fullcalendar.io/
@@ -1793,14 +1722,14 @@ function buildFormattingFunc(standardDateProps, extendedSettings, context) {
     return buildNativeFormattingFunc(standardDateProps, extendedSettings, context);
 }
 function buildNativeFormattingFunc(standardDateProps, extendedSettings, context) {
-    standardDateProps = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, standardDateProps); // copy
-    extendedSettings = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, extendedSettings); // copy
+    standardDateProps = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, standardDateProps); // copy
+    extendedSettings = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, extendedSettings); // copy
     sanitizeSettings(standardDateProps, extendedSettings);
     standardDateProps.timeZone = 'UTC'; // we leverage the only guaranteed timeZone for our UTC markers
     var normalFormat = new Intl.DateTimeFormat(context.locale.codes, standardDateProps);
     var zeroFormat; // needed?
     if (extendedSettings.omitZeroMinute) {
-        var zeroProps = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, standardDateProps);
+        var zeroProps = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, standardDateProps);
         delete zeroProps.minute; // seconds and ms were already considered in sanitizeSettings
         zeroFormat = new Intl.DateTimeFormat(context.locale.codes, zeroProps);
     }
@@ -2370,8 +2299,8 @@ function createEmptyEventStore() {
 }
 function mergeEventStores(store0, store1) {
     return {
-        defs: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, store0.defs), store1.defs),
-        instances: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, store0.instances), store1.instances)
+        defs: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, store0.defs), store1.defs),
+        instances: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, store0.instances), store1.instances)
     };
 }
 function filterEventStoreDefs(eventStore, filterFunc) {
@@ -2506,7 +2435,7 @@ var EVENT_DATE_REFINERS = {
     date: identity,
     allDay: Boolean
 };
-var EVENT_REFINERS = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, EVENT_NON_DATE_REFINERS), EVENT_DATE_REFINERS), { extendedProps: identity });
+var EVENT_REFINERS = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, EVENT_NON_DATE_REFINERS), EVENT_DATE_REFINERS), { extendedProps: identity });
 function parseEvent(raw, eventSource, context, allowOpenRange, refiners) {
     if (refiners === void 0) { refiners = buildEventRefiners(context); }
     var _a = refineEventDef(raw, context, refiners), refined = _a.refined, extra = _a.extra;
@@ -2536,7 +2465,7 @@ function refineEventDef(raw, context, refiners) {
     return refineProps(raw, refiners);
 }
 function buildEventRefiners(context) {
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, EVENT_UI_REFINERS), EVENT_REFINERS), context.pluginHooks.eventRefiners);
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, EVENT_UI_REFINERS), EVENT_REFINERS), context.pluginHooks.eventRefiners);
 }
 /*
 Will NOT populate extendedProps with the leftover properties.
@@ -2554,11 +2483,11 @@ function parseEventDef(refined, extra, sourceId, allDay, hasEnd, context) {
         allDay: allDay,
         hasEnd: hasEnd,
         ui: createEventUi(refined, context),
-        extendedProps: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, (refined.extendedProps || {})), extra)
+        extendedProps: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, (refined.extendedProps || {})), extra)
     };
     for (var _i = 0, _a = context.pluginHooks.eventDefMemberAdders; _i < _a.length; _i++) {
         var memberAdder = _a[_i];
-        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(def, memberAdder(refined));
+        (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(def, memberAdder(refined));
     }
     // help out EventApi from having user modify props
     Object.freeze(def.ui.classNames);
@@ -2916,7 +2845,7 @@ function buildSegCompareObj(seg) {
     var range = eventRange.instance ? eventRange.instance.range : eventRange.range;
     var start = range.start ? range.start.valueOf() : 0; // TODO: better support for open-range events
     var end = range.end ? range.end.valueOf() : 0; // "
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventDef.extendedProps), eventDef), { id: eventDef.publicId, start: start,
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, eventDef.extendedProps), eventDef), { id: eventDef.publicId, start: start,
         end: end, duration: end - start, allDay: Number(eventDef.allDay), _seg: seg // for later retrieval
      });
 }
@@ -3053,7 +2982,7 @@ function parseOpenDateSpan(raw, dateEnv) {
         allDay = (startMeta && startMeta.isTimeUnspecified) &&
             (!endMeta || endMeta.isTimeUnspecified);
     }
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ range: {
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ range: {
             start: startMeta ? startMeta.marker : null,
             end: endMeta ? endMeta.marker : null,
         }, allDay: allDay }, extra);
@@ -3082,10 +3011,10 @@ function isSpanPropsEqual(span0, span1) {
     return true;
 }
 function buildDateSpanApi(span, dateEnv) {
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, buildRangeApi(span.range, dateEnv, span.allDay)), { allDay: span.allDay });
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, buildRangeApi(span.range, dateEnv, span.allDay)), { allDay: span.allDay });
 }
 function buildRangeApiWithTimeZone(range, dateEnv, omitTime) {
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, buildRangeApi(range, dateEnv, omitTime)), { timeZone: dateEnv.timeZone });
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, buildRangeApi(range, dateEnv, omitTime)), { timeZone: dateEnv.timeZone });
 }
 function buildRangeApi(range, dateEnv, omitTime) {
     return {
@@ -3111,7 +3040,7 @@ function fabricateEventRange(dateSpan, eventUiBases, context) {
 }
 
 function triggerDateSelect(selection, pev, context) {
-    context.emitter.trigger('select', Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, buildDateSpanApiWithContext(selection, context)), { jsEvent: pev ? pev.origEvent : null, view: context.viewApi || context.calendarApi.view }));
+    context.emitter.trigger('select', (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, buildDateSpanApiWithContext(selection, context)), { jsEvent: pev ? pev.origEvent : null, view: context.viewApi || context.calendarApi.view }));
 }
 function triggerDateUnselect(pev, context) {
     context.emitter.trigger('unselect', {
@@ -3123,9 +3052,9 @@ function buildDateSpanApiWithContext(dateSpan, context) {
     var props = {};
     for (var _i = 0, _a = context.pluginHooks.dateSpanTransforms; _i < _a.length; _i++) {
         var transform = _a[_i];
-        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(props, transform(dateSpan, context));
+        (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(props, transform(dateSpan, context));
     }
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(props, buildDateSpanApi(dateSpan, context.dateEnv));
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(props, buildDateSpanApi(dateSpan, context.dateEnv));
     return props;
 }
 // Given an event's allDay status and start date, return what its fallback end date should be.
@@ -3168,9 +3097,9 @@ function applyMutationToEventDef(eventDef, eventConfig, mutation, context) {
         (mutation.startDelta || mutation.endDelta)) {
         standardProps.hasEnd = true; // TODO: is this mutation okay?
     }
-    var copy = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventDef), standardProps), { ui: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventDef.ui), standardProps.ui) });
+    var copy = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, eventDef), standardProps), { ui: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, eventDef.ui), standardProps.ui) });
     if (mutation.extendedProps) {
-        copy.extendedProps = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, copy.extendedProps), mutation.extendedProps);
+        copy.extendedProps = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, copy.extendedProps), mutation.extendedProps);
     }
     for (var _i = 0, _a = context.pluginHooks.eventDefMutationAppliers; _i < _a.length; _i++) {
         var applier = _a[_i];
@@ -3186,7 +3115,7 @@ eventConfig, mutation, context) {
     var dateEnv = context.dateEnv;
     var forceAllDay = mutation.standardProps && mutation.standardProps.allDay === true;
     var clearEnd = mutation.standardProps && mutation.standardProps.hasEnd === false;
-    var copy = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventInstance);
+    var copy = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, eventInstance);
     if (forceAllDay) {
         copy.range = computeAlignedDayRange(copy.range);
     }
@@ -3332,7 +3261,7 @@ function parseEventSource(raw, context, refiners) {
     return null;
 }
 function buildEventSourceRefiners(context) {
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, EVENT_UI_REFINERS), EVENT_SOURCE_REFINERS), context.pluginHooks.eventSourceRefiners);
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, EVENT_UI_REFINERS), EVENT_SOURCE_REFINERS), context.pluginHooks.eventSourceRefiners);
 }
 function buildEventSourceMeta(raw, context) {
     var defs = context.pluginHooks.eventSourceDefs;
@@ -3431,7 +3360,7 @@ var CalendarApi = /** @class */ (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
         }
-        (_a = this.currentDataManager.emitter).trigger.apply(_a, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([handlerName], args));
+        (_a = this.currentDataManager.emitter).trigger.apply(_a, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([handlerName], args));
     };
     // View
     // -----------------------------------------------------------------------------------------------------------------
@@ -4188,7 +4117,7 @@ var EventApi = /** @class */ (function () {
         }
         if (Object.keys(def.extendedProps).length) {
             if (settings.collapseExtendedProps) {
-                Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(res, def.extendedProps);
+                (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(res, def.extendedProps);
             }
             else {
                 res.extendedProps = def.extendedProps;
@@ -4717,7 +4646,7 @@ function formatRange(startInput, endInput, options // mixture of env and formatt
 // TODO: more DRY and optimized
 function buildDateEnv(settings) {
     var locale = buildLocale(settings.locale || 'en', organizeRawLocales([]).map); // TODO: don't hardcode 'en' everywhere
-    return new DateEnv(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ timeZone: BASE_OPTION_DEFAULTS.timeZone, calendarSystem: 'gregory' }, settings), { locale: locale }));
+    return new DateEnv((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ timeZone: BASE_OPTION_DEFAULTS.timeZone, calendarSystem: 'gregory' }, settings), { locale: locale }));
 }
 
 var DEF_DEFAULTS = {
@@ -4752,7 +4681,7 @@ function refineInputs(input) {
         rawDefs = [];
     }
     rawDefs = rawDefs.map(function (rawDef) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, DEF_DEFAULTS), rawDef);
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, DEF_DEFAULTS), rawDef);
     });
     return rawDefs;
 }
@@ -4968,7 +4897,7 @@ function buildEventUiForKey(allUi, eventUiForKey, individualUi) {
         '': combineEventUis(baseParts)
     };
     if (individualUi) {
-        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(stuff, individualUi);
+        (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(stuff, individualUi);
     }
     return stuff;
 }
@@ -5367,7 +5296,7 @@ var ScrollController = /** @class */ (function () {
     return ScrollController;
 }());
 var ElementScrollController = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(ElementScrollController, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(ElementScrollController, _super);
     function ElementScrollController(el) {
         var _this = _super.call(this) || this;
         _this.el = el;
@@ -5400,7 +5329,7 @@ var ElementScrollController = /** @class */ (function (_super) {
     return ElementScrollController;
 }(ScrollController));
 var WindowScrollController = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(WindowScrollController, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(WindowScrollController, _super);
     function WindowScrollController() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -5441,7 +5370,7 @@ var Theme = /** @class */ (function () {
         var iconClassesCopy;
         var buttonName;
         if (typeof iconOverrideHash === 'object' && iconOverrideHash) { // non-null object
-            iconClassesCopy = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, this.iconClasses);
+            iconClassesCopy = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, this.iconClasses);
             for (buttonName in iconOverrideHash) {
                 iconClassesCopy[buttonName] = this.applyIconOverridePrefix(iconOverrideHash[buttonName]);
             }
@@ -5498,7 +5427,7 @@ var ScrollResponder = /** @class */ (function () {
         this.emitter = emitter;
         this.scrollTime = scrollTime;
         this.handleScrollRequest = function (request) {
-            _this.queuedRequest = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, _this.queuedRequest || {}, request);
+            _this.queuedRequest = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, _this.queuedRequest || {}, request);
             _this.drain();
         };
         emitter.on('_scrollRequest', this.handleScrollRequest);
@@ -5528,7 +5457,7 @@ var ScrollResponder = /** @class */ (function () {
     return ScrollResponder;
 }());
 
-var ViewContextType = Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createContext"])({}); // for Components
+var ViewContextType = Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({}); // for Components
 function buildViewContext(viewSpec, viewApi, viewOptions, dateProfileGenerator, dateEnv, theme, pluginHooks, dispatch, getCurrentData, emitter, calendarApi, registerInteractiveComponent, unregisterInteractiveComponent) {
     return {
         dateEnv: dateEnv,
@@ -5558,7 +5487,7 @@ function buildViewContext(viewSpec, viewApi, viewOptions, dateProfileGenerator, 
 }
 
 var PureComponent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(PureComponent, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(PureComponent, _super);
     function PureComponent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -5573,11 +5502,11 @@ var PureComponent = /** @class */ (function (_super) {
     PureComponent.addStateEquality = addStateEquality;
     PureComponent.contextType = ViewContextType;
     return PureComponent;
-}(_vdom__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+}(Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
 PureComponent.prototype.propEquality = {};
 PureComponent.prototype.stateEquality = {};
 var BaseComponent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(BaseComponent, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(BaseComponent, _super);
     function BaseComponent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -5586,12 +5515,12 @@ var BaseComponent = /** @class */ (function (_super) {
 }(PureComponent));
 function addPropsEquality(propEquality) {
     var hash = Object.create(this.prototype.propEquality);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(hash, propEquality);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(hash, propEquality);
     this.prototype.propEquality = hash;
 }
 function addStateEquality(stateEquality) {
     var hash = Object.create(this.prototype.stateEquality);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(hash, stateEquality);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(hash, stateEquality);
     this.prototype.stateEquality = hash;
 }
 // use other one
@@ -5695,7 +5624,7 @@ function rezoneEventStoreDates(eventStore, oldDateEnv, newDateEnv) {
             return instance; // isn't dependent on timezone
         }
         else {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, instance), { range: {
+            return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, instance), { range: {
                     start: newDateEnv.createMarker(oldDateEnv.toDate(instance.range.start, instance.forcedStartTzo)),
                     end: newDateEnv.createMarker(oldDateEnv.toDate(instance.range.end, instance.forcedEndTzo))
                 }, forcedStartTzo: newDateEnv.canComputeOffset ? null : instance.forcedStartTzo, forcedEndTzo: newDateEnv.canComputeOffset ? null : instance.forcedEndTzo });
@@ -5728,7 +5657,7 @@ function isDateSelectionValid(dateSelection, context) {
 }
 function isNewPropsValid(newProps, context) {
     var calendarState = context.getCurrentData();
-    var props = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ businessHours: calendarState.businessHours, dateSelection: '', eventStore: calendarState.eventStore, eventUiBases: calendarState.eventUiBases, eventSelection: '', eventDrag: null, eventResize: null }, newProps);
+    var props = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ businessHours: calendarState.businessHours, dateSelection: '', eventStore: calendarState.eventStore, eventUiBases: calendarState.eventUiBases, eventSelection: '', eventDrag: null, eventResize: null }, newProps);
     return (context.pluginHooks.isPropsValid || isPropsValid)(props, context);
 }
 function isPropsValid(state, context, dateSpanMeta, filterConfig) {
@@ -5795,7 +5724,7 @@ function isInteractionPropsValid(state, context, dateSpanMeta, filterConfig) {
         var calendarEventStore = currentState.eventStore; // need global-to-calendar, not local to component (splittable)state
         for (var _i = 0, _a = subjectConfig.allows; _i < _a.length; _i++) {
             var subjectAllow = _a[_i];
-            var subjectDateSpan = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, dateSpanMeta), { range: subjectInstance.range, allDay: subjectDef.allDay });
+            var subjectDateSpan = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, dateSpanMeta), { range: subjectInstance.range, allDay: subjectDef.allDay });
             var origDef = calendarEventStore.defs[subjectDef.defId];
             var origInstance = calendarEventStore.instances[subjectInstanceId];
             var eventApi = void 0;
@@ -5846,7 +5775,7 @@ function isDateSelectionPropsValid(state, context, dateSpanMeta, filterConfig) {
     // allow (a function)
     for (var _i = 0, _a = selectionConfig.allows; _i < _a.length; _i++) {
         var selectionAllow = _a[_i];
-        var fullDateSpan = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, dateSpanMeta), selection);
+        var fullDateSpan = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, dateSpanMeta), selection);
         if (!selectionAllow(buildDateSpanApiWithContext(fullDateSpan, context), null)) {
             return false;
         }
@@ -5910,7 +5839,7 @@ PURPOSES:
 - interface for dragging and hits
 */
 var DateComponent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(DateComponent, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(DateComponent, _super);
     function DateComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.uid = guid();
@@ -6080,16 +6009,16 @@ function combineHooks(hooks0, hooks1) {
     return {
         reducers: hooks0.reducers.concat(hooks1.reducers),
         contextInit: hooks0.contextInit.concat(hooks1.contextInit),
-        eventRefiners: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.eventRefiners), hooks1.eventRefiners),
+        eventRefiners: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.eventRefiners), hooks1.eventRefiners),
         eventDefMemberAdders: hooks0.eventDefMemberAdders.concat(hooks1.eventDefMemberAdders),
-        eventSourceRefiners: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.eventSourceRefiners), hooks1.eventSourceRefiners),
+        eventSourceRefiners: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.eventSourceRefiners), hooks1.eventSourceRefiners),
         isDraggableTransformers: hooks0.isDraggableTransformers.concat(hooks1.isDraggableTransformers),
         eventDragMutationMassagers: hooks0.eventDragMutationMassagers.concat(hooks1.eventDragMutationMassagers),
         eventDefMutationAppliers: hooks0.eventDefMutationAppliers.concat(hooks1.eventDefMutationAppliers),
         dateSelectionTransformers: hooks0.dateSelectionTransformers.concat(hooks1.dateSelectionTransformers),
         datePointTransforms: hooks0.datePointTransforms.concat(hooks1.datePointTransforms),
         dateSpanTransforms: hooks0.dateSpanTransforms.concat(hooks1.dateSpanTransforms),
-        views: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.views), hooks1.views),
+        views: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.views), hooks1.views),
         viewPropsTransformers: hooks0.viewPropsTransformers.concat(hooks1.viewPropsTransformers),
         isPropsValid: hooks1.isPropsValid || hooks0.isPropsValid,
         externalDefTransforms: hooks0.externalDefTransforms.concat(hooks1.externalDefTransforms),
@@ -6098,24 +6027,24 @@ function combineHooks(hooks0, hooks1) {
         eventDropTransformers: hooks0.eventDropTransformers.concat(hooks1.eventDropTransformers),
         calendarInteractions: hooks0.calendarInteractions.concat(hooks1.calendarInteractions),
         componentInteractions: hooks0.componentInteractions.concat(hooks1.componentInteractions),
-        themeClasses: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.themeClasses), hooks1.themeClasses),
+        themeClasses: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.themeClasses), hooks1.themeClasses),
         eventSourceDefs: hooks0.eventSourceDefs.concat(hooks1.eventSourceDefs),
         cmdFormatter: hooks1.cmdFormatter || hooks0.cmdFormatter,
         recurringTypes: hooks0.recurringTypes.concat(hooks1.recurringTypes),
         namedTimeZonedImpl: hooks1.namedTimeZonedImpl || hooks0.namedTimeZonedImpl,
         initialView: hooks0.initialView || hooks1.initialView,
         elementDraggingImpl: hooks0.elementDraggingImpl || hooks1.elementDraggingImpl,
-        optionChangeHandlers: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.optionChangeHandlers), hooks1.optionChangeHandlers),
+        optionChangeHandlers: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.optionChangeHandlers), hooks1.optionChangeHandlers),
         scrollGridImpl: hooks1.scrollGridImpl || hooks0.scrollGridImpl,
-        contentTypeHandlers: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.contentTypeHandlers), hooks1.contentTypeHandlers),
-        listenerRefiners: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.listenerRefiners), hooks1.listenerRefiners),
-        optionRefiners: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.optionRefiners), hooks1.optionRefiners),
-        propSetHandlers: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, hooks0.propSetHandlers), hooks1.propSetHandlers)
+        contentTypeHandlers: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.contentTypeHandlers), hooks1.contentTypeHandlers),
+        listenerRefiners: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.listenerRefiners), hooks1.listenerRefiners),
+        optionRefiners: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.optionRefiners), hooks1.optionRefiners),
+        propSetHandlers: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, hooks0.propSetHandlers), hooks1.propSetHandlers)
     };
 }
 
 var StandardTheme = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(StandardTheme, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(StandardTheme, _super);
     function StandardTheme() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -6192,17 +6121,17 @@ function buildViewDef(viewType, hash, defaultConfigs, overrideConfigs) {
     return {
         type: viewType,
         component: theComponent,
-        defaults: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, (superDef ? superDef.defaults : {})), (defaultConfig ? defaultConfig.rawOptions : {})),
-        overrides: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, (superDef ? superDef.overrides : {})), (overrideConfig ? overrideConfig.rawOptions : {}))
+        defaults: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, (superDef ? superDef.defaults : {})), (defaultConfig ? defaultConfig.rawOptions : {})),
+        overrides: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, (superDef ? superDef.overrides : {})), (overrideConfig ? overrideConfig.rawOptions : {}))
     };
 }
 
 // NOTE: in JSX, you should always use this class with <HookProps> arg. otherwise, will default to any???
 var RenderHook = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(RenderHook, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(RenderHook, _super);
     function RenderHook() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.rootElRef = Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.rootElRef = Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();
         _this.handleRootEl = function (el) {
             setRef(_this.rootElRef, el);
             if (_this.props.elRef) {
@@ -6215,20 +6144,20 @@ var RenderHook = /** @class */ (function (_super) {
         var _this = this;
         var props = this.props;
         var hookProps = props.hookProps;
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(MountHook, { hookProps: hookProps, didMount: props.didMount, willUnmount: props.willUnmount, elRef: this.handleRootEl }, function (rootElRef) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ContentHook, { hookProps: hookProps, content: props.content, defaultContent: props.defaultContent, backupElRef: _this.rootElRef }, function (innerElRef, innerContent) { return props.children(rootElRef, normalizeClassNames(props.classNames, hookProps), innerElRef, innerContent); })); }));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(MountHook, { hookProps: hookProps, didMount: props.didMount, willUnmount: props.willUnmount, elRef: this.handleRootEl }, function (rootElRef) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ContentHook, { hookProps: hookProps, content: props.content, defaultContent: props.defaultContent, backupElRef: _this.rootElRef }, function (innerElRef, innerContent) { return props.children(rootElRef, normalizeClassNames(props.classNames, hookProps), innerElRef, innerContent); })); }));
     };
     return RenderHook;
 }(BaseComponent));
 // for forcing rerender of components that use the ContentHook
-var CustomContentRenderContext = Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createContext"])(0);
+var CustomContentRenderContext = Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(0);
 function ContentHook(props) {
-    return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(CustomContentRenderContext.Consumer, null, function (renderId) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ContentHookInner, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ renderId: renderId }, props))); }));
+    return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(CustomContentRenderContext.Consumer, null, function (renderId) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ContentHookInner, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ renderId: renderId }, props))); }));
 }
 var ContentHookInner = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(ContentHookInner, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(ContentHookInner, _super);
     function ContentHookInner() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.innerElRef = Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.innerElRef = Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();
         return _this;
     }
     ContentHookInner.prototype.render = function () {
@@ -6284,7 +6213,7 @@ var ContentHookInner = /** @class */ (function (_super) {
     return ContentHookInner;
 }(BaseComponent));
 var MountHook = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(MountHook, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(MountHook, _super);
     function MountHook() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.handleRootEl = function (rootEl) {
@@ -6300,11 +6229,11 @@ var MountHook = /** @class */ (function (_super) {
     };
     MountHook.prototype.componentDidMount = function () {
         var callback = this.props.didMount;
-        callback && callback(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, this.props.hookProps), { el: this.rootEl }));
+        callback && callback((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, this.props.hookProps), { el: this.rootEl }));
     };
     MountHook.prototype.componentWillUnmount = function () {
         var callback = this.props.willUnmount;
-        callback && callback(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, this.props.hookProps), { el: this.rootEl }));
+        callback && callback((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, this.props.hookProps), { el: this.rootEl }));
     };
     return MountHook;
 }(BaseComponent));
@@ -6329,7 +6258,7 @@ function normalizeClassNames(classNames, hookProps) {
 }
 function normalizeContent(input, hookProps) {
     if (typeof input === 'function') {
-        return input(hookProps, _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"]); // give the function the vdom-creation func
+        return input(hookProps, Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())); // give the function the vdom-creation func
     }
     else {
         return input;
@@ -6337,7 +6266,7 @@ function normalizeContent(input, hookProps) {
 }
 
 var ViewRoot = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(ViewRoot, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(ViewRoot, _super);
     function ViewRoot() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.normalizeClassNames = buildClassNameNormalizer();
@@ -6348,7 +6277,7 @@ var ViewRoot = /** @class */ (function (_super) {
         var options = context.options;
         var hookProps = { view: context.viewApi };
         var customClassNames = this.normalizeClassNames(options.viewClassNames, hookProps);
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(MountHook, { hookProps: hookProps, didMount: options.viewDidMount, willUnmount: options.viewWillUnmount, elRef: props.elRef }, function (rootElRef) { return props.children(rootElRef, ["fc-" + props.viewSpec.type + "-view", 'fc-view'].concat(customClassNames)); }));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(MountHook, { hookProps: hookProps, didMount: options.viewDidMount, willUnmount: options.viewWillUnmount, elRef: props.elRef }, function (rootElRef) { return props.children(rootElRef, ["fc-" + props.viewSpec.type + "-view", 'fc-view'].concat(customClassNames)); }));
     };
     return ViewRoot;
 }(BaseComponent));
@@ -6373,9 +6302,9 @@ function parseViewConfig(input) {
 }
 function createViewHookComponent(options) {
     return function (viewProps) {
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ViewContextType.Consumer, null, function (context) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ViewRoot, { viewSpec: context.viewSpec }, function (rootElRef, viewClassNames) {
-            var hookProps = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, viewProps), { nextDayThreshold: context.options.nextDayThreshold });
-            return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(RenderHook, { hookProps: hookProps, classNames: options.classNames, content: options.content, didMount: options.didMount, willUnmount: options.willUnmount, elRef: rootElRef }, function (rootElRef, customClassNames, innerElRef, innerContent) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: viewClassNames.concat(customClassNames).join(' '), ref: rootElRef }, innerContent)); }));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ViewContextType.Consumer, null, function (context) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ViewRoot, { viewSpec: context.viewSpec }, function (rootElRef, viewClassNames) {
+            var hookProps = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, viewProps), { nextDayThreshold: context.options.nextDayThreshold });
+            return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(RenderHook, { hookProps: hookProps, classNames: options.classNames, content: options.content, didMount: options.didMount, willUnmount: options.willUnmount, elRef: rootElRef }, function (rootElRef, customClassNames, innerElRef, innerContent) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: viewClassNames.concat(customClassNames).join(' '), ref: rootElRef }, innerContent)); }));
         })); }));
     };
 }
@@ -6428,7 +6357,7 @@ function buildViewSpec(viewDef, overrideConfigs, optionOverrides, dynamicOptionO
         durationUnit: durationUnit,
         singleUnit: singleUnit,
         optionDefaults: viewDef.defaults,
-        optionOverrides: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, singleUnitOverrides), viewDef.overrides),
+        optionOverrides: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, singleUnitOverrides), viewDef.overrides),
         buttonTextOverride: queryButtonText(dynamicOptionOverrides) ||
             queryButtonText(optionOverrides) || // constructor-specified buttonText lookup hash takes precedence
             viewDef.overrides.buttonText,
@@ -6776,7 +6705,7 @@ function reduceDynamicOptionOverrides(dynamicOptionOverrides, action) {
     var _a;
     switch (action.type) {
         case 'SET_OPTION':
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, dynamicOptionOverrides), (_a = {}, _a[action.optionName] = action.rawOptionValue, _a));
+            return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, dynamicOptionOverrides), (_a = {}, _a[action.optionName] = action.rawOptionValue, _a));
         default:
             return dynamicOptionOverrides;
     }
@@ -6866,7 +6795,7 @@ function addSources(eventSourceHash, sources, fetchRange, context) {
     if (fetchRange) {
         hash = fetchDirtySources(hash, fetchRange, context);
     }
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventSourceHash), hash);
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, eventSourceHash), hash);
 }
 function removeSource(eventSourceHash, sourceId) {
     return filterHash(eventSourceHash, function (eventSource) {
@@ -6942,14 +6871,14 @@ function fetchSource(eventSource, fetchRange, context) {
             error: error
         });
     });
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventSource), { isFetching: true, latestFetchId: fetchId });
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, eventSource), { isFetching: true, latestFetchId: fetchId });
 }
 function receiveResponse(sourceHash, sourceId, fetchId, fetchRange) {
     var _a;
     var eventSource = sourceHash[sourceId];
     if (eventSource && // not already removed
         fetchId === eventSource.latestFetchId) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, sourceHash), (_a = {}, _a[sourceId] = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventSource), { isFetching: false, fetchRange: fetchRange // also serves as a marker that at least one fetch has completed
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, sourceHash), (_a = {}, _a[sourceId] = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, eventSource), { isFetching: false, fetchRange: fetchRange // also serves as a marker that at least one fetch has completed
          }), _a));
     }
     return sourceHash;
@@ -7260,7 +7189,7 @@ function buildRequestParams(meta, range, context) {
         // probably supplied as a straight key/value object
         customRequestParams = meta.extraParams || {};
     }
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(params, customRequestParams);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(params, customRequestParams);
     params[startParam] = dateEnv.formatIso(range.start);
     params[endParam] = dateEnv.formatIso(range.end);
     if (dateEnv.timeZone !== 'local') {
@@ -7383,7 +7312,7 @@ function handleEventSources(inputs, context) {
 }
 
 function handleDateProfile(dateProfile, context) {
-    context.emitter.trigger('datesSet', Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, buildRangeApiWithTimeZone(dateProfile.activeRange, context.dateEnv)), { view: context.viewApi }));
+    context.emitter.trigger('datesSet', (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, buildRangeApiWithTimeZone(dateProfile.activeRange, context.dateEnv)), { view: context.viewApi }));
 }
 
 function handleEventStore(eventStore, context) {
@@ -7666,10 +7595,10 @@ var CalendarDataManager = /** @class */ (function () {
             eventResize: null,
             selectionConfig: this.buildViewUiProps(calendarContext).selectionConfig
         };
-        var contextAndState = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, calendarContext), initialState);
+        var contextAndState = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, calendarContext), initialState);
         for (var _b = 0, _c = optionsData.pluginHooks.reducers; _b < _c.length; _b++) {
             var reducer = _c[_b];
-            Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(initialState, reducer(null, null, contextAndState));
+            (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(initialState, reducer(null, null, contextAndState));
         }
         if (initialState.loadingLevel) {
             this.emitter.trigger('loading', true); // NOT DRY
@@ -7681,7 +7610,7 @@ var CalendarDataManager = /** @class */ (function () {
     CalendarDataManager.prototype.resetOptions = function (optionOverrides, append) {
         var props = this.props;
         props.optionOverrides = append
-            ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, props.optionOverrides), optionOverrides) : optionOverrides;
+            ? (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, props.optionOverrides), optionOverrides) : optionOverrides;
         this.actionRunner.request({
             type: 'NOTHING'
         });
@@ -7744,10 +7673,10 @@ var CalendarDataManager = /** @class */ (function () {
             eventDrag: reduceEventDrag(state.eventDrag, action),
             eventResize: reduceEventResize(state.eventResize, action)
         };
-        var contextAndState = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, calendarContext), newState);
+        var contextAndState = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, calendarContext), newState);
         for (var _i = 0, _c = optionsData.pluginHooks.reducers; _i < _c.length; _i++) {
             var reducer = _c[_i];
-            Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(newState, reducer(state, action, contextAndState)); // give the OLD state, for old value
+            (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(newState, reducer(state, action, contextAndState)); // give the OLD state, for old value
         }
         // TODO: use propSetHandlers in plugin system
         if (!prevLoadingLevel && loadingLevel) {
@@ -7766,7 +7695,7 @@ var CalendarDataManager = /** @class */ (function () {
         var oldData = this.data;
         var optionsData = this.computeOptionsData(props.optionOverrides, state.dynamicOptionOverrides, props.calendarApi);
         var currentViewData = this.computeCurrentViewData(state.currentViewType, optionsData, props.optionOverrides, state.dynamicOptionOverrides);
-        var data = this.data = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ viewTitle: this.buildTitle(state.dateProfile, currentViewData.options, optionsData.dateEnv), calendarApi: props.calendarApi, dispatch: this.dispatch, emitter: this.emitter, getCurrentData: this.getCurrentData }, optionsData), currentViewData), state);
+        var data = this.data = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ viewTitle: this.buildTitle(state.dateProfile, currentViewData.options, optionsData.dateEnv), calendarApi: props.calendarApi, dispatch: this.dispatch, emitter: this.emitter, getCurrentData: this.getCurrentData }, optionsData), currentViewData), state);
         var changeHandlers = optionsData.pluginHooks.optionChangeHandlers;
         var oldCalendarOptions = oldData && oldData.calendarOptions;
         var newCalendarOptions = optionsData.calendarOptions;
@@ -7816,7 +7745,7 @@ var CalendarDataManager = /** @class */ (function () {
         var availableRawLocales = availableLocaleData.map;
         var localeDefaults = this.buildLocale(locale || availableLocaleData.defaultCode, availableRawLocales).options;
         var pluginHooks = this.buildPluginHooks(optionOverrides.plugins || [], globalPlugins);
-        var refiners = this.currentCalendarOptionsRefiners = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, BASE_OPTION_REFINERS), CALENDAR_LISTENER_REFINERS), CALENDAR_OPTION_REFINERS), pluginHooks.listenerRefiners), pluginHooks.optionRefiners);
+        var refiners = this.currentCalendarOptionsRefiners = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, BASE_OPTION_REFINERS), CALENDAR_LISTENER_REFINERS), CALENDAR_OPTION_REFINERS), pluginHooks.listenerRefiners), pluginHooks.optionRefiners);
         var extra = {};
         var raw = mergeRawOptions([
             BASE_OPTION_DEFAULTS,
@@ -7896,7 +7825,7 @@ var CalendarDataManager = /** @class */ (function () {
             viewSpec.optionOverrides,
             dynamicOptionOverrides
         ]);
-        var refiners = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, BASE_OPTION_REFINERS), CALENDAR_LISTENER_REFINERS), CALENDAR_OPTION_REFINERS), VIEW_OPTION_REFINERS), pluginHooks.listenerRefiners), pluginHooks.optionRefiners);
+        var refiners = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, BASE_OPTION_REFINERS), CALENDAR_LISTENER_REFINERS), CALENDAR_OPTION_REFINERS), VIEW_OPTION_REFINERS), pluginHooks.listenerRefiners), pluginHooks.optionRefiners);
         var refined = {};
         var currentRaw = this.currentViewOptionsInput;
         var currentRefined = this.currentViewOptionsRefined;
@@ -8009,7 +7938,7 @@ function warnUnknownOptions(options, viewName) {
 
 // TODO: move this to react plugin?
 var CalendarDataProvider = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(CalendarDataProvider, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(CalendarDataProvider, _super);
     function CalendarDataProvider(props) {
         var _this = _super.call(this, props) || this;
         _this.handleData = function (data) {
@@ -8038,7 +7967,7 @@ var CalendarDataProvider = /** @class */ (function (_super) {
         }
     };
     return CalendarDataProvider;
-}(_vdom__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+}(Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
 
 // HELPERS
 /*
@@ -8137,7 +8066,7 @@ function parseDragMeta(raw) {
 }
 
 var Toolbar = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(Toolbar, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(Toolbar, _super);
     function Toolbar() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -8165,26 +8094,26 @@ var Toolbar = /** @class */ (function (_super) {
             'fc-toolbar',
             forceLtr ? 'fc-toolbar-ltr' : ''
         ];
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: classNames.join(' ') },
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: classNames.join(' ') },
             this.renderSection('start', startContent || []),
             this.renderSection('center', centerContent || []),
             this.renderSection('end', endContent || [])));
     };
     Toolbar.prototype.renderSection = function (key, widgetGroups) {
         var props = this.props;
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ToolbarSection, { key: key, widgetGroups: widgetGroups, title: props.title, activeButton: props.activeButton, isTodayEnabled: props.isTodayEnabled, isPrevEnabled: props.isPrevEnabled, isNextEnabled: props.isNextEnabled }));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ToolbarSection, { key: key, widgetGroups: widgetGroups, title: props.title, activeButton: props.activeButton, isTodayEnabled: props.isTodayEnabled, isPrevEnabled: props.isPrevEnabled, isNextEnabled: props.isNextEnabled }));
     };
     return Toolbar;
 }(BaseComponent));
 var ToolbarSection = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(ToolbarSection, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(ToolbarSection, _super);
     function ToolbarSection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ToolbarSection.prototype.render = function () {
         var _this = this;
         var children = this.props.widgetGroups.map(function (widgetGroup) { return _this.renderWidgetGroup(widgetGroup); });
-        return _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])(['div', { className: 'fc-toolbar-chunk' }], children));
+        return Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)(['div', { className: 'fc-toolbar-chunk' }], children));
     };
     ToolbarSection.prototype.renderWidgetGroup = function (widgetGroup) {
         var props = this.props;
@@ -8196,7 +8125,7 @@ var ToolbarSection = /** @class */ (function (_super) {
             var buttonName = widget.buttonName, buttonClick = widget.buttonClick, buttonText = widget.buttonText, buttonIcon = widget.buttonIcon;
             if (buttonName === 'title') {
                 isOnlyButtons = false;
-                children.push(Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("h2", { className: 'fc-toolbar-title' }, props.title));
+                children.push(Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("h2", { className: 'fc-toolbar-title' }, props.title));
             }
             else {
                 var ariaAttrs = buttonIcon ? { 'aria-label': buttonName } : {};
@@ -8207,12 +8136,12 @@ var ToolbarSection = /** @class */ (function (_super) {
                 var isDisabled = (!props.isTodayEnabled && buttonName === 'today') ||
                     (!props.isPrevEnabled && buttonName === 'prev') ||
                     (!props.isNextEnabled && buttonName === 'next');
-                children.push(Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("button", Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ disabled: isDisabled, className: buttonClasses.join(' '), onClick: buttonClick, type: 'button' }, ariaAttrs), buttonText || (buttonIcon ? Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("span", { className: buttonIcon }) : '')));
+                children.push(Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("button", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ disabled: isDisabled, className: buttonClasses.join(' '), onClick: buttonClick, type: 'button' }, ariaAttrs), buttonText || (buttonIcon ? Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("span", { className: buttonIcon }) : '')));
             }
         }
         if (children.length > 1) {
             var groupClassName = (isOnlyButtons && theme.getClass('buttonGroup')) || '';
-            return _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])(['div', { className: groupClassName }], children));
+            return Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)(['div', { className: groupClassName }], children));
         }
         else {
             return children[0];
@@ -8223,7 +8152,7 @@ var ToolbarSection = /** @class */ (function (_super) {
 
 // TODO: do function component?
 var ViewContainer = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(ViewContainer, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(ViewContainer, _super);
     function ViewContainer() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
@@ -8265,7 +8194,7 @@ var ViewContainer = /** @class */ (function (_super) {
         else {
             height = props.height || '';
         }
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { ref: this.handleEl, onClick: props.onClick, className: classNames.join(' '), style: { height: height, paddingBottom: paddingBottom } }, props.children));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { ref: this.handleEl, onClick: props.onClick, className: classNames.join(' '), style: { height: height, paddingBottom: paddingBottom } }, props.children));
     };
     ViewContainer.prototype.componentDidMount = function () {
         this.context.addResizeHandler(this.handleResize);
@@ -8287,7 +8216,7 @@ var ViewContainer = /** @class */ (function (_super) {
 Detects when the user clicks on an event within a DateComponent
 */
 var EventClicking = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(EventClicking, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(EventClicking, _super);
     function EventClicking(settings) {
         var _this = _super.call(this, settings) || this;
         _this.handleSegClick = function (ev, segEl) {
@@ -8323,7 +8252,7 @@ Triggers events and adds/removes core classNames when the user's pointer
 enters/leaves event-elements of a component.
 */
 var EventHovering = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(EventHovering, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(EventHovering, _super);
     function EventHovering(settings) {
         var _this = _super.call(this, settings) || this;
         // for simulating an eventMouseLeave when the event el is destroyed while mouse is over it
@@ -8368,15 +8297,15 @@ var EventHovering = /** @class */ (function (_super) {
 }(Interaction));
 
 var CalendarContent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(CalendarContent, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(CalendarContent, _super);
     function CalendarContent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.buildViewContext = memoize(buildViewContext);
         _this.buildViewPropTransformers = memoize(buildViewPropTransformers);
         _this.buildToolbarProps = memoize(buildToolbarProps);
         _this.handleNavLinkClick = buildDelegationHandler('a[data-navlink]', _this._handleNavLinkClick.bind(_this));
-        _this.headerRef = Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
-        _this.footerRef = Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.headerRef = Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();
+        _this.footerRef = Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();
         _this.interactionsStore = {};
         // Component Registration
         // -----------------------------------------------------------------------------------------------------------------
@@ -8441,14 +8370,14 @@ var CalendarContent = /** @class */ (function (_super) {
             viewAspectRatio = Math.max(options.aspectRatio, 0.5); // prevent from getting too tall
         }
         var viewContext = this.buildViewContext(props.viewSpec, props.viewApi, props.options, props.dateProfileGenerator, props.dateEnv, props.theme, props.pluginHooks, props.dispatch, props.getCurrentData, props.emitter, props.calendarApi, this.registerInteractiveComponent, this.unregisterInteractiveComponent);
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ViewContextType.Provider, { value: viewContext },
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ViewContextType.Provider, { value: viewContext },
             toolbarConfig.headerToolbar &&
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(Toolbar, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ ref: this.headerRef, extraClassName: 'fc-header-toolbar', model: toolbarConfig.headerToolbar }, toolbarProps)),
-            Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ViewContainer, { liquid: viewVGrow, height: viewHeight, aspectRatio: viewAspectRatio, onClick: this.handleNavLinkClick },
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(Toolbar, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ ref: this.headerRef, extraClassName: 'fc-header-toolbar', model: toolbarConfig.headerToolbar }, toolbarProps)),
+            Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ViewContainer, { liquid: viewVGrow, height: viewHeight, aspectRatio: viewAspectRatio, onClick: this.handleNavLinkClick },
                 this.renderView(props),
                 this.buildAppendContent()),
             toolbarConfig.footerToolbar &&
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(Toolbar, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ ref: this.footerRef, extraClassName: 'fc-footer-toolbar', model: toolbarConfig.footerToolbar }, toolbarProps))));
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(Toolbar, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ ref: this.footerRef, extraClassName: 'fc-footer-toolbar', model: toolbarConfig.footerToolbar }, toolbarProps))));
     };
     CalendarContent.prototype.componentDidMount = function () {
         var props = this.props;
@@ -8501,7 +8430,7 @@ var CalendarContent = /** @class */ (function (_super) {
     CalendarContent.prototype.buildAppendContent = function () {
         var props = this.props;
         var children = props.pluginHooks.viewContainerAppends.map(function (buildAppendContent) { return buildAppendContent(props); });
-        return _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([_vdom__WEBPACK_IMPORTED_MODULE_2__["Fragment"], {}], children));
+        return Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {}], children));
     };
     CalendarContent.prototype.renderView = function (props) {
         var pluginHooks = props.pluginHooks;
@@ -8521,10 +8450,10 @@ var CalendarContent = /** @class */ (function (_super) {
         var transformers = this.buildViewPropTransformers(pluginHooks.viewPropsTransformers);
         for (var _i = 0, transformers_1 = transformers; _i < transformers_1.length; _i++) {
             var transformer = transformers_1[_i];
-            Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(viewProps, transformer.transform(viewProps, props));
+            (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)(viewProps, transformer.transform(viewProps, props));
         }
         var ViewComponent = viewSpec.component;
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ViewComponent, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, viewProps)));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ViewComponent, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, viewProps)));
     };
     return CalendarContent;
 }(PureComponent));
@@ -8550,7 +8479,7 @@ function buildViewPropTransformers(theClasses) {
 }
 
 var CalendarRoot = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(CalendarRoot, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(CalendarRoot, _super);
     function CalendarRoot() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
@@ -8611,7 +8540,7 @@ function computeFallbackHeaderFormat(datesRepDistinctDays, dayCnt) {
 
 var CLASS_NAME = 'fc-col-header-cell'; // do the cushion too? no
 var TableDateCell = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(TableDateCell, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableDateCell, _super);
     function TableDateCell() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -8626,10 +8555,10 @@ var TableDateCell = /** @class */ (function (_super) {
         var navLinkAttrs = (options.navLinks && !dayMeta.isDisabled && props.colCnt > 1)
             ? { 'data-navlink': buildNavLinkData(date), tabIndex: 0 }
             : {};
-        var hookProps = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ date: dateEnv.toDate(date), view: viewApi }, props.extraHookProps), { text: text }), dayMeta);
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(RenderHook, { hookProps: hookProps, classNames: options.dayHeaderClassNames, content: options.dayHeaderContent, defaultContent: renderInner, didMount: options.dayHeaderDidMount, willUnmount: options.dayHeaderWillUnmount }, function (rootElRef, customClassNames, innerElRef, innerContent) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("th", Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ ref: rootElRef, className: classNames.concat(customClassNames).join(' '), "data-date": !dayMeta.isDisabled ? formatDayString(date) : undefined, colSpan: props.colSpan }, props.extraDataAttrs),
-            Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-scrollgrid-sync-inner' }, !dayMeta.isDisabled &&
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("a", Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ ref: innerElRef, className: [
+        var hookProps = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ date: dateEnv.toDate(date), view: viewApi }, props.extraHookProps), { text: text }), dayMeta);
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(RenderHook, { hookProps: hookProps, classNames: options.dayHeaderClassNames, content: options.dayHeaderContent, defaultContent: renderInner, didMount: options.dayHeaderDidMount, willUnmount: options.dayHeaderWillUnmount }, function (rootElRef, customClassNames, innerElRef, innerContent) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("th", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ ref: rootElRef, className: classNames.concat(customClassNames).join(' '), "data-date": !dayMeta.isDisabled ? formatDayString(date) : undefined, colSpan: props.colSpan }, props.extraDataAttrs),
+            Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-scrollgrid-sync-inner' }, !dayMeta.isDisabled &&
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("a", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ ref: innerElRef, className: [
                         'fc-col-header-cell-cushion',
                         props.isSticky ? 'fc-sticky' : ''
                     ].join(' ') }, navLinkAttrs), innerContent)))); }));
@@ -8637,7 +8566,7 @@ var TableDateCell = /** @class */ (function (_super) {
     return TableDateCell;
 }(BaseComponent));
 var TableDowCell = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(TableDowCell, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableDowCell, _super);
     function TableDowCell() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -8655,11 +8584,11 @@ var TableDowCell = /** @class */ (function (_super) {
         };
         var classNames = [CLASS_NAME].concat(getDayClassNames(dateMeta, theme), props.extraClassNames || []);
         var text = dateEnv.format(date, props.dayHeaderFormat);
-        var hookProps = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ // TODO: make this public?
+        var hookProps = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ // TODO: make this public?
             date: date }, dateMeta), { view: viewApi }), props.extraHookProps), { text: text });
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(RenderHook, { hookProps: hookProps, classNames: options.dayHeaderClassNames, content: options.dayHeaderContent, defaultContent: renderInner, didMount: options.dayHeaderDidMount, willUnmount: options.dayHeaderWillUnmount }, function (rootElRef, customClassNames, innerElRef, innerContent) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("th", Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ ref: rootElRef, className: classNames.concat(customClassNames).join(' '), colSpan: props.colSpan }, props.extraDataAttrs),
-            Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-scrollgrid-sync-inner' },
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("a", { className: [
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(RenderHook, { hookProps: hookProps, classNames: options.dayHeaderClassNames, content: options.dayHeaderContent, defaultContent: renderInner, didMount: options.dayHeaderDidMount, willUnmount: options.dayHeaderWillUnmount }, function (rootElRef, customClassNames, innerElRef, innerContent) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("th", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ ref: rootElRef, className: classNames.concat(customClassNames).join(' '), colSpan: props.colSpan }, props.extraDataAttrs),
+            Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-scrollgrid-sync-inner' },
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("a", { className: [
                         'fc-col-header-cell-cushion',
                         props.isSticky ? 'fc-sticky' : ''
                     ].join(' '), ref: innerElRef }, innerContent)))); }));
@@ -8671,7 +8600,7 @@ function renderInner(hookProps) {
 }
 
 var NowTimer = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(NowTimer, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(NowTimer, _super);
     function NowTimer(props, context) {
         var _this = _super.call(this, props, context) || this;
         _this.initialNowDate = getNow(context.options.now, context.dateEnv);
@@ -8723,7 +8652,7 @@ var NowTimer = /** @class */ (function (_super) {
     };
     NowTimer.contextType = ViewContextType;
     return NowTimer;
-}(_vdom__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+}(Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
 function buildDayRange(date) {
     var start = startOfDay(date);
     var end = addDays(start, 1);
@@ -8731,7 +8660,7 @@ function buildDayRange(date) {
 }
 
 var DayHeader = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(DayHeader, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(DayHeader, _super);
     function DayHeader() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.createDayHeaderFormatter = memoize(createDayHeaderFormatter);
@@ -8741,11 +8670,11 @@ var DayHeader = /** @class */ (function (_super) {
         var context = this.context;
         var _a = this.props, dates = _a.dates, dateProfile = _a.dateProfile, datesRepDistinctDays = _a.datesRepDistinctDays, renderIntro = _a.renderIntro;
         var dayHeaderFormat = this.createDayHeaderFormatter(context.options.dayHeaderFormat, datesRepDistinctDays, dates.length);
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(NowTimer, { unit: 'day' }, function (nowDate, todayRange) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("tr", null,
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(NowTimer, { unit: 'day' }, function (nowDate, todayRange) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("tr", null,
             renderIntro && renderIntro(),
             dates.map(function (date) { return (datesRepDistinctDays ?
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(TableDateCell, { key: date.toISOString(), date: date, dateProfile: dateProfile, todayRange: todayRange, colCnt: dates.length, dayHeaderFormat: dayHeaderFormat }) :
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(TableDowCell, { key: date.getUTCDay(), dow: date.getUTCDay(), dayHeaderFormat: dayHeaderFormat })); }))); }));
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(TableDateCell, { key: date.toISOString(), date: date, dateProfile: dateProfile, todayRange: todayRange, colCnt: dates.length, dayHeaderFormat: dayHeaderFormat }) :
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(TableDowCell, { key: date.getUTCDay(), dow: date.getUTCDay(), dayHeaderFormat: dayHeaderFormat })); }))); }));
     };
     return DayHeader;
 }(BaseComponent));
@@ -8907,14 +8836,14 @@ var Slicer = /** @class */ (function () {
             extraArgs[_i - 4] = arguments[_i];
         }
         var eventUiBases = props.eventUiBases;
-        var eventSegs = this.sliceEventStore.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([props.eventStore, eventUiBases, dateProfile, nextDayThreshold], extraArgs));
+        var eventSegs = this.sliceEventStore.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([props.eventStore, eventUiBases, dateProfile, nextDayThreshold], extraArgs));
         return {
-            dateSelectionSegs: this.sliceDateSelection.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([props.dateSelection, eventUiBases, context], extraArgs)),
-            businessHourSegs: this.sliceBusinessHours.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([props.businessHours, dateProfile, nextDayThreshold, context], extraArgs)),
+            dateSelectionSegs: this.sliceDateSelection.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([props.dateSelection, eventUiBases, context], extraArgs)),
+            businessHourSegs: this.sliceBusinessHours.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([props.businessHours, dateProfile, nextDayThreshold, context], extraArgs)),
             fgEventSegs: eventSegs.fg,
             bgEventSegs: eventSegs.bg,
-            eventDrag: this.sliceEventDrag.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([props.eventDrag, eventUiBases, dateProfile, nextDayThreshold], extraArgs)),
-            eventResize: this.sliceEventResize.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([props.eventResize, eventUiBases, dateProfile, nextDayThreshold], extraArgs)),
+            eventDrag: this.sliceEventDrag.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([props.eventDrag, eventUiBases, dateProfile, nextDayThreshold], extraArgs)),
+            eventResize: this.sliceEventResize.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([props.eventResize, eventUiBases, dateProfile, nextDayThreshold], extraArgs)),
             eventSelection: props.eventSelection
         }; // TODO: give interactionSegs?
     };
@@ -8924,7 +8853,7 @@ var Slicer = /** @class */ (function () {
         for (var _i = 2; _i < arguments.length; _i++) {
             extraArgs[_i - 2] = arguments[_i];
         }
-        return this._sliceDateSpan.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([{ range: { start: date, end: addMs(date, 1) }, allDay: false },
+        return this._sliceDateSpan.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([{ range: { start: date, end: addMs(date, 1) }, allDay: false },
             {},
             context], extraArgs));
     };
@@ -8936,7 +8865,7 @@ var Slicer = /** @class */ (function () {
         if (!businessHours) {
             return [];
         }
-        return this._sliceEventStore.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([expandRecurring(businessHours, computeActiveRange(dateProfile, Boolean(nextDayThreshold)), context),
+        return this._sliceEventStore.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([expandRecurring(businessHours, computeActiveRange(dateProfile, Boolean(nextDayThreshold)), context),
             {},
             dateProfile,
             nextDayThreshold], extraArgs)).bg;
@@ -8981,7 +8910,7 @@ var Slicer = /** @class */ (function () {
             return [];
         }
         var eventRange = fabricateEventRange(dateSpan, eventUiBases, context);
-        var segs = this.sliceRange.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([dateSpan.range], extraArgs));
+        var segs = this.sliceRange.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([dateSpan.range], extraArgs));
         for (var _a = 0, segs_1 = segs; _a < segs_1.length; _a++) {
             var seg = segs_1[_a];
             seg.eventRange = eventRange;
@@ -9011,7 +8940,7 @@ var Slicer = /** @class */ (function () {
                 end: addDays(dateRange.start, 1)
             };
         }
-        var segs = this.sliceRange.apply(this, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])([dateRange], extraArgs));
+        var segs = this.sliceRange.apply(this, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([dateRange], extraArgs));
         for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {
             var seg = segs_2[_i];
             seg.eventRange = eventRange;
@@ -9040,7 +8969,7 @@ function computeActiveRange(dateProfile, isComponentAllDay) {
 
 var VISIBLE_HIDDEN_RE = /^(visible|hidden)$/;
 var Scroller = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(Scroller, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(Scroller, _super);
     function Scroller() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.handleEl = function (el) {
@@ -9062,7 +8991,7 @@ var Scroller = /** @class */ (function (_super) {
                 className.push('fc-scroller-liquid');
             }
         }
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { ref: this.handleEl, className: className.join(' '), style: {
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { ref: this.handleEl, className: className.join(' '), style: {
                 overflowX: props.overflowX,
                 overflowY: props.overflowY,
                 left: (isAbsolute && -(props.overcomeLeft || 0)) || '',
@@ -9208,7 +9137,7 @@ function renderChunkContent(sectionConfig, chunkConfig, arg) {
     var expandRows = arg.expandRows;
     var content = typeof chunkConfig.content === 'function' ?
         chunkConfig.content(arg) :
-        Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])('table', {
+        Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('table', {
             className: [
                 chunkConfig.tableClassName,
                 sectionConfig.syncRowHeights ? 'fc-scrollgrid-sync-table' : ''
@@ -9218,7 +9147,7 @@ function renderChunkContent(sectionConfig, chunkConfig, arg) {
                 width: arg.clientWidth,
                 height: expandRows ? arg.clientHeight : '' // css `height` on a <table> serves as a min-height
             }
-        }, arg.tableColGroupNode, Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])('tbody', {}, typeof chunkConfig.rowContent === 'function' ? chunkConfig.rowContent(arg) : chunkConfig.rowContent));
+        }, arg.tableColGroupNode, Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('tbody', {}, typeof chunkConfig.rowContent === 'function' ? chunkConfig.rowContent(arg) : chunkConfig.rowContent));
     return content;
 }
 function isColPropsEqual(cols0, cols1) {
@@ -9235,13 +9164,13 @@ function renderMicroColGroup(cols, shrinkWidth) {
         var colProps = cols_1[_i];
         var span = colProps.span || 1;
         for (var i = 0; i < span; i++) {
-            colNodes.push(Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("col", { style: {
+            colNodes.push(Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("col", { style: {
                     width: colProps.width === 'shrink' ? sanitizeShrinkWidth(shrinkWidth) : (colProps.width || ''),
                     minWidth: colProps.minWidth || ''
                 } }));
         }
     }
-    return _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])(['colgroup', {}], colNodes));
+    return Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)(['colgroup', {}], colNodes));
 }
 function sanitizeShrinkWidth(shrinkWidth) {
     /* why 4? if we do 0, it will kill any border, which are needed for computeSmallestCellWidth
@@ -9282,7 +9211,7 @@ function getSectionClassNames(sectionConfig, wholeTableVGrow) {
     return classNames;
 }
 function renderScrollShim(arg) {
-    return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-scrollgrid-sticky-shim', style: {
+    return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-scrollgrid-sticky-shim', style: {
             width: arg.clientWidth,
             minWidth: arg.tableMinWidth
         } }));
@@ -9303,7 +9232,7 @@ function getStickyFooterScrollbar(options) {
 }
 
 var SimpleScrollGrid = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(SimpleScrollGrid, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(SimpleScrollGrid, _super);
     function SimpleScrollGrid() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.processCols = memoize(function (a) { return a; }, isColPropsEqual); // so we get same `cols` props every time
@@ -9318,7 +9247,7 @@ var SimpleScrollGrid = /** @class */ (function (_super) {
         };
         // TODO: can do a really simple print-view. dont need to join rows
         _this.handleSizing = function () {
-            _this.setState(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ shrinkWidth: _this.computeShrinkWidth() }, _this.computeScrollerDims()));
+            _this.setState((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ shrinkWidth: _this.computeShrinkWidth() }, _this.computeScrollerDims()));
         };
         return _this;
     }
@@ -9352,16 +9281,16 @@ var SimpleScrollGrid = /** @class */ (function (_super) {
         // use getCanVGrowWithinCell as a way to detect table-stupid firefox.
         // if so, use a simpler dom structure, jam everything into a lone tbody.
         var isBuggy = !getCanVGrowWithinCell();
-        return Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])('table', {
+        return Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('table', {
             className: classNames.join(' '),
             style: { height: props.height }
-        }, Boolean(!isBuggy && headSectionNodes.length) && _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])(['thead', {}], headSectionNodes)), Boolean(!isBuggy && bodySectionNodes.length) && _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])(['tbody', {}], bodySectionNodes)), Boolean(!isBuggy && footSectionNodes.length) && _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])(['tfoot', {}], footSectionNodes)), isBuggy && _vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spreadArrays"])(['tbody', {}], headSectionNodes, bodySectionNodes, footSectionNodes)));
+        }, Boolean(!isBuggy && headSectionNodes.length) && Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)(['thead', {}], headSectionNodes)), Boolean(!isBuggy && bodySectionNodes.length) && Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)(['tbody', {}], bodySectionNodes)), Boolean(!isBuggy && footSectionNodes.length) && Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)(['tfoot', {}], footSectionNodes)), isBuggy && Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)(['tbody', {}], headSectionNodes, bodySectionNodes, footSectionNodes)));
     };
     SimpleScrollGrid.prototype.renderSection = function (sectionConfig, sectionI, microColGroupNode) {
         if ('outerContent' in sectionConfig) {
-            return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_vdom__WEBPACK_IMPORTED_MODULE_2__["Fragment"], { key: sectionConfig.key }, sectionConfig.outerContent));
+            return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), { key: sectionConfig.key }, sectionConfig.outerContent));
         }
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("tr", { key: sectionConfig.key, className: getSectionClassNames(sectionConfig, this.props.liquid).join(' ') }, this.renderChunkTd(sectionConfig, sectionI, microColGroupNode, sectionConfig.chunk)));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("tr", { key: sectionConfig.key, className: getSectionClassNames(sectionConfig, this.props.liquid).join(' ') }, this.renderChunkTd(sectionConfig, sectionI, microColGroupNode, sectionConfig.chunk)));
     };
     SimpleScrollGrid.prototype.renderChunkTd = function (sectionConfig, sectionI, microColGroupNode, chunkConfig) {
         if ('outerContent' in chunkConfig) {
@@ -9387,9 +9316,9 @@ var SimpleScrollGrid = /** @class */ (function (_super) {
             rowSyncHeights: [],
             reportRowHeightChange: function () { }
         });
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("td", { ref: chunkConfig.elRef },
-            Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-scroller-harness' + (isLiquid ? ' fc-scroller-harness-liquid' : '') },
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(Scroller, { ref: this.scrollerRefs.createRef(sectionI), elRef: this.scrollerElRefs.createRef(sectionI), overflowY: overflowY, overflowX: !props.liquid ? 'visible' : 'hidden' /* natural height? */, maxHeight: sectionConfig.maxHeight, liquid: isLiquid, liquidIsAbsolute: true /* because its within a harness */ }, content))));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("td", { ref: chunkConfig.elRef },
+            Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-scroller-harness' + (isLiquid ? ' fc-scroller-harness-liquid' : '') },
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(Scroller, { ref: this.scrollerRefs.createRef(sectionI), elRef: this.scrollerElRefs.createRef(sectionI), overflowY: overflowY, overflowX: !props.liquid ? 'visible' : 'hidden' /* natural height? */, maxHeight: sectionConfig.maxHeight, liquid: isLiquid, liquidIsAbsolute: true /* because its within a harness */ }, content))));
     };
     SimpleScrollGrid.prototype._handleScrollerEl = function (scrollerEl, key) {
         var sectionI = parseInt(key, 10);
@@ -9447,10 +9376,10 @@ SimpleScrollGrid.addStateEquality({
 });
 
 var EventRoot = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(EventRoot, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(EventRoot, _super);
     function EventRoot() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.elRef = Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.elRef = Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();
         return _this;
     }
     EventRoot.prototype.render = function () {
@@ -9480,7 +9409,7 @@ var EventRoot = /** @class */ (function (_super) {
             isResizing: Boolean(props.isResizing)
         };
         var standardClassNames = getEventClassNames(hookProps).concat(ui.classNames);
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(RenderHook, { hookProps: hookProps, classNames: options.eventClassNames, content: options.eventContent, defaultContent: props.defaultContent, didMount: options.eventDidMount, willUnmount: options.eventWillUnmount, elRef: this.elRef }, function (rootElRef, customClassNames, innerElRef, innerContent) { return props.children(rootElRef, standardClassNames.concat(customClassNames), innerElRef, innerContent, hookProps); }));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(RenderHook, { hookProps: hookProps, classNames: options.eventClassNames, content: options.eventContent, defaultContent: props.defaultContent, didMount: options.eventDidMount, willUnmount: options.eventWillUnmount, elRef: this.elRef }, function (rootElRef, customClassNames, innerElRef, innerContent) { return props.children(rootElRef, standardClassNames.concat(customClassNames), innerElRef, innerContent, hookProps); }));
     };
     EventRoot.prototype.componentDidMount = function () {
         setElSeg(this.elRef.current, this.props.seg);
@@ -9499,7 +9428,7 @@ var EventRoot = /** @class */ (function (_super) {
 
 // should not be a purecomponent
 var StandardEvent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(StandardEvent, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(StandardEvent, _super);
     function StandardEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -9508,43 +9437,43 @@ var StandardEvent = /** @class */ (function (_super) {
         var seg = props.seg;
         var timeFormat = context.options.eventTimeFormat || props.defaultTimeFormat;
         var timeText = buildSegTimeText(seg, timeFormat, context, props.defaultDisplayEventTime, props.defaultDisplayEventEnd);
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(EventRoot, { seg: seg, timeText: timeText, disableDragging: props.disableDragging, disableResizing: props.disableResizing, defaultContent: props.defaultContent || renderInnerContent, isDragging: props.isDragging, isResizing: props.isResizing, isDateSelecting: props.isDateSelecting, isSelected: props.isSelected, isPast: props.isPast, isFuture: props.isFuture, isToday: props.isToday }, function (rootElRef, classNames, innerElRef, innerContent, hookProps) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("a", Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ className: props.extraClassNames.concat(classNames).join(' '), style: {
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(EventRoot, { seg: seg, timeText: timeText, disableDragging: props.disableDragging, disableResizing: props.disableResizing, defaultContent: props.defaultContent || renderInnerContent, isDragging: props.isDragging, isResizing: props.isResizing, isDateSelecting: props.isDateSelecting, isSelected: props.isSelected, isPast: props.isPast, isFuture: props.isFuture, isToday: props.isToday }, function (rootElRef, classNames, innerElRef, innerContent, hookProps) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("a", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ className: props.extraClassNames.concat(classNames).join(' '), style: {
                 borderColor: hookProps.borderColor,
                 backgroundColor: hookProps.backgroundColor
             }, ref: rootElRef }, getSegAnchorAttrs(seg)),
-            Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-event-main', ref: innerElRef, style: { color: hookProps.textColor } }, innerContent),
+            Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-event-main', ref: innerElRef, style: { color: hookProps.textColor } }, innerContent),
             hookProps.isStartResizable &&
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-event-resizer fc-event-resizer-start' }),
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-event-resizer fc-event-resizer-start' }),
             hookProps.isEndResizable &&
-                Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-event-resizer fc-event-resizer-end' }))); }));
+                Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-event-resizer fc-event-resizer-end' }))); }));
     };
     return StandardEvent;
 }(BaseComponent));
 function renderInnerContent(innerProps) {
-    return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-event-main-frame' },
+    return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-event-main-frame' },
         innerProps.timeText &&
-            Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-event-time' }, innerProps.timeText),
-        Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-event-title-container' },
-            Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-event-title fc-sticky' }, innerProps.event.title || Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_vdom__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, "\u00A0")))));
+            Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-event-time' }, innerProps.timeText),
+        Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-event-title-container' },
+            Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-event-title fc-sticky' }, innerProps.event.title || Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), null, "\u00A0")))));
 }
 function getSegAnchorAttrs(seg) {
     var url = seg.eventRange.def.url;
     return url ? { href: url } : {};
 }
 
-var NowIndicatorRoot = function (props) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ViewContextType.Consumer, null, function (context) {
+var NowIndicatorRoot = function (props) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ViewContextType.Consumer, null, function (context) {
     var options = context.options;
     var hookProps = {
         isAxis: props.isAxis,
         date: context.dateEnv.toDate(props.date),
         view: context.viewApi
     };
-    return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(RenderHook, { hookProps: hookProps, classNames: options.nowIndicatorClassNames, content: options.nowIndicatorContent, didMount: options.nowIndicatorDidMount, willUnmount: options.nowIndicatorWillUnmount }, props.children));
+    return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(RenderHook, { hookProps: hookProps, classNames: options.nowIndicatorClassNames, content: options.nowIndicatorContent, didMount: options.nowIndicatorDidMount, willUnmount: options.nowIndicatorWillUnmount }, props.children));
 })); };
 
 var DAY_NUM_FORMAT = createFormatter({ day: 'numeric' });
 var DayCellRoot = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(DayCellRoot, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(DayCellRoot, _super);
     function DayCellRoot() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.refineHookProps = memoizeObjArg(refineHookProps);
@@ -9569,12 +9498,12 @@ var DayCellRoot = /** @class */ (function (_super) {
         var dataAttrs = hookProps.isDisabled ? {} : {
             'data-date': formatDayString(props.date)
         };
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(MountHook, { hookProps: hookProps, didMount: options.dayCellDidMount, willUnmount: options.dayCellWillUnmount, elRef: props.elRef }, function (rootElRef) { return props.children(rootElRef, classNames, dataAttrs, hookProps.isDisabled); }));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(MountHook, { hookProps: hookProps, didMount: options.dayCellDidMount, willUnmount: options.dayCellWillUnmount, elRef: props.elRef }, function (rootElRef) { return props.children(rootElRef, classNames, dataAttrs, hookProps.isDisabled); }));
     };
     return DayCellRoot;
 }(BaseComponent));
 var DayCellContent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(DayCellContent, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(DayCellContent, _super);
     function DayCellContent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -9590,35 +9519,35 @@ var DayCellContent = /** @class */ (function (_super) {
             viewApi: context.viewApi,
             dateEnv: context.dateEnv
         });
-        return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ContentHook, { hookProps: hookProps, content: options.dayCellContent, defaultContent: props.defaultContent }, props.children));
+        return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ContentHook, { hookProps: hookProps, content: options.dayCellContent, defaultContent: props.defaultContent }, props.children));
     };
     return DayCellContent;
 }(BaseComponent));
 function refineHookProps(raw) {
     var date = raw.date, dateEnv = raw.dateEnv;
     var dayMeta = getDateMeta(date, raw.todayRange, null, raw.dateProfile);
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ date: dateEnv.toDate(date), view: raw.viewApi }, dayMeta), { dayNumberText: raw.showDayNumber ? dateEnv.format(date, DAY_NUM_FORMAT) : '' }), raw.extraProps);
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ date: dateEnv.toDate(date), view: raw.viewApi }, dayMeta), { dayNumberText: raw.showDayNumber ? dateEnv.format(date, DAY_NUM_FORMAT) : '' }), raw.extraProps);
 }
 
 function renderFill(fillType) {
-    return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: "fc-" + fillType }));
+    return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: "fc-" + fillType }));
 }
-var BgEvent = function (props) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(EventRoot, { defaultContent: renderInnerContent$1, seg: props.seg /* uselesss i think */, timeText: '' /* weird */, disableDragging: true, disableResizing: true, isDragging: false, isResizing: false, isDateSelecting: false, isSelected: false, isPast: props.isPast, isFuture: props.isFuture, isToday: props.isToday }, function (rootElRef, classNames, innerElRef, innerContent, hookProps) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { ref: rootElRef, className: ['fc-bg-event'].concat(classNames).join(' '), style: {
+var BgEvent = function (props) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(EventRoot, { defaultContent: renderInnerContent$1, seg: props.seg /* uselesss i think */, timeText: '' /* weird */, disableDragging: true, disableResizing: true, isDragging: false, isResizing: false, isDateSelecting: false, isSelected: false, isPast: props.isPast, isFuture: props.isFuture, isToday: props.isToday }, function (rootElRef, classNames, innerElRef, innerContent, hookProps) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { ref: rootElRef, className: ['fc-bg-event'].concat(classNames).join(' '), style: {
         backgroundColor: hookProps.backgroundColor
     } }, innerContent)); })); };
 function renderInnerContent$1(props) {
     var title = props.event.title;
-    return title && (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])("div", { className: 'fc-event-title' }, props.event.title));
+    return title && (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("div", { className: 'fc-event-title' }, props.event.title));
 }
 
-var WeekNumberRoot = function (props) { return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(ViewContextType.Consumer, null, function (context) {
+var WeekNumberRoot = function (props) { return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(ViewContextType.Consumer, null, function (context) {
     var dateEnv = context.dateEnv, options = context.options;
     var date = props.date;
     var format = options.weekNumberFormat || props.defaultFormat;
     var num = dateEnv.computeWeekNumber(date); // TODO: somehow use for formatting as well?
     var text = dateEnv.format(date, format);
     var hookProps = { num: num, text: text, date: date };
-    return (Object(_vdom__WEBPACK_IMPORTED_MODULE_2__["createElement"])(RenderHook, { hookProps: hookProps, classNames: options.weekNumberClassNames, content: options.weekNumberContent, defaultContent: renderInner$1, didMount: options.weekNumberDidMount, willUnmount: options.weekNumberWillUnmount }, props.children));
+    return (Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(RenderHook, { hookProps: hookProps, classNames: options.weekNumberClassNames, content: options.weekNumberContent, defaultContent: renderInner$1, didMount: options.weekNumberDidMount, willUnmount: options.weekNumberWillUnmount }, props.children));
 })); };
 function renderInner$1(innerProps) {
     return innerProps.text;
@@ -9638,34 +9567,35 @@ var version = '5.3.1'; // important to type it, so .d.ts has generic string
 /*!***************************************************************************!*\
   !*** ./node_modules/@fullcalendar/common/node_modules/tslib/tslib.es6.js ***!
   \***************************************************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__extends": () => (/* binding */ __extends),
+/* harmony export */   "__assign": () => (/* binding */ __assign),
+/* harmony export */   "__rest": () => (/* binding */ __rest),
+/* harmony export */   "__decorate": () => (/* binding */ __decorate),
+/* harmony export */   "__param": () => (/* binding */ __param),
+/* harmony export */   "__metadata": () => (/* binding */ __metadata),
+/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
+/* harmony export */   "__generator": () => (/* binding */ __generator),
+/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
+/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
+/* harmony export */   "__values": () => (/* binding */ __values),
+/* harmony export */   "__read": () => (/* binding */ __read),
+/* harmony export */   "__spread": () => (/* binding */ __spread),
+/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
+/* harmony export */   "__await": () => (/* binding */ __await),
+/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
+/* harmony export */   "__asyncDelegator": () => (/* binding */ __asyncDelegator),
+/* harmony export */   "__asyncValues": () => (/* binding */ __asyncValues),
+/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
+/* harmony export */   "__importStar": () => (/* binding */ __importStar),
+/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__classPrivateFieldGet": () => (/* binding */ __classPrivateFieldGet),
+/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet)
+/* harmony export */ });
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -9897,464 +9827,220 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 /***/ }),
 
-/***/ "./node_modules/@fullcalendar/common/vdom.js":
-/*!***************************************************!*\
-  !*** ./node_modules/@fullcalendar/common/vdom.js ***!
-  \***************************************************/
-/*! exports provided: Component, createElement, render, createRef, Fragment, createContext, flushToDom */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return Component; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createRef", function() { return createRef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Fragment", function() { return Fragment; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createContext", function() { return createContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "flushToDom", function() { return flushToDom; });
-
-if (typeof FullCalendarVDom === 'undefined') {
-    throw new Error('Please import the top-level fullcalendar lib before attempting to import a plugin.');
-}
-var Component = FullCalendarVDom.Component;
-var createElement = FullCalendarVDom.createElement;
-var render = FullCalendarVDom.render;
-var createRef = FullCalendarVDom.createRef;
-var Fragment = FullCalendarVDom.Fragment;
-var createContext = FullCalendarVDom.createContext;
-var flushToDom = FullCalendarVDom.flushToDom;
-
-
-/***/ }),
-
 /***/ "./node_modules/@fullcalendar/core/main.js":
 /*!*************************************************!*\
   !*** ./node_modules/@fullcalendar/core/main.js ***!
   \*************************************************/
-/*! exports provided: Component, createElement, render, createRef, Fragment, createContext, flushToDom, BASE_OPTION_DEFAULTS, BASE_OPTION_REFINERS, BaseComponent, BgEvent, CalendarApi, CalendarContent, CalendarDataManager, CalendarDataProvider, CalendarRoot, ContentHook, CustomContentRenderContext, DateComponent, DateEnv, DateProfileGenerator, DayCellContent, DayCellRoot, DayHeader, DaySeriesModel, DayTableModel, DelayedRunner, ElementDragging, ElementScrollController, Emitter, EventApi, EventRoot, EventSourceApi, Interaction, MountHook, NamedTimeZoneImpl, NowIndicatorRoot, NowTimer, PositionCache, RefMap, RenderHook, ScrollController, ScrollResponder, Scroller, SimpleScrollGrid, Slicer, Splitter, StandardEvent, TableDateCell, TableDowCell, Theme, ViewApi, ViewContextType, ViewRoot, WeekNumberRoot, WindowScrollController, addDays, addDurations, addMs, addWeeks, allowContextMenu, allowSelection, applyMutationToEventStore, applyStyle, applyStyleProp, asCleanDays, asRoughMinutes, asRoughMs, asRoughSeconds, buildClassNameNormalizer, buildEventApis, buildEventRangeKey, buildHashFromArray, buildNavLinkData, buildSegCompareObj, buildSegTimeText, collectFromHash, combineEventUis, compareByFieldSpec, compareByFieldSpecs, compareNumbers, compareObjs, computeEdges, computeFallbackHeaderFormat, computeHeightAndMargins, computeInnerRect, computeRect, computeSegDraggable, computeSegEndResizable, computeSegStartResizable, computeShrinkWidth, computeSmallestCellWidth, computeVisibleDayRange, config, constrainPoint, createDuration, createEmptyEventStore, createEventInstance, createEventUi, createFormatter, createPlugin, diffDates, diffDayAndTime, diffDays, diffPoints, diffWeeks, diffWholeDays, diffWholeWeeks, disableCursor, elementClosest, elementMatches, enableCursor, eventTupleToStore, filterEventStoreDefs, filterHash, findDirectChildren, findElements, flexibleCompare, formatDate, formatDayString, formatIsoTimeString, formatRange, getAllowYScrolling, getCanVGrowWithinCell, getClippingParents, getDateMeta, getDayClassNames, getDefaultEventEnd, getElSeg, getEventClassNames, getIsRtlScrollbarOnLeft, getRectCenter, getRelevantEvents, getScrollGridClassNames, getScrollbarWidths, getSectionClassNames, getSectionHasLiquidHeight, getSegMeta, getSlotClassNames, getStickyFooterScrollbar, getStickyHeaderDates, getUnequalProps, globalLocales, globalPlugins, greatestDurationDenominator, guid, hasBgRendering, hasShrinkWidth, identity, interactionSettingsStore, interactionSettingsToStore, intersectRanges, intersectRects, isArraysEqual, isColPropsEqual, isDateSpansEqual, isInt, isInteractionValid, isMultiDayRange, isPropsEqual, isPropsValid, isValidDate, listenBySelector, mapHash, memoize, memoizeArraylike, memoizeHashlike, memoizeObjArg, mergeEventStores, multiplyDuration, padStart, parseBusinessHours, parseClassNames, parseDragMeta, parseEventDef, parseFieldSpecs, parseMarker, pointInsideRect, preventContextMenu, preventDefault, preventSelection, rangeContainsMarker, rangeContainsRange, rangesEqual, rangesIntersect, refineEventDef, refineProps, removeElement, removeExact, renderChunkContent, renderFill, renderMicroColGroup, renderScrollShim, requestJson, sanitizeShrinkWidth, setElSeg, setRef, sliceEventStore, sliceEvents, sortEventSegs, startOfDay, translateRect, triggerDateSelect, unpromisify, version, whenTransitionDone, wholeDivideDurations, Calendar */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Calendar", function() { return Calendar; });
-/* harmony import */ var _vdom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vdom */ "./node_modules/@fullcalendar/core/vdom.js");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/core/node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fullcalendar/common */ "./node_modules/@fullcalendar/common/main.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Component"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createElement"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createRef", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createRef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Fragment", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Fragment"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createContext", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createContext"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "flushToDom", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["flushToDom"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BASE_OPTION_DEFAULTS", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["BASE_OPTION_DEFAULTS"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BASE_OPTION_REFINERS", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["BASE_OPTION_REFINERS"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BaseComponent", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BgEvent", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["BgEvent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarApi", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarApi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarContent", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarContent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarDataManager", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarDataManager"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarDataProvider", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarDataProvider"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarRoot", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ContentHook", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["ContentHook"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CustomContentRenderContext", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CustomContentRenderContext"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DateComponent", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DateComponent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DateEnv", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DateEnv"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DateProfileGenerator", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DateProfileGenerator"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DayCellContent", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DayCellContent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DayCellRoot", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DayCellRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DayHeader", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DayHeader"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DaySeriesModel", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DaySeriesModel"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DayTableModel", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DayTableModel"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DelayedRunner", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DelayedRunner"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ElementDragging", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["ElementDragging"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ElementScrollController", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["ElementScrollController"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Emitter", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Emitter"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventApi", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["EventApi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventRoot", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["EventRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventSourceApi", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["EventSourceApi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Interaction", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Interaction"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MountHook", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["MountHook"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NamedTimeZoneImpl", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["NamedTimeZoneImpl"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NowIndicatorRoot", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["NowIndicatorRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NowTimer", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["NowTimer"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PositionCache", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["PositionCache"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RefMap", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["RefMap"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RenderHook", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["RenderHook"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ScrollController", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["ScrollController"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ScrollResponder", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["ScrollResponder"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Scroller", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Scroller"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SimpleScrollGrid", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["SimpleScrollGrid"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Slicer", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Slicer"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Splitter", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Splitter"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StandardEvent", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["StandardEvent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TableDateCell", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["TableDateCell"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TableDowCell", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["TableDowCell"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Theme", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["Theme"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ViewApi", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["ViewApi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ViewContextType", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["ViewContextType"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ViewRoot", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["ViewRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WeekNumberRoot", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["WeekNumberRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WindowScrollController", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["WindowScrollController"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addDays", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["addDays"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addDurations", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["addDurations"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addMs", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["addMs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addWeeks", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["addWeeks"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "allowContextMenu", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["allowContextMenu"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "allowSelection", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["allowSelection"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyMutationToEventStore", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["applyMutationToEventStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyStyle", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["applyStyle"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyStyleProp", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["applyStyleProp"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asCleanDays", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["asCleanDays"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asRoughMinutes", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["asRoughMinutes"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asRoughMs", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["asRoughMs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asRoughSeconds", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["asRoughSeconds"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildClassNameNormalizer", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["buildClassNameNormalizer"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildEventApis", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["buildEventApis"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildEventRangeKey", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["buildEventRangeKey"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildHashFromArray", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["buildHashFromArray"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildNavLinkData", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["buildNavLinkData"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildSegCompareObj", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["buildSegCompareObj"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildSegTimeText", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["buildSegTimeText"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "collectFromHash", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["collectFromHash"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "combineEventUis", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["combineEventUis"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compareByFieldSpec", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["compareByFieldSpec"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compareByFieldSpecs", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["compareByFieldSpecs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compareNumbers", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["compareNumbers"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compareObjs", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["compareObjs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeEdges", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeEdges"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeFallbackHeaderFormat", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeFallbackHeaderFormat"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeHeightAndMargins", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeHeightAndMargins"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeInnerRect", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeInnerRect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeRect", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeRect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeSegDraggable", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeSegDraggable"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeSegEndResizable", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeSegEndResizable"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeSegStartResizable", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeSegStartResizable"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeShrinkWidth", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeShrinkWidth"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeSmallestCellWidth", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeSmallestCellWidth"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeVisibleDayRange", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["computeVisibleDayRange"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "config", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["config"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "constrainPoint", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["constrainPoint"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createDuration", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createDuration"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createEmptyEventStore", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createEmptyEventStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createEventInstance", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createEventInstance"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createEventUi", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createEventUi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createFormatter", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createFormatter"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createPlugin", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createPlugin"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffDates", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["diffDates"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffDayAndTime", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["diffDayAndTime"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffDays", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["diffDays"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffPoints", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["diffPoints"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffWeeks", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["diffWeeks"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffWholeDays", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["diffWholeDays"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffWholeWeeks", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["diffWholeWeeks"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "disableCursor", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["disableCursor"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elementClosest", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["elementClosest"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elementMatches", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["elementMatches"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "enableCursor", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["enableCursor"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "eventTupleToStore", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["eventTupleToStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "filterEventStoreDefs", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["filterEventStoreDefs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "filterHash", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["filterHash"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "findDirectChildren", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["findDirectChildren"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "findElements", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["findElements"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "flexibleCompare", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["flexibleCompare"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["formatDate"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatDayString", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["formatDayString"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatIsoTimeString", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["formatIsoTimeString"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatRange", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["formatRange"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getAllowYScrolling", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getAllowYScrolling"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getCanVGrowWithinCell", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getCanVGrowWithinCell"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getClippingParents", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getClippingParents"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDateMeta", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getDateMeta"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDayClassNames", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getDayClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDefaultEventEnd", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getDefaultEventEnd"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getElSeg", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getElSeg"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getEventClassNames", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getEventClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getIsRtlScrollbarOnLeft", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getIsRtlScrollbarOnLeft"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getRectCenter", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getRectCenter"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getRelevantEvents", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getRelevantEvents"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getScrollGridClassNames", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getScrollGridClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getScrollbarWidths", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getScrollbarWidths"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSectionClassNames", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getSectionClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSectionHasLiquidHeight", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getSectionHasLiquidHeight"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSegMeta", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getSegMeta"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSlotClassNames", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getSlotClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getStickyFooterScrollbar", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getStickyFooterScrollbar"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getStickyHeaderDates", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getStickyHeaderDates"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getUnequalProps", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["getUnequalProps"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "globalLocales", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["globalLocales"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "globalPlugins", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["globalPlugins"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "greatestDurationDenominator", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["greatestDurationDenominator"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "guid", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["guid"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hasBgRendering", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["hasBgRendering"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hasShrinkWidth", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["hasShrinkWidth"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "identity", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["identity"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interactionSettingsStore", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["interactionSettingsStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interactionSettingsToStore", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["interactionSettingsToStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "intersectRanges", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["intersectRanges"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "intersectRects", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["intersectRects"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isArraysEqual", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isArraysEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isColPropsEqual", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isColPropsEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isDateSpansEqual", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isDateSpansEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isInt", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isInt"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isInteractionValid", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isInteractionValid"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isMultiDayRange", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isMultiDayRange"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isPropsEqual", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isPropsEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isPropsValid", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isPropsValid"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isValidDate", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isValidDate"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "listenBySelector", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["listenBySelector"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mapHash", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["mapHash"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "memoize", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["memoize"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "memoizeArraylike", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["memoizeArraylike"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "memoizeHashlike", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["memoizeHashlike"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "memoizeObjArg", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["memoizeObjArg"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mergeEventStores", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["mergeEventStores"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "multiplyDuration", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["multiplyDuration"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "padStart", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["padStart"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseBusinessHours", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["parseBusinessHours"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseClassNames", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["parseClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseDragMeta", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["parseDragMeta"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseEventDef", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["parseEventDef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseFieldSpecs", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["parseFieldSpecs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseMarker", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["parseMarker"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pointInsideRect", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["pointInsideRect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "preventContextMenu", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["preventContextMenu"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "preventDefault", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["preventDefault"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "preventSelection", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["preventSelection"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rangeContainsMarker", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["rangeContainsMarker"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rangeContainsRange", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["rangeContainsRange"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rangesEqual", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["rangesEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rangesIntersect", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["rangesIntersect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "refineEventDef", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["refineEventDef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "refineProps", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["refineProps"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeElement", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["removeElement"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeExact", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["removeExact"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renderChunkContent", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["renderChunkContent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renderFill", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["renderFill"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renderMicroColGroup", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["renderMicroColGroup"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renderScrollShim", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["renderScrollShim"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "requestJson", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["requestJson"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sanitizeShrinkWidth", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["sanitizeShrinkWidth"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "setElSeg", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["setElSeg"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "setRef", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["setRef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sliceEventStore", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["sliceEventStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sliceEvents", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["sliceEvents"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sortEventSegs", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["sortEventSegs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "startOfDay", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["startOfDay"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "translateRect", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["translateRect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "triggerDateSelect", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["triggerDateSelect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "unpromisify", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["unpromisify"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "version", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["version"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "whenTransitionDone", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["whenTransitionDone"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wholeDivideDurations", function() { return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["wholeDivideDurations"]; });
-
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BASE_OPTION_DEFAULTS": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BASE_OPTION_DEFAULTS),
+/* harmony export */   "BASE_OPTION_REFINERS": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BASE_OPTION_REFINERS),
+/* harmony export */   "BaseComponent": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BaseComponent),
+/* harmony export */   "BgEvent": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BgEvent),
+/* harmony export */   "CalendarApi": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarApi),
+/* harmony export */   "CalendarContent": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarContent),
+/* harmony export */   "CalendarDataManager": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarDataManager),
+/* harmony export */   "CalendarDataProvider": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarDataProvider),
+/* harmony export */   "CalendarRoot": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarRoot),
+/* harmony export */   "ContentHook": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ContentHook),
+/* harmony export */   "CustomContentRenderContext": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CustomContentRenderContext),
+/* harmony export */   "DateComponent": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateComponent),
+/* harmony export */   "DateEnv": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateEnv),
+/* harmony export */   "DateProfileGenerator": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateProfileGenerator),
+/* harmony export */   "DayCellContent": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayCellContent),
+/* harmony export */   "DayCellRoot": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayCellRoot),
+/* harmony export */   "DayHeader": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayHeader),
+/* harmony export */   "DaySeriesModel": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DaySeriesModel),
+/* harmony export */   "DayTableModel": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayTableModel),
+/* harmony export */   "DelayedRunner": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DelayedRunner),
+/* harmony export */   "ElementDragging": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ElementDragging),
+/* harmony export */   "ElementScrollController": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ElementScrollController),
+/* harmony export */   "Emitter": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Emitter),
+/* harmony export */   "EventApi": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.EventApi),
+/* harmony export */   "EventRoot": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.EventRoot),
+/* harmony export */   "EventSourceApi": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.EventSourceApi),
+/* harmony export */   "Interaction": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Interaction),
+/* harmony export */   "MountHook": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.MountHook),
+/* harmony export */   "NamedTimeZoneImpl": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.NamedTimeZoneImpl),
+/* harmony export */   "NowIndicatorRoot": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.NowIndicatorRoot),
+/* harmony export */   "NowTimer": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.NowTimer),
+/* harmony export */   "PositionCache": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.PositionCache),
+/* harmony export */   "RefMap": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.RefMap),
+/* harmony export */   "RenderHook": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.RenderHook),
+/* harmony export */   "ScrollController": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ScrollController),
+/* harmony export */   "ScrollResponder": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ScrollResponder),
+/* harmony export */   "Scroller": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Scroller),
+/* harmony export */   "SimpleScrollGrid": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.SimpleScrollGrid),
+/* harmony export */   "Slicer": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Slicer),
+/* harmony export */   "Splitter": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Splitter),
+/* harmony export */   "StandardEvent": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.StandardEvent),
+/* harmony export */   "TableDateCell": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.TableDateCell),
+/* harmony export */   "TableDowCell": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.TableDowCell),
+/* harmony export */   "Theme": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Theme),
+/* harmony export */   "ViewApi": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ViewApi),
+/* harmony export */   "ViewContextType": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ViewContextType),
+/* harmony export */   "ViewRoot": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ViewRoot),
+/* harmony export */   "WeekNumberRoot": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.WeekNumberRoot),
+/* harmony export */   "WindowScrollController": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.WindowScrollController),
+/* harmony export */   "addDays": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addDays),
+/* harmony export */   "addDurations": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addDurations),
+/* harmony export */   "addMs": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addMs),
+/* harmony export */   "addWeeks": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addWeeks),
+/* harmony export */   "allowContextMenu": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.allowContextMenu),
+/* harmony export */   "allowSelection": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.allowSelection),
+/* harmony export */   "applyMutationToEventStore": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.applyMutationToEventStore),
+/* harmony export */   "applyStyle": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.applyStyle),
+/* harmony export */   "applyStyleProp": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.applyStyleProp),
+/* harmony export */   "asCleanDays": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.asCleanDays),
+/* harmony export */   "asRoughMinutes": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.asRoughMinutes),
+/* harmony export */   "asRoughMs": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.asRoughMs),
+/* harmony export */   "asRoughSeconds": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.asRoughSeconds),
+/* harmony export */   "buildClassNameNormalizer": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildClassNameNormalizer),
+/* harmony export */   "buildEventApis": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildEventApis),
+/* harmony export */   "buildEventRangeKey": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildEventRangeKey),
+/* harmony export */   "buildHashFromArray": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildHashFromArray),
+/* harmony export */   "buildNavLinkData": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildNavLinkData),
+/* harmony export */   "buildSegCompareObj": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildSegCompareObj),
+/* harmony export */   "buildSegTimeText": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildSegTimeText),
+/* harmony export */   "collectFromHash": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.collectFromHash),
+/* harmony export */   "combineEventUis": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.combineEventUis),
+/* harmony export */   "compareByFieldSpec": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.compareByFieldSpec),
+/* harmony export */   "compareByFieldSpecs": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.compareByFieldSpecs),
+/* harmony export */   "compareNumbers": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.compareNumbers),
+/* harmony export */   "compareObjs": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.compareObjs),
+/* harmony export */   "computeEdges": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeEdges),
+/* harmony export */   "computeFallbackHeaderFormat": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeFallbackHeaderFormat),
+/* harmony export */   "computeHeightAndMargins": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeHeightAndMargins),
+/* harmony export */   "computeInnerRect": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeInnerRect),
+/* harmony export */   "computeRect": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeRect),
+/* harmony export */   "computeSegDraggable": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeSegDraggable),
+/* harmony export */   "computeSegEndResizable": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeSegEndResizable),
+/* harmony export */   "computeSegStartResizable": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeSegStartResizable),
+/* harmony export */   "computeShrinkWidth": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeShrinkWidth),
+/* harmony export */   "computeSmallestCellWidth": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeSmallestCellWidth),
+/* harmony export */   "computeVisibleDayRange": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.computeVisibleDayRange),
+/* harmony export */   "config": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.config),
+/* harmony export */   "constrainPoint": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.constrainPoint),
+/* harmony export */   "createDuration": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createDuration),
+/* harmony export */   "createEmptyEventStore": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createEmptyEventStore),
+/* harmony export */   "createEventInstance": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createEventInstance),
+/* harmony export */   "createEventUi": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createEventUi),
+/* harmony export */   "createFormatter": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createFormatter),
+/* harmony export */   "createPlugin": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createPlugin),
+/* harmony export */   "diffDates": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.diffDates),
+/* harmony export */   "diffDayAndTime": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.diffDayAndTime),
+/* harmony export */   "diffDays": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.diffDays),
+/* harmony export */   "diffPoints": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.diffPoints),
+/* harmony export */   "diffWeeks": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.diffWeeks),
+/* harmony export */   "diffWholeDays": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.diffWholeDays),
+/* harmony export */   "diffWholeWeeks": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.diffWholeWeeks),
+/* harmony export */   "disableCursor": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.disableCursor),
+/* harmony export */   "elementClosest": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.elementClosest),
+/* harmony export */   "elementMatches": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.elementMatches),
+/* harmony export */   "enableCursor": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.enableCursor),
+/* harmony export */   "eventTupleToStore": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.eventTupleToStore),
+/* harmony export */   "filterEventStoreDefs": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.filterEventStoreDefs),
+/* harmony export */   "filterHash": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.filterHash),
+/* harmony export */   "findDirectChildren": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.findDirectChildren),
+/* harmony export */   "findElements": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.findElements),
+/* harmony export */   "flexibleCompare": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.flexibleCompare),
+/* harmony export */   "formatDate": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.formatDate),
+/* harmony export */   "formatDayString": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.formatDayString),
+/* harmony export */   "formatIsoTimeString": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.formatIsoTimeString),
+/* harmony export */   "formatRange": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.formatRange),
+/* harmony export */   "getAllowYScrolling": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getAllowYScrolling),
+/* harmony export */   "getCanVGrowWithinCell": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getCanVGrowWithinCell),
+/* harmony export */   "getClippingParents": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getClippingParents),
+/* harmony export */   "getDateMeta": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getDateMeta),
+/* harmony export */   "getDayClassNames": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getDayClassNames),
+/* harmony export */   "getDefaultEventEnd": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getDefaultEventEnd),
+/* harmony export */   "getElSeg": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getElSeg),
+/* harmony export */   "getEventClassNames": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getEventClassNames),
+/* harmony export */   "getIsRtlScrollbarOnLeft": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getIsRtlScrollbarOnLeft),
+/* harmony export */   "getRectCenter": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getRectCenter),
+/* harmony export */   "getRelevantEvents": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getRelevantEvents),
+/* harmony export */   "getScrollGridClassNames": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getScrollGridClassNames),
+/* harmony export */   "getScrollbarWidths": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getScrollbarWidths),
+/* harmony export */   "getSectionClassNames": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSectionClassNames),
+/* harmony export */   "getSectionHasLiquidHeight": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSectionHasLiquidHeight),
+/* harmony export */   "getSegMeta": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSegMeta),
+/* harmony export */   "getSlotClassNames": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSlotClassNames),
+/* harmony export */   "getStickyFooterScrollbar": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getStickyFooterScrollbar),
+/* harmony export */   "getStickyHeaderDates": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getStickyHeaderDates),
+/* harmony export */   "getUnequalProps": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getUnequalProps),
+/* harmony export */   "globalLocales": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.globalLocales),
+/* harmony export */   "globalPlugins": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.globalPlugins),
+/* harmony export */   "greatestDurationDenominator": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.greatestDurationDenominator),
+/* harmony export */   "guid": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.guid),
+/* harmony export */   "hasBgRendering": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.hasBgRendering),
+/* harmony export */   "hasShrinkWidth": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.hasShrinkWidth),
+/* harmony export */   "identity": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.identity),
+/* harmony export */   "interactionSettingsStore": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.interactionSettingsStore),
+/* harmony export */   "interactionSettingsToStore": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.interactionSettingsToStore),
+/* harmony export */   "intersectRanges": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.intersectRanges),
+/* harmony export */   "intersectRects": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.intersectRects),
+/* harmony export */   "isArraysEqual": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isArraysEqual),
+/* harmony export */   "isColPropsEqual": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isColPropsEqual),
+/* harmony export */   "isDateSpansEqual": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isDateSpansEqual),
+/* harmony export */   "isInt": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isInt),
+/* harmony export */   "isInteractionValid": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isInteractionValid),
+/* harmony export */   "isMultiDayRange": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isMultiDayRange),
+/* harmony export */   "isPropsEqual": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isPropsEqual),
+/* harmony export */   "isPropsValid": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isPropsValid),
+/* harmony export */   "isValidDate": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isValidDate),
+/* harmony export */   "listenBySelector": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.listenBySelector),
+/* harmony export */   "mapHash": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.mapHash),
+/* harmony export */   "memoize": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize),
+/* harmony export */   "memoizeArraylike": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoizeArraylike),
+/* harmony export */   "memoizeHashlike": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoizeHashlike),
+/* harmony export */   "memoizeObjArg": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoizeObjArg),
+/* harmony export */   "mergeEventStores": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.mergeEventStores),
+/* harmony export */   "multiplyDuration": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.multiplyDuration),
+/* harmony export */   "padStart": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.padStart),
+/* harmony export */   "parseBusinessHours": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.parseBusinessHours),
+/* harmony export */   "parseClassNames": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.parseClassNames),
+/* harmony export */   "parseDragMeta": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.parseDragMeta),
+/* harmony export */   "parseEventDef": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.parseEventDef),
+/* harmony export */   "parseFieldSpecs": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.parseFieldSpecs),
+/* harmony export */   "parseMarker": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.parseMarker),
+/* harmony export */   "pointInsideRect": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.pointInsideRect),
+/* harmony export */   "preventContextMenu": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.preventContextMenu),
+/* harmony export */   "preventDefault": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.preventDefault),
+/* harmony export */   "preventSelection": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.preventSelection),
+/* harmony export */   "rangeContainsMarker": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.rangeContainsMarker),
+/* harmony export */   "rangeContainsRange": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.rangeContainsRange),
+/* harmony export */   "rangesEqual": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.rangesEqual),
+/* harmony export */   "rangesIntersect": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.rangesIntersect),
+/* harmony export */   "refineEventDef": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.refineEventDef),
+/* harmony export */   "refineProps": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.refineProps),
+/* harmony export */   "removeElement": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.removeElement),
+/* harmony export */   "removeExact": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.removeExact),
+/* harmony export */   "renderChunkContent": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.renderChunkContent),
+/* harmony export */   "renderFill": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.renderFill),
+/* harmony export */   "renderMicroColGroup": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.renderMicroColGroup),
+/* harmony export */   "renderScrollShim": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.renderScrollShim),
+/* harmony export */   "requestJson": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.requestJson),
+/* harmony export */   "sanitizeShrinkWidth": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.sanitizeShrinkWidth),
+/* harmony export */   "setElSeg": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.setElSeg),
+/* harmony export */   "setRef": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.setRef),
+/* harmony export */   "sliceEventStore": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.sliceEventStore),
+/* harmony export */   "sliceEvents": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.sliceEvents),
+/* harmony export */   "sortEventSegs": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.sortEventSegs),
+/* harmony export */   "startOfDay": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.startOfDay),
+/* harmony export */   "translateRect": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.translateRect),
+/* harmony export */   "triggerDateSelect": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.triggerDateSelect),
+/* harmony export */   "unpromisify": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.unpromisify),
+/* harmony export */   "version": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.version),
+/* harmony export */   "whenTransitionDone": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.whenTransitionDone),
+/* harmony export */   "wholeDivideDurations": () => (/* reexport safe */ _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.wholeDivideDurations),
+/* harmony export */   "Calendar": () => (/* binding */ Calendar)
+/* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './vdom'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/core/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/common */ "./node_modules/@fullcalendar/common/main.js");
 /*!
 FullCalendar v5.3.1
 Docs & License: https://fullcalendar.io/
@@ -10366,7 +10052,7 @@ Docs & License: https://fullcalendar.io/
 
 
 var Calendar = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(Calendar, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(Calendar, _super);
     function Calendar(el, optionOverrides) {
         if (optionOverrides === void 0) { optionOverrides = {}; }
         var _this = _super.call(this) || this;
@@ -10390,24 +10076,24 @@ var Calendar = /** @class */ (function (_super) {
             if (_this.isRendering) {
                 _this.isRendered = true;
                 var currentData_1 = _this.currentData;
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["render"])(Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarRoot"], { options: currentData_1.calendarOptions, theme: currentData_1.theme, emitter: currentData_1.emitter }, function (classNames, height, isHeightAuto, forPrint) {
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.render)((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarRoot, { options: currentData_1.calendarOptions, theme: currentData_1.theme, emitter: currentData_1.emitter }, function (classNames, height, isHeightAuto, forPrint) {
                     _this.setClassNames(classNames);
                     _this.setHeight(height);
-                    return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CustomContentRenderContext"].Provider, { value: _this.customContentRenderId },
-                        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarContent"], Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({ isHeightAuto: isHeightAuto, forPrint: forPrint }, currentData_1))));
+                    return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CustomContentRenderContext.Provider, { value: _this.customContentRenderId },
+                        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarContent, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ isHeightAuto: isHeightAuto, forPrint: forPrint }, currentData_1))));
                 }), _this.el);
             }
             else if (_this.isRendered) {
                 _this.isRendered = false;
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["render"])(null, _this.el);
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.render)(null, _this.el);
                 _this.setClassNames([]);
                 _this.setHeight('');
             }
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["flushToDom"])();
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.flushToDom)();
         };
         _this.el = el;
-        _this.renderRunner = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["DelayedRunner"](_this.handleRenderRequest);
-        new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarDataManager"]({
+        _this.renderRunner = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DelayedRunner(_this.handleRenderRequest);
+        new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarDataManager({
             optionOverrides: optionOverrides,
             calendarApi: _this,
             onAction: _this.handleAction,
@@ -10442,7 +10128,7 @@ var Calendar = /** @class */ (function (_super) {
     };
     Calendar.prototype.updateSize = function () {
         _super.prototype.updateSize.call(this);
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["flushToDom"])();
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.flushToDom)();
     };
     Calendar.prototype.batchRendering = function (func) {
         this.renderRunner.pause('batchRendering');
@@ -10459,7 +10145,7 @@ var Calendar = /** @class */ (function (_super) {
         this.currentDataManager.resetOptions(optionOverrides, append);
     };
     Calendar.prototype.setClassNames = function (classNames) {
-        if (!Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["isArraysEqual"])(classNames, this.currentClassNames)) {
+        if (!(0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isArraysEqual)(classNames, this.currentClassNames)) {
             var classList = this.el.classList;
             for (var _i = 0, _a = this.currentClassNames; _i < _a.length; _i++) {
                 var className = _a[_i];
@@ -10473,10 +10159,10 @@ var Calendar = /** @class */ (function (_super) {
         }
     };
     Calendar.prototype.setHeight = function (height) {
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["applyStyleProp"])(this.el, 'height', height);
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.applyStyleProp)(this.el, 'height', height);
     };
     return Calendar;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_2__["CalendarApi"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.CalendarApi));
 
 
 //# sourceMappingURL=main.js.map
@@ -10488,34 +10174,35 @@ var Calendar = /** @class */ (function (_super) {
 /*!*************************************************************************!*\
   !*** ./node_modules/@fullcalendar/core/node_modules/tslib/tslib.es6.js ***!
   \*************************************************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__extends": () => (/* binding */ __extends),
+/* harmony export */   "__assign": () => (/* binding */ __assign),
+/* harmony export */   "__rest": () => (/* binding */ __rest),
+/* harmony export */   "__decorate": () => (/* binding */ __decorate),
+/* harmony export */   "__param": () => (/* binding */ __param),
+/* harmony export */   "__metadata": () => (/* binding */ __metadata),
+/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
+/* harmony export */   "__generator": () => (/* binding */ __generator),
+/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
+/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
+/* harmony export */   "__values": () => (/* binding */ __values),
+/* harmony export */   "__read": () => (/* binding */ __read),
+/* harmony export */   "__spread": () => (/* binding */ __spread),
+/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
+/* harmony export */   "__await": () => (/* binding */ __await),
+/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
+/* harmony export */   "__asyncDelegator": () => (/* binding */ __asyncDelegator),
+/* harmony export */   "__asyncValues": () => (/* binding */ __asyncValues),
+/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
+/* harmony export */   "__importStar": () => (/* binding */ __importStar),
+/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__classPrivateFieldGet": () => (/* binding */ __classPrivateFieldGet),
+/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet)
+/* harmony export */ });
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -10747,134 +10434,24 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 /***/ }),
 
-/***/ "./node_modules/@fullcalendar/core/vdom.js":
-/*!*************************************************!*\
-  !*** ./node_modules/@fullcalendar/core/vdom.js ***!
-  \*************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/core/node_modules/tslib/tslib.es6.js");
-/* harmony import */ var preact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! preact */ "./node_modules/preact/dist/preact.module.js");
-
-
-(typeof globalThis !== 'undefined' ? globalThis : window).FullCalendarVDom = {
-    Component: preact__WEBPACK_IMPORTED_MODULE_1__["Component"],
-    createElement: preact__WEBPACK_IMPORTED_MODULE_1__["createElement"],
-    render: preact__WEBPACK_IMPORTED_MODULE_1__["render"],
-    createRef: preact__WEBPACK_IMPORTED_MODULE_1__["createRef"],
-    Fragment: preact__WEBPACK_IMPORTED_MODULE_1__["Fragment"],
-    createContext: createContext,
-    flushToDom: flushToDom
-};
-
-
-
-function flushToDom() {
-    var oldDebounceRendering = preact__WEBPACK_IMPORTED_MODULE_1__["options"].debounceRendering; 
-    var callbackQ = [];
-    function execCallbackSync(callback) {
-        callbackQ.push(callback);
-    }
-    preact__WEBPACK_IMPORTED_MODULE_1__["options"].debounceRendering = execCallbackSync;
-    preact__WEBPACK_IMPORTED_MODULE_1__["render"](preact__WEBPACK_IMPORTED_MODULE_1__["createElement"](FakeComponent, {}), document.createElement('div'));
-    while (callbackQ.length) {
-        callbackQ.shift()();
-    }
-    preact__WEBPACK_IMPORTED_MODULE_1__["options"].debounceRendering = oldDebounceRendering;
-}
-var FakeComponent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(FakeComponent, _super);
-    function FakeComponent() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    FakeComponent.prototype.render = function () { return preact__WEBPACK_IMPORTED_MODULE_1__["createElement"]('div', {}); };
-    FakeComponent.prototype.componentDidMount = function () { this.setState({}); };
-    return FakeComponent;
-}(preact__WEBPACK_IMPORTED_MODULE_1__["Component"]));
-function createContext(defaultValue) {
-    var ContextType = preact__WEBPACK_IMPORTED_MODULE_1__["createContext"](defaultValue);
-    var origProvider = ContextType.Provider;
-    ContextType.Provider = function () {
-        var _this = this;
-        var isNew = !this.getChildContext;
-        var children = origProvider.apply(this, arguments);
-        if (isNew) {
-            var subs_1 = [];
-            this.shouldComponentUpdate = function (_props) {
-                if (_this.props.value !== _props.value) {
-                    subs_1.some(function (c) {
-                        c.context = _props.value;
-                        c.forceUpdate();
-                    });
-                }
-            };
-            this.sub = function (c) {
-                subs_1.push(c);
-                var old = c.componentWillUnmount;
-                c.componentWillUnmount = function () {
-                    subs_1.splice(subs_1.indexOf(c), 1);
-                    old && old.call(c);
-                };
-            };
-        }
-        return children;
-    };
-    return ContextType;
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/@fullcalendar/daygrid/main.css":
-/*!*****************************************************!*\
-  !*** ./node_modules/@fullcalendar/daygrid/main.css ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./main.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@fullcalendar/daygrid/main.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/@fullcalendar/daygrid/main.js":
 /*!****************************************************!*\
   !*** ./node_modules/@fullcalendar/daygrid/main.js ***!
   \****************************************************/
-/*! exports provided: default, DayGridView, DayTable, DayTableSlicer, Table, TableView, buildDayTableModel */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGridView", function() { return DayTableView; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayTable", function() { return DayTable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayTableSlicer", function() { return DayTableSlicer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Table", function() { return Table; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableView", function() { return TableView; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildDayTableModel", function() { return buildDayTableModel; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "DayGridView": () => (/* binding */ DayTableView),
+/* harmony export */   "DayTable": () => (/* binding */ DayTable),
+/* harmony export */   "DayTableSlicer": () => (/* binding */ DayTableSlicer),
+/* harmony export */   "Table": () => (/* binding */ Table),
+/* harmony export */   "TableView": () => (/* binding */ TableView),
+/* harmony export */   "buildDayTableModel": () => (/* binding */ buildDayTableModel)
+/* harmony export */ });
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ "./node_modules/@fullcalendar/daygrid/main.css");
-/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/common */ "./node_modules/@fullcalendar/common/main.js");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/daygrid/node_modules/tslib/tslib.es6.js");
 /*!
@@ -10892,16 +10469,16 @@ Docs & License: https://fullcalendar.io/
 // It is a manager for a Table subcomponent, which does most of the heavy lifting.
 // It is responsible for managing width/height.
 var TableView = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(TableView, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableView, _super);
     function TableView() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.headerElRef = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createRef"])();
+        _this.headerElRef = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createRef)();
         return _this;
     }
     TableView.prototype.renderSimpleLayout = function (headerRowContent, bodyContent) {
         var _a = this, props = _a.props, context = _a.context;
         var sections = [];
-        var stickyHeaderDates = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["getStickyHeaderDates"])(context.options);
+        var stickyHeaderDates = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getStickyHeaderDates)(context.options);
         if (headerRowContent) {
             sections.push({
                 type: 'header',
@@ -10920,8 +10497,8 @@ var TableView = /** @class */ (function (_super) {
             liquid: true,
             chunk: { content: bodyContent }
         });
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["ViewRoot"], { viewSpec: context.viewSpec }, function (rootElRef, classNames) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { ref: rootElRef, className: ['fc-daygrid'].concat(classNames).join(' ') },
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["SimpleScrollGrid"], { liquid: !props.isHeightAuto && !props.forPrint, cols: [] /* TODO: make optional? */, sections: sections }))); }));
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ViewRoot, { viewSpec: context.viewSpec }, function (rootElRef, classNames) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { ref: rootElRef, className: ['fc-daygrid'].concat(classNames).join(' ') },
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.SimpleScrollGrid, { liquid: !props.isHeightAuto && !props.forPrint, cols: [] /* TODO: make optional? */, sections: sections }))); }));
     };
     TableView.prototype.renderHScrollLayout = function (headerRowContent, bodyContent, colCnt, dayMinWidth) {
         var ScrollGrid = this.context.pluginHooks.scrollGridImpl;
@@ -10929,8 +10506,8 @@ var TableView = /** @class */ (function (_super) {
             throw new Error('No ScrollGrid implementation');
         }
         var _a = this, props = _a.props, context = _a.context;
-        var stickyHeaderDates = !props.forPrint && Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["getStickyHeaderDates"])(context.options);
-        var stickyFooterScrollbar = !props.forPrint && Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["getStickyFooterScrollbar"])(context.options);
+        var stickyHeaderDates = !props.forPrint && (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getStickyHeaderDates)(context.options);
+        var stickyFooterScrollbar = !props.forPrint && (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getStickyFooterScrollbar)(context.options);
         var sections = [];
         if (headerRowContent) {
             sections.push({
@@ -10961,15 +10538,15 @@ var TableView = /** @class */ (function (_super) {
                 isSticky: true,
                 chunks: [{
                         key: 'main',
-                        content: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["renderScrollShim"]
+                        content: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.renderScrollShim
                     }]
             });
         }
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["ViewRoot"], { viewSpec: context.viewSpec }, function (rootElRef, classNames) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { ref: rootElRef, className: ['fc-daygrid'].concat(classNames).join(' ') },
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(ScrollGrid, { liquid: !props.isHeightAuto && !props.forPrint, colGroups: [{ cols: [{ span: colCnt, minWidth: dayMinWidth }] }], sections: sections }))); }));
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.ViewRoot, { viewSpec: context.viewSpec }, function (rootElRef, classNames) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { ref: rootElRef, className: ['fc-daygrid'].concat(classNames).join(' ') },
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(ScrollGrid, { liquid: !props.isHeightAuto && !props.forPrint, colGroups: [{ cols: [{ span: colCnt, minWidth: dayMinWidth }] }], sections: sections }))); }));
     };
     return TableView;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateComponent));
 
 function splitSegsByRow(segs, rowCnt) {
     var byRow = [];
@@ -11016,14 +10593,14 @@ function splitInteractionByRow(ui, rowCnt) {
     return byRow;
 }
 
-var DEFAULT_WEEK_NUM_FORMAT = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createFormatter"])({ week: 'narrow' });
+var DEFAULT_WEEK_NUM_FORMAT = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createFormatter)({ week: 'narrow' });
 var TableCell = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(TableCell, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableCell, _super);
     function TableCell() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.handleRootEl = function (el) {
             _this.rootEl = el;
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["setRef"])(_this.props.elRef, el);
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.setRef)(_this.props.elRef, el);
         };
         _this.handleMoreLinkClick = function (ev) {
             var props = _this.props;
@@ -11053,23 +10630,23 @@ var TableCell = /** @class */ (function (_super) {
             view: viewApi
         };
         var navLinkAttrs = options.navLinks
-            ? { 'data-navlink': Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["buildNavLinkData"])(date, 'week'), tabIndex: 0 }
+            ? { 'data-navlink': (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildNavLinkData)(date, 'week'), tabIndex: 0 }
             : {};
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DayCellRoot"], { date: date, dateProfile: dateProfile, todayRange: props.todayRange, showDayNumber: props.showDayNumber, extraHookProps: props.extraHookProps, elRef: this.handleRootEl }, function (rootElRef, classNames, rootDataAttrs, isDisabled) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("td", Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ ref: rootElRef, className: ['fc-daygrid-day'].concat(classNames, props.extraClassNames || []).join(' ') }, rootDataAttrs, props.extraDataAttrs),
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-daygrid-day-frame fc-scrollgrid-sync-inner', ref: props.innerElRef /* different from hook system! RENAME */ },
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayCellRoot, { date: date, dateProfile: dateProfile, todayRange: props.todayRange, showDayNumber: props.showDayNumber, extraHookProps: props.extraHookProps, elRef: this.handleRootEl }, function (rootElRef, classNames, rootDataAttrs, isDisabled) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("td", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ ref: rootElRef, className: ['fc-daygrid-day'].concat(classNames, props.extraClassNames || []).join(' ') }, rootDataAttrs, props.extraDataAttrs),
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-daygrid-day-frame fc-scrollgrid-sync-inner', ref: props.innerElRef /* different from hook system! RENAME */ },
                 props.showWeekNumber &&
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["WeekNumberRoot"], { date: date, defaultFormat: DEFAULT_WEEK_NUM_FORMAT }, function (rootElRef, classNames, innerElRef, innerContent) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("a", Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ ref: rootElRef, className: ['fc-daygrid-week-number'].concat(classNames).join(' ') }, navLinkAttrs), innerContent)); }),
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.WeekNumberRoot, { date: date, defaultFormat: DEFAULT_WEEK_NUM_FORMAT }, function (rootElRef, classNames, innerElRef, innerContent) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("a", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ ref: rootElRef, className: ['fc-daygrid-week-number'].concat(classNames).join(' ') }, navLinkAttrs), innerContent)); }),
                 !isDisabled &&
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(TableCellTop, { date: date, dateProfile: dateProfile, showDayNumber: props.showDayNumber, forceDayTop: props.forceDayTop, todayRange: props.todayRange, extraHookProps: props.extraHookProps }),
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-daygrid-day-events', ref: props.fgContentElRef, style: { paddingBottom: props.fgPaddingBottom } },
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(TableCellTop, { date: date, dateProfile: dateProfile, showDayNumber: props.showDayNumber, forceDayTop: props.forceDayTop, todayRange: props.todayRange, extraHookProps: props.extraHookProps }),
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-daygrid-day-events', ref: props.fgContentElRef, style: { paddingBottom: props.fgPaddingBottom } },
                     props.fgContent,
                     Boolean(props.moreCnt) &&
-                        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-daygrid-day-bottom', style: { marginTop: props.moreMarginTop } },
-                            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["RenderHook"], { hookProps: hookProps, classNames: options.moreLinkClassNames, content: options.moreLinkContent, defaultContent: renderMoreLinkInner, didMount: options.moreLinkDidMount, willUnmount: options.moreLinkWillUnmount }, function (rootElRef, classNames, innerElRef, innerContent) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("a", { onClick: _this.handleMoreLinkClick, ref: rootElRef, className: ['fc-daygrid-more-link'].concat(classNames).join(' ') }, innerContent)); }))),
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-daygrid-day-bg' }, props.bgContent)))); }));
+                        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-daygrid-day-bottom', style: { marginTop: props.moreMarginTop } },
+                            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.RenderHook, { hookProps: hookProps, classNames: options.moreLinkClassNames, content: options.moreLinkContent, defaultContent: renderMoreLinkInner, didMount: options.moreLinkDidMount, willUnmount: options.moreLinkWillUnmount }, function (rootElRef, classNames, innerElRef, innerContent) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("a", { onClick: _this.handleMoreLinkClick, ref: rootElRef, className: ['fc-daygrid-more-link'].concat(classNames).join(' ') }, innerContent)); }))),
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-daygrid-day-bg' }, props.bgContent)))); }));
     };
     return TableCell;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateComponent));
 function renderTopInner(props) {
     return props.dayNumberText;
 }
@@ -11077,23 +10654,23 @@ function renderMoreLinkInner(props) {
     return props.text;
 }
 var TableCellTop = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(TableCellTop, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableCellTop, _super);
     function TableCellTop() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     TableCellTop.prototype.render = function () {
         var props = this.props;
         var navLinkAttrs = this.context.options.navLinks
-            ? { 'data-navlink': Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["buildNavLinkData"])(props.date), tabIndex: 0 }
+            ? { 'data-navlink': (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildNavLinkData)(props.date), tabIndex: 0 }
             : {};
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DayCellContent"], { date: props.date, dateProfile: props.dateProfile, todayRange: props.todayRange, showDayNumber: props.showDayNumber, extraHookProps: props.extraHookProps, defaultContent: renderTopInner }, function (innerElRef, innerContent) { return ((innerContent || props.forceDayTop) &&
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-daygrid-day-top', ref: innerElRef },
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("a", Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ className: 'fc-daygrid-day-number' }, navLinkAttrs), innerContent || Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, "\u00A0")))); }));
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayCellContent, { date: props.date, dateProfile: props.dateProfile, todayRange: props.todayRange, showDayNumber: props.showDayNumber, extraHookProps: props.extraHookProps, defaultContent: renderTopInner }, function (innerElRef, innerContent) { return ((innerContent || props.forceDayTop) &&
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-daygrid-day-top', ref: innerElRef },
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("a", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ className: 'fc-daygrid-day-number' }, navLinkAttrs), innerContent || (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, "\u00A0")))); }));
     };
     return TableCellTop;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BaseComponent));
 
-var DEFAULT_TABLE_EVENT_TIME_FORMAT = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createFormatter"])({
+var DEFAULT_TABLE_EVENT_TIME_FORMAT = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createFormatter)({
     hour: 'numeric',
     minute: '2-digit',
     omitZeroMinute: true,
@@ -11110,25 +10687,25 @@ function hasListItemDisplay(seg) {
 }
 
 var TableListItemEvent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(TableListItemEvent, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableListItemEvent, _super);
     function TableListItemEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     TableListItemEvent.prototype.render = function () {
         var _a = this, props = _a.props, context = _a.context;
         var timeFormat = context.options.eventTimeFormat || DEFAULT_TABLE_EVENT_TIME_FORMAT;
-        var timeText = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["buildSegTimeText"])(props.seg, timeFormat, context, true, props.defaultDisplayEventEnd);
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["EventRoot"], { seg: props.seg, timeText: timeText, defaultContent: renderInnerContent, isDragging: props.isDragging, isResizing: false, isDateSelecting: false, isSelected: props.isSelected, isPast: props.isPast, isFuture: props.isFuture, isToday: props.isToday }, function (rootElRef, classNames, innerElRef, innerContent) { return ( // we don't use styles!
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("a", Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ className: ['fc-daygrid-event', 'fc-daygrid-dot-event'].concat(classNames).join(' '), ref: rootElRef }, getSegAnchorAttrs(props.seg)), innerContent)); }));
+        var timeText = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildSegTimeText)(props.seg, timeFormat, context, true, props.defaultDisplayEventEnd);
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.EventRoot, { seg: props.seg, timeText: timeText, defaultContent: renderInnerContent, isDragging: props.isDragging, isResizing: false, isDateSelecting: false, isSelected: props.isSelected, isPast: props.isPast, isFuture: props.isFuture, isToday: props.isToday }, function (rootElRef, classNames, innerElRef, innerContent) { return ( // we don't use styles!
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("a", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ className: ['fc-daygrid-event', 'fc-daygrid-dot-event'].concat(classNames).join(' '), ref: rootElRef }, getSegAnchorAttrs(props.seg)), innerContent)); }));
     };
     return TableListItemEvent;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BaseComponent));
 function renderInnerContent(innerProps) {
-    return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-daygrid-event-dot', style: { borderColor: innerProps.borderColor || innerProps.backgroundColor } }),
+    return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-daygrid-event-dot', style: { borderColor: innerProps.borderColor || innerProps.backgroundColor } }),
         innerProps.timeText &&
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-event-time' }, innerProps.timeText),
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-event-title' }, innerProps.event.title || Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, "\u00A0"))));
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-event-time' }, innerProps.timeText),
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-event-title' }, innerProps.event.title || (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, "\u00A0"))));
 }
 function getSegAnchorAttrs(seg) {
     var url = seg.eventRange.def.url;
@@ -11136,16 +10713,16 @@ function getSegAnchorAttrs(seg) {
 }
 
 var TableBlockEvent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(TableBlockEvent, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableBlockEvent, _super);
     function TableBlockEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     TableBlockEvent.prototype.render = function () {
         var props = this.props;
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["StandardEvent"], Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, props, { extraClassNames: ['fc-daygrid-event', 'fc-daygrid-block-event', 'fc-h-event'], defaultTimeFormat: DEFAULT_TABLE_EVENT_TIME_FORMAT, defaultDisplayEventEnd: props.defaultDisplayEventEnd, disableResizing: !props.seg.eventRange.def.allDay })));
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.StandardEvent, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, props, { extraClassNames: ['fc-daygrid-event', 'fc-daygrid-block-event', 'fc-h-event'], defaultTimeFormat: DEFAULT_TABLE_EVENT_TIME_FORMAT, defaultDisplayEventEnd: props.defaultDisplayEventEnd, disableResizing: !props.seg.eventRange.def.allDay })));
     };
     return TableBlockEvent;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BaseComponent));
 
 function computeFgSegPlacement(// for one row. TODO: print mode?
 cellModels, segs, dayMaxEvents, dayMaxEventRows, eventHeights, maxContentHeight, colCnt, eventOrderSpecs) {
@@ -11160,7 +10737,7 @@ cellModels, segs, dayMaxEvents, dayMaxEventRows, eventHeights, maxContentHeight,
         colPlacements.push([]);
         moreCnts.push(0);
     }
-    segs = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["sortEventSegs"])(segs, eventOrderSpecs);
+    segs = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.sortEventSegs)(segs, eventOrderSpecs);
     for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {
         var seg = segs_1[_i];
         var instanceId = seg.eventRange.instance.instanceId;
@@ -11366,18 +10943,18 @@ function limitEvents(hiddenCnts, segIsHidden, colPlacements, _moreLinkConsumesLe
 // Given the events within an array of segment objects, reslice them to be in a single day
 function resliceDaySegs(segs, dayDate, colIndex) {
     var dayStart = dayDate;
-    var dayEnd = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["addDays"])(dayStart, 1);
+    var dayEnd = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addDays)(dayStart, 1);
     var dayRange = { start: dayStart, end: dayEnd };
     var newSegs = [];
     for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {
         var seg = segs_2[_i];
         var eventRange = seg.eventRange;
         var origRange = eventRange.range;
-        var slicedRange = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["intersectRanges"])(origRange, dayRange);
+        var slicedRange = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.intersectRanges)(origRange, dayRange);
         if (slicedRange) {
-            newSegs.push(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, seg), { firstCol: colIndex, lastCol: colIndex, eventRange: {
+            newSegs.push((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, seg), { firstCol: colIndex, lastCol: colIndex, eventRange: {
                     def: eventRange.def,
-                    ui: Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, eventRange.ui), { durationEditable: false }),
+                    ui: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, eventRange.ui), { durationEditable: false }),
                     instance: eventRange.instance,
                     range: slicedRange
                 }, isStart: seg.isStart && slicedRange.start.valueOf() === origRange.start.valueOf(), isEnd: seg.isEnd && slicedRange.end.valueOf() === origRange.end.valueOf() }));
@@ -11387,14 +10964,14 @@ function resliceDaySegs(segs, dayDate, colIndex) {
 }
 
 var TableRow = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(TableRow, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableRow, _super);
     function TableRow() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.cellElRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["RefMap"](); // the <td>
-        _this.frameElRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["RefMap"](); // the fc-daygrid-day-frame
-        _this.fgElRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["RefMap"](); // the fc-daygrid-day-events
-        _this.segHarnessRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["RefMap"](); // indexed by "instanceId:firstCol"
-        _this.rootElRef = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createRef"])();
+        _this.cellElRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.RefMap(); // the <td>
+        _this.frameElRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.RefMap(); // the fc-daygrid-day-frame
+        _this.fgElRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.RefMap(); // the fc-daygrid-day-events
+        _this.segHarnessRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.RefMap(); // indexed by "instanceId:firstCol"
+        _this.rootElRef = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createRef)();
         _this.state = {
             framePositions: null,
             maxContentHeight: null,
@@ -11415,18 +10992,18 @@ var TableRow = /** @class */ (function (_super) {
          (props.eventDrag && props.eventDrag.affectedInstances) ||
             (props.eventResize && props.eventResize.affectedInstances) ||
             {};
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("tr", { ref: this.rootElRef },
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("tr", { ref: this.rootElRef },
             props.renderIntro && props.renderIntro(),
             props.cells.map(function (cell, col) {
                 var normalFgNodes = _this.renderFgSegs(segsByFirstCol[col], segIsHidden, segTops, segMarginTops, selectedInstanceHash, props.todayRange);
                 var mirrorFgNodes = _this.renderFgSegs(mirrorSegsByCol[col], {}, segTops, // use same tops as real rendering
                 {}, {}, props.todayRange, Boolean(props.eventDrag), Boolean(props.eventResize), false // date-selecting (because mirror is never drawn for date selection)
                 );
-                return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(TableCell, { key: cell.key, elRef: _this.cellElRefs.createRef(cell.key), innerElRef: _this.frameElRefs.createRef(cell.key) /* FF <td> problem, but okay to use for left/right. TODO: rename prop */, dateProfile: props.dateProfile, date: cell.date, showDayNumber: props.showDayNumbers, showWeekNumber: props.showWeekNumbers && col === 0, forceDayTop: props.showWeekNumbers /* even displaying weeknum for row, not necessarily day */, todayRange: props.todayRange, extraHookProps: cell.extraHookProps, extraDataAttrs: cell.extraDataAttrs, extraClassNames: cell.extraClassNames, moreCnt: moreCnts[col], buildMoreLinkText: props.buildMoreLinkText, onMoreClick: props.onMoreClick, segIsHidden: segIsHidden, moreMarginTop: moreTops[col] /* rename */, segsByEachCol: segsByEachCol[col], fgPaddingBottom: paddingBottoms[col], fgContentElRef: _this.fgElRefs.createRef(cell.key), fgContent: ( // Fragment scopes the keys
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-                        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, normalFgNodes),
-                        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, mirrorFgNodes))), bgContent: ( // Fragment scopes the keys
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(TableCell, { key: cell.key, elRef: _this.cellElRefs.createRef(cell.key), innerElRef: _this.frameElRefs.createRef(cell.key) /* FF <td> problem, but okay to use for left/right. TODO: rename prop */, dateProfile: props.dateProfile, date: cell.date, showDayNumber: props.showDayNumbers, showWeekNumber: props.showWeekNumbers && col === 0, forceDayTop: props.showWeekNumbers /* even displaying weeknum for row, not necessarily day */, todayRange: props.todayRange, extraHookProps: cell.extraHookProps, extraDataAttrs: cell.extraDataAttrs, extraClassNames: cell.extraClassNames, moreCnt: moreCnts[col], buildMoreLinkText: props.buildMoreLinkText, onMoreClick: props.onMoreClick, segIsHidden: segIsHidden, moreMarginTop: moreTops[col] /* rename */, segsByEachCol: segsByEachCol[col], fgPaddingBottom: paddingBottoms[col], fgContentElRef: _this.fgElRefs.createRef(cell.key), fgContent: ( // Fragment scopes the keys
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
+                        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, normalFgNodes),
+                        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, mirrorFgNodes))), bgContent: ( // Fragment scopes the keys
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
                         _this.renderFillSegs(highlightSegsByCol[col], 'highlight'),
                         _this.renderFillSegs(businessHoursByCol[col], 'non-business'),
                         _this.renderFillSegs(bgEventSegsByCol[col], 'bg-event'))) }));
@@ -11437,7 +11014,7 @@ var TableRow = /** @class */ (function (_super) {
     };
     TableRow.prototype.componentDidUpdate = function (prevProps, prevState) {
         var currentProps = this.props;
-        this.updateSizing(!Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["isPropsEqual"])(prevProps, currentProps));
+        this.updateSizing(!(0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isPropsEqual)(prevProps, currentProps));
     };
     TableRow.prototype.getHighlightSegs = function () {
         var props = this.props;
@@ -11496,15 +11073,15 @@ var TableRow = /** @class */ (function (_super) {
                 /*
                 known bug: events that are force to be list-item but span multiple days still take up space in later columns
                 */
-                nodes.push(Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-daygrid-event-harness' + (isAbsolute ? ' fc-daygrid-event-harness-abs' : ''), key: instanceId, ref: isMirror ? null : this.segHarnessRefs.createRef(instanceId + ':' + seg.firstCol) /* in print mode when in mult cols, could collide */, style: {
+                nodes.push((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-daygrid-event-harness' + (isAbsolute ? ' fc-daygrid-event-harness-abs' : ''), key: instanceId, ref: isMirror ? null : this.segHarnessRefs.createRef(instanceId + ':' + seg.firstCol) /* in print mode when in mult cols, could collide */, style: {
                         visibility: isInvisible ? 'hidden' : '',
                         marginTop: marginTop || '',
                         top: top_1 || '',
                         left: left || '',
                         right: right || ''
                     } }, hasListItemDisplay(seg) ?
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(TableListItemEvent, Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ seg: seg, isDragging: isDragging, isSelected: instanceId === eventSelection, defaultDisplayEventEnd: defaultDisplayEventEnd }, Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["getSegMeta"])(seg, todayRange))) :
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(TableBlockEvent, Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ seg: seg, isDragging: isDragging, isResizing: isResizing, isDateSelecting: isDateSelecting, isSelected: instanceId === eventSelection, defaultDisplayEventEnd: defaultDisplayEventEnd }, Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["getSegMeta"])(seg, todayRange)))));
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(TableListItemEvent, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ seg: seg, isDragging: isDragging, isSelected: instanceId === eventSelection, defaultDisplayEventEnd: defaultDisplayEventEnd }, (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSegMeta)(seg, todayRange))) :
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(TableBlockEvent, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ seg: seg, isDragging: isDragging, isResizing: isResizing, isDateSelecting: isDateSelecting, isSelected: instanceId === eventSelection, defaultDisplayEventEnd: defaultDisplayEventEnd }, (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSegMeta)(seg, todayRange)))));
             }
         }
         return nodes;
@@ -11524,12 +11101,12 @@ var TableRow = /** @class */ (function (_super) {
                     left: 0,
                     right: framePositions.rights[seg.firstCol] - framePositions.rights[seg.lastCol],
                 };
-                nodes.push(Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { key: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["buildEventRangeKey"])(seg.eventRange), className: 'fc-daygrid-bg-harness', style: leftRightCss }, fillType === 'bg-event' ?
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["BgEvent"], Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ seg: seg }, Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["getSegMeta"])(seg, todayRange))) :
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["renderFill"])(fillType)));
+                nodes.push((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { key: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.buildEventRangeKey)(seg.eventRange), className: 'fc-daygrid-bg-harness', style: leftRightCss }, fillType === 'bg-event' ?
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BgEvent, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ seg: seg }, (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSegMeta)(seg, todayRange))) :
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.renderFill)(fillType)));
             }
         }
-        return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__spreadArrays"])([_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {}], nodes));
+        return _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement.apply(void 0, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__spreadArrays)([_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, {}], nodes));
     };
     TableRow.prototype.updateSizing = function (isExternalSizingChange) {
         var _a = this, props = _a.props, frameElRefs = _a.frameElRefs;
@@ -11539,7 +11116,7 @@ var TableRow = /** @class */ (function (_super) {
                 if (frameEls.length) {
                     var originEl = this.rootElRef.current;
                     this.setState({
-                        framePositions: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["PositionCache"](originEl, frameEls, true, // isHorizontal
+                        framePositions: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.PositionCache(originEl, frameEls, true, // isHorizontal
                         false)
                     });
                 }
@@ -11552,7 +11129,7 @@ var TableRow = /** @class */ (function (_super) {
         }
     };
     TableRow.prototype.computeSegHeights = function () {
-        return Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["mapHash"])(this.segHarnessRefs.currentMap, function (eventHarnessEl) { return (eventHarnessEl.getBoundingClientRect().height); });
+        return (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.mapHash)(this.segHarnessRefs.currentMap, function (eventHarnessEl) { return (eventHarnessEl.getBoundingClientRect().height); });
     };
     TableRow.prototype.computeMaxContentHeight = function () {
         var firstKey = this.props.cells[0].key;
@@ -11565,22 +11142,22 @@ var TableRow = /** @class */ (function (_super) {
         return this.props.cells.map(function (cell) { return elMap[cell.key]; });
     };
     return TableRow;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateComponent));
 TableRow.addStateEquality({
-    segHeights: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["isPropsEqual"]
+    segHeights: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.isPropsEqual
 });
 
 var PADDING_FROM_VIEWPORT = 10;
 var SCROLL_DEBOUNCE = 10;
 var Popover = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(Popover, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(Popover, _super);
     function Popover() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.repositioner = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DelayedRunner"](_this.updateSize.bind(_this));
+        _this.repositioner = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DelayedRunner(_this.updateSize.bind(_this));
         _this.handleRootEl = function (el) {
             _this.rootEl = el;
             if (_this.props.elRef) {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["setRef"])(_this.props.elRef, el);
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.setRef)(_this.props.elRef, el);
             }
         };
         // Triggered when the user clicks *anywhere* in the document, for the autoHide feature
@@ -11609,11 +11186,11 @@ var Popover = /** @class */ (function (_super) {
             'fc-popover',
             theme.getClass('popover')
         ].concat(props.extraClassNames || []);
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ className: classNames.join(' ') }, props.extraAttrs, { ref: this.handleRootEl }),
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-popover-header ' + theme.getClass('popoverHeader') },
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", { className: 'fc-popover-title' }, props.title),
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("span", { className: 'fc-popover-close ' + theme.getIconClass('close'), onClick: this.handleCloseClick })),
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-popover-body ' + theme.getClass('popoverContent') }, props.children)));
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ className: classNames.join(' ') }, props.extraAttrs, { ref: this.handleRootEl }),
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-popover-header ' + theme.getClass('popoverHeader') },
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("span", { className: 'fc-popover-title' }, props.title),
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("span", { className: 'fc-popover-close ' + theme.getIconClass('close'), onClick: this.handleCloseClick })),
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-popover-body ' + theme.getClass('popoverContent') }, props.children)));
     };
     Popover.prototype.componentDidMount = function () {
         document.addEventListener('mousedown', this.handleDocumentMousedown);
@@ -11650,13 +11227,13 @@ var Popover = /** @class */ (function (_super) {
         }
         left = Math.min(left, window.innerWidth - dims.width - PADDING_FROM_VIEWPORT);
         left = Math.max(left, PADDING_FROM_VIEWPORT);
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["applyStyle"])(rootEl, { top: top, left: left });
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.applyStyle)(rootEl, { top: top, left: left });
     };
     return Popover;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.BaseComponent));
 
 var MorePopover = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(MorePopover, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(MorePopover, _super);
     function MorePopover() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.handlePopoverEl = function (popoverEl) {
@@ -11678,16 +11255,16 @@ var MorePopover = /** @class */ (function (_super) {
         var props = this.props;
         var date = props.date, hiddenInstances = props.hiddenInstances, todayRange = props.todayRange, dateProfile = props.dateProfile, selectedInstanceId = props.selectedInstanceId;
         var title = dateEnv.format(date, options.dayPopoverFormat);
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DayCellRoot"], { date: date, dateProfile: dateProfile, todayRange: todayRange, elRef: this.handlePopoverEl }, function (rootElRef, dayClassNames, dataAttrs) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(Popover, { elRef: rootElRef, title: title, extraClassNames: ['fc-more-popover'].concat(dayClassNames), extraAttrs: dataAttrs, onClose: props.onCloseClick, alignmentEl: props.alignmentEl, topAlignmentEl: props.topAlignmentEl },
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DayCellContent"], { date: date, dateProfile: dateProfile, todayRange: todayRange }, function (innerElRef, innerContent) { return (innerContent &&
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-more-popover-misc', ref: innerElRef }, innerContent)); }),
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayCellRoot, { date: date, dateProfile: dateProfile, todayRange: todayRange, elRef: this.handlePopoverEl }, function (rootElRef, dayClassNames, dataAttrs) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(Popover, { elRef: rootElRef, title: title, extraClassNames: ['fc-more-popover'].concat(dayClassNames), extraAttrs: dataAttrs, onClose: props.onCloseClick, alignmentEl: props.alignmentEl, topAlignmentEl: props.topAlignmentEl },
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayCellContent, { date: date, dateProfile: dateProfile, todayRange: todayRange }, function (innerElRef, innerContent) { return (innerContent &&
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-more-popover-misc', ref: innerElRef }, innerContent)); }),
             props.segs.map(function (seg) {
                 var instanceId = seg.eventRange.instance.instanceId;
-                return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: 'fc-daygrid-event-harness', key: instanceId, style: {
+                return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: 'fc-daygrid-event-harness', key: instanceId, style: {
                         visibility: hiddenInstances[instanceId] ? 'hidden' : ''
                     } }, hasListItemDisplay(seg) ?
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(TableListItemEvent, Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ seg: seg, isDragging: false, isSelected: instanceId === selectedInstanceId, defaultDisplayEventEnd: false }, Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["getSegMeta"])(seg, todayRange))) :
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(TableBlockEvent, Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ seg: seg, isDragging: false, isResizing: false, isDateSelecting: false, isSelected: instanceId === selectedInstanceId, defaultDisplayEventEnd: false }, Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["getSegMeta"])(seg, todayRange)))));
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(TableListItemEvent, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ seg: seg, isDragging: false, isSelected: instanceId === selectedInstanceId, defaultDisplayEventEnd: false }, (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSegMeta)(seg, todayRange))) :
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(TableBlockEvent, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ seg: seg, isDragging: false, isResizing: false, isDateSelecting: false, isSelected: instanceId === selectedInstanceId, defaultDisplayEventEnd: false }, (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.getSegMeta)(seg, todayRange)))));
             }))); }));
     };
     MorePopover.prototype.queryHit = function (positionLeft, positionTop, elWidth, elHeight) {
@@ -11697,7 +11274,7 @@ var MorePopover = /** @class */ (function (_super) {
                 component: this,
                 dateSpan: {
                     allDay: true,
-                    range: { start: date, end: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["addDays"])(date, 1) }
+                    range: { start: date, end: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addDays)(date, 1) }
                 },
                 dayEl: this.popoverEl,
                 rect: {
@@ -11714,26 +11291,26 @@ var MorePopover = /** @class */ (function (_super) {
         return true; // gross
     };
     return MorePopover;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateComponent));
 
 var Table = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(Table, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(Table, _super);
     function Table() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.splitBusinessHourSegs = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["memoize"])(splitSegsByRow);
-        _this.splitBgEventSegs = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["memoize"])(splitSegsByRow);
-        _this.splitFgEventSegs = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["memoize"])(splitSegsByRow);
-        _this.splitDateSelectionSegs = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["memoize"])(splitSegsByRow);
-        _this.splitEventDrag = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["memoize"])(splitInteractionByRow);
-        _this.splitEventResize = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["memoize"])(splitInteractionByRow);
-        _this.buildBuildMoreLinkText = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["memoize"])(buildBuildMoreLinkText);
-        _this.rowRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["RefMap"]();
+        _this.splitBusinessHourSegs = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize)(splitSegsByRow);
+        _this.splitBgEventSegs = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize)(splitSegsByRow);
+        _this.splitFgEventSegs = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize)(splitSegsByRow);
+        _this.splitDateSelectionSegs = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize)(splitSegsByRow);
+        _this.splitEventDrag = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize)(splitInteractionByRow);
+        _this.splitEventResize = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize)(splitInteractionByRow);
+        _this.buildBuildMoreLinkText = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize)(buildBuildMoreLinkText);
+        _this.rowRefs = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.RefMap();
         _this.state = {
             morePopoverState: null
         };
         _this.handleRootEl = function (rootEl) {
             _this.rootEl = rootEl;
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["setRef"])(_this.props.elRef, rootEl);
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.setRef)(_this.props.elRef, rootEl);
         };
         _this.handleMoreLinkClick = function (arg) {
             var context = _this.context;
@@ -11742,7 +11319,7 @@ var Table = /** @class */ (function (_super) {
             function segForPublic(seg) {
                 var _a = seg.eventRange, def = _a.def, instance = _a.instance, range = _a.range;
                 return {
-                    event: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["EventApi"](context, def, instance),
+                    event: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.EventApi(context, def, instance),
                     start: dateEnv.toDate(range.start),
                     end: dateEnv.toDate(range.end),
                     isStart: seg.isStart,
@@ -11761,7 +11338,7 @@ var Table = /** @class */ (function (_super) {
             }
             if (!clickOption || clickOption === 'popover') {
                 _this.setState({
-                    morePopoverState: Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, arg), { currentFgEventSegs: _this.props.fgEventSegs })
+                    morePopoverState: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, arg), { currentFgEventSegs: _this.props.fgEventSegs })
                 });
             }
             else if (typeof clickOption === 'string') { // a view name
@@ -11801,25 +11378,25 @@ var Table = /** @class */ (function (_super) {
             limitViaBalanced ? 'fc-daygrid-body-balanced' : 'fc-daygrid-body-unbalanced',
             expandRows ? '' : 'fc-daygrid-body-natural' // will height of one row depend on the others?
         ];
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", { className: classNames.join(' '), ref: this.handleRootEl, style: {
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", { className: classNames.join(' '), ref: this.handleRootEl, style: {
                 // these props are important to give this wrapper correct dimensions for interactions
                 // TODO: if we set it here, can we avoid giving to inner tables?
                 width: props.clientWidth,
                 minWidth: props.tableMinWidth
             } },
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["NowTimer"], { unit: 'day' }, function (nowDate, todayRange) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("table", { className: 'fc-scrollgrid-sync-table', style: {
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.NowTimer, { unit: 'day' }, function (nowDate, todayRange) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("table", { className: 'fc-scrollgrid-sync-table', style: {
                         width: props.clientWidth,
                         minWidth: props.tableMinWidth,
                         height: expandRows ? props.clientHeight : ''
                     } },
                     props.colGroupNode,
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])("tbody", null, props.cells.map(function (cells, row) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(TableRow, { ref: _this.rowRefs.createRef(row), key: cells.length
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)("tbody", null, props.cells.map(function (cells, row) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(TableRow, { ref: _this.rowRefs.createRef(row), key: cells.length
                             ? cells[0].date.toISOString() /* best? or put key on cell? or use diff formatter? */
                             : row // in case there are no cells (like when resource view is loading)
                         , showDayNumbers: rowCnt > 1, showWeekNumbers: props.showWeekNumbers, todayRange: todayRange, dateProfile: dateProfile, cells: cells, renderIntro: props.renderRowIntro, businessHourSegs: businessHourSegsByRow[row], eventSelection: props.eventSelection, bgEventSegs: bgEventSegsByRow[row].filter(isSegAllDay) /* hack */, fgEventSegs: fgEventSegsByRow[row], dateSelectionSegs: dateSelectionSegsByRow[row], eventDrag: eventDragByRow[row], eventResize: eventResizeByRow[row], dayMaxEvents: dayMaxEvents, dayMaxEventRows: dayMaxEventRows, clientWidth: props.clientWidth, clientHeight: props.clientHeight, buildMoreLinkText: buildMoreLinkText, onMoreClick: _this.handleMoreLinkClick })); }))),
                 (!props.forPrint && morePopoverState && morePopoverState.currentFgEventSegs === props.fgEventSegs) && // clear popover on event mod
-                    Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(MorePopover, { date: morePopoverState.date, dateProfile: dateProfile, segs: morePopoverState.allSegs, alignmentEl: morePopoverState.dayEl, topAlignmentEl: rowCnt === 1 ? props.headerAlignElRef.current : null, onCloseClick: _this.handleMorePopoverClose, selectedInstanceId: props.eventSelection, hiddenInstances: // yuck
+                    (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(MorePopover, { date: morePopoverState.date, dateProfile: dateProfile, segs: morePopoverState.allSegs, alignmentEl: morePopoverState.dayEl, topAlignmentEl: rowCnt === 1 ? props.headerAlignElRef.current : null, onCloseClick: _this.handleMorePopoverClose, selectedInstanceId: props.eventSelection, hiddenInstances: // yuck
                         (props.eventDrag ? props.eventDrag.affectedInstances : null) ||
                             (props.eventResize ? props.eventResize.affectedInstances : null) ||
                             {}, todayRange: todayRange }))); })));
@@ -11827,10 +11404,10 @@ var Table = /** @class */ (function (_super) {
     // Hit System
     // ----------------------------------------------------------------------------------------------------
     Table.prototype.prepareHits = function () {
-        this.rowPositions = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["PositionCache"](this.rootEl, this.rowRefs.collect().map(function (rowObj) { return rowObj.getCellEls()[0]; }), // first cell el in each row. TODO: not optimal
+        this.rowPositions = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.PositionCache(this.rootEl, this.rowRefs.collect().map(function (rowObj) { return rowObj.getCellEls()[0]; }), // first cell el in each row. TODO: not optimal
         false, true // vertical
         );
-        this.colPositions = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["PositionCache"](this.rootEl, this.rowRefs.currentMap[0].getCellEls(), // cell els in first row
+        this.colPositions = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.PositionCache(this.rootEl, this.rowRefs.currentMap[0].getCellEls(), // cell els in first row
         true, // horizontal
         false);
     };
@@ -11861,11 +11438,11 @@ var Table = /** @class */ (function (_super) {
     };
     Table.prototype.getCellRange = function (row, col) {
         var start = this.props.cells[row][col].date;
-        var end = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["addDays"])(start, 1);
+        var end = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addDays)(start, 1);
         return { start: start, end: end };
     };
     return Table;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateComponent));
 function buildBuildMoreLinkText(moreLinkTextInput) {
     if (typeof moreLinkTextInput === 'function') {
         return moreLinkTextInput;
@@ -11881,11 +11458,11 @@ function isSegAllDay(seg) {
 }
 
 var DayTable = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(DayTable, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(DayTable, _super);
     function DayTable() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.slicer = new DayTableSlicer();
-        _this.tableRef = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createRef"])();
+        _this.tableRef = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createRef)();
         _this.handleRootEl = function (rootEl) {
             if (rootEl) {
                 _this.context.registerInteractiveComponent(_this, { el: rootEl });
@@ -11898,7 +11475,7 @@ var DayTable = /** @class */ (function (_super) {
     }
     DayTable.prototype.render = function () {
         var _a = this, props = _a.props, context = _a.context;
-        return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(Table, Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({ ref: this.tableRef, elRef: this.handleRootEl }, this.slicer.sliceProps(props, props.dateProfile, props.nextDayThreshold, context, props.dayTableModel), { dateProfile: props.dateProfile, cells: props.dayTableModel.cells, colGroupNode: props.colGroupNode, tableMinWidth: props.tableMinWidth, renderRowIntro: props.renderRowIntro, dayMaxEvents: props.dayMaxEvents, dayMaxEventRows: props.dayMaxEventRows, showWeekNumbers: props.showWeekNumbers, expandRows: props.expandRows, headerAlignElRef: props.headerAlignElRef, clientWidth: props.clientWidth, clientHeight: props.clientHeight, forPrint: props.forPrint })));
+        return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(Table, (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({ ref: this.tableRef, elRef: this.handleRootEl }, this.slicer.sliceProps(props, props.dateProfile, props.nextDayThreshold, context, props.dayTableModel), { dateProfile: props.dateProfile, cells: props.dayTableModel.cells, colGroupNode: props.colGroupNode, tableMinWidth: props.tableMinWidth, renderRowIntro: props.renderRowIntro, dayMaxEvents: props.dayMaxEvents, dayMaxEventRows: props.dayMaxEventRows, showWeekNumbers: props.showWeekNumbers, expandRows: props.expandRows, headerAlignElRef: props.headerAlignElRef, clientWidth: props.clientWidth, clientHeight: props.clientHeight, forPrint: props.forPrint })));
     };
     DayTable.prototype.prepareHits = function () {
         this.tableRef.current.prepareHits();
@@ -11921,9 +11498,9 @@ var DayTable = /** @class */ (function (_super) {
         }
     };
     return DayTable;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateComponent));
 var DayTableSlicer = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(DayTableSlicer, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(DayTableSlicer, _super);
     function DayTableSlicer() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.forceDayIfListItem = true;
@@ -11933,15 +11510,15 @@ var DayTableSlicer = /** @class */ (function (_super) {
         return dayTableModel.sliceRange(dateRange);
     };
     return DayTableSlicer;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["Slicer"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.Slicer));
 
 var DayTableView = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(DayTableView, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(DayTableView, _super);
     function DayTableView() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.buildDayTableModel = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["memoize"])(buildDayTableModel);
-        _this.headerRef = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createRef"])();
-        _this.tableRef = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createRef"])();
+        _this.buildDayTableModel = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.memoize)(buildDayTableModel);
+        _this.headerRef = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createRef)();
+        _this.tableRef = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createRef)();
         return _this;
     }
     DayTableView.prototype.render = function () {
@@ -11950,8 +11527,8 @@ var DayTableView = /** @class */ (function (_super) {
         var props = this.props;
         var dayTableModel = this.buildDayTableModel(props.dateProfile, dateProfileGenerator);
         var headerContent = options.dayHeaders &&
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DayHeader"], { ref: this.headerRef, dateProfile: props.dateProfile, dates: dayTableModel.headerDates, datesRepDistinctDays: dayTableModel.rowCnt === 1 });
-        var bodyContent = function (contentArg) { return (Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createElement"])(DayTable, { ref: _this.tableRef, dateProfile: props.dateProfile, dayTableModel: dayTableModel, businessHours: props.businessHours, dateSelection: props.dateSelection, eventStore: props.eventStore, eventUiBases: props.eventUiBases, eventSelection: props.eventSelection, eventDrag: props.eventDrag, eventResize: props.eventResize, nextDayThreshold: options.nextDayThreshold, colGroupNode: contentArg.tableColGroupNode, tableMinWidth: contentArg.tableMinWidth, dayMaxEvents: options.dayMaxEvents, dayMaxEventRows: options.dayMaxEventRows, showWeekNumbers: options.weekNumbers, expandRows: !props.isHeightAuto, headerAlignElRef: _this.headerElRef, clientWidth: contentArg.clientWidth, clientHeight: contentArg.clientHeight, forPrint: props.forPrint })); };
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayHeader, { ref: this.headerRef, dateProfile: props.dateProfile, dates: dayTableModel.headerDates, datesRepDistinctDays: dayTableModel.rowCnt === 1 });
+        var bodyContent = function (contentArg) { return ((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createElement)(DayTable, { ref: _this.tableRef, dateProfile: props.dateProfile, dayTableModel: dayTableModel, businessHours: props.businessHours, dateSelection: props.dateSelection, eventStore: props.eventStore, eventUiBases: props.eventUiBases, eventSelection: props.eventSelection, eventDrag: props.eventDrag, eventResize: props.eventResize, nextDayThreshold: options.nextDayThreshold, colGroupNode: contentArg.tableColGroupNode, tableMinWidth: contentArg.tableMinWidth, dayMaxEvents: options.dayMaxEvents, dayMaxEventRows: options.dayMaxEventRows, showWeekNumbers: options.weekNumbers, expandRows: !props.isHeightAuto, headerAlignElRef: _this.headerElRef, clientWidth: contentArg.clientWidth, clientHeight: contentArg.clientHeight, forPrint: props.forPrint })); };
         return options.dayMinWidth
             ? this.renderHScrollLayout(headerContent, bodyContent, dayTableModel.colCnt, options.dayMinWidth)
             : this.renderSimpleLayout(headerContent, bodyContent);
@@ -11959,12 +11536,12 @@ var DayTableView = /** @class */ (function (_super) {
     return DayTableView;
 }(TableView));
 function buildDayTableModel(dateProfile, dateProfileGenerator) {
-    var daySeries = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DaySeriesModel"](dateProfile.renderRange, dateProfileGenerator);
-    return new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DayTableModel"](daySeries, /year|month|week/.test(dateProfile.currentRangeUnit));
+    var daySeries = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DaySeriesModel(dateProfile.renderRange, dateProfileGenerator);
+    return new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DayTableModel(daySeries, /year|month|week/.test(dateProfile.currentRangeUnit));
 }
 
 var TableDateProfileGenerator = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__extends"])(TableDateProfileGenerator, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(TableDateProfileGenerator, _super);
     function TableDateProfileGenerator() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -11981,30 +11558,30 @@ var TableDateProfileGenerator = /** @class */ (function (_super) {
             // make end-of-week if not already
             endOfWeek = dateEnv.startOfWeek(end);
             if (endOfWeek.valueOf() !== end.valueOf()) {
-                end = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["addWeeks"])(endOfWeek, 1);
+                end = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addWeeks)(endOfWeek, 1);
             }
         }
         // ensure 6 weeks
         if (this.props.monthMode &&
             this.props.fixedWeekCount) {
             var rowCnt = Math.ceil(// could be partial weeks due to hiddenDays
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["diffWeeks"])(start, end));
-            end = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["addWeeks"])(end, 6 - rowCnt);
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.diffWeeks)(start, end));
+            end = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.addWeeks)(end, 6 - rowCnt);
         }
         return { start: start, end: end };
     };
     return TableDateProfileGenerator;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["DateProfileGenerator"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.DateProfileGenerator));
 
 var OPTION_REFINERS = {
-    moreLinkClick: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["identity"],
-    moreLinkClassNames: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["identity"],
-    moreLinkContent: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["identity"],
-    moreLinkDidMount: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["identity"],
-    moreLinkWillUnmount: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["identity"],
+    moreLinkClick: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.identity,
+    moreLinkClassNames: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.identity,
+    moreLinkContent: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.identity,
+    moreLinkDidMount: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.identity,
+    moreLinkWillUnmount: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.identity,
 };
 
-var main = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createPlugin"])({
+var main = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__.createPlugin)({
     initialView: 'dayGridMonth',
     optionRefiners: OPTION_REFINERS,
     views: {
@@ -12029,7 +11606,7 @@ var main = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createPlugi
     }
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (main);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (main);
 
 //# sourceMappingURL=main.js.map
 
@@ -12040,34 +11617,35 @@ var main = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_1__["createPlugi
 /*!****************************************************************************!*\
   !*** ./node_modules/@fullcalendar/daygrid/node_modules/tslib/tslib.es6.js ***!
   \****************************************************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__extends": () => (/* binding */ __extends),
+/* harmony export */   "__assign": () => (/* binding */ __assign),
+/* harmony export */   "__rest": () => (/* binding */ __rest),
+/* harmony export */   "__decorate": () => (/* binding */ __decorate),
+/* harmony export */   "__param": () => (/* binding */ __param),
+/* harmony export */   "__metadata": () => (/* binding */ __metadata),
+/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
+/* harmony export */   "__generator": () => (/* binding */ __generator),
+/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
+/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
+/* harmony export */   "__values": () => (/* binding */ __values),
+/* harmony export */   "__read": () => (/* binding */ __read),
+/* harmony export */   "__spread": () => (/* binding */ __spread),
+/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
+/* harmony export */   "__await": () => (/* binding */ __await),
+/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
+/* harmony export */   "__asyncDelegator": () => (/* binding */ __asyncDelegator),
+/* harmony export */   "__asyncValues": () => (/* binding */ __asyncValues),
+/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
+/* harmony export */   "__importStar": () => (/* binding */ __importStar),
+/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__classPrivateFieldGet": () => (/* binding */ __classPrivateFieldGet),
+/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet)
+/* harmony export */ });
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -12303,15 +11881,17 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 /*!********************************************************!*\
   !*** ./node_modules/@fullcalendar/interaction/main.js ***!
   \********************************************************/
-/*! exports provided: default, Draggable, FeaturefulElementDragging, PointerDragging, ThirdPartyDraggable */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Draggable", function() { return ExternalDraggable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturefulElementDragging", function() { return FeaturefulElementDragging; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PointerDragging", function() { return PointerDragging; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThirdPartyDraggable", function() { return ThirdPartyDraggable; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "Draggable": () => (/* binding */ ExternalDraggable),
+/* harmony export */   "FeaturefulElementDragging": () => (/* binding */ FeaturefulElementDragging),
+/* harmony export */   "PointerDragging": () => (/* binding */ PointerDragging),
+/* harmony export */   "ThirdPartyDraggable": () => (/* binding */ ThirdPartyDraggable)
+/* harmony export */ });
 /* harmony import */ var _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/common */ "./node_modules/@fullcalendar/common/main.js");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/interaction/node_modules/tslib/tslib.es6.js");
 /*!
@@ -12322,7 +11902,7 @@ Docs & License: https://fullcalendar.io/
 
 
 
-_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["config"].touchMouseIgnoreWait = 500;
+_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.config.touchMouseIgnoreWait = 500;
 var ignoreMouseDepth = 0;
 var listenerCnt = 0;
 var isWindowTouchMoveCancelled = false;
@@ -12438,7 +12018,7 @@ var PointerDragging = /** @class */ (function () {
             }
         };
         this.containerEl = containerEl;
-        this.emitter = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["Emitter"]();
+        this.emitter = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.Emitter();
         containerEl.addEventListener('mousedown', this.handleMouseDown);
         containerEl.addEventListener('touchstart', this.handleTouchStart, { passive: true });
         listenerCreated();
@@ -12452,7 +12032,7 @@ var PointerDragging = /** @class */ (function () {
         var subjectEl = this.querySubjectEl(ev);
         var downEl = ev.target;
         if (subjectEl &&
-            (!this.handleSelector || Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(downEl, this.handleSelector))) {
+            (!this.handleSelector || (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.elementClosest)(downEl, this.handleSelector))) {
             this.subjectEl = subjectEl;
             this.isDragging = true; // do this first so cancelTouchScroll will work
             this.wasTouchScroll = false;
@@ -12469,7 +12049,7 @@ var PointerDragging = /** @class */ (function () {
     };
     PointerDragging.prototype.querySubjectEl = function (ev) {
         if (this.selector) {
-            return Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(ev.target, this.selector);
+            return (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.elementClosest)(ev.target, this.selector);
         }
         else {
             return this.containerEl;
@@ -12576,7 +12156,7 @@ function startIgnoringMouse() {
     ignoreMouseDepth++;
     setTimeout(function () {
         ignoreMouseDepth--;
-    }, _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["config"].touchMouseIgnoreWait);
+    }, _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.config.touchMouseIgnoreWait);
 }
 // We want to attach touchmove as early as possible for Safari
 // ----------------------------------------------------------------------------------------------------
@@ -12671,25 +12251,25 @@ var ElementMirror = /** @class */ (function () {
         mirrorEl.style.transition =
             'top ' + revertDuration + 'ms,' +
                 'left ' + revertDuration + 'ms';
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(mirrorEl, {
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.applyStyle)(mirrorEl, {
             left: finalSourceElRect.left,
             top: finalSourceElRect.top
         });
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["whenTransitionDone"])(mirrorEl, function () {
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.whenTransitionDone)(mirrorEl, function () {
             mirrorEl.style.transition = '';
             callback();
         });
     };
     ElementMirror.prototype.cleanup = function () {
         if (this.mirrorEl) {
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(this.mirrorEl);
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.removeElement)(this.mirrorEl);
             this.mirrorEl = null;
         }
         this.sourceEl = null;
     };
     ElementMirror.prototype.updateElPosition = function () {
         if (this.sourceEl && this.isVisible) {
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(this.getMirrorEl(), {
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.applyStyle)(this.getMirrorEl(), {
                 left: this.sourceElRect.left + this.deltaX,
                 top: this.sourceElRect.top + this.deltaY
             });
@@ -12704,7 +12284,7 @@ var ElementMirror = /** @class */ (function () {
             // would use preventSelection(), but that prevents selectstart, causing problems.
             mirrorEl.classList.add('fc-unselectable');
             mirrorEl.classList.add('fc-event-dragging');
-            Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(mirrorEl, {
+            (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.applyStyle)(mirrorEl, {
                 position: 'fixed',
                 zIndex: this.zIndex,
                 visibility: '',
@@ -12731,7 +12311,7 @@ The cache can be in one of two modes:
 - doesListening:true - watch for scrolling and update the cache
 */
 var ScrollGeomCache = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(ScrollGeomCache, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(ScrollGeomCache, _super);
     function ScrollGeomCache(scrollController, doesListening) {
         var _this = _super.call(this) || this;
         _this.handleScroll = function () {
@@ -12797,24 +12377,24 @@ var ScrollGeomCache = /** @class */ (function (_super) {
     ScrollGeomCache.prototype.handleScrollChange = function () {
     };
     return ScrollGeomCache;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["ScrollController"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.ScrollController));
 var ElementScrollGeomCache = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(ElementScrollGeomCache, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(ElementScrollGeomCache, _super);
     function ElementScrollGeomCache(el, doesListening) {
-        return _super.call(this, new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["ElementScrollController"](el), doesListening) || this;
+        return _super.call(this, new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.ElementScrollController(el), doesListening) || this;
     }
     ElementScrollGeomCache.prototype.getEventTarget = function () {
         return this.scrollController.el;
     };
     ElementScrollGeomCache.prototype.computeClientRect = function () {
-        return Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["computeInnerRect"])(this.scrollController.el);
+        return (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.computeInnerRect)(this.scrollController.el);
     };
     return ElementScrollGeomCache;
 }(ScrollGeomCache));
 var WindowScrollGeomCache = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(WindowScrollGeomCache, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(WindowScrollGeomCache, _super);
     function WindowScrollGeomCache(doesListening) {
-        return _super.call(this, new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["WindowScrollController"](), doesListening) || this;
+        return _super.call(this, new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.WindowScrollController(), doesListening) || this;
     }
     WindowScrollGeomCache.prototype.getEventTarget = function () {
         return window;
@@ -13018,7 +12598,7 @@ Monitors dragging on an element. Has a number of high-level features:
 - a mirror element that follows the pointer
 */
 var FeaturefulElementDragging = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(FeaturefulElementDragging, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(FeaturefulElementDragging, _super);
     function FeaturefulElementDragging(containerEl, selector) {
         var _this = _super.call(this, containerEl) || this;
         // options that can be directly set by caller
@@ -13037,8 +12617,8 @@ var FeaturefulElementDragging = /** @class */ (function (_super) {
                 _this.isInteracting = true;
                 _this.isDelayEnded = false;
                 _this.isDistanceSurpassed = false;
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["preventSelection"])(document.body);
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["preventContextMenu"])(document.body);
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.preventSelection)(document.body);
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.preventContextMenu)(document.body);
                 // prevent links from being visited if there's an eventual drag.
                 // also prevents selection in older browsers (maybe?).
                 // not necessary for touch, besides, browser would complain about passiveness.
@@ -13083,8 +12663,8 @@ var FeaturefulElementDragging = /** @class */ (function (_super) {
         _this.onPointerUp = function (ev) {
             if (_this.isInteracting) {
                 _this.isInteracting = false;
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["allowSelection"])(document.body);
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["allowContextMenu"])(document.body);
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.allowSelection)(document.body);
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.allowContextMenu)(document.body);
                 _this.emitter.trigger('pointerup', ev); // can potentially set mirrorNeedsRevert
                 if (_this.isDragging) {
                     _this.autoScroller.stop();
@@ -13170,7 +12750,7 @@ var FeaturefulElementDragging = /** @class */ (function (_super) {
         this.autoScroller.isEnabled = bool;
     };
     return FeaturefulElementDragging;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["ElementDragging"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.ElementDragging));
 
 /*
 When this class is instantiated, it records the offset of an element (relative to the document topleft),
@@ -13182,9 +12762,9 @@ and an determine if a given point is inside the combined clipping rectangle.
 */
 var OffsetTracker = /** @class */ (function () {
     function OffsetTracker(el) {
-        this.origRect = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(el);
+        this.origRect = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.computeRect)(el);
         // will work fine for divs that have overflow:hidden
-        this.scrollCaches = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["getClippingParents"])(el).map(function (el) {
+        this.scrollCaches = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.getClippingParents)(el).map(function (el) {
             return new ElementScrollGeomCache(el, true); // listen=true
         });
     }
@@ -13215,7 +12795,7 @@ var OffsetTracker = /** @class */ (function () {
         for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
             var scrollCache = _a[_i];
             if (!isIgnoredClipping(scrollCache.getEventTarget()) &&
-                !Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["pointInsideRect"])(point, scrollCache.clientRect)) {
+                !(0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.pointInsideRect)(point, scrollCache.clientRect)) {
                 return false;
             }
         }
@@ -13294,7 +12874,7 @@ var HitDragging = /** @class */ (function () {
         dragging.emitter.on('pointerup', this.handlePointerUp);
         dragging.emitter.on('dragend', this.handleDragEnd);
         this.dragging = dragging;
-        this.emitter = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["Emitter"]();
+        this.emitter = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.Emitter();
     }
     // sets initialHit
     // sets coordAdjust
@@ -13304,18 +12884,18 @@ var HitDragging = /** @class */ (function () {
         var subjectEl = ev.subjectEl;
         var subjectRect;
         if (subjectEl !== document) {
-            subjectRect = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(subjectEl);
-            adjustedPoint = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["constrainPoint"])(adjustedPoint, subjectRect);
+            subjectRect = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.computeRect)(subjectEl);
+            adjustedPoint = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.constrainPoint)(adjustedPoint, subjectRect);
         }
         var initialHit = this.initialHit = this.queryHitForOffset(adjustedPoint.left, adjustedPoint.top);
         if (initialHit) {
             if (this.useSubjectCenter && subjectRect) {
-                var slicedSubjectRect = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["intersectRects"])(subjectRect, initialHit.rect);
+                var slicedSubjectRect = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.intersectRects)(subjectRect, initialHit.rect);
                 if (slicedSubjectRect) {
-                    adjustedPoint = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["getRectCenter"])(slicedSubjectRect);
+                    adjustedPoint = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.getRectCenter)(slicedSubjectRect);
                 }
             }
-            this.coordAdjust = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["diffPoints"])(adjustedPoint, origPoint);
+            this.coordAdjust = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.diffPoints)(adjustedPoint, origPoint);
         }
         else {
             this.coordAdjust = { left: 0, top: 0 };
@@ -13329,7 +12909,7 @@ var HitDragging = /** @class */ (function () {
         }
     };
     HitDragging.prototype.prepareHits = function () {
-        this.offsetTrackers = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["mapHash"])(this.droppableStore, function (interactionSettings) {
+        this.offsetTrackers = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.mapHash)(this.droppableStore, function (interactionSettings) {
             interactionSettings.component.prepareHits();
             return new OffsetTracker(interactionSettings.el);
         });
@@ -13365,7 +12945,7 @@ var HitDragging = /** @class */ (function () {
                     if (hit &&
                         (
                         // make sure the hit is within activeRange, meaning it's not a deal cell
-                        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["rangeContainsRange"])(dateProfile.activeRange, hit.dateSpan.range)) &&
+                        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.rangeContainsRange)(dateProfile.activeRange, hit.dateSpan.range)) &&
                         (!bestHit || hit.layer > bestHit.layer)) {
                         // TODO: better way to re-orient rectangle
                         hit.rect.left += originLeft;
@@ -13388,16 +12968,16 @@ function isHitsEqual(hit0, hit1) {
     if (Boolean(hit0) !== Boolean(hit1)) {
         return false;
     }
-    return Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["isDateSpansEqual"])(hit0.dateSpan, hit1.dateSpan);
+    return (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.isDateSpansEqual)(hit0.dateSpan, hit1.dateSpan);
 }
 
 function buildDatePointApiWithContext(dateSpan, context) {
     var props = {};
     for (var _i = 0, _a = context.pluginHooks.datePointTransforms; _i < _a.length; _i++) {
         var transform = _a[_i];
-        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(props, transform(dateSpan, context));
+        (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)(props, transform(dateSpan, context));
     }
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(props, buildDatePointApi(dateSpan, context.dateEnv));
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)(props, buildDatePointApi(dateSpan, context.dateEnv));
     return props;
 }
 function buildDatePointApi(span, dateEnv) {
@@ -13413,7 +12993,7 @@ Monitors when the user clicks on a specific date/time of a component.
 A pointerdown+pointerup on the same "hit" constitutes a click.
 */
 var DateClicking = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(DateClicking, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(DateClicking, _super);
     function DateClicking(settings) {
         var _this = _super.call(this, settings) || this;
         _this.handlePointerDown = function (pev) {
@@ -13430,7 +13010,7 @@ var DateClicking = /** @class */ (function (_super) {
                 var _a = _this.hitDragging, initialHit = _a.initialHit, finalHit = _a.finalHit;
                 if (initialHit && finalHit && isHitsEqual(initialHit, finalHit)) {
                     var context = component.context;
-                    var arg = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, buildDatePointApiWithContext(initialHit.dateSpan, context)), { dayEl: initialHit.dayEl, jsEvent: ev.origEvent, view: context.viewApi || context.calendarApi.view });
+                    var arg = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)({}, buildDatePointApiWithContext(initialHit.dateSpan, context)), { dayEl: initialHit.dayEl, jsEvent: ev.origEvent, view: context.viewApi || context.calendarApi.view });
                     context.emitter.trigger('dateClick', arg);
                 }
             }
@@ -13438,7 +13018,7 @@ var DateClicking = /** @class */ (function (_super) {
         // we DO want to watch pointer moves because otherwise finalHit won't get populated
         _this.dragging = new FeaturefulElementDragging(settings.el);
         _this.dragging.autoScroller.isEnabled = false;
-        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.interactionSettingsToStore)(settings));
         hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
         hitDragging.emitter.on('dragend', _this.handleDragEnd);
         return _this;
@@ -13447,14 +13027,14 @@ var DateClicking = /** @class */ (function (_super) {
         this.dragging.destroy();
     };
     return DateClicking;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.Interaction));
 
 /*
 Tracks when the user selects a portion of time of a component,
 constituted by a drag over date cells, with a possible delay at the beginning of the drag.
 */
 var DateSelecting = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(DateSelecting, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(DateSelecting, _super);
     function DateSelecting(settings) {
         var _this = _super.call(this, settings) || this;
         _this.dragSelection = null;
@@ -13489,10 +13069,10 @@ var DateSelecting = /** @class */ (function (_super) {
                 context.dispatch({ type: 'UNSELECT_DATES' });
             }
             if (!isInvalid) {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.enableCursor)();
             }
             else {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.disableCursor)();
             }
             if (!isFinal) {
                 _this.dragSelection = dragSelection; // only clear if moved away from all hits while dragging
@@ -13501,7 +13081,7 @@ var DateSelecting = /** @class */ (function (_super) {
         _this.handlePointerUp = function (pev) {
             if (_this.dragSelection) {
                 // selection is already rendered, so just need to report selection
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["triggerDateSelect"])(_this.dragSelection, pev, _this.component.context);
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.triggerDateSelect)(_this.dragSelection, pev, _this.component.context);
                 _this.dragSelection = null;
             }
         };
@@ -13511,7 +13091,7 @@ var DateSelecting = /** @class */ (function (_super) {
         dragging.touchScrollAllowed = false;
         dragging.minDistance = options.selectMinDistance || 0;
         dragging.autoScroller.isEnabled = options.dragScroll;
-        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.interactionSettingsToStore)(settings));
         hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
         hitDragging.emitter.on('dragstart', _this.handleDragStart);
         hitDragging.emitter.on('hitupdate', _this.handleHitUpdate);
@@ -13522,7 +13102,7 @@ var DateSelecting = /** @class */ (function (_super) {
         this.dragging.destroy();
     };
     return DateSelecting;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.Interaction));
 function getComponentTouchDelay(component) {
     var options = component.context.options;
     var delay = options.selectLongPressDelay;
@@ -13540,7 +13120,7 @@ function joinHitsIntoSelection(hit0, hit1, dateSelectionTransformers) {
         dateSpan1.range.start,
         dateSpan1.range.end
     ];
-    ms.sort(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["compareNumbers"]);
+    ms.sort(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.compareNumbers);
     var props = {};
     for (var _i = 0, dateSelectionTransformers_1 = dateSelectionTransformers; _i < dateSelectionTransformers_1.length; _i++) {
         var transformer = dateSelectionTransformers_1[_i];
@@ -13549,7 +13129,7 @@ function joinHitsIntoSelection(hit0, hit1, dateSelectionTransformers) {
             return null;
         }
         else if (res) {
-            Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(props, res);
+            (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)(props, res);
         }
     }
     props.range = { start: ms[0], end: ms[3] };
@@ -13558,7 +13138,7 @@ function joinHitsIntoSelection(hit0, hit1, dateSelectionTransformers) {
 }
 
 var EventDragging = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(EventDragging, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(EventDragging, _super);
     function EventDragging(settings) {
         var _this = _super.call(this, settings) || this;
         // internal state
@@ -13577,20 +13157,20 @@ var EventDragging = /** @class */ (function (_super) {
             var options = component.context.options;
             var initialContext = component.context;
             _this.subjectEl = ev.subjectEl;
-            var subjectSeg = _this.subjectSeg = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["getElSeg"])(ev.subjectEl);
+            var subjectSeg = _this.subjectSeg = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.getElSeg)(ev.subjectEl);
             var eventRange = _this.eventRange = subjectSeg.eventRange;
             var eventInstanceId = eventRange.instance.instanceId;
-            _this.relevantEvents = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["getRelevantEvents"])(initialContext.getCurrentData().eventStore, eventInstanceId);
+            _this.relevantEvents = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.getRelevantEvents)(initialContext.getCurrentData().eventStore, eventInstanceId);
             dragging.minDistance = ev.isTouch ? 0 : options.eventDragMinDistance;
             dragging.delay =
                 // only do a touch delay if touch and this event hasn't been selected yet
                 (ev.isTouch && eventInstanceId !== component.props.eventSelection) ?
                     getComponentTouchDelay$1(component) :
                     null;
-            mirror.parentNode = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(origTarget, '.fc');
+            mirror.parentNode = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.elementClosest)(origTarget, '.fc');
             mirror.revertDuration = options.dragRevertDuration;
             var isValid = component.isValidSegDownEl(origTarget) &&
-                !Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(origTarget, '.fc-event-resizer'); // NOT on a resizer
+                !(0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.elementClosest)(origTarget, '.fc-event-resizer'); // NOT on a resizer
             dragging.setIgnoreMove(!isValid);
             // disable dragging for elements that are resizable (ie, selectable)
             // but are not draggable
@@ -13615,7 +13195,7 @@ var EventDragging = /** @class */ (function (_super) {
                 initialContext.calendarApi.unselect(ev); // unselect *date* selection
                 initialContext.emitter.trigger('eventDragStart', {
                     el: _this.subjectEl,
-                    event: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["EventApi"](initialContext, eventRange.def, eventRange.instance),
+                    event: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.EventApi(initialContext, eventRange.def, eventRange.instance),
                     jsEvent: ev.origEvent,
                     view: initialContext.viewApi
                 });
@@ -13635,7 +13215,7 @@ var EventDragging = /** @class */ (function (_super) {
             var isInvalid = false;
             var interaction = {
                 affectedEvents: relevantEvents,
-                mutatedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                mutatedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createEmptyEventStore)(),
                 isEvent: true
             };
             if (hit) {
@@ -13646,13 +13226,13 @@ var EventDragging = /** @class */ (function (_super) {
                     receivingOptions.editable && receivingOptions.droppable) {
                     mutation = computeEventMutation(initialHit, hit, receivingContext.getCurrentData().pluginHooks.eventDragMutationMassagers);
                     if (mutation) {
-                        mutatedRelevantEvents = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["applyMutationToEventStore"])(relevantEvents, receivingContext.getCurrentData().eventUiBases, mutation, receivingContext);
+                        mutatedRelevantEvents = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.applyMutationToEventStore)(relevantEvents, receivingContext.getCurrentData().eventUiBases, mutation, receivingContext);
                         interaction.mutatedEvents = mutatedRelevantEvents;
                         if (!receivingComponent.isInteractionValid(interaction)) {
                             isInvalid = true;
                             mutation = null;
                             mutatedRelevantEvents = null;
-                            interaction.mutatedEvents = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])();
+                            interaction.mutatedEvents = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createEmptyEventStore)();
                         }
                     }
                 }
@@ -13662,10 +13242,10 @@ var EventDragging = /** @class */ (function (_super) {
             }
             _this.displayDrag(receivingContext, interaction);
             if (!isInvalid) {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.enableCursor)();
             }
             else {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.disableCursor)();
             }
             if (!isFinal) {
                 if (initialContext === receivingContext && // TODO: write test for this
@@ -13694,7 +13274,7 @@ var EventDragging = /** @class */ (function (_super) {
                 var _a = _this, receivingContext_1 = _a.receivingContext, validMutation = _a.validMutation;
                 var eventDef = _this.eventRange.def;
                 var eventInstance = _this.eventRange.instance;
-                var eventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["EventApi"](initialContext_1, eventDef, eventInstance);
+                var eventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.EventApi(initialContext_1, eventDef, eventInstance);
                 var relevantEvents_1 = _this.relevantEvents;
                 var mutatedRelevantEvents_1 = _this.mutatedRelevantEvents;
                 var finalHit = _this.hitDragging.finalHit;
@@ -13708,7 +13288,7 @@ var EventDragging = /** @class */ (function (_super) {
                 if (validMutation) {
                     // dropped within same calendar
                     if (receivingContext_1 === initialContext_1) {
-                        var updatedEventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["EventApi"](initialContext_1, mutatedRelevantEvents_1.defs[eventDef.defId], eventInstance ? mutatedRelevantEvents_1.instances[eventInstance.instanceId] : null);
+                        var updatedEventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.EventApi(initialContext_1, mutatedRelevantEvents_1.defs[eventDef.defId], eventInstance ? mutatedRelevantEvents_1.instances[eventInstance.instanceId] : null);
                         initialContext_1.dispatch({
                             type: 'MERGE_EVENTS',
                             eventStore: mutatedRelevantEvents_1
@@ -13716,7 +13296,7 @@ var EventDragging = /** @class */ (function (_super) {
                         var eventChangeArg = {
                             oldEvent: eventApi,
                             event: updatedEventApi,
-                            relatedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["buildEventApis"])(mutatedRelevantEvents_1, initialContext_1, eventInstance),
+                            relatedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.buildEventApis)(mutatedRelevantEvents_1, initialContext_1, eventInstance),
                             revert: function () {
                                 initialContext_1.dispatch({
                                     type: 'MERGE_EVENTS',
@@ -13727,16 +13307,16 @@ var EventDragging = /** @class */ (function (_super) {
                         var transformed = {};
                         for (var _i = 0, _b = initialContext_1.getCurrentData().pluginHooks.eventDropTransformers; _i < _b.length; _i++) {
                             var transformer = _b[_i];
-                            Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(transformed, transformer(validMutation, initialContext_1));
+                            (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)(transformed, transformer(validMutation, initialContext_1));
                         }
-                        initialContext_1.emitter.trigger('eventDrop', Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventChangeArg), transformed), { el: ev.subjectEl, delta: validMutation.datesDelta, jsEvent: ev.origEvent, view: initialView }));
+                        initialContext_1.emitter.trigger('eventDrop', (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)({}, eventChangeArg), transformed), { el: ev.subjectEl, delta: validMutation.datesDelta, jsEvent: ev.origEvent, view: initialView }));
                         initialContext_1.emitter.trigger('eventChange', eventChangeArg);
                         // dropped in different calendar
                     }
                     else if (receivingContext_1) {
                         var eventRemoveArg = {
                             event: eventApi,
-                            relatedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["buildEventApis"])(relevantEvents_1, initialContext_1, eventInstance),
+                            relatedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.buildEventApis)(relevantEvents_1, initialContext_1, eventInstance),
                             revert: function () {
                                 initialContext_1.dispatch({
                                     type: 'MERGE_EVENTS',
@@ -13744,7 +13324,7 @@ var EventDragging = /** @class */ (function (_super) {
                                 });
                             }
                         };
-                        initialContext_1.emitter.trigger('eventLeave', Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventRemoveArg), { draggedEl: ev.subjectEl, view: initialView }));
+                        initialContext_1.emitter.trigger('eventLeave', (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)({}, eventRemoveArg), { draggedEl: ev.subjectEl, view: initialView }));
                         initialContext_1.dispatch({
                             type: 'REMOVE_EVENTS',
                             eventStore: relevantEvents_1
@@ -13752,14 +13332,14 @@ var EventDragging = /** @class */ (function (_super) {
                         initialContext_1.emitter.trigger('eventRemove', eventRemoveArg);
                         var addedEventDef = mutatedRelevantEvents_1.defs[eventDef.defId];
                         var addedEventInstance = mutatedRelevantEvents_1.instances[eventInstance.instanceId];
-                        var addedEventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["EventApi"](receivingContext_1, addedEventDef, addedEventInstance);
+                        var addedEventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.EventApi(receivingContext_1, addedEventDef, addedEventInstance);
                         receivingContext_1.dispatch({
                             type: 'MERGE_EVENTS',
                             eventStore: mutatedRelevantEvents_1
                         });
                         var eventAddArg = {
                             event: addedEventApi,
-                            relatedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["buildEventApis"])(mutatedRelevantEvents_1, receivingContext_1, addedEventInstance),
+                            relatedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.buildEventApis)(mutatedRelevantEvents_1, receivingContext_1, addedEventInstance),
                             revert: function () {
                                 receivingContext_1.dispatch({
                                     type: 'REMOVE_EVENTS',
@@ -13774,8 +13354,8 @@ var EventDragging = /** @class */ (function (_super) {
                                 eventInstanceId: eventInstance.instanceId
                             });
                         }
-                        receivingContext_1.emitter.trigger('drop', Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, buildDatePointApiWithContext(finalHit.dateSpan, receivingContext_1)), { draggedEl: ev.subjectEl, jsEvent: ev.origEvent, view: finalHit.component.context.viewApi }));
-                        receivingContext_1.emitter.trigger('eventReceive', Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventAddArg), { draggedEl: ev.subjectEl, view: finalHit.component.context.viewApi }));
+                        receivingContext_1.emitter.trigger('drop', (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)({}, buildDatePointApiWithContext(finalHit.dateSpan, receivingContext_1)), { draggedEl: ev.subjectEl, jsEvent: ev.origEvent, view: finalHit.component.context.viewApi }));
+                        receivingContext_1.emitter.trigger('eventReceive', (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)({}, eventAddArg), { draggedEl: ev.subjectEl, view: finalHit.component.context.viewApi }));
                     }
                 }
                 else {
@@ -13790,7 +13370,7 @@ var EventDragging = /** @class */ (function (_super) {
         dragging.pointer.selector = EventDragging.SELECTOR;
         dragging.touchScrollAllowed = false;
         dragging.autoScroller.isEnabled = options.dragScroll;
-        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsStore"]);
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.interactionSettingsStore);
         hitDragging.useSubjectCenter = settings.useEventCenter;
         hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
         hitDragging.emitter.on('dragstart', _this.handleDragStart);
@@ -13815,7 +13395,7 @@ var EventDragging = /** @class */ (function (_super) {
                     type: 'SET_EVENT_DRAG',
                     state: {
                         affectedEvents: state.affectedEvents,
-                        mutatedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                        mutatedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createEmptyEventStore)(),
                         isEvent: true
                     }
                 });
@@ -13853,7 +13433,7 @@ var EventDragging = /** @class */ (function (_super) {
     // QUESTION: why do we need it on the resizable???
     EventDragging.SELECTOR = '.fc-event-draggable, .fc-event-resizable';
     return EventDragging;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.Interaction));
 function computeEventMutation(hit0, hit1, massagers) {
     var dateSpan0 = hit0.dateSpan;
     var dateSpan1 = hit1.dateSpan;
@@ -13866,10 +13446,10 @@ function computeEventMutation(hit0, hit1, massagers) {
         if (dateSpan1.allDay) {
             // means date1 is already start-of-day,
             // but date0 needs to be converted
-            date0 = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["startOfDay"])(date0);
+            date0 = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.startOfDay)(date0);
         }
     }
-    var delta = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["diffDates"])(date0, date1, hit0.component.context.dateEnv, hit0.component === hit1.component ?
+    var delta = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.diffDates)(date0, date1, hit0.component.context.dateEnv, hit0.component === hit1.component ?
         hit0.component.largeUnit :
         null);
     if (delta.milliseconds) { // has hours/minutes/seconds
@@ -13895,7 +13475,7 @@ function getComponentTouchDelay$1(component) {
 }
 
 var EventResizing = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(EventResizing, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(EventResizing, _super);
     function EventResizing(settings) {
         var _this = _super.call(this, settings) || this;
         // internal state
@@ -13908,7 +13488,7 @@ var EventResizing = /** @class */ (function (_super) {
         _this.handlePointerDown = function (ev) {
             var component = _this.component;
             var segEl = _this.querySegEl(ev);
-            var seg = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["getElSeg"])(segEl);
+            var seg = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.getElSeg)(segEl);
             var eventRange = _this.eventRange = seg.eventRange;
             _this.dragging.minDistance = component.context.options.eventDragMinDistance;
             // if touch, need to be working with a selected event
@@ -13918,14 +13498,14 @@ var EventResizing = /** @class */ (function (_super) {
         _this.handleDragStart = function (ev) {
             var context = _this.component.context;
             var eventRange = _this.eventRange;
-            _this.relevantEvents = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["getRelevantEvents"])(context.getCurrentData().eventStore, _this.eventRange.instance.instanceId);
+            _this.relevantEvents = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.getRelevantEvents)(context.getCurrentData().eventStore, _this.eventRange.instance.instanceId);
             var segEl = _this.querySegEl(ev);
             _this.draggingSegEl = segEl;
-            _this.draggingSeg = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["getElSeg"])(segEl);
+            _this.draggingSeg = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.getElSeg)(segEl);
             context.calendarApi.unselect();
             context.emitter.trigger('eventResizeStart', {
                 el: segEl,
-                event: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["EventApi"](context, eventRange.def, eventRange.instance),
+                event: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.EventApi(context, eventRange.def, eventRange.instance),
                 jsEvent: ev.origEvent,
                 view: context.viewApi
             });
@@ -13940,14 +13520,14 @@ var EventResizing = /** @class */ (function (_super) {
             var isInvalid = false;
             var interaction = {
                 affectedEvents: relevantEvents,
-                mutatedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                mutatedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createEmptyEventStore)(),
                 isEvent: true
             };
             if (hit) {
                 mutation = computeMutation(initialHit, hit, ev.subjectEl.classList.contains('fc-event-resizer-start'), eventInstance.range, context.pluginHooks.eventResizeJoinTransforms);
             }
             if (mutation) {
-                mutatedRelevantEvents = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["applyMutationToEventStore"])(relevantEvents, context.getCurrentData().eventUiBases, mutation, context);
+                mutatedRelevantEvents = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.applyMutationToEventStore)(relevantEvents, context.getCurrentData().eventUiBases, mutation, context);
                 interaction.mutatedEvents = mutatedRelevantEvents;
                 if (!_this.component.isInteractionValid(interaction)) {
                     isInvalid = true;
@@ -13966,10 +13546,10 @@ var EventResizing = /** @class */ (function (_super) {
                 context.dispatch({ type: 'UNSET_EVENT_RESIZE' });
             }
             if (!isInvalid) {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.enableCursor)();
             }
             else {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.disableCursor)();
             }
             if (!isFinal) {
                 if (mutation && isHitsEqual(initialHit, hit)) {
@@ -13983,7 +13563,7 @@ var EventResizing = /** @class */ (function (_super) {
             var context = _this.component.context;
             var eventDef = _this.eventRange.def;
             var eventInstance = _this.eventRange.instance;
-            var eventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["EventApi"](context, eventDef, eventInstance);
+            var eventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.EventApi(context, eventDef, eventInstance);
             var relevantEvents = _this.relevantEvents;
             var mutatedRelevantEvents = _this.mutatedRelevantEvents;
             context.emitter.trigger('eventResizeStop', {
@@ -13993,7 +13573,7 @@ var EventResizing = /** @class */ (function (_super) {
                 view: context.viewApi
             });
             if (_this.validMutation) {
-                var updatedEventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["EventApi"](context, mutatedRelevantEvents.defs[eventDef.defId], eventInstance ? mutatedRelevantEvents.instances[eventInstance.instanceId] : null);
+                var updatedEventApi = new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.EventApi(context, mutatedRelevantEvents.defs[eventDef.defId], eventInstance ? mutatedRelevantEvents.instances[eventInstance.instanceId] : null);
                 context.dispatch({
                     type: 'MERGE_EVENTS',
                     eventStore: mutatedRelevantEvents
@@ -14001,7 +13581,7 @@ var EventResizing = /** @class */ (function (_super) {
                 var eventChangeArg = {
                     oldEvent: eventApi,
                     event: updatedEventApi,
-                    relatedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["buildEventApis"])(mutatedRelevantEvents, context, eventInstance),
+                    relatedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.buildEventApis)(mutatedRelevantEvents, context, eventInstance),
                     revert: function () {
                         context.dispatch({
                             type: 'MERGE_EVENTS',
@@ -14009,7 +13589,7 @@ var EventResizing = /** @class */ (function (_super) {
                         });
                     }
                 };
-                context.emitter.trigger('eventResize', Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, eventChangeArg), { el: _this.draggingSegEl, startDelta: _this.validMutation.startDelta || Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(0), endDelta: _this.validMutation.endDelta || Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(0), jsEvent: ev.origEvent, view: context.viewApi }));
+                context.emitter.trigger('eventResize', (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)({}, eventChangeArg), { el: _this.draggingSegEl, startDelta: _this.validMutation.startDelta || (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createDuration)(0), endDelta: _this.validMutation.endDelta || (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createDuration)(0), jsEvent: ev.origEvent, view: context.viewApi }));
                 context.emitter.trigger('eventChange', eventChangeArg);
             }
             else {
@@ -14026,7 +13606,7 @@ var EventResizing = /** @class */ (function (_super) {
         dragging.pointer.selector = '.fc-event-resizer';
         dragging.touchScrollAllowed = false;
         dragging.autoScroller.isEnabled = component.context.options.dragScroll;
-        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.interactionSettingsToStore)(settings));
         hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
         hitDragging.emitter.on('dragstart', _this.handleDragStart);
         hitDragging.emitter.on('hitupdate', _this.handleHitUpdate);
@@ -14037,15 +13617,15 @@ var EventResizing = /** @class */ (function (_super) {
         this.dragging.destroy();
     };
     EventResizing.prototype.querySegEl = function (ev) {
-        return Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(ev.subjectEl, '.fc-event');
+        return (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.elementClosest)(ev.subjectEl, '.fc-event');
     };
     return EventResizing;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.Interaction));
 function computeMutation(hit0, hit1, isFromStart, instanceRange, transforms) {
     var dateEnv = hit0.component.context.dateEnv;
     var date0 = hit0.dateSpan.range.start;
     var date1 = hit1.dateSpan.range.start;
-    var delta = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["diffDates"])(date0, date1, dateEnv, hit0.component.largeUnit);
+    var delta = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.diffDates)(date0, date1, dateEnv, hit0.component.largeUnit);
     var props = {};
     for (var _i = 0, transforms_1 = transforms; _i < transforms_1.length; _i++) {
         var transform = transforms_1[_i];
@@ -14054,7 +13634,7 @@ function computeMutation(hit0, hit1, isFromStart, instanceRange, transforms) {
             return null;
         }
         else if (res) {
-            Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(props, res);
+            (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)(props, res);
         }
     }
     if (isFromStart) {
@@ -14087,8 +13667,8 @@ var UnselectAuto = /** @class */ (function () {
         this.onDocumentPointerDown = function (pev) {
             var unselectCancel = _this.context.options.unselectCancel;
             var downEl = pev.origEvent.target;
-            _this.matchesCancel = !!Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(downEl, unselectCancel);
-            _this.matchesEvent = !!Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(downEl, EventDragging.SELECTOR); // interaction started on an event?
+            _this.matchesCancel = !!(0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.elementClosest)(downEl, unselectCancel);
+            _this.matchesEvent = !!(0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.elementClosest)(downEl, EventDragging.SELECTOR); // interaction started on an event?
         };
         this.onDocumentPointerUp = function (pev) {
             var context = _this.context;
@@ -14130,16 +13710,16 @@ var UnselectAuto = /** @class */ (function () {
 }());
 
 var LISTENER_REFINERS = {
-    dateClick: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    eventDragStart: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    eventDragStop: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    eventDrop: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    eventResizeStart: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    eventResizeStop: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    eventResize: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    drop: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    eventReceive: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"],
-    eventLeave: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["identity"]
+    dateClick: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    eventDragStart: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    eventDragStop: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    eventDrop: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    eventResizeStart: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    eventResizeStop: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    eventResize: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    drop: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    eventReceive: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity,
+    eventLeave: _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.identity
 };
 
 /*
@@ -14163,18 +13743,18 @@ var ExternalElementDragging = /** @class */ (function () {
             var droppableEvent = null;
             var isInvalid = false;
             var interaction = {
-                affectedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
-                mutatedEvents: Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                affectedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createEmptyEventStore)(),
+                mutatedEvents: (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createEmptyEventStore)(),
                 isEvent: _this.dragMeta.create
             };
             if (hit) {
                 receivingContext = hit.component.context;
                 if (_this.canDropElOnCalendar(ev.subjectEl, receivingContext)) {
                     droppableEvent = computeEventForDateSpan(hit.dateSpan, _this.dragMeta, receivingContext);
-                    interaction.mutatedEvents = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["eventTupleToStore"])(droppableEvent);
-                    isInvalid = !Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["isInteractionValid"])(interaction, receivingContext);
+                    interaction.mutatedEvents = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.eventTupleToStore)(droppableEvent);
+                    isInvalid = !(0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.isInteractionValid)(interaction, receivingContext);
                     if (isInvalid) {
-                        interaction.mutatedEvents = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])();
+                        interaction.mutatedEvents = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createEmptyEventStore)();
                         droppableEvent = null;
                     }
                 }
@@ -14184,10 +13764,10 @@ var ExternalElementDragging = /** @class */ (function () {
             // TODO: wish we could somehow wait for dispatch to guarantee render
             dragging.setMirrorIsVisible(isFinal || !droppableEvent || !document.querySelector('.fc-event-mirror'));
             if (!isInvalid) {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.enableCursor)();
             }
             else {
-                Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+                (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.disableCursor)();
             }
             if (!isFinal) {
                 dragging.setMirrorNeedsRevert(!droppableEvent);
@@ -14202,9 +13782,9 @@ var ExternalElementDragging = /** @class */ (function () {
                 var finalHit = _this.hitDragging.finalHit;
                 var finalView = finalHit.component.context.viewApi;
                 var dragMeta = _this.dragMeta;
-                receivingContext.emitter.trigger('drop', Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, buildDatePointApiWithContext(finalHit.dateSpan, receivingContext)), { draggedEl: pev.subjectEl, jsEvent: pev.origEvent, view: finalView }));
+                receivingContext.emitter.trigger('drop', (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)({}, buildDatePointApiWithContext(finalHit.dateSpan, receivingContext)), { draggedEl: pev.subjectEl, jsEvent: pev.origEvent, view: finalView }));
                 if (dragMeta.create) {
-                    var addingEvents_1 = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["eventTupleToStore"])(droppableEvent);
+                    var addingEvents_1 = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.eventTupleToStore)(droppableEvent);
                     receivingContext.dispatch({
                         type: 'MERGE_EVENTS',
                         eventStore: addingEvents_1
@@ -14217,7 +13797,7 @@ var ExternalElementDragging = /** @class */ (function () {
                     }
                     // signal that an external event landed
                     receivingContext.emitter.trigger('eventReceive', {
-                        event: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["EventApi"](receivingContext, droppableEvent.def, droppableEvent.instance),
+                        event: new _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.EventApi(receivingContext, droppableEvent.def, droppableEvent.instance),
                         relatedEvents: [],
                         revert: function () {
                             receivingContext.dispatch({
@@ -14233,7 +13813,7 @@ var ExternalElementDragging = /** @class */ (function () {
             _this.receivingContext = null;
             _this.droppableEvent = null;
         };
-        var hitDragging = this.hitDragging = new HitDragging(dragging, _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsStore"]);
+        var hitDragging = this.hitDragging = new HitDragging(dragging, _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.interactionSettingsStore);
         hitDragging.requireInitial = false; // will start outside of a component
         hitDragging.emitter.on('dragstart', this.handleDragStart);
         hitDragging.emitter.on('hitupdate', this.handleHitUpdate);
@@ -14242,10 +13822,10 @@ var ExternalElementDragging = /** @class */ (function () {
     }
     ExternalElementDragging.prototype.buildDragMeta = function (subjectEl) {
         if (typeof this.suppliedDragMeta === 'object') {
-            return Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(this.suppliedDragMeta);
+            return (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.parseDragMeta)(this.suppliedDragMeta);
         }
         else if (typeof this.suppliedDragMeta === 'function') {
-            return Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(this.suppliedDragMeta(subjectEl));
+            return (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.parseDragMeta)(this.suppliedDragMeta(subjectEl));
         }
         else {
             return getDragMetaFromEl(subjectEl);
@@ -14271,7 +13851,7 @@ var ExternalElementDragging = /** @class */ (function () {
             return dropAccept.call(receivingContext.calendarApi, el);
         }
         else if (typeof dropAccept === 'string' && dropAccept) {
-            return Boolean(Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["elementMatches"])(el, dropAccept));
+            return Boolean((0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.elementMatches)(el, dropAccept));
         }
         return true;
     };
@@ -14280,13 +13860,13 @@ var ExternalElementDragging = /** @class */ (function () {
 // Utils for computing event store from the DragMeta
 // ----------------------------------------------------------------------------------------------------
 function computeEventForDateSpan(dateSpan, dragMeta, context) {
-    var defProps = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, dragMeta.leftoverProps);
+    var defProps = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)({}, dragMeta.leftoverProps);
     for (var _i = 0, _a = context.pluginHooks.externalDefTransforms; _i < _a.length; _i++) {
         var transform = _a[_i];
-        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(defProps, transform(dateSpan, dragMeta));
+        (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__assign)(defProps, transform(dateSpan, dragMeta));
     }
-    var _b = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["refineEventDef"])(defProps, context), refined = _b.refined, extra = _b.extra;
-    var def = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["parseEventDef"])(refined, extra, dragMeta.sourceId, dateSpan.allDay, context.options.forceEventDuration || Boolean(dragMeta.duration), // hasEnd
+    var _b = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.refineEventDef)(defProps, context), refined = _b.refined, extra = _b.extra;
+    var def = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.parseEventDef)(refined, extra, dragMeta.sourceId, dateSpan.allDay, context.options.forceEventDuration || Boolean(dragMeta.duration), // hasEnd
     context);
     var start = dateSpan.range.start;
     // only rely on time info if drop zone is all-day,
@@ -14296,8 +13876,8 @@ function computeEventForDateSpan(dateSpan, dragMeta, context) {
     }
     var end = dragMeta.duration ?
         context.dateEnv.add(start, dragMeta.duration) :
-        Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["getDefaultEventEnd"])(dateSpan.allDay, start, context);
-    var instance = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createEventInstance"])(def.defId, { start: start, end: end });
+        (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.getDefaultEventEnd)(dateSpan.allDay, start, context);
+    var instance = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createEventInstance)(def.defId, { start: start, end: end });
     return { def: def, instance: instance };
 }
 // Utils for extracting data from element
@@ -14307,11 +13887,11 @@ function getDragMetaFromEl(el) {
     var obj = str ?
         JSON.parse(str) :
         { create: false }; // if no embedded data, assume no event creation
-    return Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(obj);
+    return (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.parseDragMeta)(obj);
 }
-_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["config"].dataAttrPrefix = '';
+_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.config.dataAttrPrefix = '';
 function getEmbeddedElData(el, name) {
-    var prefix = _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["config"].dataAttrPrefix;
+    var prefix = _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.config.dataAttrPrefix;
     var prefixedName = (prefix ? prefix + '-' : '') + name;
     return el.getAttribute('data-' + prefixedName) || '';
 }
@@ -14331,10 +13911,10 @@ var ExternalDraggable = /** @class */ (function () {
             dragging.minDistance =
                 minDistance != null ?
                     minDistance :
-                    (ev.isTouch ? 0 : _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["BASE_OPTION_DEFAULTS"].eventDragMinDistance);
+                    (ev.isTouch ? 0 : _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.BASE_OPTION_DEFAULTS.eventDragMinDistance);
             dragging.delay =
                 ev.isTouch ? // TODO: eventually read eventLongPressDelay instead vvv
-                    (longPressDelay != null ? longPressDelay : _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["BASE_OPTION_DEFAULTS"].longPressDelay) :
+                    (longPressDelay != null ? longPressDelay : _fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.BASE_OPTION_DEFAULTS.longPressDelay) :
                     0;
         };
         this.handleDragStart = function (ev) {
@@ -14370,7 +13950,7 @@ This class simply monitors for pointer movements and fires events.
 It also has the ability to hide the moving element (the "mirror") during the drag.
 */
 var InferredElementDragging = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(InferredElementDragging, _super);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(InferredElementDragging, _super);
     function InferredElementDragging(containerEl) {
         var _this = _super.call(this, containerEl) || this;
         _this.shouldIgnoreMove = false;
@@ -14427,7 +14007,7 @@ var InferredElementDragging = /** @class */ (function (_super) {
         }
     };
     return InferredElementDragging;
-}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["ElementDragging"]));
+}(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.ElementDragging));
 
 /*
 Bridges third-party drag-n-drop systems with FullCalendar.
@@ -14464,14 +14044,14 @@ var ThirdPartyDraggable = /** @class */ (function () {
     return ThirdPartyDraggable;
 }());
 
-var main = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createPlugin"])({
+var main = (0,_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__.createPlugin)({
     componentInteractions: [DateClicking, DateSelecting, EventDragging, EventResizing],
     calendarInteractions: [UnselectAuto],
     elementDraggingImpl: FeaturefulElementDragging,
     listenerRefiners: LISTENER_REFINERS
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (main);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (main);
 
 //# sourceMappingURL=main.js.map
 
@@ -14482,34 +14062,35 @@ var main = Object(_fullcalendar_common__WEBPACK_IMPORTED_MODULE_0__["createPlugi
 /*!********************************************************************************!*\
   !*** ./node_modules/@fullcalendar/interaction/node_modules/tslib/tslib.es6.js ***!
   \********************************************************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__extends": () => (/* binding */ __extends),
+/* harmony export */   "__assign": () => (/* binding */ __assign),
+/* harmony export */   "__rest": () => (/* binding */ __rest),
+/* harmony export */   "__decorate": () => (/* binding */ __decorate),
+/* harmony export */   "__param": () => (/* binding */ __param),
+/* harmony export */   "__metadata": () => (/* binding */ __metadata),
+/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
+/* harmony export */   "__generator": () => (/* binding */ __generator),
+/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
+/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
+/* harmony export */   "__values": () => (/* binding */ __values),
+/* harmony export */   "__read": () => (/* binding */ __read),
+/* harmony export */   "__spread": () => (/* binding */ __spread),
+/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
+/* harmony export */   "__await": () => (/* binding */ __await),
+/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
+/* harmony export */   "__asyncDelegator": () => (/* binding */ __asyncDelegator),
+/* harmony export */   "__asyncValues": () => (/* binding */ __asyncValues),
+/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
+/* harmony export */   "__importStar": () => (/* binding */ __importStar),
+/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__classPrivateFieldGet": () => (/* binding */ __classPrivateFieldGet),
+/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet)
+/* harmony export */ });
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -14741,622 +14322,221 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 /***/ }),
 
-/***/ "./node_modules/@fullcalendar/vue/dist/FullCalendar.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@fullcalendar/vue/dist/FullCalendar.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/vue/node_modules/tslib/tslib.es6.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.js");
-/* harmony import */ var _options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./options */ "./node_modules/@fullcalendar/vue/dist/options.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ "./node_modules/@fullcalendar/vue/dist/utils.js");
-/* harmony import */ var _custom_content_type__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./custom-content-type */ "./node_modules/@fullcalendar/vue/dist/custom-content-type.js");
-
-
-
-
-
-
-var FullCalendar = vue__WEBPACK_IMPORTED_MODULE_1___default.a.extend({
-    props: {
-        options: Object
-    },
-    data: initData,
-    render: function (createElement) {
-        return createElement('div', {
-            // when renderId is changed, Vue will trigger a real-DOM async rerender, calling beforeUpdate/updated
-            attrs: { 'data-fc-render-id': this.renderId }
-        });
-    },
-    mounted: function () {
-        var internal = this.$options;
-        internal.scopedSlotOptions = Object(_utils__WEBPACK_IMPORTED_MODULE_4__["mapHash"])(this.$scopedSlots, _custom_content_type__WEBPACK_IMPORTED_MODULE_5__["wrapVDomGenerator"]); // needed for buildOptions
-        var calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_2__["Calendar"](this.$el, this.buildOptions(this.options));
-        internal.calendar = calendar;
-        calendar.render();
-    },
-    methods: {
-        getApi: getApi,
-        buildOptions: buildOptions,
-    },
-    beforeUpdate: function () {
-        this.getApi().resumeRendering(); // the watcher handlers paused it
-    },
-    beforeDestroy: function () {
-        this.getApi().destroy();
-    },
-    watch: buildWatchers()
-});
-function initData() {
-    return {
-        renderId: 0
-    };
-}
-function buildOptions(suppliedOptions) {
-    var internal = this.$options;
-    suppliedOptions = suppliedOptions || {};
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, internal.scopedSlotOptions), suppliedOptions), { plugins: (suppliedOptions.plugins || []).concat([
-            _custom_content_type__WEBPACK_IMPORTED_MODULE_5__["VueContentTypePlugin"]
-        ]) });
-}
-function getApi() {
-    var internal = this.$options;
-    return internal.calendar;
-}
-function buildWatchers() {
-    var watchers = {
-        // watches changes of ALL options and their nested objects,
-        // but this is only a means to be notified of top-level non-complex options changes.
-        options: {
-            deep: true,
-            handler: function (options) {
-                var calendar = this.getApi();
-                calendar.pauseRendering();
-                calendar.resetOptions(this.buildOptions(options));
-                this.renderId++; // will queue a rerender
-            }
-        }
-    };
-    var _loop_1 = function (complexOptionName) {
-        // handlers called when nested objects change
-        watchers["options." + complexOptionName] = {
-            deep: true,
-            handler: function (val) {
-                var _a;
-                // unfortunately the handler is called with undefined if new props were set, but the complex one wasn't ever set
-                if (val !== undefined) {
-                    var calendar = this.getApi();
-                    calendar.pauseRendering();
-                    calendar.resetOptions((_a = {},
-                        // the only reason we shallow-copy is to trick FC into knowing there's a nested change.
-                        // TODO: future versions of FC will more gracefully handle event option-changes that are same-reference.
-                        _a[complexOptionName] = Object(_utils__WEBPACK_IMPORTED_MODULE_4__["shallowCopy"])(val),
-                        _a), true);
-                    this.renderId++; // will queue a rerender
-                }
-            }
-        };
-    };
-    for (var complexOptionName in _options__WEBPACK_IMPORTED_MODULE_3__["OPTION_IS_COMPLEX"]) {
-        _loop_1(complexOptionName);
-    }
-    return watchers;
-}
-/* harmony default export */ __webpack_exports__["default"] = (FullCalendar);
-//# sourceMappingURL=FullCalendar.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@fullcalendar/vue/dist/custom-content-type.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@fullcalendar/vue/dist/custom-content-type.js ***!
-  \********************************************************************/
-/*! exports provided: wrapVDomGenerator, VueContentTypePlugin */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrapVDomGenerator", function() { return wrapVDomGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VueContentTypePlugin", function() { return VueContentTypePlugin; });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.js");
-
-
-/*
-wrap it in an object with a `vue` key, which the custom content-type handler system will look for
-*/
-function wrapVDomGenerator(vDomGenerator) {
-    return function (props) {
-        return { vue: vDomGenerator(props) };
-    };
-}
-var VueContentTypePlugin = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createPlugin"])({
-    contentTypeHandlers: {
-        vue: buildVDomHandler // looks for the `vue` key
-    }
-});
-function buildVDomHandler() {
-    var currentEl;
-    var v; // the Vue instance
-    return function (el, vDomContent) {
-        if (currentEl !== el) {
-            if (currentEl && v) { // if changing elements, recreate the vue
-                v.$destroy();
-            }
-            currentEl = el;
-        }
-        if (!v) {
-            v = initVue(vDomContent);
-            // vue's mount method *replaces* the given element. create an artificial inner el
-            var innerEl = document.createElement('span');
-            el.appendChild(innerEl);
-            v.$mount(innerEl);
-        }
-        else {
-            v.content = vDomContent;
-        }
-    };
-}
-function initVue(initialContent) {
-    return new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-        props: {
-            content: Array
-        },
-        propsData: {
-            content: initialContent
-        },
-        render: function (h) {
-            var content = this.content;
-            // the slot result can be an array, but the returned value of a vue component's
-            // render method must be a single node.
-            if (content.length === 1) {
-                return content[0];
-            }
-            else {
-                return h('span', {}, content);
-            }
-        }
-    });
-}
-//# sourceMappingURL=custom-content-type.js.map
-
-/***/ }),
-
 /***/ "./node_modules/@fullcalendar/vue/dist/main.js":
 /*!*****************************************************!*\
   !*** ./node_modules/@fullcalendar/vue/dist/main.js ***!
   \*****************************************************/
-/*! exports provided: install, default, Component, createElement, render, createRef, Fragment, createContext, flushToDom, BASE_OPTION_DEFAULTS, BASE_OPTION_REFINERS, BaseComponent, BgEvent, CalendarApi, CalendarContent, CalendarDataManager, CalendarDataProvider, CalendarRoot, ContentHook, CustomContentRenderContext, DateComponent, DateEnv, DateProfileGenerator, DayCellContent, DayCellRoot, DayHeader, DaySeriesModel, DayTableModel, DelayedRunner, ElementDragging, ElementScrollController, Emitter, EventApi, EventRoot, EventSourceApi, Interaction, MountHook, NamedTimeZoneImpl, NowIndicatorRoot, NowTimer, PositionCache, RefMap, RenderHook, ScrollController, ScrollResponder, Scroller, SimpleScrollGrid, Slicer, Splitter, StandardEvent, TableDateCell, TableDowCell, Theme, ViewApi, ViewContextType, ViewRoot, WeekNumberRoot, WindowScrollController, addDays, addDurations, addMs, addWeeks, allowContextMenu, allowSelection, applyMutationToEventStore, applyStyle, applyStyleProp, asCleanDays, asRoughMinutes, asRoughMs, asRoughSeconds, buildClassNameNormalizer, buildEventApis, buildEventRangeKey, buildHashFromArray, buildNavLinkData, buildSegCompareObj, buildSegTimeText, collectFromHash, combineEventUis, compareByFieldSpec, compareByFieldSpecs, compareNumbers, compareObjs, computeEdges, computeFallbackHeaderFormat, computeHeightAndMargins, computeInnerRect, computeRect, computeSegDraggable, computeSegEndResizable, computeSegStartResizable, computeShrinkWidth, computeSmallestCellWidth, computeVisibleDayRange, config, constrainPoint, createDuration, createEmptyEventStore, createEventInstance, createEventUi, createFormatter, createPlugin, diffDates, diffDayAndTime, diffDays, diffPoints, diffWeeks, diffWholeDays, diffWholeWeeks, disableCursor, elementClosest, elementMatches, enableCursor, eventTupleToStore, filterEventStoreDefs, filterHash, findDirectChildren, findElements, flexibleCompare, formatDate, formatDayString, formatIsoTimeString, formatRange, getAllowYScrolling, getCanVGrowWithinCell, getClippingParents, getDateMeta, getDayClassNames, getDefaultEventEnd, getElSeg, getEventClassNames, getIsRtlScrollbarOnLeft, getRectCenter, getRelevantEvents, getScrollGridClassNames, getScrollbarWidths, getSectionClassNames, getSectionHasLiquidHeight, getSegMeta, getSlotClassNames, getStickyFooterScrollbar, getStickyHeaderDates, getUnequalProps, globalLocales, globalPlugins, greatestDurationDenominator, guid, hasBgRendering, hasShrinkWidth, identity, interactionSettingsStore, interactionSettingsToStore, intersectRanges, intersectRects, isArraysEqual, isColPropsEqual, isDateSpansEqual, isInt, isInteractionValid, isMultiDayRange, isPropsEqual, isPropsValid, isValidDate, listenBySelector, mapHash, memoize, memoizeArraylike, memoizeHashlike, memoizeObjArg, mergeEventStores, multiplyDuration, padStart, parseBusinessHours, parseClassNames, parseDragMeta, parseEventDef, parseFieldSpecs, parseMarker, pointInsideRect, preventContextMenu, preventDefault, preventSelection, rangeContainsMarker, rangeContainsRange, rangesEqual, rangesIntersect, refineEventDef, refineProps, removeElement, removeExact, renderChunkContent, renderFill, renderMicroColGroup, renderScrollShim, requestJson, sanitizeShrinkWidth, setElSeg, setRef, sliceEventStore, sliceEvents, sortEventSegs, startOfDay, translateRect, triggerDateSelect, unpromisify, version, whenTransitionDone, wholeDivideDurations, Calendar */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
-/* harmony import */ var _FullCalendar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FullCalendar */ "./node_modules/@fullcalendar/vue/dist/FullCalendar.js");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "install": () => (/* binding */ install),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "BASE_OPTION_DEFAULTS": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.BASE_OPTION_DEFAULTS),
+/* harmony export */   "BASE_OPTION_REFINERS": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.BASE_OPTION_REFINERS),
+/* harmony export */   "BaseComponent": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.BaseComponent),
+/* harmony export */   "BgEvent": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.BgEvent),
+/* harmony export */   "Calendar": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.Calendar),
+/* harmony export */   "CalendarApi": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.CalendarApi),
+/* harmony export */   "CalendarContent": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.CalendarContent),
+/* harmony export */   "CalendarDataManager": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.CalendarDataManager),
+/* harmony export */   "CalendarDataProvider": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.CalendarDataProvider),
+/* harmony export */   "CalendarRoot": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.CalendarRoot),
+/* harmony export */   "ContentHook": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.ContentHook),
+/* harmony export */   "CustomContentRenderContext": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.CustomContentRenderContext),
+/* harmony export */   "DateComponent": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DateComponent),
+/* harmony export */   "DateEnv": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DateEnv),
+/* harmony export */   "DateProfileGenerator": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DateProfileGenerator),
+/* harmony export */   "DayCellContent": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DayCellContent),
+/* harmony export */   "DayCellRoot": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DayCellRoot),
+/* harmony export */   "DayHeader": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DayHeader),
+/* harmony export */   "DaySeriesModel": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DaySeriesModel),
+/* harmony export */   "DayTableModel": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DayTableModel),
+/* harmony export */   "DelayedRunner": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.DelayedRunner),
+/* harmony export */   "ElementDragging": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.ElementDragging),
+/* harmony export */   "ElementScrollController": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.ElementScrollController),
+/* harmony export */   "Emitter": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.Emitter),
+/* harmony export */   "EventApi": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.EventApi),
+/* harmony export */   "EventRoot": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.EventRoot),
+/* harmony export */   "EventSourceApi": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.EventSourceApi),
+/* harmony export */   "Interaction": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.Interaction),
+/* harmony export */   "MountHook": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.MountHook),
+/* harmony export */   "NamedTimeZoneImpl": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.NamedTimeZoneImpl),
+/* harmony export */   "NowIndicatorRoot": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.NowIndicatorRoot),
+/* harmony export */   "NowTimer": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.NowTimer),
+/* harmony export */   "PositionCache": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.PositionCache),
+/* harmony export */   "RefMap": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.RefMap),
+/* harmony export */   "RenderHook": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.RenderHook),
+/* harmony export */   "ScrollController": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.ScrollController),
+/* harmony export */   "ScrollResponder": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.ScrollResponder),
+/* harmony export */   "Scroller": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.Scroller),
+/* harmony export */   "SimpleScrollGrid": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.SimpleScrollGrid),
+/* harmony export */   "Slicer": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.Slicer),
+/* harmony export */   "Splitter": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.Splitter),
+/* harmony export */   "StandardEvent": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.StandardEvent),
+/* harmony export */   "TableDateCell": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.TableDateCell),
+/* harmony export */   "TableDowCell": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.TableDowCell),
+/* harmony export */   "Theme": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.Theme),
+/* harmony export */   "ViewApi": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.ViewApi),
+/* harmony export */   "ViewContextType": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.ViewContextType),
+/* harmony export */   "ViewRoot": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.ViewRoot),
+/* harmony export */   "WeekNumberRoot": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.WeekNumberRoot),
+/* harmony export */   "WindowScrollController": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.WindowScrollController),
+/* harmony export */   "addDays": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.addDays),
+/* harmony export */   "addDurations": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.addDurations),
+/* harmony export */   "addMs": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.addMs),
+/* harmony export */   "addWeeks": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.addWeeks),
+/* harmony export */   "allowContextMenu": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.allowContextMenu),
+/* harmony export */   "allowSelection": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.allowSelection),
+/* harmony export */   "applyMutationToEventStore": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.applyMutationToEventStore),
+/* harmony export */   "applyStyle": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.applyStyle),
+/* harmony export */   "applyStyleProp": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.applyStyleProp),
+/* harmony export */   "asCleanDays": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.asCleanDays),
+/* harmony export */   "asRoughMinutes": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.asRoughMinutes),
+/* harmony export */   "asRoughMs": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.asRoughMs),
+/* harmony export */   "asRoughSeconds": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.asRoughSeconds),
+/* harmony export */   "buildClassNameNormalizer": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.buildClassNameNormalizer),
+/* harmony export */   "buildEventApis": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.buildEventApis),
+/* harmony export */   "buildEventRangeKey": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.buildEventRangeKey),
+/* harmony export */   "buildHashFromArray": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.buildHashFromArray),
+/* harmony export */   "buildNavLinkData": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.buildNavLinkData),
+/* harmony export */   "buildSegCompareObj": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.buildSegCompareObj),
+/* harmony export */   "buildSegTimeText": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.buildSegTimeText),
+/* harmony export */   "collectFromHash": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.collectFromHash),
+/* harmony export */   "combineEventUis": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.combineEventUis),
+/* harmony export */   "compareByFieldSpec": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.compareByFieldSpec),
+/* harmony export */   "compareByFieldSpecs": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.compareByFieldSpecs),
+/* harmony export */   "compareNumbers": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.compareNumbers),
+/* harmony export */   "compareObjs": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.compareObjs),
+/* harmony export */   "computeEdges": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeEdges),
+/* harmony export */   "computeFallbackHeaderFormat": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeFallbackHeaderFormat),
+/* harmony export */   "computeHeightAndMargins": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeHeightAndMargins),
+/* harmony export */   "computeInnerRect": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeInnerRect),
+/* harmony export */   "computeRect": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeRect),
+/* harmony export */   "computeSegDraggable": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeSegDraggable),
+/* harmony export */   "computeSegEndResizable": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeSegEndResizable),
+/* harmony export */   "computeSegStartResizable": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeSegStartResizable),
+/* harmony export */   "computeShrinkWidth": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeShrinkWidth),
+/* harmony export */   "computeSmallestCellWidth": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeSmallestCellWidth),
+/* harmony export */   "computeVisibleDayRange": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.computeVisibleDayRange),
+/* harmony export */   "config": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.config),
+/* harmony export */   "constrainPoint": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.constrainPoint),
+/* harmony export */   "createDuration": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.createDuration),
+/* harmony export */   "createEmptyEventStore": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.createEmptyEventStore),
+/* harmony export */   "createEventInstance": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.createEventInstance),
+/* harmony export */   "createEventUi": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.createEventUi),
+/* harmony export */   "createFormatter": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.createFormatter),
+/* harmony export */   "createPlugin": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.createPlugin),
+/* harmony export */   "diffDates": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.diffDates),
+/* harmony export */   "diffDayAndTime": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.diffDayAndTime),
+/* harmony export */   "diffDays": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.diffDays),
+/* harmony export */   "diffPoints": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.diffPoints),
+/* harmony export */   "diffWeeks": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.diffWeeks),
+/* harmony export */   "diffWholeDays": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.diffWholeDays),
+/* harmony export */   "diffWholeWeeks": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.diffWholeWeeks),
+/* harmony export */   "disableCursor": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.disableCursor),
+/* harmony export */   "elementClosest": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.elementClosest),
+/* harmony export */   "elementMatches": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.elementMatches),
+/* harmony export */   "enableCursor": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.enableCursor),
+/* harmony export */   "eventTupleToStore": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.eventTupleToStore),
+/* harmony export */   "filterEventStoreDefs": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.filterEventStoreDefs),
+/* harmony export */   "filterHash": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.filterHash),
+/* harmony export */   "findDirectChildren": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.findDirectChildren),
+/* harmony export */   "findElements": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.findElements),
+/* harmony export */   "flexibleCompare": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.flexibleCompare),
+/* harmony export */   "formatDate": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.formatDate),
+/* harmony export */   "formatDayString": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.formatDayString),
+/* harmony export */   "formatIsoTimeString": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.formatIsoTimeString),
+/* harmony export */   "formatRange": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.formatRange),
+/* harmony export */   "getAllowYScrolling": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getAllowYScrolling),
+/* harmony export */   "getCanVGrowWithinCell": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getCanVGrowWithinCell),
+/* harmony export */   "getClippingParents": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getClippingParents),
+/* harmony export */   "getDateMeta": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getDateMeta),
+/* harmony export */   "getDayClassNames": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getDayClassNames),
+/* harmony export */   "getDefaultEventEnd": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getDefaultEventEnd),
+/* harmony export */   "getElSeg": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getElSeg),
+/* harmony export */   "getEventClassNames": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getEventClassNames),
+/* harmony export */   "getIsRtlScrollbarOnLeft": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getIsRtlScrollbarOnLeft),
+/* harmony export */   "getRectCenter": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getRectCenter),
+/* harmony export */   "getRelevantEvents": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getRelevantEvents),
+/* harmony export */   "getScrollGridClassNames": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getScrollGridClassNames),
+/* harmony export */   "getScrollbarWidths": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getScrollbarWidths),
+/* harmony export */   "getSectionClassNames": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getSectionClassNames),
+/* harmony export */   "getSectionHasLiquidHeight": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getSectionHasLiquidHeight),
+/* harmony export */   "getSegMeta": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getSegMeta),
+/* harmony export */   "getSlotClassNames": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getSlotClassNames),
+/* harmony export */   "getStickyFooterScrollbar": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getStickyFooterScrollbar),
+/* harmony export */   "getStickyHeaderDates": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getStickyHeaderDates),
+/* harmony export */   "getUnequalProps": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.getUnequalProps),
+/* harmony export */   "globalLocales": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.globalLocales),
+/* harmony export */   "globalPlugins": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.globalPlugins),
+/* harmony export */   "greatestDurationDenominator": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.greatestDurationDenominator),
+/* harmony export */   "guid": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.guid),
+/* harmony export */   "hasBgRendering": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.hasBgRendering),
+/* harmony export */   "hasShrinkWidth": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.hasShrinkWidth),
+/* harmony export */   "identity": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.identity),
+/* harmony export */   "interactionSettingsStore": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.interactionSettingsStore),
+/* harmony export */   "interactionSettingsToStore": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.interactionSettingsToStore),
+/* harmony export */   "intersectRanges": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.intersectRanges),
+/* harmony export */   "intersectRects": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.intersectRects),
+/* harmony export */   "isArraysEqual": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isArraysEqual),
+/* harmony export */   "isColPropsEqual": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isColPropsEqual),
+/* harmony export */   "isDateSpansEqual": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isDateSpansEqual),
+/* harmony export */   "isInt": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isInt),
+/* harmony export */   "isInteractionValid": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isInteractionValid),
+/* harmony export */   "isMultiDayRange": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isMultiDayRange),
+/* harmony export */   "isPropsEqual": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isPropsEqual),
+/* harmony export */   "isPropsValid": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isPropsValid),
+/* harmony export */   "isValidDate": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.isValidDate),
+/* harmony export */   "listenBySelector": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.listenBySelector),
+/* harmony export */   "mapHash": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.mapHash),
+/* harmony export */   "memoize": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.memoize),
+/* harmony export */   "memoizeArraylike": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.memoizeArraylike),
+/* harmony export */   "memoizeHashlike": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.memoizeHashlike),
+/* harmony export */   "memoizeObjArg": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.memoizeObjArg),
+/* harmony export */   "mergeEventStores": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.mergeEventStores),
+/* harmony export */   "multiplyDuration": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.multiplyDuration),
+/* harmony export */   "padStart": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.padStart),
+/* harmony export */   "parseBusinessHours": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.parseBusinessHours),
+/* harmony export */   "parseClassNames": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.parseClassNames),
+/* harmony export */   "parseDragMeta": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.parseDragMeta),
+/* harmony export */   "parseEventDef": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.parseEventDef),
+/* harmony export */   "parseFieldSpecs": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.parseFieldSpecs),
+/* harmony export */   "parseMarker": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.parseMarker),
+/* harmony export */   "pointInsideRect": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.pointInsideRect),
+/* harmony export */   "preventContextMenu": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.preventContextMenu),
+/* harmony export */   "preventDefault": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.preventDefault),
+/* harmony export */   "preventSelection": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.preventSelection),
+/* harmony export */   "rangeContainsMarker": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.rangeContainsMarker),
+/* harmony export */   "rangeContainsRange": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.rangeContainsRange),
+/* harmony export */   "rangesEqual": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.rangesEqual),
+/* harmony export */   "rangesIntersect": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.rangesIntersect),
+/* harmony export */   "refineEventDef": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.refineEventDef),
+/* harmony export */   "refineProps": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.refineProps),
+/* harmony export */   "removeElement": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.removeElement),
+/* harmony export */   "removeExact": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.removeExact),
+/* harmony export */   "renderChunkContent": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.renderChunkContent),
+/* harmony export */   "renderFill": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.renderFill),
+/* harmony export */   "renderMicroColGroup": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.renderMicroColGroup),
+/* harmony export */   "renderScrollShim": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.renderScrollShim),
+/* harmony export */   "requestJson": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.requestJson),
+/* harmony export */   "sanitizeShrinkWidth": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.sanitizeShrinkWidth),
+/* harmony export */   "setElSeg": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.setElSeg),
+/* harmony export */   "setRef": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.setRef),
+/* harmony export */   "sliceEventStore": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.sliceEventStore),
+/* harmony export */   "sliceEvents": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.sliceEvents),
+/* harmony export */   "sortEventSegs": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.sortEventSegs),
+/* harmony export */   "startOfDay": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.startOfDay),
+/* harmony export */   "translateRect": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.translateRect),
+/* harmony export */   "triggerDateSelect": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.triggerDateSelect),
+/* harmony export */   "unpromisify": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.unpromisify),
+/* harmony export */   "version": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.version),
+/* harmony export */   "whenTransitionDone": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.whenTransitionDone),
+/* harmony export */   "wholeDivideDurations": () => (/* reexport safe */ _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__.wholeDivideDurations)
+/* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './FullCalendar'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Component"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createElement"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createRef", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createRef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Fragment", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Fragment"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createContext", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createContext"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "flushToDom", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["flushToDom"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BASE_OPTION_DEFAULTS", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["BASE_OPTION_DEFAULTS"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BASE_OPTION_REFINERS", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["BASE_OPTION_REFINERS"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BaseComponent", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["BaseComponent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BgEvent", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["BgEvent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarApi", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["CalendarApi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarContent", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["CalendarContent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarDataManager", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["CalendarDataManager"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarDataProvider", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["CalendarDataProvider"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CalendarRoot", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["CalendarRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ContentHook", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ContentHook"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CustomContentRenderContext", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["CustomContentRenderContext"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DateComponent", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DateEnv", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DateEnv"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DateProfileGenerator", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DateProfileGenerator"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DayCellContent", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DayCellContent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DayCellRoot", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DayCellRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DayHeader", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DayHeader"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DaySeriesModel", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DaySeriesModel"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DayTableModel", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DayTableModel"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DelayedRunner", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DelayedRunner"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ElementDragging", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ElementDragging"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ElementScrollController", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ElementScrollController"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Emitter", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Emitter"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventApi", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["EventApi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventRoot", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["EventRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventSourceApi", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["EventSourceApi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Interaction", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Interaction"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MountHook", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["MountHook"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NamedTimeZoneImpl", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["NamedTimeZoneImpl"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NowIndicatorRoot", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["NowIndicatorRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NowTimer", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["NowTimer"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PositionCache", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["PositionCache"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RefMap", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["RefMap"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RenderHook", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["RenderHook"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ScrollController", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ScrollController"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ScrollResponder", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ScrollResponder"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Scroller", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Scroller"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SimpleScrollGrid", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["SimpleScrollGrid"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Slicer", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Slicer"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Splitter", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Splitter"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StandardEvent", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["StandardEvent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TableDateCell", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["TableDateCell"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TableDowCell", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["TableDowCell"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Theme", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Theme"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ViewApi", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ViewApi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ViewContextType", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ViewContextType"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ViewRoot", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ViewRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WeekNumberRoot", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["WeekNumberRoot"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WindowScrollController", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["WindowScrollController"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addDays", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["addDays"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addDurations", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["addDurations"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addMs", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["addMs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "addWeeks", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["addWeeks"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "allowContextMenu", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["allowContextMenu"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "allowSelection", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["allowSelection"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyMutationToEventStore", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["applyMutationToEventStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyStyle", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["applyStyle"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyStyleProp", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["applyStyleProp"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asCleanDays", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["asCleanDays"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asRoughMinutes", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["asRoughMinutes"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asRoughMs", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["asRoughMs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asRoughSeconds", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["asRoughSeconds"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildClassNameNormalizer", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildClassNameNormalizer"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildEventApis", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildEventApis"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildEventRangeKey", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildEventRangeKey"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildHashFromArray", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildHashFromArray"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildNavLinkData", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildNavLinkData"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildSegCompareObj", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildSegCompareObj"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "buildSegTimeText", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildSegTimeText"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "collectFromHash", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["collectFromHash"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "combineEventUis", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["combineEventUis"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compareByFieldSpec", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["compareByFieldSpec"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compareByFieldSpecs", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["compareByFieldSpecs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compareNumbers", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["compareNumbers"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compareObjs", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["compareObjs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeEdges", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeEdges"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeFallbackHeaderFormat", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeFallbackHeaderFormat"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeHeightAndMargins", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeHeightAndMargins"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeInnerRect", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeInnerRect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeRect", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeRect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeSegDraggable", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeSegDraggable"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeSegEndResizable", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeSegEndResizable"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeSegStartResizable", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeSegStartResizable"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeShrinkWidth", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeShrinkWidth"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeSmallestCellWidth", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeSmallestCellWidth"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "computeVisibleDayRange", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeVisibleDayRange"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "config", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["config"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "constrainPoint", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["constrainPoint"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createDuration", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createDuration"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createEmptyEventStore", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createEmptyEventStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createEventInstance", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createEventInstance"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createEventUi", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createEventUi"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createFormatter", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createFormatter"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createPlugin", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createPlugin"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffDates", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["diffDates"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffDayAndTime", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["diffDayAndTime"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffDays", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["diffDays"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffPoints", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["diffPoints"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffWeeks", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["diffWeeks"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffWholeDays", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["diffWholeDays"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diffWholeWeeks", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["diffWholeWeeks"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "disableCursor", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["disableCursor"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elementClosest", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["elementClosest"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elementMatches", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["elementMatches"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "enableCursor", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["enableCursor"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "eventTupleToStore", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["eventTupleToStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "filterEventStoreDefs", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["filterEventStoreDefs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "filterHash", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["filterHash"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "findDirectChildren", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["findDirectChildren"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "findElements", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["findElements"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "flexibleCompare", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["flexibleCompare"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["formatDate"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatDayString", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["formatDayString"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatIsoTimeString", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["formatIsoTimeString"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatRange", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["formatRange"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getAllowYScrolling", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getAllowYScrolling"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getCanVGrowWithinCell", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getCanVGrowWithinCell"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getClippingParents", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getClippingParents"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDateMeta", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getDateMeta"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDayClassNames", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getDayClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDefaultEventEnd", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getDefaultEventEnd"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getElSeg", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getElSeg"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getEventClassNames", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getEventClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getIsRtlScrollbarOnLeft", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getIsRtlScrollbarOnLeft"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getRectCenter", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getRectCenter"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getRelevantEvents", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getRelevantEvents"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getScrollGridClassNames", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getScrollGridClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getScrollbarWidths", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getScrollbarWidths"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSectionClassNames", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getSectionClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSectionHasLiquidHeight", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getSectionHasLiquidHeight"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSegMeta", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getSegMeta"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSlotClassNames", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getSlotClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getStickyFooterScrollbar", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getStickyFooterScrollbar"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getStickyHeaderDates", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getStickyHeaderDates"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getUnequalProps", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getUnequalProps"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "globalLocales", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["globalLocales"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "globalPlugins", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["globalPlugins"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "greatestDurationDenominator", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["greatestDurationDenominator"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "guid", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["guid"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hasBgRendering", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["hasBgRendering"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hasShrinkWidth", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["hasShrinkWidth"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "identity", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["identity"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interactionSettingsStore", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["interactionSettingsStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "interactionSettingsToStore", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["interactionSettingsToStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "intersectRanges", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["intersectRanges"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "intersectRects", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["intersectRects"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isArraysEqual", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isArraysEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isColPropsEqual", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isColPropsEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isDateSpansEqual", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isDateSpansEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isInt", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isInt"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isInteractionValid", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isInteractionValid"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isMultiDayRange", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isMultiDayRange"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isPropsEqual", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isPropsEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isPropsValid", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isPropsValid"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isValidDate", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["isValidDate"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "listenBySelector", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["listenBySelector"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mapHash", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["mapHash"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "memoize", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoize"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "memoizeArraylike", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeArraylike"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "memoizeHashlike", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeHashlike"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "memoizeObjArg", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeObjArg"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mergeEventStores", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["mergeEventStores"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "multiplyDuration", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["multiplyDuration"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "padStart", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["padStart"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseBusinessHours", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["parseBusinessHours"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseClassNames", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["parseClassNames"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseDragMeta", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["parseDragMeta"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseEventDef", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["parseEventDef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseFieldSpecs", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["parseFieldSpecs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseMarker", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["parseMarker"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pointInsideRect", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["pointInsideRect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "preventContextMenu", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["preventContextMenu"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "preventDefault", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["preventDefault"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "preventSelection", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["preventSelection"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rangeContainsMarker", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["rangeContainsMarker"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rangeContainsRange", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["rangeContainsRange"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rangesEqual", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["rangesEqual"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rangesIntersect", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["rangesIntersect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "refineEventDef", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["refineEventDef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "refineProps", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["refineProps"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeElement", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["removeElement"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "removeExact", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["removeExact"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renderChunkContent", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["renderChunkContent"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renderFill", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["renderFill"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renderMicroColGroup", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["renderMicroColGroup"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renderScrollShim", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["renderScrollShim"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "requestJson", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["requestJson"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sanitizeShrinkWidth", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["sanitizeShrinkWidth"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "setElSeg", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["setElSeg"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "setRef", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["setRef"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sliceEventStore", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["sliceEventStore"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sliceEvents", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["sliceEvents"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sortEventSegs", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["sortEventSegs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "startOfDay", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["startOfDay"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "translateRect", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["translateRect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "triggerDateSelect", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["triggerDateSelect"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "unpromisify", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["unpromisify"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "version", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["version"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "whenTransitionDone", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["whenTransitionDone"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wholeDivideDurations", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["wholeDivideDurations"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Calendar", function() { return _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Calendar"]; });
-
 
 /*
 Registers the component globally if appropriate.
@@ -15370,7 +14550,7 @@ var installed = false;
 function install(Vue) {
     if (!installed) {
         installed = true;
-        Vue.component('FullCalendar', _FullCalendar__WEBPACK_IMPORTED_MODULE_0__["default"]);
+        Vue.component('FullCalendar', Object(function webpackMissingModule() { var e = new Error("Cannot find module './FullCalendar'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
     }
 }
 // detect a globally availble version of Vue (eg. in browser via <script> tag)
@@ -15388,419 +14568,630 @@ if (GlobalVue) {
     });
 }
 // to allow use as module (npm/webpack/etc.) export component
-/* harmony default export */ __webpack_exports__["default"] = (_FullCalendar__WEBPACK_IMPORTED_MODULE_0__["default"]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object(function webpackMissingModule() { var e = new Error("Cannot find module './FullCalendar'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 // so can access any of the utils/types from this lib
 
 //# sourceMappingURL=main.js.map
 
 /***/ }),
 
-/***/ "./node_modules/@fullcalendar/vue/dist/options.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@fullcalendar/vue/dist/options.js ***!
-  \********************************************************/
-/*! exports provided: OPTION_IS_COMPLEX */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OPTION_IS_COMPLEX", function() { return OPTION_IS_COMPLEX; });
-var OPTION_IS_COMPLEX = {
-    headerToolbar: true,
-    footerToolbar: true,
-    events: true,
-    eventSources: true,
-    resources: true
-};
-//# sourceMappingURL=options.js.map
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/vue */ "./node_modules/@fullcalendar/vue/dist/main.js");
+/* harmony import */ var _fullcalendar_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/bootstrap */ "./node_modules/@fullcalendar/bootstrap/main.js");
+/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.js");
+/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fullcalendar/interaction */ "./node_modules/@fullcalendar/interaction/main.js");
+/* harmony import */ var _event_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./event-utils */ "./resources/js/components/admin/event-utils.js");
 
-/***/ }),
 
-/***/ "./node_modules/@fullcalendar/vue/dist/utils.js":
-/*!******************************************************!*\
-  !*** ./node_modules/@fullcalendar/vue/dist/utils.js ***!
-  \******************************************************/
-/*! exports provided: shallowCopy, mapHash */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shallowCopy", function() { return shallowCopy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapHash", function() { return mapHash; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@fullcalendar/vue/node_modules/tslib/tslib.es6.js");
-// TODO: add types!
 
-/*
-works with objects and arrays
-*/
-function shallowCopy(val) {
-    if (typeof val === 'object') {
-        if (Array.isArray(val)) {
-            val = Array.prototype.slice.call(val);
-        }
-        else if (val) { // non-null
-            val = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, val);
-        }
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["accountuser", "session"],
+  components: {
+    FullCalendar: _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__.default // make the <FullCalendar> tag available
+
+  },
+  data: function data() {
+    return {
+      usersession: this.$props.session,
+      calendarOptions: {
+        plugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_2__.default, _fullcalendar_bootstrap__WEBPACK_IMPORTED_MODULE_1__.default, _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_3__.default],
+        initialView: 'dayGridMonth',
+        themeSystem: 'bootstrap',
+        headerToolbar: {
+          left: '',
+          center: 'title',
+          right: ''
+        },
+        longPressDelay: 50,
+        select: this.addEventClick,
+        eventClick: this.handleEventClick,
+        events: {},
+        selectable: true
+      },
+      eventlist: [],
+      eventedit: []
+    };
+  },
+  created: function created() {
+    this.getevent();
+  },
+  onResize: function onResize() {
+    if (window.innerWidth <= 767) {
+      _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__.default.updateSize();
+    } else {
+      _fullcalendar_vue__WEBPACK_IMPORTED_MODULE_0__.default.updateSize();
     }
-    return val;
-}
-function mapHash(input, func) {
-    var output = {};
-    for (var key in input) {
-        if (input.hasOwnProperty(key)) {
-            output[key] = func(input[key], key);
+  },
+  methods: {
+    getevent: function getevent() {
+      var _this = this;
+
+      var uri = '/api/event';
+      this.axios.get(uri).then(function (response) {
+        _this.calendarOptions.events = response.data;
+      });
+    },
+    handleEventClick: function handleEventClick(clickInfo) {
+      var _this2 = this;
+
+      axios.get('/api/event/show', {
+        params: {
+          iduser: clickInfo.event.id
         }
-    }
-    return output;
-}
-//# sourceMappingURL=utils.js.map
+      }).then(function (res) {
+        _this2.event = res.data;
 
-/***/ }),
+        if (_this2.usersession.role == 'admin') {
+          _this2.$swal.fire({
+            icon: 'info',
+            title: res.data.title,
+            text: res.data.deskripsi,
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Edit Acara",
+            denyButtonText: "Hapus Acara",
+            cancelButtonText: "Kembali"
+          }).then(function (result) {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+              _this2.$swal.close();
 
-/***/ "./node_modules/@fullcalendar/vue/node_modules/tslib/tslib.es6.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@fullcalendar/vue/node_modules/tslib/tslib.es6.js ***!
-  \************************************************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+              var formvalues = _this2.$swal.fire({
+                title: 'Edit Acara',
+                html: '<p class="mb-0">Nama Acara</p>' + '<input value="' + res.data.title + '" id="swal-input1" class="swal2-input">' + '<p class="mb-0">Deskripsi Acara</p>' + '<textarea rows="6" id="swal-input2" class="swal2-input textarea">' + res.data.deskripsi + '</textarea>',
+                focusConfirm: false,
+                preConfirm: function preConfirm() {
+                  return [document.getElementById('swal-input1').value, document.getElementById('swal-input2').value];
+                }
+              }).then(function (form) {
+                if (form.value[0] != "" && form.value[1] != "") {
+                  _this2.eventedit.id = res.data.id;
+                  _this2.eventedit.title = form.value[0];
+                  _this2.eventedit.deskripsi = form.value[1];
+                  var eventitle = form.value[0];
+                  var eventdeskrisi = form.value[1];
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
+                  _this2.axios.put("/api/event/update", {
+                    params: {
+                      id: res.data.id,
+                      title: eventitle,
+                      deskripsi: eventdeskrisi
+                    }
+                  }).then(function (response) {
+                    _this2.getevent();
 
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
+                    _this2.$swal.fire({
+                      icon: 'success',
+                      title: 'Success',
+                      text: 'Acara berhasil diperbaharui'
+                    });
+                  });
+                } else {
+                  _this2.$swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: 'Tolong isi judul dan deskripsi acara!'
+                  });
+                }
+              });
+            } else if (result.isDenied) {
+              _this2.axios["delete"]("/api/event/delete/".concat(res.data.id)).then(function (response) {
+                _this2.$swal.fire({
+                  icon: 'success',
+                  title: 'Success',
+                  text: 'Acara Berhasil Dihapus'
+                });
 
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-/* global Reflect, Promise */
-
-var extendStatics = function(d, b) {
-    extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-    return extendStatics(d, b);
-};
-
-function __extends(d, b) {
-    extendStatics(d, b);
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    }
-    return __assign.apply(this, arguments);
-}
-
-function __rest(s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-}
-
-function __decorate(decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-}
-
-function __param(paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-}
-
-function __metadata(metadataKey, metadataValue) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
-}
-
-function __awaiter(thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-}
-
-function __generator(thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
+                _this2.getevent();
+              });
             }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-}
+          });
+        } else {
+          _this2.$swal.fire({
+            icon: 'info',
+            title: res.data.title,
+            text: res.data.deskripsi,
+            confirmButtonText: "Kembali"
+          });
+        }
+      });
+    },
+    addEventClick: function addEventClick(info) {
+      var _this3 = this;
 
-var __createBinding = Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
+      if (this.usersession.role == 'admin') {
+        var date = new Date();
+        date.setHours(0, 0, 0, 0);
+
+        if (date > info.start) {
+          this.$swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Anda Tidak Dapat Menambah Acara Pada Tanggal Lampau'
+          });
+        } else {
+          var _this$$swal$fire$then = this.$swal.fire({
+            title: 'Enter Event Title',
+            input: 'text',
+            inputAttributes: {
+              autocapitalize: 'off'
+            },
+            showCancelButton: true,
+            confirmButtonText: 'Create Event',
+            allowOutsideClick: function allowOutsideClick() {
+              return _this3.$swal.isLoading();
+            }
+          }).then(function (text) {
+            if (text.isDismissed != true && text.value != "") {
+              var _this3$$swal$fire$the = _this3.$swal.fire({
+                title: 'Enter Event Description',
+                input: 'textarea',
+                inputAttributes: {
+                  autocapitalize: 'off'
+                },
+                showCancelButton: true,
+                confirmButtonText: 'Create Event',
+                allowOutsideClick: function allowOutsideClick() {
+                  return !Swal.isLoading();
+                }
+              }).then(function (description) {
+                if (description.isDismissed != true && description.value != "") {
+                  var formdata = new FormData();
+                  formdata.append('id_akun', _this3.usersession.id_akun);
+                  formdata.append('title', text.value);
+                  formdata.append('deskripsi', description.value);
+                  formdata.append('start', info.startStr);
+                  formdata.append('end', info.endStr);
+                  axios.post('/api/event/addevent', formdata).then(function (response) {
+                    _this3.getevent();
+
+                    _this3.$swal.fire({
+                      icon: 'success',
+                      title: 'Success',
+                      text: 'Acara Berhasil Dibuat'
+                    });
+
+                    axios.get('/api/sentemailall', {
+                      params: {
+                        title: response.data.title,
+                        deskripsi: response.data.deskripsi,
+                        start: response.data.start
+                      }
+                    }).then(function (res) {
+                      res.data;
+                    })["catch"](function (error) {});
+                  })["catch"](function (error) {
+                    _this3.$swal.fire({
+                      icon: 'error',
+                      title: 'Login Failed',
+                      text: error
+                    });
+                  });
+                } else if (description.value == "" && description.isConfirmed == true) {
+                  _this3.$swal.fire({
+                    title: 'Error',
+                    icon: 'error',
+                    text: 'Anda harus memasukan input deskripsi acara',
+                    allowOutsideClick: function allowOutsideClick() {
+                      return !Swal.isLoading();
+                    }
+                  });
+                }
+              }),
+                  description = _this3$$swal$fire$the.value;
+            } else if (text.value == "" && text.isConfirmed == true) {
+              _this3.$swal.fire({
+                title: 'Error',
+                icon: 'error',
+                text: 'Anda harus memasukan input nama acara',
+                allowOutsideClick: function allowOutsideClick() {
+                  return !Swal.isLoading();
+                }
+              });
+            }
+          }),
+              text = _this$$swal$fire$then.value;
+
+          var calendarApi = info.view.calendar;
+          calendarApi.unselect(); // clear date selection
+        }
+      }
+    }
+  }
 });
 
-function __exportStar(m, o) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
-}
-
-function __values(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-}
-
-function __read(o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-}
-
-function __spread() {
-    for (var ar = [], i = 0; i < arguments.length; i++)
-        ar = ar.concat(__read(arguments[i]));
-    return ar;
-}
-
-function __spreadArrays() {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
-
-function __await(v) {
-    return this instanceof __await ? (this.v = v, this) : new __await(v);
-}
-
-function __asyncGenerator(thisArg, _arguments, generator) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var g = generator.apply(thisArg, _arguments || []), i, q = [];
-    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
-    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
-    function fulfill(value) { resume("next", value); }
-    function reject(value) { resume("throw", value); }
-    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
-}
-
-function __asyncDelegator(o) {
-    var i, p;
-    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
-}
-
-function __asyncValues(o) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var m = o[Symbol.asyncIterator], i;
-    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
-}
-
-function __makeTemplateObject(cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-
-var __setModuleDefault = Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-};
-
-function __importStar(mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-}
-
-function __importDefault(mod) {
-    return (mod && mod.__esModule) ? mod : { default: mod };
-}
-
-function __classPrivateFieldGet(receiver, privateMap) {
-    if (!privateMap.has(receiver)) {
-        throw new TypeError("attempted to get private field on non-instance");
-    }
-    return privateMap.get(receiver);
-}
-
-function __classPrivateFieldSet(receiver, privateMap, value) {
-    if (!privateMap.has(receiver)) {
-        throw new TypeError("attempted to set private field on non-instance");
-    }
-    privateMap.set(receiver, value);
-    return value;
-}
-
-
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@fullcalendar/bootstrap/main.css":
-/*!***************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/@fullcalendar/bootstrap/main.css ***!
-  \***************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n  .fc-theme-bootstrap a:not([href]) {\n    color: inherit; /* natural color for navlinks */\n  }\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@fullcalendar/common/main.css":
-/*!************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/@fullcalendar/common/main.css ***!
-  \************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n/* classes attached to <body> */\n\n.fc-not-allowed,\n.fc-not-allowed .fc-event { /* override events' custom cursors */\n  cursor: not-allowed;\n}\n\n.fc-unselectable {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n.fc {\n  /* layout of immediate children */\n  display: flex;\n  flex-direction: column;\n\n  font-size: 1em\n}\n.fc,\n  .fc *,\n  .fc *:before,\n  .fc *:after {\n    box-sizing: border-box;\n  }\n.fc table {\n    border-collapse: collapse;\n    border-spacing: 0;\n    font-size: 1em; /* normalize cross-browser */\n  }\n.fc th {\n    text-align: center;\n  }\n.fc th,\n  .fc td {\n    vertical-align: top;\n    padding: 0;\n  }\n.fc a[data-navlink] {\n    cursor: pointer;\n  }\n.fc a[data-navlink]:hover {\n    text-decoration: underline;\n  }\n.fc-direction-ltr {\n  direction: ltr;\n  text-align: left;\n}\n.fc-direction-rtl {\n  direction: rtl;\n  text-align: right;\n}\n.fc-theme-standard td,\n  .fc-theme-standard th {\n    border: 1px solid #ddd;\n    border: 1px solid var(--fc-border-color, #ddd);\n  }\n/* for FF, which doesn't expand a 100% div within a table cell. use absolute positioning */\n/* inner-wrappers are responsible for being absolute */\n/* TODO: best place for this? */\n.fc-liquid-hack td,\n  .fc-liquid-hack th {\n    position: relative;\n  }\n\n@font-face {\n  font-family: 'fcicons';\n  src: url(\"data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBfAAAAC8AAAAYGNtYXAXVtKNAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZgYydxIAAAF4AAAFNGhlYWQUJ7cIAAAGrAAAADZoaGVhB20DzAAABuQAAAAkaG10eCIABhQAAAcIAAAALGxvY2ED4AU6AAAHNAAAABhtYXhwAA8AjAAAB0wAAAAgbmFtZXsr690AAAdsAAABhnBvc3QAAwAAAAAI9AAAACAAAwPAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpBgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6Qb//f//AAAAAAAg6QD//f//AAH/4xcEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAWIAjQKeAskAEwAAJSc3NjQnJiIHAQYUFwEWMjc2NCcCnuLiDQ0MJAz/AA0NAQAMJAwNDcni4gwjDQwM/wANIwz/AA0NDCMNAAAAAQFiAI0CngLJABMAACUBNjQnASYiBwYUHwEHBhQXFjI3AZ4BAA0N/wAMJAwNDeLiDQ0MJAyNAQAMIw0BAAwMDSMM4uINIwwNDQAAAAIA4gC3Ax4CngATACcAACUnNzY0JyYiDwEGFB8BFjI3NjQnISc3NjQnJiIPAQYUHwEWMjc2NCcB87e3DQ0MIw3VDQ3VDSMMDQ0BK7e3DQ0MJAzVDQ3VDCQMDQ3zuLcMJAwNDdUNIwzWDAwNIwy4twwkDA0N1Q0jDNYMDA0jDAAAAgDiALcDHgKeABMAJwAAJTc2NC8BJiIHBhQfAQcGFBcWMjchNzY0LwEmIgcGFB8BBwYUFxYyNwJJ1Q0N1Q0jDA0Nt7cNDQwjDf7V1Q0N1QwkDA0Nt7cNDQwkDLfWDCMN1Q0NDCQMt7gMIw0MDNYMIw3VDQ0MJAy3uAwjDQwMAAADAFUAAAOrA1UAMwBoAHcAABMiBgcOAQcOAQcOARURFBYXHgEXHgEXHgEzITI2Nz4BNz4BNz4BNRE0JicuAScuAScuASMFITIWFx4BFx4BFx4BFREUBgcOAQcOAQcOASMhIiYnLgEnLgEnLgE1ETQ2Nz4BNz4BNz4BMxMhMjY1NCYjISIGFRQWM9UNGAwLFQkJDgUFBQUFBQ4JCRULDBgNAlYNGAwLFQkJDgUFBQUFBQ4JCRULDBgN/aoCVgQIBAQHAwMFAQIBAQIBBQMDBwQECAT9qgQIBAQHAwMFAQIBAQIBBQMDBwQECASAAVYRGRkR/qoRGRkRA1UFBAUOCQkVDAsZDf2rDRkLDBUJCA4FBQUFBQUOCQgVDAsZDQJVDRkLDBUJCQ4FBAVVAgECBQMCBwQECAX9qwQJAwQHAwMFAQICAgIBBQMDBwQDCQQCVQUIBAQHAgMFAgEC/oAZEhEZGRESGQAAAAADAFUAAAOrA1UAMwBoAIkAABMiBgcOAQcOAQcOARURFBYXHgEXHgEXHgEzITI2Nz4BNz4BNz4BNRE0JicuAScuAScuASMFITIWFx4BFx4BFx4BFREUBgcOAQcOAQcOASMhIiYnLgEnLgEnLgE1ETQ2Nz4BNz4BNz4BMxMzFRQWMzI2PQEzMjY1NCYrATU0JiMiBh0BIyIGFRQWM9UNGAwLFQkJDgUFBQUFBQ4JCRULDBgNAlYNGAwLFQkJDgUFBQUFBQ4JCRULDBgN/aoCVgQIBAQHAwMFAQIBAQIBBQMDBwQECAT9qgQIBAQHAwMFAQIBAQIBBQMDBwQECASAgBkSEhmAERkZEYAZEhIZgBEZGREDVQUEBQ4JCRUMCxkN/asNGQsMFQkIDgUFBQUFBQ4JCBUMCxkNAlUNGQsMFQkJDgUEBVUCAQIFAwIHBAQIBf2rBAkDBAcDAwUBAgICAgEFAwMHBAMJBAJVBQgEBAcCAwUCAQL+gIASGRkSgBkSERmAEhkZEoAZERIZAAABAOIAjQMeAskAIAAAExcHBhQXFjI/ARcWMjc2NC8BNzY0JyYiDwEnJiIHBhQX4uLiDQ0MJAzi4gwkDA0N4uINDQwkDOLiDCQMDQ0CjeLiDSMMDQ3h4Q0NDCMN4uIMIw0MDOLiDAwNIwwAAAABAAAAAQAAa5n0y18PPPUACwQAAAAAANivOVsAAAAA2K85WwAAAAADqwNVAAAACAACAAAAAAAAAAEAAAPA/8AAAAQAAAAAAAOrAAEAAAAAAAAAAAAAAAAAAAALBAAAAAAAAAAAAAAAAgAAAAQAAWIEAAFiBAAA4gQAAOIEAABVBAAAVQQAAOIAAAAAAAoAFAAeAEQAagCqAOoBngJkApoAAQAAAAsAigADAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAcAAAABAAAAAAACAAcAYAABAAAAAAADAAcANgABAAAAAAAEAAcAdQABAAAAAAAFAAsAFQABAAAAAAAGAAcASwABAAAAAAAKABoAigADAAEECQABAA4ABwADAAEECQACAA4AZwADAAEECQADAA4APQADAAEECQAEAA4AfAADAAEECQAFABYAIAADAAEECQAGAA4AUgADAAEECQAKADQApGZjaWNvbnMAZgBjAGkAYwBvAG4Ac1ZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMGZjaWNvbnMAZgBjAGkAYwBvAG4Ac2ZjaWNvbnMAZgBjAGkAYwBvAG4Ac1JlZ3VsYXIAUgBlAGcAdQBsAGEAcmZjaWNvbnMAZgBjAGkAYwBvAG4Ac0ZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\") format('truetype');\n  font-weight: normal;\n  font-style: normal;\n}\n\n.fc-icon {\n  /* added for fc */\n  display: inline-block;\n  width: 1em;\n  height: 1em;\n  text-align: center;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'fcicons' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.fc-icon-chevron-left:before {\n  content: \"\\E900\";\n}\n\n.fc-icon-chevron-right:before {\n  content: \"\\E901\";\n}\n\n.fc-icon-chevrons-left:before {\n  content: \"\\E902\";\n}\n\n.fc-icon-chevrons-right:before {\n  content: \"\\E903\";\n}\n\n.fc-icon-minus-square:before {\n  content: \"\\E904\";\n}\n\n.fc-icon-plus-square:before {\n  content: \"\\E905\";\n}\n\n.fc-icon-x:before {\n  content: \"\\E906\";\n}\n/*\nLots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css\n\nThese styles only apply when the standard-theme is activated.\nWhen it's NOT activated, the fc-button classes won't even be in the DOM.\n*/\n.fc {\n\n  /* reset */\n\n}\n.fc .fc-button {\n    border-radius: 0;\n    overflow: visible;\n    text-transform: none;\n    margin: 0;\n    font-family: inherit;\n    font-size: inherit;\n    line-height: inherit;\n  }\n.fc .fc-button:focus {\n    outline: 1px dotted;\n    outline: 5px auto -webkit-focus-ring-color;\n  }\n.fc .fc-button {\n    -webkit-appearance: button;\n  }\n.fc .fc-button:not(:disabled) {\n    cursor: pointer;\n  }\n.fc .fc-button::-moz-focus-inner {\n    padding: 0;\n    border-style: none;\n  }\n.fc {\n\n  /* theme */\n\n}\n.fc .fc-button {\n    display: inline-block;\n    font-weight: 400;\n    text-align: center;\n    vertical-align: middle;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    background-color: transparent;\n    border: 1px solid transparent;\n    padding: 0.4em 0.65em;\n    font-size: 1em;\n    line-height: 1.5;\n    border-radius: 0.25em;\n  }\n.fc .fc-button:hover {\n    text-decoration: none;\n  }\n.fc .fc-button:focus {\n    outline: 0;\n    box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);\n  }\n.fc .fc-button:disabled {\n    opacity: 0.65;\n  }\n.fc {\n\n  /* \"primary\" coloring */\n\n}\n.fc .fc-button-primary {\n    color: #fff;\n    color: var(--fc-button-text-color, #fff);\n    background-color: #2C3E50;\n    background-color: var(--fc-button-bg-color, #2C3E50);\n    border-color: #2C3E50;\n    border-color: var(--fc-button-border-color, #2C3E50);\n  }\n.fc .fc-button-primary:hover {\n    color: #fff;\n    color: var(--fc-button-text-color, #fff);\n    background-color: #1e2b37;\n    background-color: var(--fc-button-hover-bg-color, #1e2b37);\n    border-color: #1a252f;\n    border-color: var(--fc-button-hover-border-color, #1a252f);\n  }\n.fc .fc-button-primary:disabled { /* not DRY */\n    color: #fff;\n    color: var(--fc-button-text-color, #fff);\n    background-color: #2C3E50;\n    background-color: var(--fc-button-bg-color, #2C3E50);\n    border-color: #2C3E50;\n    border-color: var(--fc-button-border-color, #2C3E50); /* overrides :hover */\n  }\n.fc .fc-button-primary:focus {\n    box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);\n  }\n.fc .fc-button-primary:not(:disabled):active,\n  .fc .fc-button-primary:not(:disabled).fc-button-active {\n    color: #fff;\n    color: var(--fc-button-text-color, #fff);\n    background-color: #1a252f;\n    background-color: var(--fc-button-active-bg-color, #1a252f);\n    border-color: #151e27;\n    border-color: var(--fc-button-active-border-color, #151e27);\n  }\n.fc .fc-button-primary:not(:disabled):active:focus,\n  .fc .fc-button-primary:not(:disabled).fc-button-active:focus {\n    box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);\n  }\n.fc {\n\n  /* icons within buttons */\n\n}\n.fc .fc-button .fc-icon {\n    vertical-align: middle;\n    font-size: 1.5em; /* bump up the size (but don't make it bigger than line-height of button, which is 1.5em also) */\n  }\n.fc .fc-button-group {\n    position: relative;\n    display: inline-flex;\n    vertical-align: middle;\n  }\n.fc .fc-button-group > .fc-button {\n    position: relative;\n    flex: 1 1 auto;\n  }\n.fc .fc-button-group > .fc-button:hover {\n    z-index: 1;\n  }\n.fc .fc-button-group > .fc-button:focus,\n  .fc .fc-button-group > .fc-button:active,\n  .fc .fc-button-group > .fc-button.fc-button-active {\n    z-index: 1;\n  }\n.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {\n    margin-left: -1px;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n  }\n.fc-direction-rtl .fc-button-group > .fc-button:not(:first-child) {\n    margin-right: -1px;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n  }\n.fc-direction-rtl .fc-button-group > .fc-button:not(:last-child) {\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n.fc .fc-toolbar {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n  }\n.fc .fc-toolbar.fc-header-toolbar {\n    margin-bottom: 1.5em;\n  }\n.fc .fc-toolbar.fc-footer-toolbar {\n    margin-top: 1.5em;\n  }\n.fc .fc-toolbar-title {\n    font-size: 1.75em;\n    margin: 0;\n  }\n.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {\n    margin-left: .75em; /* space between */\n  }\n.fc-direction-rtl .fc-toolbar > * > :not(:first-child) {\n    margin-right: .75em; /* space between */\n  }\n.fc-direction-rtl .fc-toolbar-ltr { /* when the toolbar-chunk positioning system is explicitly left-to-right */\n    flex-direction: row-reverse;\n  }\n.fc .fc-scroller {\n    -webkit-overflow-scrolling: touch;\n    position: relative; /* for abs-positioned elements within */\n  }\n.fc .fc-scroller-liquid {\n    height: 100%;\n  }\n.fc .fc-scroller-liquid-absolute {\n    position: absolute;\n    top: 0;\n    right: 0;\n    left: 0;\n    bottom: 0;\n  }\n.fc .fc-scroller-harness {\n    position: relative;\n    overflow: hidden;\n    direction: ltr;\n      /* hack for chrome computing the scroller's right/left wrong for rtl. undone below... */\n      /* TODO: demonstrate in codepen */\n  }\n.fc .fc-scroller-harness-liquid {\n    height: 100%;\n  }\n.fc-direction-rtl .fc-scroller-harness > .fc-scroller { /* undo above hack */\n    direction: rtl;\n  }\n.fc-theme-standard .fc-scrollgrid {\n    border: 1px solid #ddd;\n    border: 1px solid var(--fc-border-color, #ddd); /* bootstrap does this. match */\n  }\n.fc .fc-scrollgrid,\n    .fc .fc-scrollgrid table { /* all tables (self included) */\n      width: 100%; /* because tables don't normally do this */\n      table-layout: fixed;\n    }\n.fc .fc-scrollgrid table { /* inner tables */\n      border-top-style: hidden;\n      border-left-style: hidden;\n      border-right-style: hidden;\n    }\n.fc .fc-scrollgrid {\n\n    border-collapse: separate;\n    border-right-width: 0;\n    border-bottom-width: 0;\n\n  }\n.fc .fc-scrollgrid-liquid {\n    height: 100%;\n  }\n.fc .fc-scrollgrid-section { /* a <tr> */\n    height: 1px /* better than 0, for firefox */\n\n  }\n.fc .fc-scrollgrid-section > td {\n      height: 1px; /* needs a height so inner div within grow. better than 0, for firefox */\n    }\n.fc .fc-scrollgrid-section table {\n      height: 1px;\n        /* for most browsers, if a height isn't set on the table, can't do liquid-height within cells */\n        /* serves as a min-height. harmless */\n    }\n.fc .fc-scrollgrid-section-liquid {\n    height: auto\n\n  }\n.fc .fc-scrollgrid-section-liquid > td {\n      height: 100%; /* better than `auto`, for firefox */\n    }\n.fc .fc-scrollgrid-section > * {\n    border-top-width: 0;\n    border-left-width: 0;\n  }\n.fc .fc-scrollgrid-section-header > *,\n  .fc .fc-scrollgrid-section-footer > * {\n    border-bottom-width: 0;\n  }\n.fc .fc-scrollgrid-section-body table,\n  .fc .fc-scrollgrid-section-footer table {\n    border-bottom-style: hidden; /* head keeps its bottom border tho */\n  }\n.fc {\n\n  /* stickiness */\n\n}\n.fc .fc-scrollgrid-section-sticky > * {\n    background: #fff;\n    background: var(--fc-page-bg-color, #fff);\n    position: -webkit-sticky;\n    position: sticky;\n    z-index: 2; /* TODO: var */\n    /* TODO: box-shadow when sticking */\n  }\n.fc .fc-scrollgrid-section-header.fc-scrollgrid-section-sticky > * {\n    top: 0; /* because border-sharing causes a gap at the top */\n      /* TODO: give safari -1. has bug */\n  }\n.fc .fc-scrollgrid-section-footer.fc-scrollgrid-section-sticky > * {\n    bottom: 0; /* known bug: bottom-stickiness doesn't work in safari */\n  }\n.fc .fc-scrollgrid-sticky-shim { /* for horizontal scrollbar */\n    height: 1px; /* needs height to create scrollbars */\n    margin-bottom: -1px;\n  }\n.fc-sticky { /* no .fc wrap because used as child of body */\n  position: -webkit-sticky;\n  position: sticky;\n}\n.fc .fc-view-harness {\n    flex-grow: 1; /* because this harness is WITHIN the .fc's flexbox */\n    position: relative;\n  }\n.fc {\n\n  /* when the harness controls the height, make the view liquid */\n\n}\n.fc .fc-view-harness-active > .fc-view {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n  }\n.fc .fc-col-header-cell-cushion {\n    display: inline-block; /* x-browser for when sticky (when multi-tier header) */\n    padding: 2px 4px;\n  }\n.fc .fc-bg-event,\n  .fc .fc-non-business,\n  .fc .fc-highlight {\n    /* will always have a harness with position:relative/absolute, so absolutely expand */\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n  }\n.fc .fc-non-business {\n    background: rgba(215, 215, 215, 0.3);\n    background: var(--fc-non-business-color, rgba(215, 215, 215, 0.3));\n  }\n.fc .fc-bg-event {\n    background: rgb(143, 223, 130);\n    background: var(--fc-bg-event-color, rgb(143, 223, 130));\n    opacity: 0.3;\n    opacity: var(--fc-bg-event-opacity, 0.3)\n  }\n.fc .fc-bg-event .fc-event-title {\n      margin: .5em;\n      font-size: .85em;\n      font-size: var(--fc-small-font-size, .85em);\n      font-style: italic;\n    }\n.fc .fc-highlight {\n    background: rgba(188, 232, 241, 0.3);\n    background: var(--fc-highlight-color, rgba(188, 232, 241, 0.3));\n  }\n.fc .fc-cell-shaded,\n  .fc .fc-day-disabled {\n    background: rgba(208, 208, 208, 0.3);\n    background: var(--fc-neutral-bg-color, rgba(208, 208, 208, 0.3));\n  }\n/* link resets */\n/* ---------------------------------------------------------------------------------------------------- */\na.fc-event,\na.fc-event:hover {\n  text-decoration: none;\n}\n/* cursor */\n.fc-event[href],\n.fc-event.fc-event-draggable {\n  cursor: pointer;\n}\n/* event text content */\n/* ---------------------------------------------------------------------------------------------------- */\n.fc-event .fc-event-main {\n    position: relative;\n    z-index: 2;\n  }\n/* dragging */\n/* ---------------------------------------------------------------------------------------------------- */\n.fc-event-dragging:not(.fc-event-selected) { /* MOUSE */\n    opacity: 0.75;\n  }\n.fc-event-dragging.fc-event-selected { /* TOUCH */\n    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);\n  }\n/* resizing */\n/* ---------------------------------------------------------------------------------------------------- */\n/* (subclasses should hone positioning for touch and non-touch) */\n.fc-event .fc-event-resizer {\n    display: none;\n    position: absolute;\n    z-index: 4;\n  }\n.fc-event:hover, /* MOUSE */\n.fc-event-selected { /* TOUCH */\n\n}\n.fc-event:hover .fc-event-resizer, .fc-event-selected .fc-event-resizer {\n    display: block;\n  }\n.fc-event-selected .fc-event-resizer {\n    border-radius: 4px;\n    border-radius: calc(var(--fc-event-resizer-dot-total-width, 8px) / 2);\n    border-width: 1px;\n    border-width: var(--fc-event-resizer-dot-border-width, 1px);\n    width: 8px;\n    width: var(--fc-event-resizer-dot-total-width, 8px);\n    height: 8px;\n    height: var(--fc-event-resizer-dot-total-width, 8px);\n    border-style: solid;\n    border-color: inherit;\n    background: #fff;\n    background: var(--fc-page-bg-color, #fff)\n\n    /* expand hit area */\n\n  }\n.fc-event-selected .fc-event-resizer:before {\n      content: '';\n      position: absolute;\n      top: -20px;\n      left: -20px;\n      right: -20px;\n      bottom: -20px;\n    }\n/* selecting (always TOUCH) */\n/* ---------------------------------------------------------------------------------------------------- */\n.fc-event-selected {\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)\n\n  /* expand hit area (subclasses should expand) */\n\n}\n.fc-event-selected:before {\n    content: \"\";\n    position: absolute;\n    z-index: 3;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n  }\n.fc-event-selected {\n\n  /* dimmer effect */\n\n}\n.fc-event-selected:after {\n    content: \"\";\n    background: rgba(0, 0, 0, 0.25);\n    background: var(--fc-event-selected-overlay-color, rgba(0, 0, 0, 0.25));\n    position: absolute;\n    z-index: 1;\n\n    /* assume there's a border on all sides. overcome it. */\n    /* sometimes there's NOT a border, in which case the dimmer will go over */\n    /* an adjacent border, which looks fine. */\n    top: -1px;\n    left: -1px;\n    right: -1px;\n    bottom: -1px;\n  }\n/*\nA HORIZONTAL event\n*/\n.fc-h-event { /* allowed to be top-level */\n  display: block;\n  border: 1px solid #3788d8;\n  border: 1px solid var(--fc-event-border-color, #3788d8);\n  background-color: #3788d8;\n  background-color: var(--fc-event-bg-color, #3788d8)\n\n}\n.fc-h-event .fc-event-main {\n    color: #fff;\n    color: var(--fc-event-text-color, #fff);\n  }\n.fc-h-event .fc-event-main-frame {\n    display: flex; /* for make fc-event-title-container expand */\n  }\n.fc-h-event .fc-event-time {\n    max-width: 100%; /* clip overflow on this element */\n    overflow: hidden;\n  }\n.fc-h-event .fc-event-title-container { /* serves as a container for the sticky cushion */\n    flex-grow: 1;\n    flex-shrink: 1;\n    min-width: 0; /* important for allowing to shrink all the way */\n  }\n.fc-h-event .fc-event-title {\n    display: inline-block; /* need this to be sticky cross-browser */\n    vertical-align: top; /* for not messing up line-height */\n    left: 0;  /* for sticky */\n    right: 0; /* for sticky */\n    max-width: 100%; /* clip overflow on this element */\n    overflow: hidden;\n  }\n.fc-h-event.fc-event-selected:before {\n    /* expand hit area */\n    top: -10px;\n    bottom: -10px;\n  }\n/* adjust border and border-radius (if there is any) for non-start/end */\n.fc-direction-ltr .fc-daygrid-block-event:not(.fc-event-start),\n.fc-direction-rtl .fc-daygrid-block-event:not(.fc-event-end) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n  border-left-width: 0;\n}\n.fc-direction-ltr .fc-daygrid-block-event:not(.fc-event-end),\n.fc-direction-rtl .fc-daygrid-block-event:not(.fc-event-start) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  border-right-width: 0;\n}\n/* resizers */\n.fc-h-event:not(.fc-event-selected) .fc-event-resizer {\n  top: 0;\n  bottom: 0;\n  width: 8px;\n  width: var(--fc-event-resizer-thickness, 8px);\n}\n.fc-direction-ltr .fc-h-event:not(.fc-event-selected) .fc-event-resizer-start,\n.fc-direction-rtl .fc-h-event:not(.fc-event-selected) .fc-event-resizer-end {\n  cursor: w-resize;\n  left: -4px;\n  left: calc(var(--fc-event-resizer-thickness, 8px) / -2);\n}\n.fc-direction-ltr .fc-h-event:not(.fc-event-selected) .fc-event-resizer-end,\n.fc-direction-rtl .fc-h-event:not(.fc-event-selected) .fc-event-resizer-start {\n  cursor: e-resize;\n  right: -4px;\n  right: calc(var(--fc-event-resizer-thickness, 8px) / -2);\n}\n/* resizers for TOUCH */\n.fc-h-event.fc-event-selected .fc-event-resizer {\n  top: 50%;\n  margin-top: -4px;\n  margin-top: calc(var(--fc-event-resizer-dot-total-width, 8px) / -2);\n}\n.fc-direction-ltr .fc-h-event.fc-event-selected .fc-event-resizer-start,\n.fc-direction-rtl .fc-h-event.fc-event-selected .fc-event-resizer-end {\n  left: -4px;\n  left: calc(var(--fc-event-resizer-dot-total-width, 8px) / -2);\n}\n.fc-direction-ltr .fc-h-event.fc-event-selected .fc-event-resizer-end,\n.fc-direction-rtl .fc-h-event.fc-event-selected .fc-event-resizer-start {\n  right: -4px;\n  right: calc(var(--fc-event-resizer-dot-total-width, 8px) / -2);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/@fullcalendar/daygrid/main.css":
-/*!*************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/@fullcalendar/daygrid/main.css ***!
-  \*************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n:root {\n  --fc-daygrid-event-dot-width: 8px;\n}\n.fc .fc-popover {\n    position: fixed;\n    top: 0; /* for when not positioned yet */\n    box-shadow: 0 2px 6px rgba(0,0,0,.15);\n  }\n.fc .fc-popover-header {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    padding: 3px 4px;\n  }\n.fc .fc-popover-title {\n    margin: 0 2px;\n  }\n.fc .fc-popover-close {\n    cursor: pointer;\n    opacity: 0.65;\n    font-size: 1.1em;\n  }\n.fc-theme-standard .fc-popover {\n    border: 1px solid #ddd;\n    border: 1px solid var(--fc-border-color, #ddd);\n    background: #fff;\n    background: var(--fc-page-bg-color, #fff);\n  }\n.fc-theme-standard .fc-popover-header {\n    background: rgba(208, 208, 208, 0.3);\n    background: var(--fc-neutral-bg-color, rgba(208, 208, 208, 0.3));\n  }\n/* help things clear margins of inner content */\n.fc-daygrid-day-frame,\n.fc-daygrid-day-events,\n.fc-daygrid-event-harness { /* for event top/bottom margins */\n}\n.fc-daygrid-day-frame:before, .fc-daygrid-day-events:before, .fc-daygrid-event-harness:before {\n  content: \"\";\n  clear: both;\n  display: table; }\n.fc-daygrid-day-frame:after, .fc-daygrid-day-events:after, .fc-daygrid-event-harness:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n.fc .fc-daygrid-body { /* a <div> that wraps the table */\n    position: relative;\n    z-index: 1; /* container inner z-index's because <tr>s can't do it */\n  }\n.fc .fc-daygrid-day.fc-day-today {\n      background-color: rgba(255, 220, 40, 0.15);\n      background-color: var(--fc-today-bg-color, rgba(255, 220, 40, 0.15));\n    }\n.fc .fc-daygrid-day-frame {\n    position: relative;\n    min-height: 100%; /* seems to work better than `height` because sets height after rows/cells naturally do it */\n  }\n.fc {\n\n  /* cell top */\n\n}\n.fc .fc-daygrid-day-top {\n    display: flex;\n    flex-direction: row-reverse;\n  }\n.fc .fc-day-other .fc-daygrid-day-top {\n    opacity: 0.3;\n  }\n.fc {\n\n  /* day number (within cell top) */\n\n}\n.fc .fc-daygrid-day-number {\n    position: relative;\n    z-index: 4;\n    padding: 4px;\n  }\n.fc {\n\n  /* event container */\n\n}\n.fc .fc-daygrid-day-events {\n    margin-top: 1px; /* needs to be margin, not padding, so that available cell height can be computed */\n  }\n.fc {\n\n  /* positioning for balanced vs natural */\n\n}\n.fc .fc-daygrid-body-balanced .fc-daygrid-day-events {\n      position: absolute;\n      left: 0;\n      right: 0;\n    }\n.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {\n      position: relative; /* for containing abs positioned event harnesses */\n      min-height: 2em; /* in addition to being a min-height during natural height, equalizes the heights a little bit */\n    }\n.fc .fc-daygrid-body-natural { /* can coexist with -unbalanced */\n  }\n.fc .fc-daygrid-body-natural .fc-daygrid-day-events {\n      margin-bottom: 1em;\n    }\n.fc {\n\n  /* event harness */\n\n}\n.fc .fc-daygrid-event-harness {\n    position: relative;\n  }\n.fc .fc-daygrid-event-harness-abs {\n    position: absolute;\n    top: 0; /* fallback coords for when cannot yet be computed */\n    left: 0; /* */\n    right: 0; /* */\n  }\n.fc .fc-daygrid-bg-harness {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n  }\n.fc {\n\n  /* bg content */\n\n}\n.fc .fc-daygrid-day-bg .fc-non-business { z-index: 1 }\n.fc .fc-daygrid-day-bg .fc-bg-event { z-index: 2 }\n.fc .fc-daygrid-day-bg .fc-highlight { z-index: 3 }\n.fc {\n\n  /* events */\n\n}\n.fc .fc-daygrid-event {\n    z-index: 6;\n    margin-top: 1px;\n  }\n.fc .fc-daygrid-event.fc-event-mirror {\n    z-index: 7;\n  }\n.fc {\n\n  /* cell bottom (within day-events) */\n\n}\n.fc .fc-daygrid-day-bottom {\n    font-size: .85em;\n    margin: 2px 3px 0;\n  }\n.fc .fc-daygrid-more-link {\n    position: relative;\n    z-index: 4;\n    cursor: pointer;\n  }\n.fc {\n\n  /* week number (within frame) */\n\n}\n.fc .fc-daygrid-week-number {\n    position: absolute;\n    z-index: 5;\n    top: 0;\n    padding: 2px;\n    min-width: 1.5em;\n    text-align: center;\n    background-color: rgba(208, 208, 208, 0.3);\n    background-color: var(--fc-neutral-bg-color, rgba(208, 208, 208, 0.3));\n    color: #808080;\n    color: var(--fc-neutral-text-color, #808080);\n  }\n.fc {\n\n  /* popover */\n\n}\n.fc .fc-more-popover {\n    z-index: 8;\n  }\n.fc .fc-more-popover .fc-popover-body {\n    min-width: 220px;\n    padding: 10px;\n  }\n.fc-direction-ltr .fc-daygrid-event.fc-event-start,\n.fc-direction-rtl .fc-daygrid-event.fc-event-end {\n  margin-left: 2px;\n}\n.fc-direction-ltr .fc-daygrid-event.fc-event-end,\n.fc-direction-rtl .fc-daygrid-event.fc-event-start {\n  margin-right: 2px;\n}\n.fc-direction-ltr .fc-daygrid-week-number {\n    left: 0;\n    border-radius: 0 0 3px 0;\n  }\n.fc-direction-rtl .fc-daygrid-week-number {\n    right: 0;\n    border-radius: 0 0 0 3px;\n  }\n.fc-liquid-hack .fc-daygrid-day-frame {\n    position: static; /* will cause inner absolute stuff to expand to <td> */\n  }\n.fc-daygrid-event { /* make root-level, because will be dragged-and-dropped outside of a component root */\n  position: relative; /* for z-indexes assigned later */\n  white-space: nowrap;\n  border-radius: 3px; /* dot event needs this to when selected */\n  font-size: .85em;\n  font-size: var(--fc-small-font-size, .85em);\n}\n/* --- the rectangle (\"block\") style of event --- */\n.fc-daygrid-block-event .fc-event-time {\n    font-weight: bold;\n  }\n.fc-daygrid-block-event .fc-event-time,\n  .fc-daygrid-block-event .fc-event-title {\n    padding: 1px;\n  }\n/* --- the dot style of event --- */\n.fc-daygrid-dot-event {\n  display: flex;\n  align-items: center;\n  padding: 2px 0\n\n}\n.fc-daygrid-dot-event .fc-event-title {\n    flex-grow: 1;\n    flex-shrink: 1;\n    min-width: 0; /* important for allowing to shrink all the way */\n    overflow: hidden;\n    font-weight: bold;\n  }\n.fc-daygrid-dot-event:hover,\n  .fc-daygrid-dot-event.fc-event-mirror {\n    background: rgba(0, 0, 0, 0.1);\n  }\n.fc-daygrid-dot-event.fc-event-selected:before {\n    /* expand hit area */\n    top: -10px;\n    bottom: -10px;\n  }\n.fc-daygrid-event-dot { /* the actual dot */\n  margin: 0 4px;\n  box-sizing: content-box;\n  width: 0;\n  height: 0;\n  border: 4px solid #3788d8;\n  border: calc(var(--fc-daygrid-event-dot-width, 8px) / 2) solid var(--fc-event-border-color, #3788d8);\n  border-radius: 4px;\n  border-radius: calc(var(--fc-daygrid-event-dot-width, 8px) / 2);\n}\n/* --- spacing between time and title --- */\n.fc-direction-ltr .fc-daygrid-event .fc-event-time {\n    margin-right: 3px;\n  }\n.fc-direction-rtl .fc-daygrid-event .fc-event-time {\n    margin-left: 3px;\n  }\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/preact/dist/preact.module.js":
-/*!***************************************************!*\
-  !*** ./node_modules/preact/dist/preact.module.js ***!
-  \***************************************************/
-/*! exports provided: render, hydrate, createElement, h, Fragment, createRef, isValidElement, Component, cloneElement, createContext, toChildArray, __u, options */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./resources/js/components/admin/event-utils.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/admin/event-utils.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return O; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hydrate", function() { return S; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return h; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return h; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Fragment", function() { return p; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createRef", function() { return y; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidElement", function() { return l; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cloneElement", function() { return q; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createContext", function() { return B; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toChildArray", function() { return b; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__u", function() { return L; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "options", function() { return n; });
-var n,l,u,i,t,o,r,f={},e=[],c=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;function s(n,l){for(var u in l)n[u]=l[u];return n}function a(n){var l=n.parentNode;l&&l.removeChild(n)}function h(n,l,u){var i,t,o,r=arguments,f={};for(o in l)"key"==o?i=l[o]:"ref"==o?t=l[o]:f[o]=l[o];if(arguments.length>3)for(u=[u],o=3;o<arguments.length;o++)u.push(r[o]);if(null!=u&&(f.children=u),"function"==typeof n&&null!=n.defaultProps)for(o in n.defaultProps)void 0===f[o]&&(f[o]=n.defaultProps[o]);return v(n,f,i,t,null)}function v(l,u,i,t,o){var r={type:l,props:u,key:i,ref:t,__k:null,__:null,__b:0,__e:null,__d:void 0,__c:null,__h:null,constructor:void 0,__v:o};return null==o&&(r.__v=r),null!=n.vnode&&n.vnode(r),r}function y(){return{current:null}}function p(n){return n.children}function d(n,l){this.props=n,this.context=l}function _(n,l){if(null==l)return n.__?_(n.__,n.__.__k.indexOf(n)+1):null;for(var u;l<n.__k.length;l++)if(null!=(u=n.__k[l])&&null!=u.__e)return u.__e;return"function"==typeof n.type?_(n):null}function w(n){var l,u;if(null!=(n=n.__)&&null!=n.__c){for(n.__e=n.__c.base=null,l=0;l<n.__k.length;l++)if(null!=(u=n.__k[l])&&null!=u.__e){n.__e=n.__c.base=u.__e;break}return w(n)}}function k(l){(!l.__d&&(l.__d=!0)&&u.push(l)&&!g.__r++||t!==n.debounceRendering)&&((t=n.debounceRendering)||i)(g)}function g(){for(var n;g.__r=u.length;)n=u.sort(function(n,l){return n.__v.__b-l.__v.__b}),u=[],n.some(function(n){var l,u,i,t,o,r,f;n.__d&&(r=(o=(l=n).__v).__e,(f=l.__P)&&(u=[],(i=s({},o)).__v=i,t=$(f,o,i,l.__n,void 0!==f.ownerSVGElement,null!=o.__h?[r]:null,u,null==r?_(o):r,o.__h),j(u,o),t!=r&&w(o)))})}function m(n,l,u,i,t,o,r,c,s,h){var y,d,w,k,g,m,b,A=i&&i.__k||e,P=A.length;for(s==f&&(s=null!=r?r[0]:P?_(i,0):null),u.__k=[],y=0;y<l.length;y++)if(null!=(k=u.__k[y]=null==(k=l[y])||"boolean"==typeof k?null:"string"==typeof k||"number"==typeof k?v(null,k,null,null,k):Array.isArray(k)?v(p,{children:k},null,null,null):null!=k.__e||null!=k.__c?v(k.type,k.props,k.key,null,k.__v):k)){if(k.__=u,k.__b=u.__b+1,null===(w=A[y])||w&&k.key==w.key&&k.type===w.type)A[y]=void 0;else for(d=0;d<P;d++){if((w=A[d])&&k.key==w.key&&k.type===w.type){A[d]=void 0;break}w=null}g=$(n,k,w=w||f,t,o,r,c,s,h),(d=k.ref)&&w.ref!=d&&(b||(b=[]),w.ref&&b.push(w.ref,null,k),b.push(d,k.__c||g,k)),null!=g?(null==m&&(m=g),s=x(n,k,w,A,r,g,s),h||"option"!=u.type?"function"==typeof u.type&&(u.__d=s):n.value=""):s&&w.__e==s&&s.parentNode!=n&&(s=_(w))}if(u.__e=m,null!=r&&"function"!=typeof u.type)for(y=r.length;y--;)null!=r[y]&&a(r[y]);for(y=P;y--;)null!=A[y]&&L(A[y],A[y]);if(b)for(y=0;y<b.length;y++)I(b[y],b[++y],b[++y])}function b(n,l){return l=l||[],null==n||"boolean"==typeof n||(Array.isArray(n)?n.some(function(n){b(n,l)}):l.push(n)),l}function x(n,l,u,i,t,o,r){var f,e,c;if(void 0!==l.__d)f=l.__d,l.__d=void 0;else if(t==u||o!=r||null==o.parentNode)n:if(null==r||r.parentNode!==n)n.appendChild(o),f=null;else{for(e=r,c=0;(e=e.nextSibling)&&c<i.length;c+=2)if(e==o)break n;n.insertBefore(o,r),f=r}return void 0!==f?f:o.nextSibling}function A(n,l,u,i,t){var o;for(o in u)"children"===o||"key"===o||o in l||C(n,o,null,u[o],i);for(o in l)t&&"function"!=typeof l[o]||"children"===o||"key"===o||"value"===o||"checked"===o||u[o]===l[o]||C(n,o,l[o],u[o],i)}function P(n,l,u){"-"===l[0]?n.setProperty(l,u):n[l]=null==u?"":"number"!=typeof u||c.test(l)?u:u+"px"}function C(n,l,u,i,t){var o,r,f;if(t&&"className"==l&&(l="class"),"style"===l)if("string"==typeof u)n.style.cssText=u;else{if("string"==typeof i&&(n.style.cssText=i=""),i)for(l in i)u&&l in u||P(n.style,l,"");if(u)for(l in u)i&&u[l]===i[l]||P(n.style,l,u[l])}else"o"===l[0]&&"n"===l[1]?(o=l!==(l=l.replace(/Capture$/,"")),(r=l.toLowerCase())in n&&(l=r),l=l.slice(2),n.l||(n.l={}),n.l[l+o]=u,f=o?N:z,u?i||n.addEventListener(l,f,o):n.removeEventListener(l,f,o)):"list"!==l&&"tagName"!==l&&"form"!==l&&"type"!==l&&"size"!==l&&"download"!==l&&"href"!==l&&!t&&l in n?n[l]=null==u?"":u:"function"!=typeof u&&"dangerouslySetInnerHTML"!==l&&(l!==(l=l.replace(/xlink:?/,""))?null==u||!1===u?n.removeAttributeNS("http://www.w3.org/1999/xlink",l.toLowerCase()):n.setAttributeNS("http://www.w3.org/1999/xlink",l.toLowerCase(),u):null==u||!1===u&&!/^ar/.test(l)?n.removeAttribute(l):n.setAttribute(l,u))}function z(l){this.l[l.type+!1](n.event?n.event(l):l)}function N(l){this.l[l.type+!0](n.event?n.event(l):l)}function T(n,l,u){var i,t;for(i=0;i<n.__k.length;i++)(t=n.__k[i])&&(t.__=n,t.__e&&("function"==typeof t.type&&t.__k.length>1&&T(t,l,u),l=x(u,t,t,n.__k,null,t.__e,l),"function"==typeof n.type&&(n.__d=l)))}function $(l,u,i,t,o,r,f,e,c){var a,h,v,y,_,w,k,g,b,x,A,P=u.type;if(void 0!==u.constructor)return null;null!=i.__h&&(c=i.__h,e=u.__e=i.__e,u.__h=null,r=[e]),(a=n.__b)&&a(u);try{n:if("function"==typeof P){if(g=u.props,b=(a=P.contextType)&&t[a.__c],x=a?b?b.props.value:a.__:t,i.__c?k=(h=u.__c=i.__c).__=h.__E:("prototype"in P&&P.prototype.render?u.__c=h=new P(g,x):(u.__c=h=new d(g,x),h.constructor=P,h.render=M),b&&b.sub(h),h.props=g,h.state||(h.state={}),h.context=x,h.__n=t,v=h.__d=!0,h.__h=[]),null==h.__s&&(h.__s=h.state),null!=P.getDerivedStateFromProps&&(h.__s==h.state&&(h.__s=s({},h.__s)),s(h.__s,P.getDerivedStateFromProps(g,h.__s))),y=h.props,_=h.state,v)null==P.getDerivedStateFromProps&&null!=h.componentWillMount&&h.componentWillMount(),null!=h.componentDidMount&&h.__h.push(h.componentDidMount);else{if(null==P.getDerivedStateFromProps&&g!==y&&null!=h.componentWillReceiveProps&&h.componentWillReceiveProps(g,x),!h.__e&&null!=h.shouldComponentUpdate&&!1===h.shouldComponentUpdate(g,h.__s,x)||u.__v===i.__v){h.props=g,h.state=h.__s,u.__v!==i.__v&&(h.__d=!1),h.__v=u,u.__e=i.__e,u.__k=i.__k,h.__h.length&&f.push(h),T(u,e,l);break n}null!=h.componentWillUpdate&&h.componentWillUpdate(g,h.__s,x),null!=h.componentDidUpdate&&h.__h.push(function(){h.componentDidUpdate(y,_,w)})}h.context=x,h.props=g,h.state=h.__s,(a=n.__r)&&a(u),h.__d=!1,h.__v=u,h.__P=l,a=h.render(h.props,h.state,h.context),h.state=h.__s,null!=h.getChildContext&&(t=s(s({},t),h.getChildContext())),v||null==h.getSnapshotBeforeUpdate||(w=h.getSnapshotBeforeUpdate(y,_)),A=null!=a&&a.type==p&&null==a.key?a.props.children:a,m(l,Array.isArray(A)?A:[A],u,i,t,o,r,f,e,c),h.base=u.__e,u.__h=null,h.__h.length&&f.push(h),k&&(h.__E=h.__=null),h.__e=!1}else null==r&&u.__v===i.__v?(u.__k=i.__k,u.__e=i.__e):u.__e=H(i.__e,u,i,t,o,r,f,c);(a=n.diffed)&&a(u)}catch(l){u.__v=null,(c||null!=r)&&(u.__e=e,u.__h=!!c,r[r.indexOf(e)]=null),n.__e(l,u,i)}return u.__e}function j(l,u){n.__c&&n.__c(u,l),l.some(function(u){try{l=u.__h,u.__h=[],l.some(function(n){n.call(u)})}catch(l){n.__e(l,u.__v)}})}function H(n,l,u,i,t,o,r,c){var s,a,h,v,y,p=u.props,d=l.props;if(t="svg"===l.type||t,null!=o)for(s=0;s<o.length;s++)if(null!=(a=o[s])&&((null===l.type?3===a.nodeType:a.localName===l.type)||n==a)){n=a,o[s]=null;break}if(null==n){if(null===l.type)return document.createTextNode(d);n=t?document.createElementNS("http://www.w3.org/2000/svg",l.type):document.createElement(l.type,d.is&&{is:d.is}),o=null,c=!1}if(null===l.type)p===d||c&&n.data===d||(n.data=d);else{if(null!=o&&(o=e.slice.call(n.childNodes)),h=(p=u.props||f).dangerouslySetInnerHTML,v=d.dangerouslySetInnerHTML,!c){if(null!=o)for(p={},y=0;y<n.attributes.length;y++)p[n.attributes[y].name]=n.attributes[y].value;(v||h)&&(v&&(h&&v.__html==h.__html||v.__html===n.innerHTML)||(n.innerHTML=v&&v.__html||""))}A(n,d,p,t,c),v?l.__k=[]:(s=l.props.children,m(n,Array.isArray(s)?s:[s],l,u,i,"foreignObject"!==l.type&&t,o,r,f,c)),c||("value"in d&&void 0!==(s=d.value)&&(s!==n.value||"progress"===l.type&&!s)&&C(n,"value",s,p.value,!1),"checked"in d&&void 0!==(s=d.checked)&&s!==n.checked&&C(n,"checked",s,p.checked,!1))}return n}function I(l,u,i){try{"function"==typeof l?l(u):l.current=u}catch(l){n.__e(l,i)}}function L(l,u,i){var t,o,r;if(n.unmount&&n.unmount(l),(t=l.ref)&&(t.current&&t.current!==l.__e||I(t,null,u)),i||"function"==typeof l.type||(i=null!=(o=l.__e)),l.__e=l.__d=void 0,null!=(t=l.__c)){if(t.componentWillUnmount)try{t.componentWillUnmount()}catch(l){n.__e(l,u)}t.base=t.__P=null}if(t=l.__k)for(r=0;r<t.length;r++)t[r]&&L(t[r],u,i);null!=o&&a(o)}function M(n,l,u){return this.constructor(n,u)}function O(l,u,i){var t,r,c;n.__&&n.__(l,u),r=(t=i===o)?null:i&&i.__k||u.__k,l=h(p,null,[l]),c=[],$(u,(t?u:i||u).__k=l,r||f,f,void 0!==u.ownerSVGElement,i&&!t?[i]:r?null:u.childNodes.length?e.slice.call(u.childNodes):null,c,i||f,t),j(c,l)}function S(n,l){O(n,l,o)}function q(n,l,u){var i,t,o,r=arguments,f=s({},n.props);for(o in l)"key"==o?i=l[o]:"ref"==o?t=l[o]:f[o]=l[o];if(arguments.length>3)for(u=[u],o=3;o<arguments.length;o++)u.push(r[o]);return null!=u&&(f.children=u),v(n.type,f,i||n.key,t||n.ref,null)}function B(n,l){var u={__c:l="__cC"+r++,__:n,Consumer:function(n,l){return n.children(l)},Provider:function(n,u,i){return this.getChildContext||(u=[],(i={})[l]=this,this.getChildContext=function(){return i},this.shouldComponentUpdate=function(n){this.props.value!==n.value&&u.some(k)},this.sub=function(n){u.push(n);var l=n.componentWillUnmount;n.componentWillUnmount=function(){u.splice(u.indexOf(n),1),l&&l.call(n)}}),n.children}};return u.Provider.__=u.Consumer.contextType=u}n={__e:function(n,l){for(var u,i,t,o=l.__h;l=l.__;)if((u=l.__c)&&!u.__)try{if((i=u.constructor)&&null!=i.getDerivedStateFromError&&(u.setState(i.getDerivedStateFromError(n)),t=u.__d),null!=u.componentDidCatch&&(u.componentDidCatch(n),t=u.__d),t)return l.__h=o,u.__E=u}catch(l){n=l}throw n}},l=function(n){return null!=n&&void 0===n.constructor},d.prototype.setState=function(n,l){var u;u=null!=this.__s&&this.__s!==this.state?this.__s:this.__s=s({},this.state),"function"==typeof n&&(n=n(s({},u),this.props)),n&&s(u,n),null!=n&&this.__v&&(l&&this.__h.push(l),k(this))},d.prototype.forceUpdate=function(n){this.__v&&(this.__e=!0,n&&this.__h.push(n),k(this))},d.prototype.render=p,u=[],i="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,g.__r=0,o=f,r=0;
-//# sourceMappingURL=preact.module.js.map
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "INITIAL_EVENTS": () => (/* binding */ INITIAL_EVENTS),
+/* harmony export */   "createEventId": () => (/* binding */ createEventId)
+/* harmony export */ });
+var eventGuid = 0;
+var todayStr = new Date().toISOString().replace(/T.*$/, ''); // YYYY-MM-DD of today
+
+var INITIAL_EVENTS = [{
+  id: createEventId(),
+  title: 'All-day event',
+  start: todayStr
+}, {
+  id: createEventId(),
+  title: 'Timed event',
+  start: todayStr + 'T12:00:00'
+}];
+function createEventId() {
+  return String(eventGuid++);
+}
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/bootstrap/main.css":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/bootstrap/main.css ***!
+  \***************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n  .fc-theme-bootstrap a:not([href]) {\n    color: inherit; /* natural color for navlinks */\n  }\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/common/main.css":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/common/main.css ***!
+  \************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n/* classes attached to <body> */\n\n.fc-not-allowed,\n.fc-not-allowed .fc-event { /* override events' custom cursors */\n  cursor: not-allowed;\n}\n\n.fc-unselectable {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n.fc {\n  /* layout of immediate children */\n  display: flex;\n  flex-direction: column;\n\n  font-size: 1em\n}\n.fc,\n  .fc *,\n  .fc *:before,\n  .fc *:after {\n    box-sizing: border-box;\n  }\n.fc table {\n    border-collapse: collapse;\n    border-spacing: 0;\n    font-size: 1em; /* normalize cross-browser */\n  }\n.fc th {\n    text-align: center;\n  }\n.fc th,\n  .fc td {\n    vertical-align: top;\n    padding: 0;\n  }\n.fc a[data-navlink] {\n    cursor: pointer;\n  }\n.fc a[data-navlink]:hover {\n    text-decoration: underline;\n  }\n.fc-direction-ltr {\n  direction: ltr;\n  text-align: left;\n}\n.fc-direction-rtl {\n  direction: rtl;\n  text-align: right;\n}\n.fc-theme-standard td,\n  .fc-theme-standard th {\n    border: 1px solid #ddd;\n    border: 1px solid var(--fc-border-color, #ddd);\n  }\n/* for FF, which doesn't expand a 100% div within a table cell. use absolute positioning */\n/* inner-wrappers are responsible for being absolute */\n/* TODO: best place for this? */\n.fc-liquid-hack td,\n  .fc-liquid-hack th {\n    position: relative;\n  }\n\n@font-face {\n  font-family: 'fcicons';\n  src: url(\"data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBfAAAAC8AAAAYGNtYXAXVtKNAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZgYydxIAAAF4AAAFNGhlYWQUJ7cIAAAGrAAAADZoaGVhB20DzAAABuQAAAAkaG10eCIABhQAAAcIAAAALGxvY2ED4AU6AAAHNAAAABhtYXhwAA8AjAAAB0wAAAAgbmFtZXsr690AAAdsAAABhnBvc3QAAwAAAAAI9AAAACAAAwPAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpBgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6Qb//f//AAAAAAAg6QD//f//AAH/4xcEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAWIAjQKeAskAEwAAJSc3NjQnJiIHAQYUFwEWMjc2NCcCnuLiDQ0MJAz/AA0NAQAMJAwNDcni4gwjDQwM/wANIwz/AA0NDCMNAAAAAQFiAI0CngLJABMAACUBNjQnASYiBwYUHwEHBhQXFjI3AZ4BAA0N/wAMJAwNDeLiDQ0MJAyNAQAMIw0BAAwMDSMM4uINIwwNDQAAAAIA4gC3Ax4CngATACcAACUnNzY0JyYiDwEGFB8BFjI3NjQnISc3NjQnJiIPAQYUHwEWMjc2NCcB87e3DQ0MIw3VDQ3VDSMMDQ0BK7e3DQ0MJAzVDQ3VDCQMDQ3zuLcMJAwNDdUNIwzWDAwNIwy4twwkDA0N1Q0jDNYMDA0jDAAAAgDiALcDHgKeABMAJwAAJTc2NC8BJiIHBhQfAQcGFBcWMjchNzY0LwEmIgcGFB8BBwYUFxYyNwJJ1Q0N1Q0jDA0Nt7cNDQwjDf7V1Q0N1QwkDA0Nt7cNDQwkDLfWDCMN1Q0NDCQMt7gMIw0MDNYMIw3VDQ0MJAy3uAwjDQwMAAADAFUAAAOrA1UAMwBoAHcAABMiBgcOAQcOAQcOARURFBYXHgEXHgEXHgEzITI2Nz4BNz4BNz4BNRE0JicuAScuAScuASMFITIWFx4BFx4BFx4BFREUBgcOAQcOAQcOASMhIiYnLgEnLgEnLgE1ETQ2Nz4BNz4BNz4BMxMhMjY1NCYjISIGFRQWM9UNGAwLFQkJDgUFBQUFBQ4JCRULDBgNAlYNGAwLFQkJDgUFBQUFBQ4JCRULDBgN/aoCVgQIBAQHAwMFAQIBAQIBBQMDBwQECAT9qgQIBAQHAwMFAQIBAQIBBQMDBwQECASAAVYRGRkR/qoRGRkRA1UFBAUOCQkVDAsZDf2rDRkLDBUJCA4FBQUFBQUOCQgVDAsZDQJVDRkLDBUJCQ4FBAVVAgECBQMCBwQECAX9qwQJAwQHAwMFAQICAgIBBQMDBwQDCQQCVQUIBAQHAgMFAgEC/oAZEhEZGRESGQAAAAADAFUAAAOrA1UAMwBoAIkAABMiBgcOAQcOAQcOARURFBYXHgEXHgEXHgEzITI2Nz4BNz4BNz4BNRE0JicuAScuAScuASMFITIWFx4BFx4BFx4BFREUBgcOAQcOAQcOASMhIiYnLgEnLgEnLgE1ETQ2Nz4BNz4BNz4BMxMzFRQWMzI2PQEzMjY1NCYrATU0JiMiBh0BIyIGFRQWM9UNGAwLFQkJDgUFBQUFBQ4JCRULDBgNAlYNGAwLFQkJDgUFBQUFBQ4JCRULDBgN/aoCVgQIBAQHAwMFAQIBAQIBBQMDBwQECAT9qgQIBAQHAwMFAQIBAQIBBQMDBwQECASAgBkSEhmAERkZEYAZEhIZgBEZGREDVQUEBQ4JCRUMCxkN/asNGQsMFQkIDgUFBQUFBQ4JCBUMCxkNAlUNGQsMFQkJDgUEBVUCAQIFAwIHBAQIBf2rBAkDBAcDAwUBAgICAgEFAwMHBAMJBAJVBQgEBAcCAwUCAQL+gIASGRkSgBkSERmAEhkZEoAZERIZAAABAOIAjQMeAskAIAAAExcHBhQXFjI/ARcWMjc2NC8BNzY0JyYiDwEnJiIHBhQX4uLiDQ0MJAzi4gwkDA0N4uINDQwkDOLiDCQMDQ0CjeLiDSMMDQ3h4Q0NDCMN4uIMIw0MDOLiDAwNIwwAAAABAAAAAQAAa5n0y18PPPUACwQAAAAAANivOVsAAAAA2K85WwAAAAADqwNVAAAACAACAAAAAAAAAAEAAAPA/8AAAAQAAAAAAAOrAAEAAAAAAAAAAAAAAAAAAAALBAAAAAAAAAAAAAAAAgAAAAQAAWIEAAFiBAAA4gQAAOIEAABVBAAAVQQAAOIAAAAAAAoAFAAeAEQAagCqAOoBngJkApoAAQAAAAsAigADAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAcAAAABAAAAAAACAAcAYAABAAAAAAADAAcANgABAAAAAAAEAAcAdQABAAAAAAAFAAsAFQABAAAAAAAGAAcASwABAAAAAAAKABoAigADAAEECQABAA4ABwADAAEECQACAA4AZwADAAEECQADAA4APQADAAEECQAEAA4AfAADAAEECQAFABYAIAADAAEECQAGAA4AUgADAAEECQAKADQApGZjaWNvbnMAZgBjAGkAYwBvAG4Ac1ZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMGZjaWNvbnMAZgBjAGkAYwBvAG4Ac2ZjaWNvbnMAZgBjAGkAYwBvAG4Ac1JlZ3VsYXIAUgBlAGcAdQBsAGEAcmZjaWNvbnMAZgBjAGkAYwBvAG4Ac0ZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\") format('truetype');\n  font-weight: normal;\n  font-style: normal;\n}\n\n.fc-icon {\n  /* added for fc */\n  display: inline-block;\n  width: 1em;\n  height: 1em;\n  text-align: center;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'fcicons' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.fc-icon-chevron-left:before {\n  content: \"\\e900\";\n}\n\n.fc-icon-chevron-right:before {\n  content: \"\\e901\";\n}\n\n.fc-icon-chevrons-left:before {\n  content: \"\\e902\";\n}\n\n.fc-icon-chevrons-right:before {\n  content: \"\\e903\";\n}\n\n.fc-icon-minus-square:before {\n  content: \"\\e904\";\n}\n\n.fc-icon-plus-square:before {\n  content: \"\\e905\";\n}\n\n.fc-icon-x:before {\n  content: \"\\e906\";\n}\n/*\nLots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css\n\nThese styles only apply when the standard-theme is activated.\nWhen it's NOT activated, the fc-button classes won't even be in the DOM.\n*/\n.fc {\n\n  /* reset */\n\n}\n.fc .fc-button {\n    border-radius: 0;\n    overflow: visible;\n    text-transform: none;\n    margin: 0;\n    font-family: inherit;\n    font-size: inherit;\n    line-height: inherit;\n  }\n.fc .fc-button:focus {\n    outline: 1px dotted;\n    outline: 5px auto -webkit-focus-ring-color;\n  }\n.fc .fc-button {\n    -webkit-appearance: button;\n  }\n.fc .fc-button:not(:disabled) {\n    cursor: pointer;\n  }\n.fc .fc-button::-moz-focus-inner {\n    padding: 0;\n    border-style: none;\n  }\n.fc {\n\n  /* theme */\n\n}\n.fc .fc-button {\n    display: inline-block;\n    font-weight: 400;\n    text-align: center;\n    vertical-align: middle;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    background-color: transparent;\n    border: 1px solid transparent;\n    padding: 0.4em 0.65em;\n    font-size: 1em;\n    line-height: 1.5;\n    border-radius: 0.25em;\n  }\n.fc .fc-button:hover {\n    text-decoration: none;\n  }\n.fc .fc-button:focus {\n    outline: 0;\n    box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);\n  }\n.fc .fc-button:disabled {\n    opacity: 0.65;\n  }\n.fc {\n\n  /* \"primary\" coloring */\n\n}\n.fc .fc-button-primary {\n    color: #fff;\n    color: var(--fc-button-text-color, #fff);\n    background-color: #2C3E50;\n    background-color: var(--fc-button-bg-color, #2C3E50);\n    border-color: #2C3E50;\n    border-color: var(--fc-button-border-color, #2C3E50);\n  }\n.fc .fc-button-primary:hover {\n    color: #fff;\n    color: var(--fc-button-text-color, #fff);\n    background-color: #1e2b37;\n    background-color: var(--fc-button-hover-bg-color, #1e2b37);\n    border-color: #1a252f;\n    border-color: var(--fc-button-hover-border-color, #1a252f);\n  }\n.fc .fc-button-primary:disabled { /* not DRY */\n    color: #fff;\n    color: var(--fc-button-text-color, #fff);\n    background-color: #2C3E50;\n    background-color: var(--fc-button-bg-color, #2C3E50);\n    border-color: #2C3E50;\n    border-color: var(--fc-button-border-color, #2C3E50); /* overrides :hover */\n  }\n.fc .fc-button-primary:focus {\n    box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);\n  }\n.fc .fc-button-primary:not(:disabled):active,\n  .fc .fc-button-primary:not(:disabled).fc-button-active {\n    color: #fff;\n    color: var(--fc-button-text-color, #fff);\n    background-color: #1a252f;\n    background-color: var(--fc-button-active-bg-color, #1a252f);\n    border-color: #151e27;\n    border-color: var(--fc-button-active-border-color, #151e27);\n  }\n.fc .fc-button-primary:not(:disabled):active:focus,\n  .fc .fc-button-primary:not(:disabled).fc-button-active:focus {\n    box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, 0.5);\n  }\n.fc {\n\n  /* icons within buttons */\n\n}\n.fc .fc-button .fc-icon {\n    vertical-align: middle;\n    font-size: 1.5em; /* bump up the size (but don't make it bigger than line-height of button, which is 1.5em also) */\n  }\n.fc .fc-button-group {\n    position: relative;\n    display: inline-flex;\n    vertical-align: middle;\n  }\n.fc .fc-button-group > .fc-button {\n    position: relative;\n    flex: 1 1 auto;\n  }\n.fc .fc-button-group > .fc-button:hover {\n    z-index: 1;\n  }\n.fc .fc-button-group > .fc-button:focus,\n  .fc .fc-button-group > .fc-button:active,\n  .fc .fc-button-group > .fc-button.fc-button-active {\n    z-index: 1;\n  }\n.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {\n    margin-left: -1px;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n  }\n.fc-direction-rtl .fc-button-group > .fc-button:not(:first-child) {\n    margin-right: -1px;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n  }\n.fc-direction-rtl .fc-button-group > .fc-button:not(:last-child) {\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n.fc .fc-toolbar {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n  }\n.fc .fc-toolbar.fc-header-toolbar {\n    margin-bottom: 1.5em;\n  }\n.fc .fc-toolbar.fc-footer-toolbar {\n    margin-top: 1.5em;\n  }\n.fc .fc-toolbar-title {\n    font-size: 1.75em;\n    margin: 0;\n  }\n.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {\n    margin-left: .75em; /* space between */\n  }\n.fc-direction-rtl .fc-toolbar > * > :not(:first-child) {\n    margin-right: .75em; /* space between */\n  }\n.fc-direction-rtl .fc-toolbar-ltr { /* when the toolbar-chunk positioning system is explicitly left-to-right */\n    flex-direction: row-reverse;\n  }\n.fc .fc-scroller {\n    -webkit-overflow-scrolling: touch;\n    position: relative; /* for abs-positioned elements within */\n  }\n.fc .fc-scroller-liquid {\n    height: 100%;\n  }\n.fc .fc-scroller-liquid-absolute {\n    position: absolute;\n    top: 0;\n    right: 0;\n    left: 0;\n    bottom: 0;\n  }\n.fc .fc-scroller-harness {\n    position: relative;\n    overflow: hidden;\n    direction: ltr;\n      /* hack for chrome computing the scroller's right/left wrong for rtl. undone below... */\n      /* TODO: demonstrate in codepen */\n  }\n.fc .fc-scroller-harness-liquid {\n    height: 100%;\n  }\n.fc-direction-rtl .fc-scroller-harness > .fc-scroller { /* undo above hack */\n    direction: rtl;\n  }\n.fc-theme-standard .fc-scrollgrid {\n    border: 1px solid #ddd;\n    border: 1px solid var(--fc-border-color, #ddd); /* bootstrap does this. match */\n  }\n.fc .fc-scrollgrid,\n    .fc .fc-scrollgrid table { /* all tables (self included) */\n      width: 100%; /* because tables don't normally do this */\n      table-layout: fixed;\n    }\n.fc .fc-scrollgrid table { /* inner tables */\n      border-top-style: hidden;\n      border-left-style: hidden;\n      border-right-style: hidden;\n    }\n.fc .fc-scrollgrid {\n\n    border-collapse: separate;\n    border-right-width: 0;\n    border-bottom-width: 0;\n\n  }\n.fc .fc-scrollgrid-liquid {\n    height: 100%;\n  }\n.fc .fc-scrollgrid-section { /* a <tr> */\n    height: 1px /* better than 0, for firefox */\n\n  }\n.fc .fc-scrollgrid-section > td {\n      height: 1px; /* needs a height so inner div within grow. better than 0, for firefox */\n    }\n.fc .fc-scrollgrid-section table {\n      height: 1px;\n        /* for most browsers, if a height isn't set on the table, can't do liquid-height within cells */\n        /* serves as a min-height. harmless */\n    }\n.fc .fc-scrollgrid-section-liquid {\n    height: auto\n\n  }\n.fc .fc-scrollgrid-section-liquid > td {\n      height: 100%; /* better than `auto`, for firefox */\n    }\n.fc .fc-scrollgrid-section > * {\n    border-top-width: 0;\n    border-left-width: 0;\n  }\n.fc .fc-scrollgrid-section-header > *,\n  .fc .fc-scrollgrid-section-footer > * {\n    border-bottom-width: 0;\n  }\n.fc .fc-scrollgrid-section-body table,\n  .fc .fc-scrollgrid-section-footer table {\n    border-bottom-style: hidden; /* head keeps its bottom border tho */\n  }\n.fc {\n\n  /* stickiness */\n\n}\n.fc .fc-scrollgrid-section-sticky > * {\n    background: #fff;\n    background: var(--fc-page-bg-color, #fff);\n    position: -webkit-sticky;\n    position: sticky;\n    z-index: 2; /* TODO: var */\n    /* TODO: box-shadow when sticking */\n  }\n.fc .fc-scrollgrid-section-header.fc-scrollgrid-section-sticky > * {\n    top: 0; /* because border-sharing causes a gap at the top */\n      /* TODO: give safari -1. has bug */\n  }\n.fc .fc-scrollgrid-section-footer.fc-scrollgrid-section-sticky > * {\n    bottom: 0; /* known bug: bottom-stickiness doesn't work in safari */\n  }\n.fc .fc-scrollgrid-sticky-shim { /* for horizontal scrollbar */\n    height: 1px; /* needs height to create scrollbars */\n    margin-bottom: -1px;\n  }\n.fc-sticky { /* no .fc wrap because used as child of body */\n  position: -webkit-sticky;\n  position: sticky;\n}\n.fc .fc-view-harness {\n    flex-grow: 1; /* because this harness is WITHIN the .fc's flexbox */\n    position: relative;\n  }\n.fc {\n\n  /* when the harness controls the height, make the view liquid */\n\n}\n.fc .fc-view-harness-active > .fc-view {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n  }\n.fc .fc-col-header-cell-cushion {\n    display: inline-block; /* x-browser for when sticky (when multi-tier header) */\n    padding: 2px 4px;\n  }\n.fc .fc-bg-event,\n  .fc .fc-non-business,\n  .fc .fc-highlight {\n    /* will always have a harness with position:relative/absolute, so absolutely expand */\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n  }\n.fc .fc-non-business {\n    background: rgba(215, 215, 215, 0.3);\n    background: var(--fc-non-business-color, rgba(215, 215, 215, 0.3));\n  }\n.fc .fc-bg-event {\n    background: rgb(143, 223, 130);\n    background: var(--fc-bg-event-color, rgb(143, 223, 130));\n    opacity: 0.3;\n    opacity: var(--fc-bg-event-opacity, 0.3)\n  }\n.fc .fc-bg-event .fc-event-title {\n      margin: .5em;\n      font-size: .85em;\n      font-size: var(--fc-small-font-size, .85em);\n      font-style: italic;\n    }\n.fc .fc-highlight {\n    background: rgba(188, 232, 241, 0.3);\n    background: var(--fc-highlight-color, rgba(188, 232, 241, 0.3));\n  }\n.fc .fc-cell-shaded,\n  .fc .fc-day-disabled {\n    background: rgba(208, 208, 208, 0.3);\n    background: var(--fc-neutral-bg-color, rgba(208, 208, 208, 0.3));\n  }\n/* link resets */\n/* ---------------------------------------------------------------------------------------------------- */\na.fc-event,\na.fc-event:hover {\n  text-decoration: none;\n}\n/* cursor */\n.fc-event[href],\n.fc-event.fc-event-draggable {\n  cursor: pointer;\n}\n/* event text content */\n/* ---------------------------------------------------------------------------------------------------- */\n.fc-event .fc-event-main {\n    position: relative;\n    z-index: 2;\n  }\n/* dragging */\n/* ---------------------------------------------------------------------------------------------------- */\n.fc-event-dragging:not(.fc-event-selected) { /* MOUSE */\n    opacity: 0.75;\n  }\n.fc-event-dragging.fc-event-selected { /* TOUCH */\n    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);\n  }\n/* resizing */\n/* ---------------------------------------------------------------------------------------------------- */\n/* (subclasses should hone positioning for touch and non-touch) */\n.fc-event .fc-event-resizer {\n    display: none;\n    position: absolute;\n    z-index: 4;\n  }\n.fc-event:hover, /* MOUSE */\n.fc-event-selected { /* TOUCH */\n\n}\n.fc-event:hover .fc-event-resizer, .fc-event-selected .fc-event-resizer {\n    display: block;\n  }\n.fc-event-selected .fc-event-resizer {\n    border-radius: 4px;\n    border-radius: calc(var(--fc-event-resizer-dot-total-width, 8px) / 2);\n    border-width: 1px;\n    border-width: var(--fc-event-resizer-dot-border-width, 1px);\n    width: 8px;\n    width: var(--fc-event-resizer-dot-total-width, 8px);\n    height: 8px;\n    height: var(--fc-event-resizer-dot-total-width, 8px);\n    border-style: solid;\n    border-color: inherit;\n    background: #fff;\n    background: var(--fc-page-bg-color, #fff)\n\n    /* expand hit area */\n\n  }\n.fc-event-selected .fc-event-resizer:before {\n      content: '';\n      position: absolute;\n      top: -20px;\n      left: -20px;\n      right: -20px;\n      bottom: -20px;\n    }\n/* selecting (always TOUCH) */\n/* ---------------------------------------------------------------------------------------------------- */\n.fc-event-selected {\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)\n\n  /* expand hit area (subclasses should expand) */\n\n}\n.fc-event-selected:before {\n    content: \"\";\n    position: absolute;\n    z-index: 3;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n  }\n.fc-event-selected {\n\n  /* dimmer effect */\n\n}\n.fc-event-selected:after {\n    content: \"\";\n    background: rgba(0, 0, 0, 0.25);\n    background: var(--fc-event-selected-overlay-color, rgba(0, 0, 0, 0.25));\n    position: absolute;\n    z-index: 1;\n\n    /* assume there's a border on all sides. overcome it. */\n    /* sometimes there's NOT a border, in which case the dimmer will go over */\n    /* an adjacent border, which looks fine. */\n    top: -1px;\n    left: -1px;\n    right: -1px;\n    bottom: -1px;\n  }\n/*\nA HORIZONTAL event\n*/\n.fc-h-event { /* allowed to be top-level */\n  display: block;\n  border: 1px solid #3788d8;\n  border: 1px solid var(--fc-event-border-color, #3788d8);\n  background-color: #3788d8;\n  background-color: var(--fc-event-bg-color, #3788d8)\n\n}\n.fc-h-event .fc-event-main {\n    color: #fff;\n    color: var(--fc-event-text-color, #fff);\n  }\n.fc-h-event .fc-event-main-frame {\n    display: flex; /* for make fc-event-title-container expand */\n  }\n.fc-h-event .fc-event-time {\n    max-width: 100%; /* clip overflow on this element */\n    overflow: hidden;\n  }\n.fc-h-event .fc-event-title-container { /* serves as a container for the sticky cushion */\n    flex-grow: 1;\n    flex-shrink: 1;\n    min-width: 0; /* important for allowing to shrink all the way */\n  }\n.fc-h-event .fc-event-title {\n    display: inline-block; /* need this to be sticky cross-browser */\n    vertical-align: top; /* for not messing up line-height */\n    left: 0;  /* for sticky */\n    right: 0; /* for sticky */\n    max-width: 100%; /* clip overflow on this element */\n    overflow: hidden;\n  }\n.fc-h-event.fc-event-selected:before {\n    /* expand hit area */\n    top: -10px;\n    bottom: -10px;\n  }\n/* adjust border and border-radius (if there is any) for non-start/end */\n.fc-direction-ltr .fc-daygrid-block-event:not(.fc-event-start),\n.fc-direction-rtl .fc-daygrid-block-event:not(.fc-event-end) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n  border-left-width: 0;\n}\n.fc-direction-ltr .fc-daygrid-block-event:not(.fc-event-end),\n.fc-direction-rtl .fc-daygrid-block-event:not(.fc-event-start) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  border-right-width: 0;\n}\n/* resizers */\n.fc-h-event:not(.fc-event-selected) .fc-event-resizer {\n  top: 0;\n  bottom: 0;\n  width: 8px;\n  width: var(--fc-event-resizer-thickness, 8px);\n}\n.fc-direction-ltr .fc-h-event:not(.fc-event-selected) .fc-event-resizer-start,\n.fc-direction-rtl .fc-h-event:not(.fc-event-selected) .fc-event-resizer-end {\n  cursor: w-resize;\n  left: -4px;\n  left: calc(var(--fc-event-resizer-thickness, 8px) / -2);\n}\n.fc-direction-ltr .fc-h-event:not(.fc-event-selected) .fc-event-resizer-end,\n.fc-direction-rtl .fc-h-event:not(.fc-event-selected) .fc-event-resizer-start {\n  cursor: e-resize;\n  right: -4px;\n  right: calc(var(--fc-event-resizer-thickness, 8px) / -2);\n}\n/* resizers for TOUCH */\n.fc-h-event.fc-event-selected .fc-event-resizer {\n  top: 50%;\n  margin-top: -4px;\n  margin-top: calc(var(--fc-event-resizer-dot-total-width, 8px) / -2);\n}\n.fc-direction-ltr .fc-h-event.fc-event-selected .fc-event-resizer-start,\n.fc-direction-rtl .fc-h-event.fc-event-selected .fc-event-resizer-end {\n  left: -4px;\n  left: calc(var(--fc-event-resizer-dot-total-width, 8px) / -2);\n}\n.fc-direction-ltr .fc-h-event.fc-event-selected .fc-event-resizer-end,\n.fc-direction-rtl .fc-h-event.fc-event-selected .fc-event-resizer-start {\n  right: -4px;\n  right: calc(var(--fc-event-resizer-dot-total-width, 8px) / -2);\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/daygrid/main.css":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/daygrid/main.css ***!
+  \*************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n:root {\n  --fc-daygrid-event-dot-width: 8px;\n}\n.fc .fc-popover {\n    position: fixed;\n    top: 0; /* for when not positioned yet */\n    box-shadow: 0 2px 6px rgba(0,0,0,.15);\n  }\n.fc .fc-popover-header {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    padding: 3px 4px;\n  }\n.fc .fc-popover-title {\n    margin: 0 2px;\n  }\n.fc .fc-popover-close {\n    cursor: pointer;\n    opacity: 0.65;\n    font-size: 1.1em;\n  }\n.fc-theme-standard .fc-popover {\n    border: 1px solid #ddd;\n    border: 1px solid var(--fc-border-color, #ddd);\n    background: #fff;\n    background: var(--fc-page-bg-color, #fff);\n  }\n.fc-theme-standard .fc-popover-header {\n    background: rgba(208, 208, 208, 0.3);\n    background: var(--fc-neutral-bg-color, rgba(208, 208, 208, 0.3));\n  }\n/* help things clear margins of inner content */\n.fc-daygrid-day-frame,\n.fc-daygrid-day-events,\n.fc-daygrid-event-harness { /* for event top/bottom margins */\n}\n.fc-daygrid-day-frame:before, .fc-daygrid-day-events:before, .fc-daygrid-event-harness:before {\n  content: \"\";\n  clear: both;\n  display: table; }\n.fc-daygrid-day-frame:after, .fc-daygrid-day-events:after, .fc-daygrid-event-harness:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n.fc .fc-daygrid-body { /* a <div> that wraps the table */\n    position: relative;\n    z-index: 1; /* container inner z-index's because <tr>s can't do it */\n  }\n.fc .fc-daygrid-day.fc-day-today {\n      background-color: rgba(255, 220, 40, 0.15);\n      background-color: var(--fc-today-bg-color, rgba(255, 220, 40, 0.15));\n    }\n.fc .fc-daygrid-day-frame {\n    position: relative;\n    min-height: 100%; /* seems to work better than `height` because sets height after rows/cells naturally do it */\n  }\n.fc {\n\n  /* cell top */\n\n}\n.fc .fc-daygrid-day-top {\n    display: flex;\n    flex-direction: row-reverse;\n  }\n.fc .fc-day-other .fc-daygrid-day-top {\n    opacity: 0.3;\n  }\n.fc {\n\n  /* day number (within cell top) */\n\n}\n.fc .fc-daygrid-day-number {\n    position: relative;\n    z-index: 4;\n    padding: 4px;\n  }\n.fc {\n\n  /* event container */\n\n}\n.fc .fc-daygrid-day-events {\n    margin-top: 1px; /* needs to be margin, not padding, so that available cell height can be computed */\n  }\n.fc {\n\n  /* positioning for balanced vs natural */\n\n}\n.fc .fc-daygrid-body-balanced .fc-daygrid-day-events {\n      position: absolute;\n      left: 0;\n      right: 0;\n    }\n.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {\n      position: relative; /* for containing abs positioned event harnesses */\n      min-height: 2em; /* in addition to being a min-height during natural height, equalizes the heights a little bit */\n    }\n.fc .fc-daygrid-body-natural { /* can coexist with -unbalanced */\n  }\n.fc .fc-daygrid-body-natural .fc-daygrid-day-events {\n      margin-bottom: 1em;\n    }\n.fc {\n\n  /* event harness */\n\n}\n.fc .fc-daygrid-event-harness {\n    position: relative;\n  }\n.fc .fc-daygrid-event-harness-abs {\n    position: absolute;\n    top: 0; /* fallback coords for when cannot yet be computed */\n    left: 0; /* */\n    right: 0; /* */\n  }\n.fc .fc-daygrid-bg-harness {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n  }\n.fc {\n\n  /* bg content */\n\n}\n.fc .fc-daygrid-day-bg .fc-non-business { z-index: 1 }\n.fc .fc-daygrid-day-bg .fc-bg-event { z-index: 2 }\n.fc .fc-daygrid-day-bg .fc-highlight { z-index: 3 }\n.fc {\n\n  /* events */\n\n}\n.fc .fc-daygrid-event {\n    z-index: 6;\n    margin-top: 1px;\n  }\n.fc .fc-daygrid-event.fc-event-mirror {\n    z-index: 7;\n  }\n.fc {\n\n  /* cell bottom (within day-events) */\n\n}\n.fc .fc-daygrid-day-bottom {\n    font-size: .85em;\n    margin: 2px 3px 0;\n  }\n.fc .fc-daygrid-more-link {\n    position: relative;\n    z-index: 4;\n    cursor: pointer;\n  }\n.fc {\n\n  /* week number (within frame) */\n\n}\n.fc .fc-daygrid-week-number {\n    position: absolute;\n    z-index: 5;\n    top: 0;\n    padding: 2px;\n    min-width: 1.5em;\n    text-align: center;\n    background-color: rgba(208, 208, 208, 0.3);\n    background-color: var(--fc-neutral-bg-color, rgba(208, 208, 208, 0.3));\n    color: #808080;\n    color: var(--fc-neutral-text-color, #808080);\n  }\n.fc {\n\n  /* popover */\n\n}\n.fc .fc-more-popover {\n    z-index: 8;\n  }\n.fc .fc-more-popover .fc-popover-body {\n    min-width: 220px;\n    padding: 10px;\n  }\n.fc-direction-ltr .fc-daygrid-event.fc-event-start,\n.fc-direction-rtl .fc-daygrid-event.fc-event-end {\n  margin-left: 2px;\n}\n.fc-direction-ltr .fc-daygrid-event.fc-event-end,\n.fc-direction-rtl .fc-daygrid-event.fc-event-start {\n  margin-right: 2px;\n}\n.fc-direction-ltr .fc-daygrid-week-number {\n    left: 0;\n    border-radius: 0 0 3px 0;\n  }\n.fc-direction-rtl .fc-daygrid-week-number {\n    right: 0;\n    border-radius: 0 0 0 3px;\n  }\n.fc-liquid-hack .fc-daygrid-day-frame {\n    position: static; /* will cause inner absolute stuff to expand to <td> */\n  }\n.fc-daygrid-event { /* make root-level, because will be dragged-and-dropped outside of a component root */\n  position: relative; /* for z-indexes assigned later */\n  white-space: nowrap;\n  border-radius: 3px; /* dot event needs this to when selected */\n  font-size: .85em;\n  font-size: var(--fc-small-font-size, .85em);\n}\n/* --- the rectangle (\"block\") style of event --- */\n.fc-daygrid-block-event .fc-event-time {\n    font-weight: bold;\n  }\n.fc-daygrid-block-event .fc-event-time,\n  .fc-daygrid-block-event .fc-event-title {\n    padding: 1px;\n  }\n/* --- the dot style of event --- */\n.fc-daygrid-dot-event {\n  display: flex;\n  align-items: center;\n  padding: 2px 0\n\n}\n.fc-daygrid-dot-event .fc-event-title {\n    flex-grow: 1;\n    flex-shrink: 1;\n    min-width: 0; /* important for allowing to shrink all the way */\n    overflow: hidden;\n    font-weight: bold;\n  }\n.fc-daygrid-dot-event:hover,\n  .fc-daygrid-dot-event.fc-event-mirror {\n    background: rgba(0, 0, 0, 0.1);\n  }\n.fc-daygrid-dot-event.fc-event-selected:before {\n    /* expand hit area */\n    top: -10px;\n    bottom: -10px;\n  }\n.fc-daygrid-event-dot { /* the actual dot */\n  margin: 0 4px;\n  box-sizing: content-box;\n  width: 0;\n  height: 0;\n  border: 4px solid #3788d8;\n  border: calc(var(--fc-daygrid-event-dot-width, 8px) / 2) solid var(--fc-event-border-color, #3788d8);\n  border-radius: 4px;\n  border-radius: calc(var(--fc-daygrid-event-dot-width, 8px) / 2);\n}\n/* --- spacing between time and title --- */\n.fc-direction-ltr .fc-daygrid-event .fc-event-time {\n    margin-right: 3px;\n  }\n.fc-direction-rtl .fc-daygrid-event .fc-event-time {\n    margin-left: 3px;\n  }\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fc-col-header-cell{\r\nbackground-color: #3490dc ;\r\ncolor: white;\n}\n.fc-h-event{\r\n    transition: 1s;\r\n    cursor: pointer;\n}\n.fc-h-event:hover{\r\n    transition: 1s;\r\nbackground-color: #19588b\n}\n.fc-daygrid-day{\r\n    background-color: white ;\n}\n.fc .fc-daygrid-day.fc-day-today{\r\n    background-color: #6cb2eb;\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/bootstrap/main.css":
+/*!*******************************************************!*\
+  !*** ./node_modules/@fullcalendar/bootstrap/main.css ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./main.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/bootstrap/main.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/common/main.css":
+/*!****************************************************!*\
+  !*** ./node_modules/@fullcalendar/common/main.css ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./main.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/common/main.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/daygrid/main.css":
+/*!*****************************************************!*\
+  !*** ./node_modules/@fullcalendar/daygrid/main.css ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./main.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/@fullcalendar/daygrid/main.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_main_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Calendar.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Calendar.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/admin/Calendar.vue ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Calendar_vue_vue_type_template_id_68b97629___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Calendar.vue?vue&type=template&id=68b97629& */ "./resources/js/components/admin/Calendar.vue?vue&type=template&id=68b97629&");
+/* harmony import */ var _Calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Calendar.vue?vue&type=script&lang=js& */ "./resources/js/components/admin/Calendar.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Calendar_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Calendar.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _Calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Calendar_vue_vue_type_template_id_68b97629___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Calendar_vue_vue_type_template_id_68b97629___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/admin/Calendar.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Calendar.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/admin/Calendar.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Calendar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Calendar.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Calendar.vue?vue&type=template&id=68b97629&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/admin/Calendar.vue?vue&type=template&id=68b97629& ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_template_id_68b97629___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_template_id_68b97629___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_template_id_68b97629___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Calendar.vue?vue&type=template&id=68b97629& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=template&id=68b97629&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=template&id=68b97629&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Calendar.vue?vue&type=template&id=68b97629& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("FullCalendar", {
+    ref: "fullcalendar",
+    staticClass: "mt-2",
+    attrs: { id: "calendar", options: _vm.calendarOptions }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
 
 
 /***/ })
