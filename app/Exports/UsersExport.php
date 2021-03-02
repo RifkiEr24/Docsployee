@@ -9,8 +9,11 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
+use Maatwebsite\Excel\Concerns\WithColumnFormatting;
 
-class UsersExport implements FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithStyles
+
+class UsersExport implements WithColumnFormatting,FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithStyles
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -29,6 +32,12 @@ class UsersExport implements FromCollection, WithMapping, WithHeadings, ShouldAu
     public function collection()
     {
         return User::with('detail')->get();
+    }
+    public function columnFormats(): array
+    {
+        return [
+            'B' => NumberFormat::FORMAT_NUMBER,
+        ];
     }
     public function map($user) : array {
         return [

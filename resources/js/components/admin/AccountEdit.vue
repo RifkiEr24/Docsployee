@@ -4,9 +4,14 @@
             <div>
                 
                 <div class="form-group">
+                                 <ValidationProvider name="NPWP" rules="length:15" v-slot="{ errors }">
+
                     <label for="npwp">NPWP</label>
                     <input type="number" class="form-control rounded-pill" placeholder="Masukkan NPWP Anda disini"
                         id="NPWP" aria-describedby="npwp" v-model="user.npwp">
+                    <span v-if="errors[0]" class="ml-2  text-danger font-weight-bold">{{ errors[0] }}</span>
+
+                                 </ValidationProvider>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -50,6 +55,33 @@
     </div>
 </template>
 <script>
+   import {
+        length,
+        required,
+        email,
+        integer,
+    } from 'vee-validate/dist/rules';
+import {
+    ValidationProvider
+} from 'vee-validate';
+import {
+    ValidationObserver
+} from 'vee-validate';
+import {
+    extend
+} from 'vee-validate';
+extend('length', value => {
+  if (value.length == 15) {
+    return true;
+  }
+  return '{_field_} Harus Berisi 15 Angka!';
+});
+extend('required',value =>{
+     if (value.length !== 0) {
+    return true;
+  }
+  return '{_field_} Harus diisi!';
+});
 export default {
     data() {
         return {
@@ -66,25 +98,39 @@ export default {
                 }
             }).then((res) => {
                 this.user = res.data[0];
-                console.log(this.user)
             })
         })
     },
     methods: {
         update() {
             this.$swal.showLoading();
-            this.axios.put('/api/account/updateall', this.user).then(() => {
+            let npwplength=this.user.npwp.toString().length;
+            if(npwplength !==15){
+                                this.$swal.close();
+
+                  this.$swal.fire({
+                        title: 'Update Gagal',
+                        text: "NPWP Harus berisi 15 angka !",
+                        icon: 'error',
+                    })
+            }else{
+                 this.axios.put('/api/account/updateall', this.user).then(() => {
                 this.$swal.close();
                 this.$swal.fire({
                     icon: 'success',
-                    title: 'Success',
-                    text: 'Akun Berhasil di update',
+                    title: 'Sukses',
+                    text: 'Akun Berhasil di perbaharui',
                 })
             });
+            }
+           
         },
         a() {
-            console.log(this.user);
         }
-    }
+    },
+     components: {
+        ValidationProvider,
+        ValidationObserver
+    },
 }
 </script>

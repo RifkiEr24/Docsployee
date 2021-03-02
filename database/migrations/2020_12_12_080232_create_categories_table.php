@@ -44,6 +44,11 @@ class CreateCategoriesTable extends Migration
                 'category_name' => 'Kartu Pegawai',
             ],
         );
+        Category::create(
+            [
+                'category_name' => 'Berkas Kerja',
+            ],
+        );
       
        
       

@@ -132,9 +132,24 @@ export default {
     },
     onItemClick: function (event, item, node) {
     if(item.title === 'Log Out'){
-      axios.post('/api/logout').then(()=>{
-        this.$router.push({name: 'login'});
-      })
+        this.$swal.fire({
+                title: 'Apakah kamu yakin?',
+                text: "Apakah Kamu Yakin Ingin Keluar Aplikasi Sistem Kepegawaian?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Keluar',
+                cancelButtonText: 'Kembali'
+                }).then((result) => {
+                if (result.value) {
+                            this.$swal.showLoading();
+                              axios.post('/api/logout').then(()=>{
+                    this.$router.push({name: 'login'});
+                  }).then(()=>{
+                     this.$swal.close();
+                  })                 
+                }
+            })
+
     }    
     },
     showOnAdmin: function(){

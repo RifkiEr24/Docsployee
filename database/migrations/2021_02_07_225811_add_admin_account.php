@@ -21,8 +21,6 @@ class AddAdminAccount extends Migration
                 'role' => 'admin',
                 'email' => 'admin123@gmail.com',
                 'password' =>Hash::make('admin123'),
-
-                
             ]
         );
     }

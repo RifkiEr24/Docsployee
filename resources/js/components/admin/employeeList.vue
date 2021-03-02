@@ -143,13 +143,11 @@ export default {
         })
           },
           exportToPDF () {
-                         console.log('a')
 			},
           search(){
               axios.get('/api/account/search', { params: { keywords: this.keywords } })
                 .then(response => this.accounts = response.data)
                 .catch(error => {});
-                console.log(this.keywords);
           },
         deletePost(id)
         {
@@ -161,14 +159,14 @@ export default {
                   })
             }else{
                  this.$swal.fire({
-                title: 'Apakah kamu yakin?',
-                text: "Jika kamu hapus, maka data tidak akan kembali lagi.",
+                title: 'Apakah anda yakin?',
+                text: "Jika anda hapus, maka data tidak akan kembali lagi.",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Hapus Deh',
-                cancelButtonText: 'Nggak Jadi'
+                confirmButtonText: 'Hapus',
+                cancelButtonText: 'Kembali'
                 }).then((result) => {
                 if (result.value) {
                 
@@ -178,7 +176,6 @@ export default {
                         title: 'Success!',
                         text: 'Akun Berhasil Dihapus',
                         icon: 'success',
-                        timer: 1000
                     });
                         this.getaccount();
                     });

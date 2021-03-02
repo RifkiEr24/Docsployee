@@ -48,7 +48,6 @@ export default {
                         title: 'Success',
                         text: "Password Berhasil Diubah",
                         icon: 'success',
-                        timer: 1500
                     })
             }).catch((error)=>{
                 if(error.response.data.errors.old){
@@ -73,7 +72,6 @@ export default {
                         title: 'Success',
                         text: "Password Berhasil Diubah",
                         icon: 'success',
-                        timer: 1500
                     })
             }).catch((error)=>{
                 if(error.response.data.errors.old){

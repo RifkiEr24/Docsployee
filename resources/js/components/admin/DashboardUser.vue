@@ -169,11 +169,9 @@ export default {
     },
 
     mounted() {
-      console.log(this.profilepicture);
       axios.get('/api/event/monthly').then((res) => {
           this.monthlyevent = res.data;
   })
-      console.log(this.usersession);
         // DOCUMENT DATA CHECK
         let i = 0;
             axios.get('/api/datacheck', {

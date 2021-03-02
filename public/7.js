@@ -142,7 +142,7 @@ __webpack_require__.r(__webpack_exports__);
         }]
       },
       dataPie: {
-        labels: ['Man', 'Woman'],
+        labels: ['Laki - Laki', 'Perempuan'],
         datasets: [{
           label: 'Task finished',
           pointBackgroundColor: 'white',

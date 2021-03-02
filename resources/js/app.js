@@ -73,7 +73,6 @@ const routes = [
       component: AdminPage,
       beforeEnter: (to, from, next) =>{
         axios.get('/api/athenticated').then((res)=>{
-          console.log(res);
           axios.get('api/user').then((res)=>{
             if(res.data.role == 'user'){
              Vue.swal.fire({
@@ -88,10 +87,8 @@ const routes = [
               const start= new Date(res.data.last_login);
               let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
               let startdate = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
-              console.log(date, startdate)
               if(startdate != date){
                 axios.get('/api/updatelogin',{params:{iduser: res.data.id_akun}}).then((res)=>{
-                  console.log(res.data);
                 });
               }
               next()
@@ -215,7 +212,6 @@ const routes = [
     beforeEnter: (to, form, next) =>{
       axios.get('/api/athenticated').then((response)=>{
         axios.get('/api/user').then((res)=>{
-          console.log(res);
           if(res.data.role == 'admin'){
            Vue.swal.fire({
               icon: 'error',
@@ -229,10 +225,8 @@ const routes = [
             const start= new Date(res.data.last_login);
             let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             let startdate = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
-            console.log(date, startdate)
             if(startdate != date){
               axios.get('/api/updatelogin',{params:{iduser: res.data.id_akun}}).then((res)=>{
-                console.log(res.data);
               });
             }
             next()
@@ -272,7 +266,6 @@ const routes = [
     axios.get('/api/athenticated').then(()=>{
         next()
     }).catch(()=>{
-      console.log('error')
     })
 }
 }

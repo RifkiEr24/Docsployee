@@ -1,5 +1,8 @@
 <template>
 <div>
+    <a  href="javascript:history.go(-1)">
+    <i class="fas fa-arrow-left back-icon mt-3" ></i>
+    </a>
     <div v-if="documents.length > 0" class="row mt-5">
         <div class="col-md-4" v-for="(document) in documents" :key="document.id_document">
             <div class="card border-rounded" style="width: 18rem;">
@@ -45,6 +48,21 @@ export default {
         documents: [],
     }),
     methods: {
+        getfile(){
+             if(this.$route.name== 'admineditcategory'){
+              axios.get(`/api/category/detailname/${this.$route.params.id}`,{params:{categoryid:this.$route.params.categoryname}}).then((res) => {
+                this.documents = res.data;      
+            })
+        }else{
+           axios.get('/api/user').then((res) => {
+            this.user = res.data
+        }).then(() => {
+            axios.get(`/api/category/detail/${this.$route.params.id}`,{params : {iduser: this.user.id_akun}}).then((res) => {
+                this.documents = res.data;  
+            })
+        })  
+        }
+        },
          download(user,filename) {
               axios({
                     url: `http://127.0.0.1:8000/storage/images/${user}/${filename}`,
@@ -81,8 +99,7 @@ export default {
                     });
                     let uri = `/api/document/delete/${id}`;
                     this.axios.delete(uri).then(response => {
-                        console.log(response);
-                        this.documents.splice(this.documents.indexOf(id), 1);
+                       this.getfile();
                     });                    
                 }
             })
@@ -90,21 +107,15 @@ export default {
       
            },
     mounted() {
-        if(this.$route.name== 'admineditcategory'){
-              axios.get(`/api/category/detailname/${this.$route.params.id}`,{params:{categoryid:this.$route.params.categoryname}}).then((res) => {
-                this.documents = res.data;      
-            })
-        }else{
-           axios.get('/api/user').then((res) => {
-            this.user = res.data
-        }).then(() => {
-            axios.get(`/api/category/detail/${this.$route.params.id}`,{params : {iduser: this.user.id_akun}}).then((res) => {
-                this.documents = res.data;  
-            })
-        })  
-        }
+       this.getfile();
        
     }
 
 }
 </script>
+<style  scoped>
+.back-icon{
+    font-size: 3rem;
+    color: #3490dc;
+}
+</style>

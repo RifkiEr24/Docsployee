@@ -17,7 +17,7 @@ class RegisterController extends Controller
             'name' => ['required'],
             'email' => ['required', 'email', 'unique:users'],
             'password' =>['required', 'confirmed'],
-            'npwp' => ['required','integer'],
+            'npwp' => ['required','integer','unique:users'],
             'date' => ['required','date'],
             'gender' => ['required'],
             'address' => ['required'],

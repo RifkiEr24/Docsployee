@@ -1,5 +1,8 @@
 <template>
     <div>
+            <a  href="javascript:history.go(-1)"  v-if="this.$route.name == 'admineditcloud'">
+    <i class="fas fa-arrow-left back-icon mt-3" ></i>
+    </a>
         <div class="row mt-5">
             <div class="col-md-6">
                 <h4 class="text-dark ">Quick Access</h4>
@@ -56,6 +59,8 @@
             
         </div>
         <h4 class="text-dark mt-5">All Files</h4>
+            <div class="table-responsive">
+
         <table class="table table-light mt-3">
             <thead class="bg-primary text-white">
                 <tr>
@@ -93,6 +98,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
         <!-- Modal -->
         <form method="POST" enctype="multipart/form-data" @submit.prevent="Upload">
 
@@ -196,7 +202,6 @@ export default {
                         title: 'Success!',
                         text: 'Gambar Berhasil Dihapus',
                         icon: 'success',
-                        timer: 1000
                     });
                     let uri = `/api/document/delete/${id}`;
                     this.axios.delete(uri).then(response => {
@@ -245,7 +250,13 @@ export default {
                     title: 'Success',
                          text: 'Gambar Berhasil Di Tambahkan',
                 })
-                });
+                }).catch((error) =>{
+                            this.$swal.fire({
+                    icon: 'error',
+                    title: 'Upload Gagal',
+                    text: 'Penginputan Berkas Gagal, Pastikan Ukuran File Berada dibawah 2MB',
+                    })
+                                })
             }else{
                 this.$swal.fire({
                 icon: 'error',
@@ -279,7 +290,6 @@ export default {
                 }
             }).then((res) => {
                 this.documents = res.data
-                console.log(this.documents);
             })
         })
         }
@@ -296,5 +306,9 @@ export default {
         width: 44px;
         height: 44px;
         object-fit: cover;
+    }
+    .back-icon{
+        font-size: 3rem;
+    color: #3490dc;
     }
 </style>

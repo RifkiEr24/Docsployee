@@ -58,7 +58,15 @@ export default {
         loginUser(){
             axios.get('/sanctum/csrf-cookie').then(response => {
           this.$swal.showLoading();
-                    axios.post('/api/login', this.form).then((response) =>{
+          if(this.form.email == '' || this.form.password == ''){
+               this.$swal.close();
+                this.$swal.fire({
+                    icon: 'error',
+                    title: 'Login Gagal',
+                    text: 'Isi semua input email dan password!',
+                 })
+          }else{
+                axios.post('/api/login', this.form).then((response) =>{
                         this.$swal.close();
                                   this.$swal.fire({
                                     icon: 'success',
@@ -70,10 +78,12 @@ export default {
                                 }).catch((error) =>{
                             this.$swal.fire({
                     icon: 'error',
-                    title: 'Login Failed',
-                    text: error,
+                    title: 'Login Gagal',
+                    text: 'Pastikan input yang anda masukkan sesuai',
                     })
                                 })
+          }
+                  
           });
     
             

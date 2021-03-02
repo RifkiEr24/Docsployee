@@ -15,7 +15,7 @@ class AddFieldToEventTable extends Migration
     {
         Schema::table('events', function (Blueprint $table) {
             $table->bigInteger('id_akun')->unsigned()->nullable()->index()->after('id');
-            $table->foreign('id_akun')->references('id_akun')->on('users');
+            $table->foreign('id_akun')->references('id_akun')->on('users')->onDelete(DB::raw('set null'));
         });
     }
 

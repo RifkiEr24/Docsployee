@@ -130,7 +130,7 @@ export default {
                 }]
             },
             dataPie: {
-                labels: ['Man', 'Woman'],
+                labels: ['Laki - Laki', 'Perempuan'],
                 datasets: [{
                     label: 'Task finished',
                     pointBackgroundColor: 'white',

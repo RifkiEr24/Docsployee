@@ -24,9 +24,11 @@ export default {
                     center: 'title',
                     right: ''
                 },
+                longPressDelay:50,
                 select: this.addEventClick,
                 eventClick: this.handleEventClick,
                 events: {},
+                
                 selectable: true
             },
             eventlist: [],
@@ -100,7 +102,7 @@ export default {
                          this.getevent();
                            this.$swal.fire({
                                 icon: 'success',
-                              title: 'Berhasil',
+                              title: 'Success',
                           text: 'Acara berhasil diperbaharui',
                            })
                        
@@ -115,7 +117,11 @@ export default {
                         })
                 } else if (result.isDenied) {
                    this.axios.delete(`/api/event/delete/${res.data.id}`).then((response) => {
-                            response.data;
+                            this.$swal.fire({
+                                    icon: 'success',
+                                    title: 'Success',
+                                    text: 'Acara Berhasil Dihapus',
+                                })
                         this.getevent();
                             });
                 }
@@ -133,93 +139,107 @@ export default {
         })
         },
         addEventClick: function (info) {
-            if(this.usersession.role == 'admin'){
-                    const {
-                value: text
-            } = this.$swal.fire({
-                title: 'Enter Event Title',
-                input: 'text',
-                inputAttributes: {
-                    autocapitalize: 'off'
-                },
 
-                showCancelButton: true,
-                confirmButtonText: 'Create Event',
-                allowOutsideClick: () => this.$swal.isLoading(),
-            }).then((text) => {
-            
-                if (text.isDismissed != true && text.value != "") {
+
+            if (this.usersession.role == 'admin') {
+                let date = new Date();
+                date.setHours(0, 0, 0, 0)
+                if (date > info.start) {
+                    this.$swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Anda Tidak Dapat Menambah Acara Pada Tanggal Lampau',
+                    })
+                } else {
                     const {
-                        value: description
+                        value: text
                     } = this.$swal.fire({
-                        title: 'Enter Event Description',
-                        input: 'textarea',
+                        title: 'Enter Event Title',
+                        input: 'text',
                         inputAttributes: {
                             autocapitalize: 'off'
                         },
 
                         showCancelButton: true,
                         confirmButtonText: 'Create Event',
-                        allowOutsideClick: () => !Swal.isLoading(),
-                    }).then((description) => {
-                        if (description.isDismissed != true && description.value != "") {
-                            const formdata = new FormData();
+                        allowOutsideClick: () => this.$swal.isLoading(),
+                    }).then((text) => {
 
-                            formdata.append('id_akun', this.usersession.id_akun);
-                            formdata.append('title', text.value);
-                            formdata.append('deskripsi', description.value);
-                            formdata.append('start', info.startStr);
-                            formdata.append('end', info.endStr);
-                            axios.post('/api/event/addevent', formdata).then((response) => {
-                                this.$swal.fire({
-                                    icon: 'success',
-                                    title: 'Success',
-                                    text: 'Acara Berhasil Dibuat',
-                                }).then(() => {
-                                    this.getevent();
-                                })
-                                axios.get('/api/sentemailall',{params: {
-                                    title:response.data.title,
-                                    deskripsi:response.data.deskripsi,
-                                    start:response.data.start
-                                }}).then((res)=>{
-                                    res.data;
-                                }).catch((error)=>{
-                                    console.log(error);
-                                })
-                            }).catch((error) => {
-                                this.$swal.fire({
-                                    icon: 'error',
-                                    title: 'Login Failed',
-                                    text: error,
-                                })
+                        if (text.isDismissed != true && text.value != "") {
+                            const {
+                                value: description
+                            } = this.$swal.fire({
+                                title: 'Enter Event Description',
+                                input: 'textarea',
+                                inputAttributes: {
+                                    autocapitalize: 'off'
+                                },
+
+                                showCancelButton: true,
+                                confirmButtonText: 'Create Event',
+                                allowOutsideClick: () => !Swal.isLoading(),
+                            }).then((description) => {
+                                if (description.isDismissed != true && description.value != "") {
+                                    const formdata = new FormData();
+
+                                    formdata.append('id_akun', this.usersession.id_akun);
+                                    formdata.append('title', text.value);
+                                    formdata.append('deskripsi', description.value);
+                                    formdata.append('start', info.startStr);
+                                    formdata.append('end', info.endStr);
+                                    axios.post('/api/event/addevent', formdata).then((response) => {
+                                        this.getevent();
+                                        this.$swal.fire({
+                                            icon: 'success',
+                                            title: 'Success',
+                                            text: 'Acara Berhasil Dibuat',
+                                        })
+                                        axios.get('/api/sentemailall', {
+                                            params: {
+                                                title: response.data.title,
+                                                deskripsi: response.data.deskripsi,
+                                                start: response.data.start
+                                            }
+                                        }).then((res) => {
+                                            res.data;
+                                        }).catch((error) => {
+                                        })
+                                    }).catch((error) => {
+                                        this.$swal.fire({
+                                            icon: 'error',
+                                            title: 'Login Failed',
+                                            text: error,
+                                        })
+                                    })
+                                } else if (description.value == "" && description.isConfirmed == true) {
+                                    this.$swal.fire({
+                                        title: 'Error',
+                                        icon: 'error',
+                                        text: 'Anda harus memasukan input deskripsi acara',
+                                        allowOutsideClick: () => !Swal.isLoading(),
+                                    })
+                                }
                             })
-                        }  else if(description.value == "" && description.isConfirmed == true){
-                    this.$swal.fire({
-                        title: 'Error',
-                        icon: 'error',
-                        text:'Anda harus memasukan input deskripsi acara',
-                        allowOutsideClick: () => !Swal.isLoading(),
+                        } else if (text.value == "" && text.isConfirmed == true) {
+                            this.$swal.fire({
+                                title: 'Error',
+                                icon: 'error',
+                                text: 'Anda harus memasukan input nama acara',
+                                allowOutsideClick: () => !Swal.isLoading(),
+                            })
+                        }
+
                     })
-                }
-                    })
-                }
-                else if(text.value == "" && text.isConfirmed == true){
-                    this.$swal.fire({
-                        title: 'Error',
-                        icon: 'error',
-                        text:'Anda harus memasukan input nama acara',
-                        allowOutsideClick: () => !Swal.isLoading(),
-                    })
+
+                    let calendarApi = info.view.calendar
+                    calendarApi.unselect() // clear date selection
                 }
 
-            })
-
-            let calendarApi = info.view.calendar
-            calendarApi.unselect() // clear date selection
             }
+
+
         },
-    }
+        }
 }
 </script>
 <template>

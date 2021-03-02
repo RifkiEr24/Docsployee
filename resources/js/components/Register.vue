@@ -1,12 +1,19 @@
 <template>
     <div class="container">
-        <h2 class="text-center mt-2">Daftar Kepegawaian</h2>
+        <h2 class="text-center mt-4">Daftar Kepegawaian</h2>
 
-        <form  method="POST" enctype="multipart/form-data" class="px-5" @submit.prevent="AccountCreate">
+        <form  method="POST" enctype="multipart/form-data" class="px-md-5 px-2" @submit.prevent="AccountCreate">
             <div class="form-group">
-                <label for="exampleInputEmail1">NPWP</label>
-                <input type="number" class="form-control rounded-pill" required placeholder="Masukkan NPWP Anda disini" id="NPWP"
+         <ValidationObserver>
+                <ValidationProvider name="NPWP" rules="length:15" v-slot="{ errors }">
+                <label for="exampleInputEmail1" >NPWP</label>
+                <input   type="number"  class="form-control rounded-pill" required placeholder="Masukkan NPWP Anda disini" id="NPWP"
                     aria-describedby="emailHelp" v-model="form.npwp">
+                    
+                <span v-if="errors[0]" class="ml-2  text-danger font-weight-bold">{{ errors[0] }}</span>
+
+             </ValidationProvider>
+         </ValidationObserver>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail2">Email</label>
@@ -55,7 +62,7 @@
                 <input type="tel" class="form-control rounded-pill" required v-model="form.tel"
                     placeholder="Masukkan Nomor Telepon Anda disini" id="tel" aria-describedby="dateHelp">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mt-2 mt-md-0">
                     <h5 class="text-center">Masukkan Pas Foto Anda</h5>
                     <img class="w-50 ml-auto mr-auto d-block border-rounded shadow-sm"   :src="urlpas" alt="">
                     <div class="form-group">
@@ -82,7 +89,7 @@
                     <li v-for="error in errors" :key="error">{{ error }}</li>
                 </ul>
             </div>
-            <button class="btn btn-primary rounded-pill ml-auto mr-auto d-block mb-3" type="submit">Register
+            <button class="btn btn-primary rounded-pill ml-auto mt-2 mr-auto d-block mb-3" type="submit">Register
                 Akun</button>
 
         </form>
@@ -90,15 +97,27 @@
 </template>
 <script>
     import {
+        length,
         required,
         email,
         integer,
         between
     } from 'vee-validate/dist/rules';
-extend('required', required);
+extend('required',value =>{
+     if (value.length !== 0) {
+    return true;
+  }
+  return '{_field_} Harus diisi!';
+});
 extend('email', email);
 extend('integer', integer);
 extend('between', between);
+extend('length', value => {
+  if (value.length == 15) {
+    return true;
+  }
+  return '{_field_} Harus Berisi 15 Angka!';
+});
 import {
     ValidationProvider
 } from 'vee-validate';
@@ -108,15 +127,11 @@ import {
 import {
     extend
 } from 'vee-validate';
-extend('password', {
-    params: ['target'],
-    validate(value, {
-        target
-    }) {
+extend('password', {  params: ['target'], validate(value, { target }) {
         return value === target;
     },
     message: 'Password confirmation does not match'
-});
+}); 
 export default {
     data: () => ({
         filePas: '',
@@ -148,8 +163,27 @@ export default {
         },
         AccountCreate: function (e) {
             this.$swal.showLoading();
-            if (this.filePas != '' && this.fileKtp != '') {
-                const config = {
+             if(this.form.npwp.length !=15){
+                  this.$swal.fire({
+                        title: 'RegistrasiGagal',
+                        text: "NPWP Harus berisi 15 angka !",
+                        icon: 'error',
+                    })
+            } else if (this.filePas == '' && this.fileKtp == '') {
+                  this.$swal.fire({
+                        title: 'Registrasi Gagal',
+                        text: "Anda belum memasukan File Pas Foto dan KTP Anda",
+                        icon: 'error',
+                  })
+            }else if(this.form.password !== this.form.password_confirmation){
+                 this.$swal.fire({
+                        title: 'Registrasi Gagal',
+                        text: "Password dengan Konfirmasi Password Anda Tidak Sama",
+                        icon: 'error',
+                  })
+            }
+            else{
+                  const config = {
                     headers: {
                         'content-type': 'multipart/form-data'
                     }
@@ -160,15 +194,13 @@ export default {
                 });
                 formdata.append('pasfoto', this.filePas);
                 formdata.append('pasktp', this.fileKtp);
-                console.log(formdata);
                 let uri = '/api/register';
                 this.axios.post(uri, formdata, config).then((response) => {
                     this.$swal.close();
                     this.$swal.fire({
-                        title: 'Success',
-                        text: "Account created successfully",
+                        title: 'Sukses',
+                        text: "Akun Berhasil dibuat",
                         icon: 'success',
-                        timer: 1500
                     }).then(() => {
                         if(this.$route.name == 'createaccount'){
                          this.$router.push({
@@ -180,20 +212,32 @@ export default {
                         });
                         }
                        
-                    }).catch((error) => {
-                        this.errors = error.response.data.errors
-                        console.log(this.errors);
                     })
-                });
+                }).catch((error) => {
+                        this.errors = error.response.data.errors
+                        if(error.response.data.errors.email){
+                    this.$swal.fire({
+                        title: 'Registrasi gagal',
+                        text: "Email yang anda gunakan sudah terdaftar pada Sistem Aplikasi Kepegawaian",
+                        icon: 'error',
+                    })
+                        }else if(error.response.data.errors.npwp){
+                 this.$swal.fire({
+                        title: 'Registrasi gagal',
+                        text: "NPWP yang anda gunakan sudah terdaftar pada Sistem Aplikasi Kepegawaian",
+                        icon: 'error',
+                    })
+                        }else{
+                              this.$swal.fire({
+                        title: 'Registrasi gagal',
+                        text: "Registrasi gagal",
+                        icon: 'error',
+                    })
+                        }
+                    });
                 return true;
             }
-            else{
-                  this.$swal.fire({
-                        title: 'Registrasi Gagal',
-                        text: "Anda belum memasukan File Pas Foto dan KTP Anda",
-                        icon: 'error',
-                  })
-            }
+           
 
             this.errors = [];
 
@@ -208,7 +252,6 @@ export default {
         }
     },
     mounted(){
-        console.log(this.$route.name);
     },
     components: {
         ValidationProvider,
