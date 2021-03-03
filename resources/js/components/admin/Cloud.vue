@@ -116,7 +116,7 @@
                             <div id="preview">
                                 <img class="w-75 ml-auto mr-auto d-block" v-if="url" :src="url" />
                             </div>
-                            <input type="file" class="d-none" @change="processFile($event)" name="imgupload"
+                            <input type="file"  accept="image/*" class="d-none" @change="processFile($event)" name="imgupload"
                                 id="photoForm">
                             <label class="btn btn-primary rounded-pill ml-auto mr-auto d-block w-75"
                                 for="photoForm">Input Gambar Disini</label>

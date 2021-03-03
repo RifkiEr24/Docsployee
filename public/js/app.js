@@ -55883,6 +55883,7 @@ var render = function() {
                       staticClass: "d-none",
                       attrs: {
                         type: "file",
+                        accept: "image/*",
                         name: "imgupload",
                         id: "photoForm"
                       },
