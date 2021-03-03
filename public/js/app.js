@@ -7342,7 +7342,7 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__["extend"])('password', {
           } else {
             _this.$swal.fire({
               title: 'Registrasi gagal',
-              text: "Registrasi gagal",
+              text: "Registrasi gagal, Pastikan Ukuran Gambar Kurang dari 2MB",
               icon: 'error'
             });
           }
@@ -7762,7 +7762,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     download: function download(user, filename) {
       axios({
-        url: "http://127.0.0.1:8000/userdata/".concat(user, "/").concat(filename),
+        url: "https://kepegawaiansmk1cmh.herokuapp.com/userdata/".concat(user, "/").concat(filename),
         method: 'GET',
         responseType: 'blob'
       }).then(function (response) {

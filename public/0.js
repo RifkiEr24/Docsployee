@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     download: function download(user, filename) {
       axios({
-        url: "http://127.0.0.1:8000/storage/images/".concat(user, "/").concat(filename),
+        url: "https://kepegawaiansmk1cmh.herokuapp.com/userdata/".concat(user, "/").concat(filename),
         method: 'GET',
         responseType: 'blob'
       }).then(function (response) {
