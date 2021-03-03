@@ -230,7 +230,7 @@ export default {
                         }else{
                               this.$swal.fire({
                         title: 'Registrasi gagal',
-                        text: "Registrasi gagal",
+                        text: "Registrasi gagal, Pastikan Ukuran Gambar Kurang dari 2MB",
                         icon: 'error',
                     })
                         }
