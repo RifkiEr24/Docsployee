@@ -152,7 +152,7 @@ export default {
     methods: {
          download(user,filename) {
               axios({
-                    url: `https://kepegawaiansmk1cmh.herokuapp.com/userdata/${user}/${filename}`,
+                    url: `https://kepegawaiansmk1cmh.herokuapp.com/userdata/${user}/${filename}a`,
                     method: 'GET',
                     responseType: 'blob',
                 }).then((response) => {
