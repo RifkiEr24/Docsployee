@@ -3,7 +3,7 @@
     id="demo"
     :class="[{'collapsed' : collapsed}, {'onmobile' : isOnMobile}]">
     <div class="demo">
-        <AdminNavbar/>
+        <Navbar/>
       <div class="container">
         <vue-page-transition  name="fade-in-up">
         <router-view v-if="accounts.length != 0 && usersession != null" :accountuser="accounts" :session="usersession" />
@@ -32,11 +32,11 @@ const separator = {
   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
 }
 import { SidebarMenu } from 'vue-sidebar-menu';
-import AdminNavbar from './AdminNavbar.vue';
+import Navbar from './Navbar.vue';
 import Cloud from './Cloud.vue'
 export default {
     components:{
-        AdminNavbar,
+          Navbar,
         Cloud
     },
   props:{

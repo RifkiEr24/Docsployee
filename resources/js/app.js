@@ -21,14 +21,10 @@ Vue.use(VueSweetalert2);
 Vue.use(VueAxios, axios);
 Vue.use(SweetAlertIcons);
 
-import ArticleIndex from './components/ArticleIndex.vue';
-import ArticleCreate from './components/ArticleCreate.vue';
-import ArticleShow from './components/ArticleShow.vue';
-import ArticleEdit from './components/ArticleEdit.vue';
+import ArticleEdit from './components/employeeedit.vue';
 import Login from './components/Login.vue'
 import Register from './components/Register.vue';
-import AdminPage from './components/admin/AdminPage.vue'
-import ExampleComponent from './components/ExampleComponent.vue'
+import AdminPage from './components/page/AdminPage.vue'
 import NotFound from './components/NotFound.vue'
 import '@fortawesome/fontawesome-free/js/all.js';
 
@@ -36,8 +32,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 //   'example-component',
 //   require('./components/ExampleComponent.vue').default
 // );
-Vue.component('example-component', require('./components/ExampleComponent.vue').default
-);
+
   // {
   //   name: 'login',
   //   path: '/login',
@@ -102,12 +97,12 @@ const routes = [
           {
             name: 'admin',
             path:'',
-            component: () => import("./components/admin/DashboardAdmin.vue")
+            component: () => import("./components/page/DashboardAdmin.vue")
           },
           {
             name: 'employeelist',
             path:'employeelist',
-            component: () => import("./components/admin/employeeList.vue")
+            component: () => import("./components/page/employeeList.vue")
           },
           {
             name: 'edit',
@@ -122,50 +117,50 @@ const routes = [
           {
             name:'admincalendar',
             path:'event',
-            component: () => import("./components/admin/Calendar.vue")
+            component: () => import("./components/page/Calendar.vue")
           },
           {
             path:'eventdetail/:id',
-            component: () => import("./components/admin/EventDetail.vue")
+            component: () => import("./components/page/EventDetail.vue")
           },
           {
             name:'admincloud',
             path:'cloud',
-            component: () => import("./components/admin/Cloud.vue")
+            component: () => import("./components/page/Cloud.vue")
           },
           {
             name: 'admincategorydetail',
             path:'/admin/cloud/detail/:id',
-            component: () => import("./components/admin/CategoryDetail.vue")
+            component: () => import("./components/page/CategoryDetail.vue")
           },
           {
             name: 'admineditcloud',
             path:'/admin/cloud/:id',
-            component: () => import("./components/admin/Cloud.vue")
+            component: () => import("./components/page/Cloud.vue")
           },
           {
             name: 'admineditcategory',
             path:'/admin/cloud/detail/:categoryname/:id',
-            component: () => import("./components/admin/CategoryDetail.vue")
+            component: () => import("./components/page/CategoryDetail.vue")
           },
           {
             name:'adminaccountedit',
             path:'accountedit',
-            component: () => import("./components/admin/AccountEdit.vue")
+            component: () => import("./components/page/AccountEdit.vue")
           },
           {
             name:'adminpassword',
             path:'passwordedit',
-            component: () => import("./components/admin/PasswordEdit.vue")
+            component: () => import("./components/page/PasswordEdit.vue")
           },
           {
             name:'adminpasswordedit',
             path:'passwordedit/:id',
-            component: () => import("./components/admin/PasswordEdit.vue")
+            component: () => import("./components/page/PasswordEdit.vue")
           },
           {
             path: 'notification',
-            component: () => import("./components/admin/Notification.vue")
+            component: () => import("./components/page/Notification.vue")
           }
       ],
     
@@ -177,36 +172,36 @@ const routes = [
         {
           name: 'user',
           path:'',
-          component: () => import("./components/admin/DashboardUser.vue")
+          component: () => import("./components/page/DashboardUser.vue")
         },
         {
           name: 'usercalendar',
           path:'/user/event',
-          component: () => import("./components/admin/Calendar.vue")
+          component: () => import("./components/page/Calendar.vue")
         },
         {
           name: 'usercloud',
           path:'/user/cloud',
-          component: () => import("./components/admin/Cloud.vue")
+          component: () => import("./components/page/Cloud.vue")
         },
         {
           name: 'usercategorydetail',
           path:'/user/cloud/detail/:id',
-          component: () => import("./components/admin/CategoryDetail.vue")
+          component: () => import("./components/page/CategoryDetail.vue")
         },
         {
           path: '/user/notification',
-          component: () => import("./components/admin/Notification.vue")
+          component: () => import("./components/page/Notification.vue")
         },
         {
           name: 'useraccountedit',
           path:'/user/accountedit',
-          component: () => import("./components/admin/AccountEdit.vue")
+          component: () => import("./components/page/AccountEdit.vue")
         },
         {
           name:'userpassword',
           path:'passwordedit',
-          component: () => import("./components/admin/PasswordEdit.vue")
+          component: () => import("./components/page/PasswordEdit.vue")
         },
     ],
     beforeEnter: (to, form, next) =>{
@@ -238,37 +233,6 @@ const routes = [
   }
 },
 
-  {
-    name: 'show',
-    path: '/article/show/:id',
-    component: ArticleShow
-},
-{
-  name: 'articleindex',
-  path: '/article',
-  component: ArticleIndex
-},
-{
-  name: 'articlecretae',
-  path: '/article/create',
-  component: ArticleCreate
-},
-{
-  name: 'articleedit',
-  path: '/article/edit/:id',
-  component: ArticleEdit
-},
-{
-  name: 'example',
-  path: '/example',
-  component: ExampleComponent,
-  beforeEnter: (to, form, next) =>{
-    axios.get('/api/athenticated').then(()=>{
-        next()
-    }).catch(()=>{
-    })
-}
-}
 ];
  
 const router = new VueRouter({ mode: 'history', routes: routes});
