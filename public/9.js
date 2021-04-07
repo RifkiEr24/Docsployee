@@ -125,6 +125,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["accountuser", "session"],
   data: function data() {
@@ -132,7 +153,15 @@ __webpack_require__.r(__webpack_exports__);
       usersession: this.$props.session,
       accounts: this.$props.accountuser,
       results: [],
-      keywords: null
+      keywords: null,
+      filters: {
+        name: {
+          value: '',
+          keys: ['name']
+        }
+      },
+      currentPage: 1,
+      totalPages: 0
     };
   },
   created: function created() {
@@ -341,130 +370,93 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "table-responsive" }, [
-      _c(
-        "table",
-        { staticClass: "table table-light table-hover mt-4 border-rounded" },
-        [
-          _vm._m(1),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            _vm._l(_vm.accounts, function(user) {
-              return _c("tr", { key: user.id_akun }, [
-                _c("th", { attrs: { scope: "row" } }, [
-                  _vm._v(" " + _vm._s(user.npwp))
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v(" " + _vm._s(user.name))]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("span", { staticClass: "badge badge-primary" }, [
-                    _vm._v(_vm._s(user.last_login))
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        attrs: {
-                          to: {
-                            name: "admineditcloud",
-                            params: { id: user.id_akun }
-                          }
-                        }
-                      },
-                      [
-                        _c("span", { staticClass: "fa-stack  fa-size fa-lg" }, [
-                          _c("i", {
-                            staticClass: "fa fa-square text-success fa-stack-2x"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "fas fa-folder fa-stack-1x text-white"
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "router-link",
-                      {
-                        attrs: {
-                          to: { name: "edit", params: { id: user.id_akun } }
-                        }
-                      },
-                      [
-                        _c("span", { staticClass: "fa-stack  fa-size fa-lg" }, [
-                          _c("i", {
-                            staticClass: "fa fa-square text-primary fa-stack-2x"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass:
-                              "fas fa-user-edit fa-stack-1x text-white"
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "router-link",
-                      {
-                        attrs: {
-                          to: {
-                            name: "adminpasswordedit",
-                            params: { id: user.id_akun }
-                          }
-                        }
-                      },
-                      [
-                        _c("span", { staticClass: "fa-stack  fa-size fa-lg" }, [
-                          _c("i", {
-                            staticClass: "fa fa-square text-warning fa-stack-2x"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "fas fa-key fa-stack-1x text-white"
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass: "fa-stack  fa-size fa-lg",
-                        on: {
-                          click: function($event) {
-                            return _vm.deletePost(user.id_akun)
-                          }
-                        }
-                      },
-                      [
-                        _c("i", {
-                          staticClass: "fa fa-square text-danger fa-stack-2x"
-                        }),
+    _c(
+      "div",
+      { staticClass: "table-responsive" },
+      [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.filters.name.value,
+              expression: "filters.name.value"
+            }
+          ],
+          staticClass: "form-control",
+          domProps: { value: _vm.filters.name.value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.filters.name, "value", $event.target.value)
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "v-table",
+          {
+            staticClass: "table table-light table-hover mt-4 border-rounded",
+            attrs: { data: _vm.accounts, filters: _vm.filters, pageSize: 5 },
+            scopedSlots: _vm._u([
+              {
+                key: "body",
+                fn: function(ref) {
+                  var displayData = ref.displayData
+                  return _c(
+                    "tbody",
+                    {},
+                    _vm._l(displayData, function(row) {
+                      return _c("tr", { key: row.id_akun }, [
+                        _c("td", [_vm._v(_vm._s(row.name))]),
                         _vm._v(" "),
-                        _c("i", {
-                          staticClass:
-                            "fas fa-user-minus fa-stack-1x text-white"
-                        })
-                      ]
-                    )
-                  ],
-                  1
-                )
-              ])
-            }),
-            0
-          )
-        ]
-      )
-    ])
+                        _c("td", [_vm._v(_vm._s(row.last_login))])
+                      ])
+                    }),
+                    0
+                  )
+                }
+              }
+            ])
+          },
+          [
+            _c(
+              "thead",
+              {
+                staticClass: "bg-primary border-rounded text-white",
+                attrs: { slot: "head" },
+                slot: "head"
+              },
+              [
+                _c("v-th", { attrs: { sortKey: "name" } }, [_vm._v("Name")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Age")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Address")])
+              ],
+              1
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("smart-pagination", {
+          attrs: { currentPage: _vm.currentPage, totalPages: _vm.totalPages },
+          on: {
+            "update:currentPage": function($event) {
+              _vm.currentPage = $event
+            },
+            "update:current-page": function($event) {
+              _vm.currentPage = $event
+            }
+          }
+        })
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = [
@@ -481,22 +473,6 @@ var staticRenderFns = [
         },
         [_c("i", { staticClass: "fas fa-search" })]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", { staticClass: "bg-primary border-rounded" }, [
-      _c("tr", { staticClass: "text-white" }, [
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("NPWP")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Last Login")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Action")])
-      ])
     ])
   }
 ]

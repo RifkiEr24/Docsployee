@@ -100,6 +100,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -642,7 +648,8 @@ var render = function() {
                 ],
                 2
               )
-            : _c(
+            : (_vm.missingdata.length = 0)
+            ? _c(
                 "div",
                 [
                   _c("h4", { staticClass: "text-center font-weight-bold" }, [
@@ -653,6 +660,7 @@ var render = function() {
                 ],
                 1
               )
+            : _c("div", [_vm._m(0)])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row mt-4" }, [
@@ -795,7 +803,24 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-center" }, [
+      _c(
+        "div",
+        {
+          staticClass: "spinner-border text-primary",
+          staticStyle: { width: "3rem", height: "3rem" },
+          attrs: { role: "status" }
+        },
+        [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 

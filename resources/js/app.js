@@ -10,6 +10,7 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import VuePageTransition from "vue-page-transition";
 import VueSidebarMenu from 'vue-sidebar-menu'
 import SweetAlertIcons from 'vue-sweetalert-icons';
+import SmartTable from 'vuejs-smart-table'
 
 // If you don't need the styles, do not connect
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -20,6 +21,7 @@ Vue.use(VuePageTransition);
 Vue.use(VueSweetalert2);
 Vue.use(VueAxios, axios);
 Vue.use(SweetAlertIcons);
+Vue.use(SmartTable)
 
 import ArticleEdit from './components/employeeedit.vue';
 import Login from './components/Login.vue'

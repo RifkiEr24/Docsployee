@@ -26,7 +26,7 @@
     </div>
     <div class="table-responsive">
 
-    <table class="table table-light table-hover mt-4 border-rounded">
+    <!-- <table class="table table-light table-hover mt-4 border-rounded">
         <thead class="bg-primary border-rounded">
             <tr class="text-white">
                 <th scope="col">NPWP</th>
@@ -68,8 +68,29 @@
                 </td>
             </tr>
         </tbody>
-    </table>
-
+    </table> -->
+      <input class="form-control" v-model="filters.name.value"/>
+  <v-table :data="accounts"
+   :filters="filters"
+   :pageSize="5"
+    class="table table-light table-hover mt-4 border-rounded">
+    <thead slot="head"  class="bg-primary border-rounded text-white">
+        <v-th sortKey="name">Name</v-th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Address</th>
+    </thead>
+    <tbody slot="body" slot-scope="{displayData}" >
+        <tr v-for="row in displayData" :key="row.id_akun">
+          <td>{{ row.name }}</td>
+          <td>{{ row.last_login }}</td>
+        </tr>
+    </tbody>
+  </v-table>
+  <smart-pagination
+        :currentPage.sync="currentPage"
+        :totalPages="totalPages"
+      />    
     </div>
 </div>
 
@@ -125,6 +146,11 @@ export default {
           accounts: this.$props.accountuser,
           results:[],
           keywords:null,
+           filters: {
+            name: { value: '', keys: ['name'] }
+            },
+            currentPage: 1,
+    totalPages: 0
         }
       },
          created() {

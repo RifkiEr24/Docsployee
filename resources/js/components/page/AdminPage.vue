@@ -18,6 +18,8 @@
         @item-click="onItemClick"
       >
         <template v-slot:toggle-icon><i class="fas fa-arrows-alt-h"></i></template>
+        <span slot="dropdown-icon"><i class="fas fa-chevron-right"></i></span>
+
       </sidebar-menu>
       <div
         v-if="isOnMobile && !collapsed"
@@ -83,6 +85,22 @@ export default {
          
           
         },
+        {
+                        title: 'Data Master',
+                        icon: 'fa fa-database',
+                        child: [
+                            {
+                                href: '/charts/sublink',
+                                title: 'Golongan',
+                                icon: 'fa fa-portrait',
+                            },
+                            {
+                                href: '/charts/sublink',
+                                title: 'Jabatan',
+                                icon: 'fa fa-user-tie',
+                            }
+                        ]
+                    },
         {
           href: '/'+ this.routeDifferentiator()+'/accountedit',
           title: 'Edit Profile',
@@ -214,6 +232,12 @@ export default {
 
 .v-sidebar-menu .vsm--toggle-btn{
   background-color: #3490dc;
+}
+.v-sidebar-menu .vsm--dropdown .vsm--list{
+  background-color: #3490dc;
+}
+.v-sidebar-menu .vsm--link{
+   background-color: #3490dc;
 }
 .v-sidebar-menu .vsm--link_level-1 .vsm--icon{
   background: none;
