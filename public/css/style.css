@@ -141,3 +141,7 @@
 .ffolder.gray:after{ border-bottom-color: #687F8C;}
 .ffolder.gray span{background-color: transparent;}
 .ffolder.gray i{color: #687F8C;}
+
+.swal2-input[type=number]{
+  max-width: none !important;
+}

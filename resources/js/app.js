@@ -107,6 +107,11 @@ const routes = [
             component: () => import("./components/page/employeeList.vue")
           },
           {
+            name: 'accountmenu',
+            path:'accountmenu/:id',
+            component: () => import("./components/page/AccountMenu.vue")
+          },
+          {
             name: 'edit',
             path: 'edit/:id',
             component: ArticleEdit
@@ -124,6 +129,31 @@ const routes = [
           {
             path:'eventdetail/:id',
             component: () => import("./components/page/EventDetail.vue")
+          },
+          {
+            name:'golongan',
+            path:'golongan',
+            component: () => import("./components/page/Golongan.vue")
+          },
+           {
+            name:'jabatan',
+            path:'jabatan',
+            component: () => import("./components/page/Jabatan.vue")
+          },
+          {
+            name:'jurusan',
+            path:'jurusan',
+            component: () => import("./components/page/Jurusan.vue")
+          },
+           {
+            name:'matpel',
+            path:'matpel',
+            component: () => import("./components/page/Matpel.vue")
+          },
+          {
+            name:'keluarga',
+            path:'keluarga/:id',
+            component: () => import("./components/page/Keluarga.vue")
           },
           {
             name:'admincloud',

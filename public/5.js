@@ -67,6 +67,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -88,12 +118,21 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__["extend"])('required', function
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      user: []
+      user: [],
+      disabledteacher: null,
+      disabledjurusan: 0,
+      disabledmatpel: 0,
+      matpel: {},
+      jurusan: {},
+      jabatan: {}
     };
   },
   created: function created() {
     var _this = this;
 
+    this.matpelNormatif();
+    this.jurusanIndex();
+    this.jabatanIndex();
     axios.get('/api/user').then(function (res) {
       _this.user = res.data;
     }).then(function () {
@@ -103,12 +142,72 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__["extend"])('required', function
         }
       }).then(function (res) {
         _this.user = res.data[0];
+
+        if (_this.user.is_mengajar == 0) {
+          _this.disabledteacher = 0;
+        }
       });
     });
   },
   methods: {
-    update: function update() {
+    jabatanIndex: function jabatanIndex() {
       var _this2 = this;
+
+      var uri = "/api/jabatan";
+      this.axios.get(uri).then(function (response) {
+        _this2.jabatan = response.data;
+      });
+    },
+    matpelNormatif: function matpelNormatif() {
+      var _this3 = this;
+
+      var uri = "/api/matpelnormatif";
+      this.axios.get(uri).then(function (response) {
+        _this3.matpel = response.data;
+      });
+    },
+    matpelProduktif: function matpelProduktif() {
+      var _this4 = this;
+
+      console.log(this.user.id_jurusan);
+      var uri = "/api/matpelproduktif/".concat(this.user.id_jurusan);
+      this.axios.get(uri).then(function (response) {
+        console.log(response.data);
+        _this4.matpel = response.data;
+      });
+    },
+    jurusanIndex: function jurusanIndex() {
+      var _this5 = this;
+
+      var uri = "/api/jurusan";
+      this.axios.get(uri).then(function (response) {
+        _this5.jurusan = response.data;
+      });
+    },
+    toggle_teach: function toggle_teach() {
+      if (this.user.is_mengajar == "1") {
+        this.disabledteacher = 1;
+        this.user.bidang_guru == 0;
+      } else {
+        this.disabledteacher = 0;
+      }
+    },
+    toggle_jurusan: function toggle_jurusan() {
+      this.disabledmatpel = 1;
+
+      if (this.user.bidang_guru == "Produktif") {
+        this.disabledjurusan = 1;
+        this.matpelProduktif();
+      } else {
+        this.disabledjurusan = 0;
+        this.matpelNormatif();
+      }
+    },
+    toggle_jurusan_option: function toggle_jurusan_option() {
+      this.matpelProduktif();
+    },
+    update: function update() {
+      var _this6 = this;
 
       this.$swal.showLoading();
       var npwplength = this.user.npwp.toString().length;
@@ -122,9 +221,9 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__["extend"])('required', function
         });
       } else {
         this.axios.put('/api/account/updateall', this.user).then(function () {
-          _this2.$swal.close();
+          _this6.$swal.close();
 
-          _this2.$swal.fire({
+          _this6.$swal.fire({
             icon: 'success',
             title: 'Sukses',
             text: 'Akun Berhasil di perbaharui'
@@ -435,6 +534,227 @@ var render = function() {
                   }
                 }
               })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "border-top border-bottom py-2" }, [
+            _c("label", { attrs: { for: "mengajar" } }, [
+              _vm._v("Apakah Mengajar")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.user.is_mengajar,
+                    expression: "user.is_mengajar"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { required: "", id: "mengajar" },
+                on: {
+                  change: [
+                    function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.user,
+                        "is_mengajar",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    },
+                    function($event) {
+                      return _vm.toggle_teach()
+                    }
+                  ]
+                }
+              },
+              [
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Ya")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "0" } }, [_vm._v("Tidak")])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group mt-2" }, [
+              _c("label", { attrs: { for: "bidang" } }, [_vm._v("Bidang")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.user.bidang_guru,
+                      expression: "user.bidang_guru"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { disabled: _vm.disabledteacher == 0, id: "bidang" },
+                  on: {
+                    change: [
+                      function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.$set(
+                          _vm.user,
+                          "bidang_guru",
+                          $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        )
+                      },
+                      function($event) {
+                        return _vm.toggle_jurusan()
+                      }
+                    ]
+                  }
+                },
+                [
+                  _c("option", [_vm._v("Normatif & Adaptif")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Produktif")])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group mt-2" }, [
+              _c("label", { attrs: { for: "bidang" } }, [_vm._v("Jurusan")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.user.id_jurusan,
+                      expression: "user.id_jurusan"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    disabled:
+                      _vm.disabledteacher == 0 || _vm.disabledjurusan == 0,
+                    id: "bidang"
+                  },
+                  on: {
+                    change: [
+                      function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.$set(
+                          _vm.user,
+                          "id_jurusan",
+                          $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        )
+                      },
+                      function($event) {
+                        return _vm.toggle_jurusan_option()
+                      }
+                    ]
+                  }
+                },
+                _vm._l(_vm.jurusan, function(item) {
+                  return _c(
+                    "option",
+                    {
+                      key: item.id_jurusan,
+                      domProps: { value: item.id_jurusan }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                    " +
+                          _vm._s(item.nama_jurusan) +
+                          "\n                                "
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group mt-2" }, [
+              _c("label", { attrs: { for: "bidang" } }, [_vm._v("Matpel")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.user.id_matpel,
+                      expression: "user.id_matpel"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { disabled: _vm.disabledteacher == 0, id: "bidang" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.user,
+                        "id_matpel",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                _vm._l(_vm.matpel, function(item) {
+                  return _c(
+                    "option",
+                    {
+                      key: item.id_matpel,
+                      domProps: { value: item.id_matpel }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                    " +
+                          _vm._s(item.nama_matpel) +
+                          "\n                                "
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
             ])
           ])
         ]),

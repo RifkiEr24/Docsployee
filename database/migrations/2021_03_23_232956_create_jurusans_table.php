@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
+use App\Jurusan;
 class CreateJurusansTable extends Migration
 {
     /**
@@ -18,6 +18,18 @@ class CreateJurusansTable extends Migration
             $table->string('nama_jurusan');
             $table->timestamps();
         });
+
+        Jurusan::create(
+            [
+                'nama_jurusan' => 'Rekayasa Perangkat Lunak',
+            ]
+        );
+        Jurusan::create(
+            [
+                'nama_jurusan' => 'Teknik Elektronika Industri',
+            ]
+        );
+
     }
 
     /**

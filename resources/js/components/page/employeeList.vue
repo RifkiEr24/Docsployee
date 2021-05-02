@@ -9,17 +9,14 @@
         </div>
         <div class=" col-6 col-md-3">
             <router-link :to="{ name: 'createaccount' }">
-                <button class="btn btn-primary mt-3 float-right">Add Account</button>
+                <button class="btn btn-primary mt-3 float-right">Tambah Pegawai</button>
             </router-link>
         </div>
         <div class="col-12 col-md-6">
             <div class="input-group search ml-auto mt-3">
-                <input type="text" v-model.lazy="keywords" class=" rounded-pill form-control"
+                <input type="text" v-model="filters.name.value" class=" rounded-pill form-control"
                     placeholder="Employee Name" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <div class="input-group-append ml-2">
-                    <button class="btn btn-primary rounded-circle" type="submit" id="button-addon2"><i
-                            class="fas fa-search"></i></button>
-                </div>
+           
             </div>
         </div>
     </div>
@@ -69,28 +66,50 @@
             </tr>
         </tbody>
     </table> -->
-      <input class="form-control" v-model="filters.name.value"/>
   <v-table :data="accounts"
    :filters="filters"
    :pageSize="5"
-    class="table table-light table-hover mt-4 border-rounded">
+    class="table table-light  mt-4 border-rounded">
     <thead slot="head"  class="bg-primary border-rounded text-white">
+        <v-th sortKey="npwp">NPWP</v-th>
         <v-th sortKey="name">Name</v-th>
-        <th>Age</th>
-        <th>Email</th>
-        <th>Address</th>
+        <v-th sortKey="last_login">Last Login</v-th>
+        <th>Action</th>
     </thead>
     <tbody slot="body" slot-scope="{displayData}" >
         <tr v-for="row in displayData" :key="row.id_akun">
-          <td>{{ row.name }}</td>
+          <td>{{ row.npwp }}</td>
+            <td>{{ row.name }}</td>
           <td>{{ row.last_login }}</td>
+          <td>
+                       <!-- <router-link :to="{name: 'admineditcloud', params: { id: row.id_akun }}">
+                        <span class="fa-stack  fa-size fa-lg">
+                            <i class="fa fa-square text-success fa-stack-2x"></i>
+                            <i class="fas fa-folder fa-stack-1x text-white"></i>
+                        </span>
+                    </router-link> -->
+                    <router-link :to="{name: 'accountmenu', params: { id: row.id_akun }}">
+                       <span class="fa-stack  fa-size fa-lg">
+                            <i class="fa fa-square text-info fa-stack-2x"></i>
+                            <i class="fas fa-eye fa-stack-1x text-white"></i>
+                        </span>
+                    </router-link>
+                        <!-- <router-link :to="{name: 'adminpasswordedit', params: { id: row.id_akun }}">
+                        <span class="fa-stack  fa-size fa-lg">
+                            <i class="fa fa-square text-warning fa-stack-2x"></i>
+                            <i class="fas fa-key fa-stack-1x text-white"></i>
+                        </span>
+                    </router-link> -->
+                    <span class="fa-stack  fa-size fa-lg" @click="deletePost(row.id_akun)">
+                        <i class="fa fa-square text-danger fa-stack-2x"></i>
+                        <i class="fas fa-user-minus fa-stack-1x text-white"></i>
+                    </span>
+
+                </td>
         </tr>
     </tbody>
   </v-table>
-  <smart-pagination
-        :currentPage.sync="currentPage"
-        :totalPages="totalPages"
-      />    
+
     </div>
 </div>
 
@@ -150,7 +169,7 @@ export default {
             name: { value: '', keys: ['name'] }
             },
             currentPage: 1,
-    totalPages: 0
+    totalPages: 2
         }
       },
          created() {
@@ -168,8 +187,6 @@ export default {
             this.accounts = response.data;
         })
           },
-          exportToPDF () {
-			},
           search(){
               axios.get('/api/account/search', { params: { keywords: this.keywords } })
                 .then(response => this.accounts = response.data)

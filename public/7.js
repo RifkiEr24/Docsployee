@@ -106,6 +106,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -615,7 +620,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "font-weight-bold text-center" }, [
                     _vm._v(
-                      "Data Akun Anda masih belum lengkap, Ayo lengkapi sekarang"
+                      "Data Akun Anda masih belum lengkap, Ayo lengkapi\n                        sekarang"
                     )
                   ]),
                   _vm._v(" "),
@@ -642,7 +647,11 @@ var render = function() {
                         staticClass:
                           "btn btn-primary  rounded-pill text-white py-1 ml-auto mr-auto d-block w-75 mt-3 font-weight-bold"
                       },
-                      [_vm._v(" Pergi ke ruang penyimpanan")]
+                      [
+                        _vm._v(
+                          "\n                            Pergi ke ruang penyimpanan"
+                        )
+                      ]
                     )
                   ])
                 ],

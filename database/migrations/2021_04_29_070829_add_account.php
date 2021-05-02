@@ -5,7 +5,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\User;
 use App\UserDetail;
-class AddAdminAccount extends Migration
+use App\Keluarga;
+
+class AddAccount extends Migration
 {
     /**
      * Run the migrations.
@@ -31,6 +33,11 @@ class AddAdminAccount extends Migration
                 'no_telp' => '085872146070',
             ]
         );
+        Keluarga::create(
+            [
+                'id_akun'=>1
+            ]
+            );
         User::create(
             [
                 'name' => 'user',
@@ -48,6 +55,11 @@ class AddAdminAccount extends Migration
                 'no_telp' => '08587214623',
             ]
         );
+        Keluarga::create(
+            [
+                'id_akun'=>2
+            ]
+            );
     }
 
     /**

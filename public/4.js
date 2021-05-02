@@ -218,7 +218,7 @@ __webpack_require__.r(__webpack_exports__);
                   })["catch"](function (error) {
                     _this3.$swal.fire({
                       icon: 'error',
-                      title: 'Login Failed',
+                      title: 'Failed',
                       text: error
                     });
                   });

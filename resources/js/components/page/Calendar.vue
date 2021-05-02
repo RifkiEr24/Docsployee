@@ -207,7 +207,7 @@ export default {
                                     }).catch((error) => {
                                         this.$swal.fire({
                                             icon: 'error',
-                                            title: 'Login Failed',
+                                            title: 'Failed',
                                             text: error,
                                         })
                                     })

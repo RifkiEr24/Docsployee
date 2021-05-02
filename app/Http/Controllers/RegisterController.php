@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\UserDetail;
 use App\Document;
+use App\Keluarga;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
@@ -58,6 +59,10 @@ class RegisterController extends Controller
         'id_akun' => $UserCreate->id_akun,
         'id_category' => 1,
         'file_name' => $imagename]);
+
+        Keluarga::create([
+            'id_akun' => $UserCreate->id_akun,
+        ]);
     }
 
 }

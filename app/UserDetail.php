@@ -17,7 +17,7 @@ class UserDetail extends Model
         return $this->hasMany('App\Document');
     }
     protected $fillable = [
-        'id_akun','tgl_lahir', 'jen_kel', 'alamat','no_telp'
+        'id_akun','id_matpel','status','tanggal_bergabung','tanggal_pensiun','tgl_lahir', 'jen_kel', 'alamat','no_telp','is_mengajar'
     ];
 
 }

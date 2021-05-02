@@ -165,7 +165,7 @@ export default {
             this.$swal.showLoading();
              if(this.form.npwp.length !=15){
                   this.$swal.fire({
-                        title: 'RegistrasiGagal',
+                        title: 'Registrasi Gagal',
                         text: "NPWP Harus berisi 15 angka !",
                         icon: 'error',
                     })

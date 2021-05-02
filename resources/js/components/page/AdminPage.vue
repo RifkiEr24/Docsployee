@@ -86,18 +86,29 @@ export default {
           
         },
         {
-                        title: 'Data Master',
-                        icon: 'fa fa-database',
+          title: 'Data Master',
+          icon: 'fa fa-database',
+          hidden: this.showOnAdmin(),
                         child: [
                             {
-                                href: '/charts/sublink',
+                                href: '/'+ this.routeDifferentiator()+'/golongan',
                                 title: 'Golongan',
-                                icon: 'fa fa-portrait',
+                                icon: 'fas fa-sitemap',
                             },
                             {
-                                href: '/charts/sublink',
+                                href: '/'+ this.routeDifferentiator()+'/jabatan',
                                 title: 'Jabatan',
                                 icon: 'fa fa-user-tie',
+                            },
+                               {
+                                href: '/'+ this.routeDifferentiator()+'/jurusan',
+                                title: 'Jurusan',
+                                icon: 'fas fa-school',
+                            },
+                            {
+                                href: '/'+ this.routeDifferentiator()+'/matpel',
+                                title: 'Mata Pelajaran',
+                                icon: 'fa fa-book',
                             }
                         ]
                     },

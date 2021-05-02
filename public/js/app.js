@@ -6833,7 +6833,7 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__["extend"])('password', {
 
       if (this.form.npwp.length != 15) {
         this.$swal.fire({
-          title: 'RegistrasiGagal',
+          title: 'Registrasi Gagal',
           text: "NPWP Harus berisi 15 angka !",
           icon: 'error'
         });
@@ -7017,6 +7017,45 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -7043,12 +7082,21 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__["extend"])('required', function
       usersession: this.$props.session,
       errors: [],
       title: null,
-      content: null
+      content: null,
+      disabledteacher: null,
+      disabledjurusan: 0,
+      disabledmatpel: 0,
+      matpel: {},
+      jurusan: {},
+      jabatan: {}
     };
   },
   mounted: function mounted() {
     var _this = this;
 
+    this.matpelNormatif();
+    this.jurusanIndex();
+    this.jabatanIndex();
     axios.get('/api/userall', {
       params: {
         iduser: this.$route.params.id
@@ -7056,12 +7104,68 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__["extend"])('required', function
     }).then(function (response) {
       _this.user = response.data[0];
       _this.user.npwp;
+      _this.disabledteacher = response.data[0].is_mengajar;
+      console.log(_this.user);
     });
   },
   methods: {
-    update: function update() {
+    jabatanIndex: function jabatanIndex() {
       var _this2 = this;
 
+      var uri = "/api/jabatan";
+      this.axios.get(uri).then(function (response) {
+        _this2.jabatan = response.data;
+      });
+    },
+    matpelNormatif: function matpelNormatif() {
+      var _this3 = this;
+
+      var uri = "/api/matpelnormatif";
+      this.axios.get(uri).then(function (response) {
+        _this3.matpel = response.data;
+      });
+    },
+    matpelProduktif: function matpelProduktif() {
+      var _this4 = this;
+
+      console.log(this.user.id_jurusan);
+      var uri = "/api/matpelproduktif/".concat(this.user.id_jurusan);
+      this.axios.get(uri).then(function (response) {
+        console.log(response.data);
+        _this4.matpel = response.data;
+      });
+    },
+    jurusanIndex: function jurusanIndex() {
+      var _this5 = this;
+
+      var uri = "/api/jurusan";
+      this.axios.get(uri).then(function (response) {
+        _this5.jurusan = response.data;
+      });
+    },
+    toggle_teach: function toggle_teach() {
+      if (this.user.is_mengajar == "1") {
+        this.disabledteacher = 1;
+        this.user.bidang_guru == 0;
+      } else {
+        this.disabledteacher = 0;
+      }
+    },
+    toggle_jurusan: function toggle_jurusan() {
+      this.disabledmatpel = 1;
+
+      if (this.user.bidang_guru == "Produktif") {
+        this.disabledjurusan = 1;
+        this.matpelProduktif();
+      } else {
+        this.disabledjurusan = 0;
+        this.matpelNormatif();
+      }
+    },
+    toggle_jurusan_option: function toggle_jurusan_option() {
+      this.matpelProduktif();
+    },
+    update: function update() {
       var npwplength = this.user.npwp.toString().length;
 
       if (npwplength !== 15) {
@@ -7075,11 +7179,7 @@ Object(vee_validate__WEBPACK_IMPORTED_MODULE_1__["extend"])('required', function
           title: 'Success',
           text: "Akun Berhasil diperbaharui",
           icon: 'success'
-        }).then(function () {
-          _this2.$router.push({
-            name: 'employeelist'
-          });
-        }));
+        }).then(function () {}));
       }
     }
   },
@@ -7184,14 +7284,23 @@ var separator = {
       }, {
         title: 'Data Master',
         icon: 'fa fa-database',
+        hidden: this.showOnAdmin(),
         child: [{
-          href: '/charts/sublink',
+          href: '/' + this.routeDifferentiator() + '/golongan',
           title: 'Golongan',
-          icon: 'fa fa-portrait'
+          icon: 'fas fa-sitemap'
         }, {
-          href: '/charts/sublink',
+          href: '/' + this.routeDifferentiator() + '/jabatan',
           title: 'Jabatan',
           icon: 'fa fa-user-tie'
+        }, {
+          href: '/' + this.routeDifferentiator() + '/jurusan',
+          title: 'Jurusan',
+          icon: 'fas fa-school'
+        }, {
+          href: '/' + this.routeDifferentiator() + '/matpel',
+          title: 'Mata Pelajaran',
+          icon: 'fa fa-book'
         }]
       }, {
         href: '/' + this.routeDifferentiator() + '/accountedit',
@@ -55662,10 +55771,64 @@ var render = function() {
                     _vm.$set(_vm.user, "name", $event.target.value)
                   }
                 }
-              })
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "mengajar" } }, [_vm._v("Jabatan")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.user.id_jabatan,
+                      expression: "user.id_jabatan"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { id: "mengajar" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.user,
+                        "id_jabatan",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                _vm._l(_vm.jabatan, function(item) {
+                  return _c(
+                    "option",
+                    {
+                      key: item.id_jabatan,
+                      domProps: { value: item.id_jabatan }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                    " +
+                          _vm._s(item.nama_jabatan) +
+                          "\n                                "
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "row mt-2" }, [
               _c("div", { staticClass: "col-md-6" }, [
                 _c("div", { staticClass: "form-group" }, [
                   _c("label", { attrs: { for: "exampleInputEmail2" } }, [
@@ -55814,6 +55977,227 @@ var render = function() {
                     }
                   }
                 })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "border-top border-bottom py-2" }, [
+              _c("label", { attrs: { for: "mengajar" } }, [
+                _vm._v("Apakah Mengajar")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.user.is_mengajar,
+                      expression: "user.is_mengajar"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { required: "", id: "mengajar" },
+                  on: {
+                    change: [
+                      function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.$set(
+                          _vm.user,
+                          "is_mengajar",
+                          $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        )
+                      },
+                      function($event) {
+                        return _vm.toggle_teach()
+                      }
+                    ]
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "1" } }, [_vm._v("Ya")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "0" } }, [_vm._v("Tidak")])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group mt-2" }, [
+                _c("label", { attrs: { for: "bidang" } }, [_vm._v("Bidang")]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.user.bidang_guru,
+                        expression: "user.bidang_guru"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { disabled: _vm.disabledteacher == 0, id: "bidang" },
+                    on: {
+                      change: [
+                        function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.user,
+                            "bidang_guru",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        },
+                        function($event) {
+                          return _vm.toggle_jurusan()
+                        }
+                      ]
+                    }
+                  },
+                  [
+                    _c("option", [_vm._v("Normatif & Adaptif")]),
+                    _vm._v(" "),
+                    _c("option", [_vm._v("Produktif")])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group mt-2" }, [
+                _c("label", { attrs: { for: "bidang" } }, [_vm._v("Jurusan")]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.user.id_jurusan,
+                        expression: "user.id_jurusan"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      disabled:
+                        _vm.disabledteacher == 0 || _vm.disabledjurusan == 0,
+                      id: "bidang"
+                    },
+                    on: {
+                      change: [
+                        function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.user,
+                            "id_jurusan",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        },
+                        function($event) {
+                          return _vm.toggle_jurusan_option()
+                        }
+                      ]
+                    }
+                  },
+                  _vm._l(_vm.jurusan, function(item) {
+                    return _c(
+                      "option",
+                      {
+                        key: item.id_jurusan,
+                        domProps: { value: item.id_jurusan }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    " +
+                            _vm._s(item.nama_jurusan) +
+                            "\n                                "
+                        )
+                      ]
+                    )
+                  }),
+                  0
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group mt-2" }, [
+                _c("label", { attrs: { for: "bidang" } }, [_vm._v("Matpel")]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.user.id_matpel,
+                        expression: "user.id_matpel"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { disabled: _vm.disabledteacher == 0, id: "bidang" },
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.$set(
+                          _vm.user,
+                          "id_matpel",
+                          $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        )
+                      }
+                    }
+                  },
+                  _vm._l(_vm.matpel, function(item) {
+                    return _c(
+                      "option",
+                      {
+                        key: item.id_matpel,
+                        domProps: { value: item.id_matpel }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    " +
+                            _vm._s(item.nama_matpel) +
+                            "\n                                "
+                        )
+                      ]
+                    )
+                  }),
+                  0
+                )
               ])
             ])
           ],
@@ -72705,7 +73089,13 @@ var routes = [{
     name: 'employeelist',
     path: 'employeelist',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./components/page/employeeList.vue */ "./resources/js/components/page/employeeList.vue"));
+      return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./components/page/employeeList.vue */ "./resources/js/components/page/employeeList.vue"));
+    }
+  }, {
+    name: 'accountmenu',
+    path: 'accountmenu/:id',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./components/page/AccountMenu.vue */ "./resources/js/components/page/AccountMenu.vue"));
     }
   }, {
     name: 'edit',
@@ -72726,7 +73116,37 @@ var routes = [{
   }, {
     path: 'eventdetail/:id',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./components/page/EventDetail.vue */ "./resources/js/components/page/EventDetail.vue"));
+      return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./components/page/EventDetail.vue */ "./resources/js/components/page/EventDetail.vue"));
+    }
+  }, {
+    name: 'golongan',
+    path: 'golongan',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./components/page/Golongan.vue */ "./resources/js/components/page/Golongan.vue"));
+    }
+  }, {
+    name: 'jabatan',
+    path: 'jabatan',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ./components/page/Jabatan.vue */ "./resources/js/components/page/Jabatan.vue"));
+    }
+  }, {
+    name: 'jurusan',
+    path: 'jurusan',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 14).then(__webpack_require__.bind(null, /*! ./components/page/Jurusan.vue */ "./resources/js/components/page/Jurusan.vue"));
+    }
+  }, {
+    name: 'matpel',
+    path: 'matpel',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ./components/page/Matpel.vue */ "./resources/js/components/page/Matpel.vue"));
+    }
+  }, {
+    name: 'keluarga',
+    path: 'keluarga/:id',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 15).then(__webpack_require__.bind(null, /*! ./components/page/Keluarga.vue */ "./resources/js/components/page/Keluarga.vue"));
     }
   }, {
     name: 'admincloud',

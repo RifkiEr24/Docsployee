@@ -16,8 +16,9 @@ class CreateUserDetailsTable extends Migration
         Schema::create('user_details', function (Blueprint $table) {
             $table->id('id_akun');
             $table->foreign('id_akun')->references('id_akun')->on('users');
-            $table->smallInteger('id_matpel')->nullable();
-            $table->boolean('is_mengajar')->default(0)->change();
+            $table->string('status')->default('Aktif');
+            $table->enum('is_mengajar',[0, 1])->default(0);  
+            $table->enum('bidang_guru',['Normatif & Adaptif', 'Produktif'])->nullable();  
             $table->date('tgl_lahir');
             $table->enum('jen_kel',['Laki - laki', 'Perempuan']);
             $table->string('alamat');

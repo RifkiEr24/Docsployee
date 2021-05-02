@@ -67,6 +67,7 @@ class AccountController extends Controller
         'npwp'  => 'required',
         'tgl_lahir' => 'required',
         'email' => 'required',
+        'is_mengajar' => 'required',
         'name' => 'required',
         'role' => 'required'
       ]);
@@ -83,6 +84,19 @@ class AccountController extends Controller
       $detail->jen_kel = $validatedData['jen_kel'];
       $detail->alamat = $validatedData['alamat'];
       $detail->no_telp = $validatedData['no_telp'];
+      $detail->is_mengajar = $validatedData['is_mengajar'];
+      if( $validatedData['is_mengajar'] == 0){
+        $detail->id_matpel=null;
+      $detail->id_jurusan=null;
+      $detail->bidang_guru=null;
+      }else{
+        $detail->id_matpel=$request->id_matpel;
+      $detail->id_jurusan=$request->id_jurusan;
+      $detail->bidang_guru=$request->bidang_guru;
+      }
+      $detail->id_jabatan=$request->id_jabatan;
+      
+
       $detail->save();
       $msg = [
           'success' => true,
